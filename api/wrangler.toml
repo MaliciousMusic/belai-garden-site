@@ -34,7 +34,7 @@ PAIEMENT = "faux"
 # what the shop sells: the site's own boutique.json (prices, the month's collection)
 CATALOGUE = "http://localhost:8851/scene/boutique.json"
 # the seller printed on the invoices (factures.js): as in the legal notice
-VENDEUR = '{"nom":"Hadrien Lonjaret, entrepreneur individuel (Agent 33)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488","courriel":"lonjaret.hadrien@proton.me"}'
+VENDEUR = '{"nom":"Hadrien Lonjaret EI, entrepreneur individuel (Agent 33)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 · RCS Clermont-Ferrand","courriel":"lonjaret.hadrien@proton.me"}'
 
 [[d1_databases]]
 binding = "DB"

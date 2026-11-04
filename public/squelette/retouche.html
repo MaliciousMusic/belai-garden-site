@@ -21,13 +21,13 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-extralight.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-black.woff2">
   <!-- the bouquet of the address (?b=) is fetched with the page, not after its scripts -->
   <script>(() => { const b = new URLSearchParams(location.search).get('b');
     const l = document.createElement('link');
     Object.assign(l, { rel: 'preload', as: 'fetch', crossOrigin: 'anonymous', href: `../scene/bouquets/${/^[a-z0-9-]{1,60}$/.test(b || '') ? b : 'printemps-a-la-carpe'}/atelier.json`, fetchPriority: 'high' });
     document.head.append(l); })();</script>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/cormorant-italique-500.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/italianno.woff2">
   <link rel="stylesheet" href="squelette.css">
 </head>
 <body class="compose page-atelier">

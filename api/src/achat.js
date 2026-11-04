@@ -48,8 +48,8 @@ function modePaiement(req, env) {
 
 // the waiver kept as the proof of the buyer's request: the server's own words, never the client's
 export const RENONCIATION = {
-  version: '2026-11-04',
-  texte: 'Je demande que mon bouquet me soit livré immédiatement, et je reconnais perdre ainsi mon droit de rétractation de 14 jours.',
+  version: '2026-11-04b',
+  texte: 'Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de 14 jours.',
 };
 const ACHATS_HEURE = 10;
 

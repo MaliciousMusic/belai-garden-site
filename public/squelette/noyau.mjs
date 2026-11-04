@@ -535,6 +535,8 @@ function panierCompte() {
   // whole sentences, for the phrase books
   for (const b of document.querySelectorAll('.panier-btn')) b.setAttribute('aria-label', !n ? 'Panier vide' : n === 1 ? 'Panier, 1 bouquet' : `Panier, ${n} bouquets`);
 }
+// the waiver, word for word as the server keeps it (api/src/achat.js RENONCIATION): sent as its version when the payment opens
+const RENONCIATION = 'Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de 14 jours.';
 function panierFenetre() {
   let d = $('panier');
   if (!d) {
@@ -560,7 +562,10 @@ function panierFenetre() {
         </div>
         <label class="case age-case"><input type="checkbox" id="age"> J’ai 16 ans ou plus.</label>
         <p class="age-note" id="age-note" hidden>Cochez « J’ai 16 ans ou plus » pour continuer.</p>
-        <button type="button" class="btn btn-achat" data-bouchon="achat">Passer à la caisse</button>
+        <p class="panier-rappel">Chaque bouquet vit trente jours à compter de son ouverture, puis reste fané. Il est livré dès la confirmation du paiement.</p>
+        <label class="case renonce-case"><input type="checkbox" id="renonce"> ${RENONCIATION}</label>
+        <p class="age-note" id="renonce-note" hidden>Cochez cette case pour continuer.</p>
+        <button type="button" class="btn btn-achat" data-bouchon="achat">Commande avec obligation de paiement</button>
       </div>`;
     document.body.append(d);
     $('panier-pied').append(marquesPaiement());
@@ -568,12 +573,13 @@ function panierFenetre() {
     // every checkout, not kept; the checkout waits for it
     const pay = d.querySelector('[data-bouchon="achat"]');
     pay.addEventListener('click', (e) => {
-      if ($('age').checked) return;
+      const manque = !$('age').checked ? 'age' : !$('renonce').checked ? 'renonce' : null;
+      if (!manque) return;
       e.stopPropagation();
-      $('age-note').hidden = false;
-      $('age').focus();
+      $(`${manque}-note`).hidden = false;
+      $(manque).focus();
     });
-    $('age').addEventListener('change', () => $('age').checked && ($('age-note').hidden = true));
+    for (const k of ['age', 'renonce']) $(k).addEventListener('change', () => $(k).checked && ($(`${k}-note`).hidden = true));
     // the business invoice (owner, 2026-11-01): kept in this browser with the basket, until the checkout
     const PRO = 'belai-facture';
     let pro = {};
@@ -643,7 +649,7 @@ function panierListe() {
   $('panier-fois').textContent = enPlusieursFois();
   $('panier-fois').hidden = !items.length || !enPlusieursFois();
   const pay = $('panier-pied').querySelector('[data-bouchon="achat"]');
-  pay.textContent = items.length ? `Passer à la caisse · ${price(panierTotal(items))}` : 'Passer à la caisse';
+  pay.textContent = items.length ? `Commande avec obligation de paiement · ${price(panierTotal(items))}` : 'Commande avec obligation de paiement';
 }
 export const ouvrirPanier = () => panierFenetre().showModal();
 

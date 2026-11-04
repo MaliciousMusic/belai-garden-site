@@ -2298,5 +2298,17 @@
  "Offrez-le d’un simple lien, où que soit la personne, ou gardez-le sur votre bureau. Son prix est celui de ses tiges chez un fleuriste, vase offert, et la collection change chaque mois.": "링크 하나로 어디에 있는 사람에게나 선물하거나, 내 바탕화면에 둘 수 있어요. 가격은 꽃집에서의 꽃줄기 값 그대로이고, 화병은 무료이며, 컬렉션은 매달 바뀌어요.",
  "Une question ? Touchez-moi : je suis Bzzou.": "궁금한 게 있으세요? 저를 눌러 주세요. 저는 Bzzou예요.",
  "Son vase : une bouteille en céladon cerclée de gui d’argent.": "화병: 은빛 겨우살이를 두른 청자 병.",
- "Son vase : une colonne Art nouveau en grès.": "화병: 아르누보 양식의 석기 기둥."
+ "Son vase : une colonne Art nouveau en grès.": "화병: 아르누보 양식의 석기 기둥.",
+ "Bzzou est une IA. Une personne de l’atelier peut prendre le relais.": "Bzzou는 AI입니다. 아틀리에 담당자가 이어받을 수 있습니다.",
+ "Bonjour ! Je suis Bzzou, l’abeille de l’atelier, une IA. Posez-moi votre question sur les bouquets, les soliflores ou un cadeau. Une personne de l’atelier peut prendre le relais.": "안녕하세요! 저는 아틀리에의 꿀벌이자 AI인 Bzzou입니다. 부케, 한 송이 꽃, 선물에 대해 물어보세요. 아틀리에 담당자가 이어받을 수 있습니다.",
+ "Oui, je suis une IA, une petite abeille automatique, et les questions existentielles, ça me donne le bourdon ! Pour parler à une personne de l’atelier, dites-le-moi.": "네, 저는 AI, 작은 자동 꿀벌이에요. 존재에 관한 질문은 저를 윙윙거리게 하네요! 아틀리에 담당자와 이야기하고 싶으면 말씀해 주세요.",
+ "Un bouquet numérique est livré tout de suite : en l’achetant, vous renoncez au droit de rétractation (article L{n1}-{n2} du Code de la consommation). Il s’échange une fois sous {n3} h, s’il n’a pas été offert.": "디지털 부케는 즉시 전달됩니다. 구매하면 철회권을 포기하게 됩니다(프랑스 소비자법 L221-28조). 선물하지 않았다면 {n1}시간 안에 한 번 교환할 수 있습니다.",
+ "En euros : le montant affiché dans votre monnaie est une estimation. Votre banque fait la conversion et peut y ajouter des frais ; l’atelier n’en prend aucun.": "유로로 결제합니다. 현지 통화로 표시된 금액은 추정치입니다. 환전은 은행이 하며 수수료가 붙을 수 있고, 아틀리에 수수료는 없습니다.",
+ "Un bouquet numérique ne voyage pas : il arrive par un lien et s’ouvre dans un navigateur, où que soit la personne. On paie en euros, et le montant affiché dans votre monnaie est une estimation.": "디지털 부케는 배송되지 않습니다. 링크로 도착해 어디서든 브라우저에서 열립니다. 결제는 유로로 하며, 현지 통화 금액은 추정치입니다.",
+ "Oui : le prix en euros est celui que vous payez. Il n’y a pas de TVA (TVA non applicable, article {n1} B du CGI), ni frais de livraison, ni frais de l’atelier, et c’est le même prix pour un cadeau. Hors zone euro, votre banque peut ajouter des frais de conversion.": "네, 유로 가격이 결제 금액입니다. 부가세가 없고(프랑스 조세법 293 B조에 따라 비적용), 배송비나 아틀리에 수수료도 없으며, 선물도 같은 가격입니다. 유로존 밖에서는 은행이 환전 수수료를 더할 수 있습니다.",
+ "Chaque bouquet vit trente jours à compter de son ouverture, puis reste fané. Il est livré dès la confirmation du paiement.": "각 부케는 연 날부터 30일 동안 살고 이후 시든 채로 남습니다. 결제가 확인되면 바로 전달됩니다.",
+ "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "결제가 확인되는 즉시 부케를 전달해 줄 것을 요청하며, 이로써 {n1}일의 철회권을 잃는다는 것을 인정합니다.",
+ "Cochez cette case pour continuer.": "계속하려면 이 상자를 선택하세요.",
+ "Commande avec obligation de paiement": "결제 의무가 있는 주문",
+ "Commande avec obligation de paiement · {p{n1}}": "결제 의무가 있는 주문 · {p1}"
 }

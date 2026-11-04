@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import worker from '../src/index.js';
 import { demande, verifie } from '../src/compte.js';
-import { achat, livre } from '../src/achat.js';
+import { achat, livre, RENONCIATION } from '../src/achat.js';
 import { d1 } from './d1.mjs';
 
 const ORIGINE = 'http://localhost:8835';
@@ -53,7 +53,7 @@ test('le prix vient du catalogue, la commande retient le renoncement', async () 
   const row = env.DB.raw.prepare('SELECT * FROM commandes WHERE id = ?').get(commande);
   assert.equal(row.centimes, 9480);
   assert.equal(row.etat, 'en_attente');
-  assert.equal(JSON.parse(row.consentement).texte, TEXTE);
+  assert.equal(JSON.parse(row.consentement).texte, RENONCIATION.texte);
 });
 
 test('page de paiement simulée : payer donne le bouquet, numéroté dans sa série', async () => {

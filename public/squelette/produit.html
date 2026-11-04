@@ -22,8 +22,6 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-extralight.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-black.woff2">
   <!-- the sprites of the bouquet of the address (?b=) are fetched with the page, not after its scripts: it shows from them
   first, its SVG after -->
   <script>(() => { const b = new URLSearchParams(location.search).get('b');
@@ -34,6 +32,8 @@
       if (as === 'fetch') l.crossOrigin = 'anonymous';
       document.head.append(l);
     } })();</script>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/cormorant-italique-500.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/italianno.woff2">
   <link rel="stylesheet" href="squelette.css">
   <link rel="stylesheet" href="../scene/essai.css">
   <!-- the choreography's waiting state is set before the first paint (no flash); only on a first visit of this page (a

@@ -2092,3 +2092,5 @@ main > #launcher { border-top: 0; }
 .legal .sommaire { columns: 2 200px; margin-top: 18px; }
 /* what the owner still has to decide before the sales open (docs/LEGAL-A-TRANCHER.md) */
 .legal .a-remplir { padding: 0 3px; border-radius: 4px; background: rgb(255 214 102 / 0.45); }
+/* a notice over the legal page while it is being prepared */
+.legal .brouillon { padding: 10px 14px; border-radius: 6px; background: rgb(255 214 102 / 0.25); }

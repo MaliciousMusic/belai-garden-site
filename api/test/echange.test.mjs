@@ -58,7 +58,7 @@ test('une facture numérotée pour chaque achat, lisible par son seul compte', a
   assert.equal(l.length, 1);
   assert.equal(l[0].ref, 'F-000001');
   assert.equal(l[0].total, 9480);
-  assert.match(l[0].libelle, /Bouquet « Citrine », exemplaire n° 1 sur 100, collection d’octobre 2026/);
+  assert.match(l[0].libelle, /Bouquet « Citrine », collection d’octobre 2026/);
   const h = (await call(env, 'GET', '/api/facture/1', null, c)).j;
   assert.match(h, /Facture F-000001/);
   assert.match(h, /Zoé/);

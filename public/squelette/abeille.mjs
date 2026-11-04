@@ -119,7 +119,7 @@ chat.setAttribute('aria-label', 'L’abeille de l’atelier');
 chat.hidden = true;
 chat.innerHTML = `<header class="abeille-tete"><span class="abeille-nom">L’abeille de l’atelier</span><button type="button" class="abeille-fermer" aria-label="Fermer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button></header>
   <ol class="abeille-fil" aria-live="polite"></ol>
-  <p class="abeille-mention">Bzzou n’est pas un vrai interlocuteur.</p>
+  <p class="abeille-mention">Bzzou est une IA. Une personne de l’atelier peut prendre le relais.</p>
   <form class="abeille-form"><label class="visuellement-cache" for="abeille-q">Votre question</label><input id="abeille-q" autocomplete="off" maxlength="500" placeholder="Posez votre question…"><button type="submit" aria-label="Envoyer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></form>`;
 document.body.append(chat);
 const liste = chat.querySelector('.abeille-fil');
@@ -427,7 +427,7 @@ chat.querySelector('.abeille-form').addEventListener('submit', (e) => {
 async function ouvre() {
   bulle.hidden = true;
   chat.hidden = false;
-  if (!fil.length) dit({ de: 'abeille', texte: 'Bonjour ! Je suis Bzzou, l’abeille de l’atelier. Posez-moi votre question sur les bouquets, les soliflores ou un cadeau.' });
+  if (!fil.length) dit({ de: 'abeille', texte: 'Bonjour ! Je suis Bzzou, l’abeille de l’atelier, une IA. Posez-moi votre question sur les bouquets, les soliflores ou un cadeau. Une personne de l’atelier peut prendre le relais.' });
   liste.scrollTop = liste.scrollHeight;
   champ.focus({ preventScroll: true });
   charge().catch(() => {});

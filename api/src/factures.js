@@ -15,8 +15,8 @@ export function libelle(nom, numero, total, mois) {
   const [y, m] = mois.split('-').map(Number);
   let month = new Intl.DateTimeFormat('fr-FR', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(Date.UTC(y, m - 1, 1));
   month = (/^[aeiouyàâéèêîôû]/i.test(month) ? 'd’' : 'de ') + month;
-  // (no total for a bouquet with no cap)
-  return `Bouquet « ${nom} », exemplaire n° ${numero}${total ? ` sur ${total}` : ''}, collection ${month}`;
+  // no copy number on the shop's words (owner, 2026-11-01: « pas de numéro d'exemplaire »); the base still orders its series
+  return `Bouquet « ${nom} », collection ${month}`;
 }
 
 // issued: f = { type, compte, bouquet?, commande?, annule?, libelle, total, carte?, cagnotte?, echange?, paiement? }, at now;

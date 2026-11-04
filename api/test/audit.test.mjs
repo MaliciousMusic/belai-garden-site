@@ -53,10 +53,10 @@ test('la limite par adresse tient sur tout un /64', async () => {
 test('le service worker ne garde rien de /api ni de /bzzou', () => {
   const ecoute = {};
   const sw = { addEventListener: (k, f) => (ecoute[k] = f), location: { origin: 'https://boutique.test' }, skipWaiting() {}, clients: { claim() {} } };
-  vm.runInNewContext(readFileSync(new URL('../../public/squelette/sw.js', import.meta.url), 'utf8'), { self: sw, URL, caches: {}, fetch: () => {}, console });
+  vm.runInNewContext(readFileSync(new URL('../../public/squelette/sw.js', import.meta.url), 'utf8'), { self: sw, URL, Request, caches: { match: async () => null, open: async () => ({ put: async () => {}, match: async () => null }) }, fetch: async () => new Response('x'), console });
   const repond = (url) => {
     let pris = false;
-    ecoute.fetch({ request: { method: 'GET', url, headers: new Headers(), mode: 'cors', destination: '' }, respondWith: () => (pris = true), waitUntil() {} });
+    ecoute.fetch({ request: new Request(url), respondWith: (p) => { pris = true; Promise.resolve(p).catch(() => {}); }, waitUntil() {} });
     return pris;
   };
   assert.equal(repond('https://boutique.test/api/moi'), false);

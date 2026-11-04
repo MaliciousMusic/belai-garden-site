@@ -8,7 +8,7 @@
 // contact is an e-mail address or a phone number; site is a field the page hides (a robot that fills it is thanked and
 // forgotten). Limits: three messages an hour and ten a day for an address, env.MESSAGES_JOUR a day for the whole shop.
 import { compte1, lireJson } from './compte.js';
-import { adresse, empreinte, identifiant, numero, json, erreur } from './outils.js';
+import { adresse, chiffre, cleIp, empreinte, identifiant, numero, json, erreur } from './outils.js';
 
 const H = 60 * 60 * 1000;
 const J = 24 * H;
@@ -41,7 +41,7 @@ export async function message(req, env, now = Date.now()) {
   if (!c) return erreur('contact');
   const ip = req.headers.get('cf-connecting-ip') || '';
   if (ip) {
-    const cle = await empreinte(env.POIVRE, `ip:${ip}`);
+    const cle = await empreinte(env.POIVRE, `ip:${cleIp(ip)}`);
     for (const [nom, fenetre, max] of LIMITES_IP) {
       const r = await compte1(env.DB, `${nom}:${cle}`, fenetre, max, now);
       if (!r.ok) return erreur('trop', 429, { attendre: r.attendre });
@@ -53,7 +53,7 @@ export async function message(req, env, now = Date.now()) {
   const langue = LANGUES.has(b.langue) ? b.langue : null;
   const id = identifiant();
   await env.DB.prepare('INSERT INTO messages (id, cree, texte, genre, contact, page, langue) VALUES (?, ?, ?, ?, ?, ?, ?)')
-    .bind(id, now, texte, c.genre, c.contact, page, langue)
+    .bind(id, now, texte, c.genre, await chiffre(env.CLE_NUMEROS, c.contact), page, langue)
     .run();
   // the owner is told at once; the message is kept whatever happens to the mail
   try {

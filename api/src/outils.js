@@ -52,6 +52,19 @@ export function egal(a, b) {
   return d === 0;
 }
 
+// an address as the limits count it: IPv4 whole, IPv6 by its /64 (what one subscriber holds, whatever the last bits say)
+export function cleIp(ip) {
+  const s = String(ip || '').trim().toLowerCase();
+  if (!s.includes(':')) return s;
+  const v4 = /^::ffff:(\d+\.\d+\.\d+\.\d+)$/.exec(s);
+  if (v4) return v4[1];
+  const [a, b = ''] = s.split('::');
+  const l = a ? a.split(':') : [];
+  const r = b ? b.split(':') : [];
+  const tout = [...l, ...Array(Math.max(0, 8 - l.length - r.length)).fill('0'), ...r];
+  return `${tout.slice(0, 4).map((x) => x.replace(/^0+(?=.)/, '')).join(':')}::/64`;
+}
+
 // a phone number in E.164 (+33612345678): written with its prefix, or national with the default country's
 const PREFIXES = { FR: '33', BE: '32', CH: '41', LU: '352', DE: '49', ES: '34', IT: '39', GB: '44', US: '1', CA: '1' };
 export function numero(brut, pays = 'FR') {

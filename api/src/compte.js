@@ -13,7 +13,7 @@
 //   POST   /api/moi           { prenom }                          -> { compte }
 //   POST   /api/deconnexion                                      -> { ok }
 //   DELETE /api/moi                                               -> { ok }                  erased 30 days later
-import { adresse, empreinte, chiffre, sha256, jeton, identifiant, codeChiffres, egal, numero, prenom, joignable, INDICATIFS_SMS, local, json, erreur, cookies } from './outils.js';
+import { cleIp, adresse, empreinte, chiffre, sha256, jeton, identifiant, codeChiffres, egal, numero, prenom, joignable, INDICATIFS_SMS, local, json, erreur, cookies } from './outils.js';
 import { envoie } from './sms.js';
 import { envoieCourriel } from './courriel.js';
 
@@ -37,6 +37,9 @@ const SMS_JOUR = 300;
 const COURRIEL_JOUR = 300;
 // wrong codes for a number in a day, whatever the number of codes asked for: past it, no more codes until the day is over
 const FAUX_JOUR = 15;
+// all addresses together, higher: one person's bad day locks nobody else out, a wide attack still stops
+const FAUX_TOUT = 100;
+const MESSAGES_VIE = 3 * 365;
 
 const MESSAGES = {
   fr: (c) => `Belai's Garden : votre code est ${c}. Il est valable 10 minutes. Ne le donnez à personne.`,
@@ -133,8 +136,11 @@ async function demandeCode(canal, req, env, now = Date.now()) {
   if (!n) return erreur(k.invalide);
   if (!k.desservi(n, env)) return erreur('pays_non_desservi');
   const fp = await empreinte(env.POIVRE, k.cle(n));
-  const f = await depasse(env.DB, `faux:${fp}`, J, FAUX_JOUR, now);
-  if (!f.ok) return erreur('trop_de_demandes', 429, { attendre: f.attendre });
+  const fauxCle = `faux:${fp}:${await empreinte(env.POIVRE, `ip:${cleIp(req.headers.get('cf-connecting-ip'))}`)}`;
+  for (const [cle, max] of [[fauxCle, FAUX_JOUR], [`fauxtout:${fp}`, FAUX_TOUT]]) {
+    const f = await depasse(env.DB, cle, J, max, now);
+    if (!f.ok) return erreur('trop_de_demandes', 429, { attendre: f.attendre });
+  }
   for (const [nom, fenetre, max] of LIMITES) {
     const r = await compte1(env.DB, `${nom}:${fp}`, fenetre, max, now);
     if (!r.ok) return erreur('trop_de_demandes', 429, { attendre: r.attendre });
@@ -142,7 +148,7 @@ async function demandeCode(canal, req, env, now = Date.now()) {
   const ip = req.headers.get('cf-connecting-ip') || '';
   if (ip) {
     // (the address keyed with the pepper, as the numbers: a plain hash of an IPv4 address is reversed in minutes)
-    const r = await compte1(env.DB, `ip:${await empreinte(env.POIVRE, `ip:${ip}`)}`, LIMITE_IP[0], LIMITE_IP[1], now);
+    const r = await compte1(env.DB, `ip:${await empreinte(env.POIVRE, `ip:${cleIp(ip)}`)}`, LIMITE_IP[0], LIMITE_IP[1], now);
     if (!r.ok) return erreur('trop_de_demandes', 429, { attendre: r.attendre });
   }
   // the shop's ceiling, counted last: only the codes that would really go out
@@ -182,8 +188,10 @@ async function verifieCode(canal, req, env, now = Date.now()) {
   const code = String(corps.code || '').replace(/\D/g, '');
   if (!egal(await sha256(`${fp}:${code}`), row.code_hash)) {
     // the wrong codes of the day, all codes together: past them the code goes, and no other is sent until the day is over
-    const f = await compte1(env.DB, `faux:${fp}`, J, FAUX_JOUR, now);
-    if (!f.ok) {
+    const fauxCle = `faux:${fp}:${await empreinte(env.POIVRE, `ip:${cleIp(req.headers.get('cf-connecting-ip'))}`)}`;
+    const f = await compte1(env.DB, fauxCle, J, FAUX_JOUR, now);
+    const g = await compte1(env.DB, `fauxtout:${fp}`, J, FAUX_TOUT, now);
+    if (!f.ok || !g.ok) {
       await env.DB.prepare('DELETE FROM codes_sms WHERE empreinte = ?').bind(fp).run();
       return erreur('trop_d_essais', 429);
     }
@@ -275,7 +283,12 @@ export async function deconnexion(req, env, now = Date.now()) {
 export async function menage(env, now = Date.now()) {
   await env.DB.prepare('DELETE FROM codes_sms WHERE expire <= ?').bind(now).run();
   await env.DB.prepare('DELETE FROM sessions WHERE expire <= ?').bind(now).run();
-  await env.DB.prepare('DELETE FROM limites WHERE debut <= ?').bind(now - 2 * H).run();
+  await env.DB.prepare('DELETE FROM limites WHERE debut <= ?').bind(now - 2 * J).run();
+  // what visitors wrote, as long as the privacy policy says
+  const vieux = now - MESSAGES_VIE * J;
+  await env.DB.prepare('DELETE FROM messages WHERE cree <= ?').bind(vieux).run();
+  await env.DB.prepare('DELETE FROM guichet_messages WHERE conv IN (SELECT id FROM guichet WHERE maj <= ?)').bind(vieux).run();
+  await env.DB.prepare('DELETE FROM guichet WHERE maj <= ?').bind(vieux).run();
   await env.DB.prepare("UPDATE comptes SET empreinte = 'efface:' || id, numero_chiffre = '', prenom = NULL WHERE supprime IS NOT NULL AND supprime <= ? AND empreinte NOT LIKE 'efface:%'")
     .bind(now - 30 * J)
     .run();

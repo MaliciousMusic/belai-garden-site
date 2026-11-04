@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; font-src 'self'; connect-src 'self' blob: data: http://127.0.0.1:8790 http://127.0.0.1:8792; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
   <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
   <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
   <!-- a reload opens on the top of the page, never where the old scroll fell on a half-built page (owner, 2026-11-03) -->

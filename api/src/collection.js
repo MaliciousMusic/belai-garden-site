@@ -28,6 +28,7 @@ export async function collection(req, env, now = Date.now()) {
   const restants = {};
   for (const p of produits) {
     const fiche = C && (C.produits || []).find((x) => x.id === p);
+    if (C && !fiche) continue; // only what the shop sells: an invented name costs no query
     const tot = await total(env, p, mois, (fiche && fiche.exemplaires) || (C && C.collection && C.collection.exemplaires) || null);
     if (tot == null) {
       restants[p] = { total: null, restants: null };

@@ -12,7 +12,7 @@
 // A new VERSION (at every publication of the shop, and whenever a bouquet is drawn again) empties every older cache.
 // Never kept: what is not a GET of this origin, a range (the cycle's video streams by ranges), an answer other than 200.
 'use strict';
-const VERSION = 'squelette-2026-11-01';
+const VERSION = 'squelette-2026-11-04';
 const FIXED = `${VERSION}:fixe`;
 const BQ = `${VERSION}:bouquets`;
 const FRESH = `${VERSION}:frais`;
@@ -78,7 +78,8 @@ self.addEventListener('fetch', (ev) => {
   const req = ev.request;
   if (req.method !== 'GET' || req.headers.has('range')) return;
   const url = new URL(req.url);
-  if (url.origin !== self.location.origin || /\.(mp4|webm)$/.test(url.pathname)) return;
+  // the account server's answers are one person's: never kept
+  if (url.origin !== self.location.origin || /^\/(api|bzzou)(\/|$)/.test(url.pathname) || /\.(mp4|webm)$/.test(url.pathname)) return;
   if (isBouquet(url.pathname)) return ev.respondWith(cacheFirst(BQ, req));
   if (isFixed(url.pathname)) return ev.respondWith(cacheFirst(FIXED, req));
   if (isCode(req, url.pathname)) return ev.respondWith(networkFirst(req));

@@ -277,7 +277,7 @@ async function ecoute() {
   clearTimeout(relance);
   if (!guichet) return;
   try {
-    const r = await fetch(`${API}/guichet/${guichet.id}?jeton=${encodeURIComponent(guichet.jeton)}&depuis=${guichet.n}`);
+    const r = await fetch(`${API}/guichet/${guichet.id}?depuis=${guichet.n}`, { headers: { 'x-guichet-jeton': guichet.jeton } });
     if (r.status === 404) {
       guichet = null;
       garde(GUICHET, null);

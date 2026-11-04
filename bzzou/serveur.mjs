@@ -12,7 +12,7 @@
 // Settings (environment): BZZOU_PORT (8792), BZZOU_MODELE (qwen2.5:1.5b), OLLAMA (http://127.0.0.1:11434),
 // BZZOU_ORIGINES (the pages allowed to ask, comma-separated), BZZOU_PAR_IP (questions per IP per 10 minutes, 20).
 import { createServer } from 'node:http';
-import { appendFileSync, mkdirSync, readFileSync } from 'node:fs';
+import { appendFileSync, mkdirSync, readFileSync, readdirSync, rmSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -22,6 +22,12 @@ const MODELE = process.env.BZZOU_MODELE || 'qwen2.5:1.5b';
 const OLLAMA = process.env.OLLAMA || 'http://127.0.0.1:11434';
 const ORIGINES = (process.env.BZZOU_ORIGINES || 'http://localhost:8851,http://127.0.0.1:8851').split(',').map((s) => s.trim());
 const PAR_IP = Number(process.env.BZZOU_PAR_IP || 20);
+// all visitors together, per hour: a small machine, which one visitor alone must not fill
+const PAR_HEURE = Number(process.env.BZZOU_PAR_HEURE || 120);
+// the address comes from cf-connecting-ip only behind Cloudflare (anyone can write that header otherwise)
+const CLOUDFLARE = process.env.BZZOU_CLOUDFLARE === '1';
+// how long the talks are kept, in days
+const JOURS = Number(process.env.BZZOU_JOURS || 395);
 const LANGUES = { fr: 'français', en: 'anglais', es: 'espagnol', it: 'italien', de: 'allemand', ja: 'japonais', zh: 'chinois simplifié', fil: 'filipino', pt: 'portugais du Brésil', ko: 'coréen' };
 // facts always given: what the shop is, how it is given, kept, paid and reached
 const SOCLE = ['bouquet_numerique', 'soliflore', 'offrir', 'fin_trente_jours', 'appareils', 'payer', 'contact'];
@@ -41,6 +47,21 @@ const tropVite = (ip) => {
   vus.set(ip, l);
   return l.length > PAR_IP;
 };
+let heure = [];
+const tropEnTout = () => {
+  const now = Date.now();
+  heure = heure.filter((t) => now - t < 3600000);
+  heure.push(now);
+  return heure.length > PAR_HEURE;
+};
+// IPv4 whole, IPv6 by its /64 (what one subscriber holds)
+const cleIp = (ip) => {
+  const s = String(ip || '').toLowerCase().replace(/^::ffff:/, '');
+  return s.includes(':') ? s.split(':').slice(0, 4).join(':') : s;
+};
+setInterval(() => {
+  for (const [ip, l] of vus) if (!l.some((t) => Date.now() - t < 600000)) vus.delete(ip);
+}, 600000).unref();
 let enCours = Promise.resolve();
 let attente = 0;
 
@@ -60,9 +81,10 @@ async function repond({ texte, langue, pistes, fil }) {
   const lg = LANGUES[langue] ? langue : 'fr';
   const messages = [
     { role: 'system', content: `${consignes}\nLANGUE : ${LANGUES[lg]}\n\nFAITS :\n${faits(pistes)}` },
+    // the visitor's own lines only: the page could write Bzzou's answers as it likes
     ...(Array.isArray(fil) ? fil.slice(-6) : [])
-      .filter((m) => m && (m.de === 'visiteur' || m.de === 'abeille'))
-      .map((m) => ({ role: m.de === 'visiteur' ? 'user' : 'assistant', content: propre(m.texte, 300) })),
+      .filter((m) => m && m.de === 'visiteur')
+      .map((m) => ({ role: 'user', content: propre(m.texte, 300) })),
     { role: 'user', content: question },
   ];
   const r = await fetch(`${OLLAMA}/api/chat`, {
@@ -75,11 +97,25 @@ async function repond({ texte, langue, pistes, fil }) {
   const j = await r.json();
   let a = propre(j.message?.content, 600);
   // an answer that breaks the shop's rules, or carries a link or a list, is not given
-  if (!a || INTERDITS.test(a) || /https?:\/\/|www\./i.test(a)) return null;
+  if (!a || INTERDITS.test(a) || /https?:\/\/|www\.|\b[\w-]+\.(com|fr|net|org|io|co|app|shop|info|biz|xyz|link|site|online|me)\b/i.test(a)) return null;
   a = a.replace(/^[-*#>\s]+/, '');
   return a;
 }
 
+// what is kept is kept without a name: an address or a number written in a question goes first
+const masque = (t) =>
+  String(t || '')
+    .replace(/[^\s@]+@[^\s@]+\.[^\s@]+/g, '[adresse]')
+    .replace(/\+?\d[\d\s.()-]{7,}\d/g, '[numéro]');
+function purge() {
+  try {
+    const d = join(ICI, 'journal');
+    const limite = new Date(Date.now() - JOURS * 86400000).toISOString().slice(0, 10);
+    for (const f of readdirSync(d)) if (/^\d{4}-\d{2}-\d{2}\.jsonl$/.test(f) && f.slice(0, 10) < limite) rmSync(join(d, f));
+  } catch (_) {}
+}
+purge();
+setInterval(purge, 86400000).unref();
 function journal(e) {
   try {
     const d = join(ICI, 'journal');
@@ -102,9 +138,16 @@ createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/bzzou/etat') return envoie(200, { modele: MODELE });
   if (req.method !== 'POST' || req.url !== '/bzzou') return envoie(404, { erreur: 'introuvable' });
   if (!cors['access-control-allow-origin']) return envoie(403, { erreur: 'origine' });
-  const ip = req.headers['cf-connecting-ip'] || req.socket.remoteAddress || '';
+  const ip = cleIp((CLOUDFLARE && req.headers['cf-connecting-ip']) || req.socket.remoteAddress || '');
   if (tropVite(ip)) return envoie(429, { erreur: 'trop' });
-  if (attente >= 3) return envoie(503, { erreur: 'occupe' });
+  if (attente >= 3 || tropEnTout()) return envoie(503, { erreur: 'occupe' });
+  // the place in the queue is taken now, while the body comes, and given back when the answer ends or the visitor leaves
+  attente++;
+  let rendu = false;
+  res.on('close', () => {
+    if (!rendu) attente--;
+    rendu = true;
+  });
   let corps = '';
   req.on('data', (c) => {
     corps += c;
@@ -117,17 +160,15 @@ createServer((req, res) => {
     } catch (_) {
       return envoie(400, { erreur: 'json' });
     }
-    attente++;
     enCours = enCours
       .then(() => repond(q))
       .then((texte) => {
-        journal({ t: Date.now(), langue: q.langue, texte: propre(q.texte, 500), pistes: q.pistes, reponse: texte });
+        journal({ t: Date.now(), langue: q.langue, texte: masque(propre(q.texte, 500)), pistes: q.pistes, reponse: masque(texte) });
         envoie(texte ? 200 : 204, texte ? { texte } : {});
       })
       .catch((err) => {
         console.error('[bzzou]', err.message);
         envoie(503, { erreur: 'modele' });
-      })
-      .finally(() => attente--);
+      });
   });
 }).listen(PORT, '127.0.0.1', () => console.log(`Bzzou écoute sur http://127.0.0.1:${PORT}/bzzou (modèle ${MODELE}, Ollama ${OLLAMA})`));

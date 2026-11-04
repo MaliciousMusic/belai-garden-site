@@ -4,7 +4,7 @@ import { API } from './ecrire.mjs';
 const $ = (id) => document.getElementById(id);
 const CLE = 'guichet-jeton';
 let secret = '';
-try { secret = localStorage.getItem(CLE) || ''; } catch (_) {}
+try { secret = sessionStorage.getItem(CLE) || ''; localStorage.removeItem(CLE); } catch (_) {}
 let ouverte = null;
 let vus = new Map(); // conversation -> its new messages last time (to notify only what is new)
 const appel = async (chemin, opts = {}) => {
@@ -24,11 +24,10 @@ function connexion(msg = '') {
 $('g-connexion').addEventListener('submit', (e) => {
   e.preventDefault();
   secret = $('g-jeton').value.trim();
-  try { localStorage.setItem(CLE, secret); } catch (_) {}
   demarre();
 });
 $('g-sortir').addEventListener('click', () => {
-  try { localStorage.removeItem(CLE); } catch (_) {}
+  try { sessionStorage.removeItem(CLE); } catch (_) {}
   secret = '';
   connexion();
 });
@@ -112,6 +111,7 @@ async function demarre() {
   if (!secret) return connexion();
   try {
     await rafraichit();
+    try { sessionStorage.setItem(CLE, secret); } catch (_) {}
     $('g-connexion').hidden = true;
     $('g-corps').hidden = false;
     $('g-sortir').hidden = false;

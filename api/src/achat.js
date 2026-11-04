@@ -10,7 +10,7 @@
 //   GET  /api/faux-stripe/<id>   the simulated payment page (env.PAIEMENT = "faux"); POST: pay or cancel
 import { identifiant, local, json, erreur } from './outils.js';
 import { session as stripeSession, evenement } from './stripe.js';
-import { session as connecte } from './compte.js';
+import { compte1, session as connecte } from './compte.js';
 import { produit as produitDe } from './catalogue.js';
 import { total } from './collection.js';
 import { emettre, libelle } from './factures.js';
@@ -46,6 +46,13 @@ function modePaiement(req, env) {
   throw Object.assign(new Error(`PAIEMENT « ${env.PAIEMENT} » refusé ici`), { config: true });
 }
 
+// the waiver kept as the proof of the buyer's request: the server's own words, never the client's
+export const RENONCIATION = {
+  version: '2026-11-04',
+  texte: 'Je demande que mon bouquet me soit livré immédiatement, et je reconnais perdre ainsi mon droit de rétractation de 14 jours.',
+};
+const ACHATS_HEURE = 10;
+
 export async function achat(req, env, now = Date.now()) {
   const mode = modePaiement(req, env);
   const s = await connecte(req, env, now);
@@ -54,7 +61,7 @@ export async function achat(req, env, now = Date.now()) {
   const p = await produitDe(env, String(corps.produit || ''), now);
   if (!p) return erreur('produit_inconnu', 404);
   // the express request for immediate delivery and waiver of withdrawal (Code de la consommation L221-28, 13°)
-  if (corps.renonce !== true || typeof corps.texte !== 'string' || corps.texte.length < 20) return erreur('renonciation_requise');
+  if (corps.renonce !== true) return erreur('renonciation_requise');
   // the page to come back to: one of the site's own
   let retour;
   try {
@@ -66,12 +73,18 @@ export async function achat(req, env, now = Date.now()) {
   retour.searchParams.delete('commande');
   retour.searchParams.delete('paiement');
 
+  // one open order per bouquet and per account: asking again frees the copy the last one held (still delivered if it gets paid)
+  const trop = await compte1(env.DB, `achat:${s.compte.id}`, 60 * MIN, ACHATS_HEURE, now);
+  if (!trop.ok) return erreur('trop', 429, { attendre: trop.attendre });
+  const { results: ouvertes } = await env.DB.prepare("SELECT id FROM commandes WHERE compte = ? AND produit = ? AND etat = 'en_attente'").bind(s.compte.id, p.id).all();
+  for (const o of ouvertes || []) await abandon(env, o.id, 'expiree');
+
   // the copy is held in one statement: two buyers of the last copy cannot both have it (a bouquet with no cap: always)
   const id = identifiant();
   const expire = now + TENUE;
   const tot = await total(env, p.id, p.mois, p.exemplaires);
   const cg = Math.min(s.compte.cagnotte || 0, p.centimes);
-  const consent = JSON.stringify({ texte: corps.texte.slice(0, 600), le: new Date(now).toISOString() });
+  const consent = JSON.stringify({ ...RENONCIATION, langue: String(corps.langue || 'fr').slice(0, 5), le: new Date(now).toISOString() });
   const r = await env.DB.prepare(
     `INSERT INTO commandes (id, compte, produit, mois, centimes, etat, cree, expire, consentement, retour, langue, cagnotte)
      SELECT ?4, ?5, ?1, ?2, ?6, 'en_attente', ?3, ?7, ?8, ?9, ?10, ?12
@@ -153,12 +166,21 @@ export async function ajouteBouquet(env, b, now = Date.now()) {
 // its invoice issued
 export async function livre(env, id, reference, now = Date.now()) {
   const c = await env.DB.prepare('SELECT * FROM commandes WHERE id = ?').bind(id).first();
-  if (!c || !['en_attente', 'expiree'].includes(c.etat)) return false;
-  const r = await env.DB.prepare("UPDATE commandes SET etat = 'payee', paye = ?, paiement = ? WHERE id = ? AND etat = ?").bind(now, reference, id, c.etat).run();
-  if (!r.meta || r.meta.changes !== 1) return false;
-  // paid after its page expired: its credit had gone back, it is taken again
-  if (c.etat === 'expiree' && c.cagnotte) await env.DB.prepare('UPDATE comptes SET cagnotte = cagnotte - ? WHERE id = ?').bind(c.cagnotte, c.compte).run();
-  const b = await ajouteBouquet(env, { compte: c.compte, produit: c.produit, mois: c.mois, origine: 'achat', commande: id }, now);
+  if (!c) return false;
+  if (['en_attente', 'expiree'].includes(c.etat)) {
+    const r = await env.DB.prepare("UPDATE commandes SET etat = 'payee', paye = ?, paiement = ? WHERE id = ? AND etat = ?").bind(now, reference, id, c.etat).run();
+    if (!r.meta || r.meta.changes !== 1) return false;
+    // paid after its page expired: its credit had gone back, it is taken again
+    if (c.etat === 'expiree' && c.cagnotte) await env.DB.prepare('UPDATE comptes SET cagnotte = cagnotte - ? WHERE id = ?').bind(c.cagnotte, c.compte).run();
+  } else {
+    // paid, but its delivery stopped half-way last time (Stripe sends the event again, minutes later): it goes on from there.
+    // The same event twice at the same moment is not that: the first one is still working
+    if (c.etat !== 'payee' || now - c.paye < 60000) return false;
+    if (await env.DB.prepare('SELECT 1 FROM factures WHERE commande = ?').bind(id).first()) return false;
+  }
+  const b =
+    (await env.DB.prepare('SELECT id, numero FROM bouquets WHERE commande = ?').bind(id).first()) ||
+    (await ajouteBouquet(env, { compte: c.compte, produit: c.produit, mois: c.mois, origine: 'achat', commande: id }, now));
   await env.DB.prepare('UPDATE commandes SET bouquet = ? WHERE id = ?').bind(b.id, id).run();
   let nom = c.produit;
   let tot = null;
@@ -193,7 +215,25 @@ async function retire(env, commande) {
   if (dernier !== c.bouquet) {
     const f = await env.DB.prepare("SELECT total FROM factures WHERE bouquet = ? AND type = 'facture'").bind(dernier).first();
     const credit = c.centimes - (f ? f.total : c.centimes);
-    if (credit > 0) await env.DB.prepare('UPDATE comptes SET cagnotte = MAX(0, cagnotte - ?) WHERE id = ?').bind(credit, c.compte).run();
+    if (credit > 0) {
+      // the credit already spent: what it alone paid for since the exchange goes back too, newest first, as far as it was spent
+      const compte = await env.DB.prepare('SELECT cagnotte FROM comptes WHERE id = ?').bind(c.compte).first();
+      let manque = credit - (compte ? compte.cagnotte : 0);
+      if (manque > 0) {
+        const depuis = await env.DB.prepare('SELECT achat FROM bouquets WHERE id = ?').bind(dernier).first();
+        const { results } = await env.DB.prepare(
+          "SELECT b.id, o.centimes FROM commandes o JOIN bouquets b ON b.commande = o.id WHERE o.compte = ? AND o.cagnotte = o.centimes AND o.centimes > 0 AND o.cree >= ? AND b.etat = 'actif' ORDER BY o.cree DESC",
+        )
+          .bind(c.compte, depuis ? depuis.achat : 0)
+          .all();
+        for (const x of results || []) {
+          if (manque <= 0) break;
+          await env.DB.prepare("UPDATE bouquets SET etat = 'retire' WHERE id = ?").bind(x.id).run();
+          manque -= x.centimes;
+        }
+      }
+      await env.DB.prepare('UPDATE comptes SET cagnotte = MAX(0, cagnotte - ?) WHERE id = ?').bind(credit, c.compte).run();
+    }
   }
 }
 

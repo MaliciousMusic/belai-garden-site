@@ -12,7 +12,7 @@
 //   POST /api/guichet/<id>/reponse     (atelier) { texte }                -> { ok, n }            the atelier answers
 //   POST /api/guichet/<id>/clos        (atelier)                          -> { ok }               the talk is closed
 import { compte1, lireJson } from './compte.js';
-import { empreinte, sha256, egal, identifiant, jeton, json, erreur } from './outils.js';
+import { cleIp, empreinte, sha256, egal, identifiant, jeton, json, erreur } from './outils.js';
 
 const H = 60 * 60 * 1000;
 const J = 24 * H;
@@ -49,7 +49,7 @@ export async function ouvre(req, env, now = Date.now()) {
   if (texte.length < 1) return erreur('texte');
   const ip = req.headers.get('cf-connecting-ip') || '';
   if (ip) {
-    const cle = await empreinte(env.POIVRE, `ip:${ip}`);
+    const cle = await empreinte(env.POIVRE, `ip:${cleIp(ip)}`);
     for (const [nom, fenetre, max] of OUVERTES) {
       const r = await compte1(env.DB, `${nom}:${cle}`, fenetre, max, now);
       if (!r.ok) return erreur('trop', 429, { attendre: r.attendre });
@@ -74,7 +74,7 @@ export async function ouvre(req, env, now = Date.now()) {
 
 export async function lit(req, env, id) {
   const u = new URL(req.url);
-  const c = await visiteur(env, id, u.searchParams.get('jeton'));
+  const c = await visiteur(env, id, req.headers.get('x-guichet-jeton'));
   if (!c) return erreur('introuvable', 404);
   const depuis = Number(u.searchParams.get('depuis')) || 0;
   const { results } = await env.DB.prepare('SELECT n, de, texte, cree FROM guichet_messages WHERE conv = ? AND n > ? ORDER BY n').bind(id, depuis).all();

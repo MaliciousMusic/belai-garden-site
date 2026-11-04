@@ -16,6 +16,10 @@ Ne passent jamais par le modèle :
 - une commande, un paiement, un lien perdu, un deuil : une personne de l'atelier ;
 - les blagues évidentes et ce que Bzzou sait déjà.
 
+Derrière Cloudflare Tunnel, lancer le relais avec `BZZOU_CLOUDFLARE=1`, pour que la limite par adresse lise la vraie adresse.
+`BZZOU_PAR_HEURE` (120) plafonne les questions de tous les visiteurs, et `BZZOU_JOURS` (395) est la durée de conservation du journal,
+d'où les adresses et les numéros écrits dans une question sont retirés.
+
 Si le modèle ne répond pas (relais éteint, PC éteint), Bzzou fait comme avant : elle propose ses pistes, puis une
 personne.
 

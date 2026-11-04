@@ -27,14 +27,14 @@ test('une conversation s’ouvre avec ce qui a été dit à l’abeille, le visi
   });
   assert.equal(r.status, 200);
   assert.ok(j.id && j.jeton);
-  const lu = await call(env, 'GET', `/api/guichet/${j.id}?jeton=${j.jeton}`);
+  const lu = await call(env, 'GET', `/api/guichet/${j.id}`, null, { 'x-guichet-jeton': j.jeton });
   assert.equal(lu.j.etat, 'ouvert');
   assert.deepEqual(lu.j.messages.map((m) => m.de), ['visiteur', 'abeille', 'visiteur']);
   assert.equal(lu.j.messages[2].texte, 'Puis-je payer en bitcoin ?');
   const n = lu.j.messages.at(-1).n;
   const ecrit = await call(env, 'POST', `/api/guichet/${j.id}/message`, { jeton: j.jeton, texte: 'Merci !' });
   assert.equal(ecrit.r.status, 200);
-  const suite = await call(env, 'GET', `/api/guichet/${j.id}?jeton=${j.jeton}&depuis=${n}`);
+  const suite = await call(env, 'GET', `/api/guichet/${j.id}?depuis=${n}`, null, { 'x-guichet-jeton': j.jeton });
   assert.deepEqual(suite.j.messages.map((m) => m.texte), ['Merci !']);
   // the token is kept as a hash only
   assert.notEqual(env.DB.raw.prepare('SELECT jeton_hash FROM guichet').get().jeton_hash, j.jeton);
@@ -43,7 +43,7 @@ test('une conversation s’ouvre avec ce qui a été dit à l’abeille, le visi
 test('sans le bon jeton, rien ; texte vide refusé', async () => {
   const env = envNeuf();
   const { j } = await call(env, 'POST', '/api/guichet', { texte: 'Bonjour' });
-  assert.equal((await call(env, 'GET', `/api/guichet/${j.id}?jeton=faux`)).r.status, 404);
+  assert.equal((await call(env, 'GET', `/api/guichet/${j.id}`, null, { 'x-guichet-jeton': 'faux' })).r.status, 404);
   assert.equal((await call(env, 'POST', `/api/guichet/${j.id}/message`, { jeton: 'faux', texte: 'x' })).r.status, 404);
   assert.equal((await call(env, 'POST', '/api/guichet', { texte: '  ' })).j.erreur, 'texte');
 });
@@ -63,7 +63,7 @@ test('le panneau de l’atelier : son secret, la liste et les nouveaux, la répo
   assert.equal((await call(env, 'GET', '/api/guichet', null, cm)).j.conversations[0].nouveaux, 0);
   const rep = await call(env, 'POST', `/api/guichet/${j.id}/reponse`, { texte: 'Bonjour, je regarde ça.' }, cm);
   assert.equal(rep.r.status, 200);
-  const vu = await call(env, 'GET', `/api/guichet/${j.id}?jeton=${j.jeton}`);
+  const vu = await call(env, 'GET', `/api/guichet/${j.id}`, null, { 'x-guichet-jeton': j.jeton });
   assert.equal(vu.j.messages.at(-1).de, 'atelier');
   assert.equal(vu.j.messages.at(-1).texte, 'Bonjour, je regarde ça.');
   assert.equal((await call(env, 'POST', `/api/guichet/${j.id}/clos`, null, cm)).r.status, 200);

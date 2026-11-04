@@ -31,6 +31,9 @@ export async function echange(req, env, now = Date.now()) {
   if (!b) return erreur('introuvable', 404);
   // the conditions: bought (not itself an exchange's), within 24 hours, never offered
   if (b.origine !== 'achat' || b.echange_de) return erreur('echange_impossible', 409, { raison: 'deja_echange' });
+  // a payment under dispute: nothing leaves it until the dispute is settled
+  const paye = b.commande ? await env.DB.prepare('SELECT litige FROM commandes WHERE id = ?').bind(b.commande).first() : null;
+  if (paye && ['ouvert', 'perdu'].includes(paye.litige)) return erreur('echange_impossible', 409, { raison: 'litige' });
   if (now - b.achat >= DELAI) return erreur('echange_impossible', 409, { raison: 'delai' });
   const k = await env.DB.prepare('SELECT COUNT(*) AS n FROM cadeaux WHERE bouquet = ?').bind(b.id).first();
   if (k && k.n) return erreur('echange_impossible', 409, { raison: 'offert' });

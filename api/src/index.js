@@ -59,12 +59,22 @@ function cors(req, env) {
     ? {
         'access-control-allow-origin': o,
         'access-control-allow-credentials': 'true',
-        'access-control-allow-headers': 'content-type, authorization',
+        'access-control-allow-headers': 'content-type, authorization, x-guichet-jeton',
         'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS',
         'access-control-max-age': '600',
         vary: 'origin',
       }
     : {};
+}
+
+// Belai Bureau and the counter's panel sign with a bearer token; Stripe signs its events; the simulated payment page is a form
+function horsSite(req, url, env) {
+  if (['GET', 'HEAD'].includes(req.method) || req.headers.get('authorization')) return null;
+  if (url.pathname === '/api/stripe/webhook' || url.pathname.startsWith('/api/faux-stripe/')) return null;
+  const o = req.headers.get('origin');
+  if (o && !(env.ORIGINES || '').split(',').map((s) => s.trim()).includes(o)) return erreur('origine', 403);
+  if (!/^application\/json\b/i.test(req.headers.get('content-type') || '')) return erreur('type', 415);
+  return null;
 }
 
 export default {
@@ -75,7 +85,7 @@ export default {
     const fn = route(`${req.method} ${url.pathname}`);
     let res;
     try {
-      res = fn ? await fn(req, env) : erreur('introuvable', 404);
+      res = fn ? (horsSite(req, url, env) || (await fn(req, env))) : erreur('introuvable', 404);
     } catch (err) {
       console.error('[api]', err);
       res = erreur(err.config ? 'configuration' : 'serveur', 500);

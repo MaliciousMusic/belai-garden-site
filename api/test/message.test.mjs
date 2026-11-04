@@ -6,7 +6,7 @@ import { contact } from '../src/message.js';
 import { d1 } from './d1.mjs';
 
 const ORIGINE = 'http://localhost:8851';
-const envNeuf = () => ({ DB: d1(), POIVRE: 'poivre-de-test', PAYS: 'FR', ORIGINES: ORIGINE });
+const envNeuf = () => ({ DB: d1(), POIVRE: 'poivre-de-test', CLE_NUMEROS: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', PAYS: 'FR', ORIGINES: ORIGINE });
 const req = (body, headers = {}) =>
   new Request('http://api.test/api/message', { method: 'POST', headers: { 'content-type': 'application/json', origin: ORIGINE, ...headers }, body: JSON.stringify(body) });
 const call = async (env, body, headers) => {
@@ -33,7 +33,7 @@ test('un message est gardé, avec sa page et sa langue', async () => {
   const row = env.DB.raw.prepare('SELECT * FROM messages').get();
   assert.equal(row.texte, 'Bonjour, un bouquet pour un deuil ?');
   assert.equal(row.genre, 'mail');
-  assert.equal(row.contact, 'lea@exemple.fr');
+  assert.notEqual(row.contact, 'lea@exemple.fr'); // encrypted (audit.test.mjs)
   assert.equal(row.langue, 'fr');
   assert.equal(row.lu, null);
 });

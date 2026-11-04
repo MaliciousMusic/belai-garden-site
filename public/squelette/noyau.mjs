@@ -495,7 +495,8 @@ const PANIER = 'belai-panier';
 export const panier = {
   lire() {
     try {
-      return JSON.parse(localStorage.getItem(PANIER)) || [];
+      const items = JSON.parse(localStorage.getItem(PANIER));
+      return Array.isArray(items) ? items.map((x) => ({ ...x, qte: Math.max(1, Math.floor(Number(x.qte)) || 1), centimes: Number(x.centimes) || 0 })) : [];
     } catch (_) {
       return [];
     }
@@ -797,7 +798,7 @@ if ($('recu-boite')) {
       return;
     }
     u.searchParams.delete('code');
-    location.href = `${u.pathname}${u.search}`;
+    location.href = u.href;
   });
 }
 

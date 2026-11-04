@@ -25,7 +25,7 @@ if (q.has('code')) {
 // the signature, as the giver wrote it, or nothing: an unsigned gift names no one
 const de = (q.get('de') || '').trim().slice(0, 30);
 const signe = de !== '';
-const mot = q.get('mot') || 'Bon anniversaire, petite sœur. Il restera chez toi tout le mois.';
+const mot = (q.get('mot') || 'Bon anniversaire, petite sœur. Il restera chez toi tout le mois.').slice(0, 280);
 const narrow = () => matchMedia('(max-width: 900px)').matches;
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -100,7 +100,14 @@ $('code-form').addEventListener('submit', async (ev) => {
 });
 
 // the voice message, when the gift has one (its address comes with the gift from the server; none in this preview)
-const voix = q.get('voix-url') || '';
+const voix = (() => {
+  try {
+    const u = new URL(q.get('voix-url') || '', location.href);
+    return q.get('voix-url') && u.origin === location.origin ? u.href : '';
+  } catch (_) {
+    return '';
+  }
+})();
 if (voix) {
   $('vocal').hidden = false;
   $('vocal-son').src = voix;

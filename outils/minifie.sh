@@ -5,10 +5,4 @@
 set -e
 P="${1:-public}"
 FILES=$(ls "$P"/squelette/*.mjs "$P"/squelette/*.js "$P"/squelette/*.css "$P"/scene/*.mjs "$P"/scene/*.js "$P"/scene/*.css "$P"/insectes/runtime/*.mjs)
-npx --yes esbuild@0.24.0 $FILES --minify --charset=utf8 --legal-comments=none --allow-overwrite --outbase="$P" --outdir="$P" --out-extension:.js=.js --log-level=warning
-# esbuild writes an .mjs source to a .js file unless told otherwise: put each one back under its own name
-for f in $FILES; do
-  case "$f" in
-    *.mjs) [ -f "${f%.mjs}.js" ] && [ "${f%.mjs}.js" -nt "$f" ] && mv "${f%.mjs}.js" "$f" ;;
-  esac
-done
+npx --yes esbuild@0.24.0 $FILES --minify --charset=utf8 --legal-comments=none --allow-overwrite --outbase="$P" --outdir="$P" --log-level=warning

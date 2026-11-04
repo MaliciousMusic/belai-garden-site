@@ -200,3 +200,33 @@ test('contestation : gagnée, le bouquet reste ; perdue, il est retiré, même �
   assert.equal(m.compte.cagnotte, 0);
   assert.equal(env.DB.raw.prepare('SELECT litige FROM commandes WHERE id = ?').get(o1).litige, 'perdu');
 });
+
+test('contestation perdue après avoir dépensé la cagnotte : ce qu’elle seule a payé repart aussi', async () => {
+  const env = envNeuf({ STRIPE_WEBHOOK_SECRET: SECRET });
+  const c = await cookie(env, '0688888889');
+  const o = await achete(env, c);
+  const citrine = (await moi(env, c)).bouquets.find((x) => x.produit === 'citrine');
+  await call(env, 'POST', '/api/echange', { bouquet: citrine.id, produit: 'douce' }, c);
+  assert.equal((await moi(env, c)).compte.cagnotte, 6480);
+  // the credit spent on a bouquet it pays whole
+  const { j } = await call(env, 'POST', '/api/achat', { produit: 'rare', renonce: true, langue: 'fr', retour: RETOUR }, c);
+  assert.match(j.url, /paiement=ok/);
+  assert.equal((await moi(env, c)).compte.cagnotte, 1480);
+  const pi = env.DB.raw.prepare('SELECT paiement FROM commandes WHERE id = ?').get(o).paiement;
+  await poste(env, litige('charge.dispute.closed', pi, 'lost'));
+  const m = await moi(env, c);
+  assert.deepEqual(m.bouquets, []);
+  assert.equal(m.compte.cagnotte, 0);
+});
+
+test('contestation ouverte : plus d’échange tant qu’elle n’est pas réglée', async () => {
+  const env = envNeuf({ STRIPE_WEBHOOK_SECRET: SECRET });
+  const c = await cookie(env, '0688888890');
+  const o = await achete(env, c);
+  const pi = env.DB.raw.prepare('SELECT paiement FROM commandes WHERE id = ?').get(o).paiement;
+  await poste(env, litige('charge.dispute.created', pi));
+  const b = (await moi(env, c)).bouquets[0];
+  const e = await call(env, 'POST', '/api/echange', { bouquet: b.id, produit: 'douce' }, c);
+  assert.equal(e.r.status, 409);
+  assert.equal(e.j.raison, 'litige');
+});

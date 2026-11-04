@@ -34,8 +34,8 @@ const ENTETE = '.tete .marque, .tete .nav a, .tete-droite > a, .tete-droite > bu
 const REPLI = '.marque';
 // its size: as on the page while it roams, in the foreground while it welcomes (owner, 2026-11-03: « en assez gros, genre
 // premier plan »)
-const TAILLE = () => (narrow() ? 40 : 54);
-const TAILLE_ACCUEIL = () => (narrow() ? 80 : 108);
+const TAILLE = () => (narrow() ? 20 : 27);
+const TAILLE_ACCUEIL = () => (narrow() ? 40 : 54);
 // sitting, its feet are this many body lengths under its middle (the welcome sets it on its card's rim)
 const PIEDS = 0.28;
 // how much of its heading must turn toward the viewer (z, toward the screen's front): never seen from behind

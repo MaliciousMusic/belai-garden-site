@@ -515,24 +515,12 @@ const ACCUEIL = {
   ],
   fin: 'Une question ? Touchez-moi : je suis Bzzou.',
 };
-// the welcome's words typed in, the card at its final size from the start. The phrase books write first, so the words typed
-// are the reader's; screen readers get the words whole, not letter by letter
+// the welcome's words typed in. The phrase books write first, so the words typed are the reader's (hidden for that instant)
 async function tapeAccueil() {
   bulle.style.visibility = 'hidden';
-  bulle.setAttribute('aria-live', 'off');
   await new Promise((res) => setTimeout(res));
-  const lignes = [...bulle.querySelectorAll(':scope > p')];
-  bulle.style.width = `${bulle.getBoundingClientRect().width}px`;
-  for (const p of lignes) p.style.minHeight = `${p.getBoundingClientRect().height}px`;
+  tapeDedans([...bulle.querySelectorAll(':scope > p')].map((p) => p.firstChild));
   bulle.style.visibility = '';
-  tapeDedans(
-    lignes.map((p) => p.firstChild),
-    () => {
-      bulle.style.width = '';
-      for (const p of lignes) p.style.minHeight = '';
-      bulle.removeAttribute('aria-live');
-    },
-  );
 }
 async function accueil() {
   let vu = false;

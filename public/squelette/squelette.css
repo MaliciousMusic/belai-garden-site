@@ -2061,7 +2061,7 @@ main > #launcher { border-top: 0; }
 }
 /* ---------- the audience-measurement cookies, asked first (owner, 2026-11-02; consentement.mjs): a band at the foot of the
    screen, the page still usable around it; « Refuser » and « Accepter » side by side, the same weight */
-.consentement { position: fixed; z-index: 48; left: 50%; top: 157px; transform: translateX(-50%); width: min(480px, calc(100vw - 32px)); max-height: calc(100vh - 169px); overflow-y: auto; box-sizing: border-box; padding: 22px 28px 20px;
+.consentement { position: fixed; z-index: 48; left: 50%; top: 116px; transform: translateX(-50%); width: min(480px, calc(100vw - 32px)); max-height: calc(100vh - 128px); overflow-y: auto; box-sizing: border-box; padding: 22px 28px 20px;
   border: 1px solid rgb(var(--fg-rgb) / 0.25); border-radius: 22px; background: var(--nuit); color: var(--ivoire); outline: none; }
 .page-recu .consentement { left: 20px; top: auto; bottom: 20px; transform: none; width: min(520px, calc(100vw - 32px)); max-height: none; padding: 18px 20px; border-radius: 10px; box-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.45); }
 .consentement[hidden] { display: none; }
@@ -2072,7 +2072,7 @@ main > #launcher { border-top: 0; }
 .consentement a { color: var(--ivoire); text-decoration: underline; text-underline-offset: 3px; }
 .consentement-choix { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .consentement-choix .btn { min-height: 44px; }
-@media (max-width: 900px) { .consentement { top: 136px; max-height: calc(100vh - 148px); } }
+@media (max-width: 900px) { .consentement { top: 106px; max-height: calc(100vh - 118px); } }
 @media (max-width: 600px) { .consentement { padding: 18px 20px 16px; } .consentement h2 { font-size: 32px; } .consentement p { font-size: 16px; }
   .page-recu .consentement { left: 16px; right: 16px; bottom: 16px; width: auto; } }
 /* « Cookies » at the foot of every page, beside « Confidentialité »: a button that looks like its neighbours */
@@ -2102,3 +2102,5 @@ main > #launcher { border-top: 0; }
 /* the room of what the scripts fill, so nothing below moves when it comes */
 .fin-bq { min-height: 320px; }
 @media (max-width: 900px) { .personnes { min-height: 680px; } }
+/* what Bzzou has not typed yet (traduction.mjs tapeDedans) */
+::highlight(a-taper) { color: transparent; }

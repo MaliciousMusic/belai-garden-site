@@ -258,17 +258,24 @@ function tape(liste) {
   id = requestAnimationFrame(image);
   frappe = { fin };
 }
-// words typed in from nothing, one node after the other, a letter every PAS ms (Bzzou's welcome, owner 2026-11-04: « une
-// animation de type in »); each node keeps its French, so a change of language still finds it. At once when the system asks
-// for less motion. Returns what stops it and writes the words whole; fini is told in every case.
-const PAS = 14;
+// words typed in, one node after the other, a letter every PAS ms (Bzzou's welcome, owner 2026-11-04: « une animation de type
+// in », then « des petits sursauts, pas assez rapide »). The text stays whole in the page and what is still to come is only
+// painted transparent (the ::highlight of squelette.css): lines keep their words from the first letter to the last, nothing is
+// laid out again, and screen readers and a change of language find the real text. Shown at once when the system asks for less
+// motion, or in a browser without highlights. Returns what stops it; fini is told in every case.
+const PAS = 5;
 export function tapeDedans(noeuds, fini = () => {}) {
-  const liste = noeuds.map((n) => ({ n, a: n.nodeValue }));
-  const total = liste.reduce((s, x) => s + x.a.length, 0);
-  if (calme.matches || !total) {
+  const liste = noeuds.filter((n) => n?.nodeValue).map((n) => {
+    const r = new Range();
+    r.selectNodeContents(n);
+    return { n, r };
+  });
+  const total = liste.reduce((s, x) => s + x.n.length, 0);
+  if (calme.matches || !total || !window.Highlight || !CSS.highlights) {
     fini();
     return () => {};
   }
+  const reste = new Highlight(...liste.map((x) => x.r));
   let id = 0;
   let parti = true;
   const fin = () => {
@@ -276,28 +283,25 @@ export function tapeDedans(noeuds, fini = () => {}) {
     parti = false;
     cancelAnimationFrame(id);
     clearTimeout(garde);
-    for (const x of liste) if (fait.get(x.n) === x.n.nodeValue) ecrit(x.n, x.a);
+    CSS.highlights.delete('a-taper');
     if (frappe === ici) frappe = null;
     fini();
   };
   const ici = { fin };
-  // a tab that draws no frames (in the background) still ends in the right words
+  // a tab that draws no frames (in the background) still ends with all its words
   const garde = setTimeout(fin, total * PAS + 1000);
   frappe?.fin();
   frappe = ici;
-  // never quite empty: each line keeps its height while its words come
-  for (const x of liste) ecrit(x.n, '\u200b');
+  CSS.highlights.set('a-taper', reste);
   const t0 = performance.now();
   const image = (now) => {
-    let reste = Math.floor((now - t0) / PAS);
+    let montre = Math.floor((now - t0) / PAS);
+    if (montre >= total) return fin();
     for (const x of liste) {
-      if (fait.get(x.n) !== x.n.nodeValue) continue; // the page wrote it meanwhile: its own words win
-      const v = reste >= x.a.length ? x.a : x.a.slice(0, reste) || '\u200b';
-      if (v !== x.n.nodeValue) ecrit(x.n, v);
-      reste = Math.max(0, reste - x.a.length);
+      x.r.setStart(x.n, Math.min(montre, x.n.length));
+      montre = Math.max(0, montre - x.n.length);
     }
-    if ((now - t0) / PAS >= total) fin();
-    else id = requestAnimationFrame(image);
+    id = requestAnimationFrame(image);
   };
   id = requestAnimationFrame(image);
   return fin;

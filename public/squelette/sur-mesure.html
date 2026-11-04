@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Une demande sur mesure | Belai’s Garden</title>
+  <meta name="description" content="Un bouquet composé pour une personne, un cadeau d’exception : l’atelier vous répond.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
+  <footer class="pied-court">
+    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
+    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
+  </footer>
+
+  <link rel="stylesheet" href="squelette.css">
+</head>
+<body class="page-mesure">
+  <!-- Bespoke requests and exceptional gifts (owner, 2026-10-31: « un inquire », a human contact): the atelier answers by
+       itself; nothing is priced or promised on this page. -->
+  <header class="tete tete-simple">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <nav class="nav-compte" aria-label="Retour"><a href="index.html">La collection</a><a href="groupe.html">Offrir à plusieurs</a></nav>
+  </header>
+
+  <main class="bloc formulaire">
+    <p class="sur-titre">L’atelier</p>
+    <h1 class="titre">Une demande sur mesure</h1>
+    <p class="chapo">Un bouquet composé pour une personne, ses fleurs, ses couleurs, son vase ; un cadeau d’exception. Dites-nous, l’atelier
+      vous répond lui-même.</p>
+    <p class="delai">Réponse en 30 minutes environ, de 10 h à 23 h (heure de Paris), 7 jours sur 7.</p>
+
+    <form id="demande" novalidate>
+      <fieldset>
+        <legend>Votre demande</legend>
+        <div class="choix-ligne" role="radiogroup" aria-label="Ce que vous cherchez">
+          <label><input type="radio" name="genre" value="bouquet" checked> Un bouquet sur mesure</label>
+          <label><input type="radio" name="genre" value="exception"> Un cadeau d’exception</label>
+          <label><input type="radio" name="genre" value="autre"> Autre chose</label>
+        </div>
+        <label class="champ">Pour qui, pour quelle occasion<input id="d-pour" placeholder="Ma mère, ses 70 ans"></label>
+        <label class="champ">Pour quand<input type="date" id="d-date"></label>
+        <label class="champ champ-large">Ce que vous imaginez<textarea id="d-texte" rows="5" maxlength="2000"
+            placeholder="Les pivoines de son jardin, un vase bleu, quelque chose de calme…"></textarea></label>
+      </fieldset>
+      <fieldset>
+        <legend>Pour vous répondre</legend>
+        <label class="champ">Votre prénom<input id="d-prenom" autocomplete="given-name"></label>
+        <label class="champ">Votre e-mail<input type="email" id="d-mail" autocomplete="email"></label>
+      </fieldset>
+      <button type="submit" class="btn btn-achat">Envoyer à l’atelier</button>
+      <p class="confidentialite">Votre e-mail sert seulement à vous répondre. <a href="legal.html#privacy">Confidentialité</a></p>
+      <p class="merci-etat" id="d-etat" role="status"></p>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('demande').addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const ok = document.getElementById('d-texte').value.trim() && document.getElementById('d-mail').value.includes('@');
+      document.getElementById('d-etat').textContent = ok
+        ? 'Merci. Dans la boutique ouverte, l’atelier vous répond lui-même. Cet aperçu n’envoie pas encore la demande.'
+        : 'Dites-nous ce que vous imaginez, et une adresse e-mail pour vous répondre.';
+    });
+  </script>
+</body>
+</html>

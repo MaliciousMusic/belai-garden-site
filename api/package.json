@@ -1,0 +1,13 @@
+{
+  "name": "belai-api",
+  "private": true,
+  "type": "module",
+  "description": "Le serveur des comptes et des cadeaux de la boutique (decor/COMPTE.md)",
+  "scripts": {
+    "dev": "wrangler d1 migrations apply belai --local && wrangler dev --port 8790",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.153.0"
+  }
+}

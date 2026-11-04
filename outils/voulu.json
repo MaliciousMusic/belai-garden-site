@@ -1,0 +1,6 @@
+{
+  "premier-ecran": ["bouquet accroche", "titre accroche", "phrase accroche", "porte offrir", "porte pour moi", "fourchette de prix"],
+  "accroche": ["bouquet accroche", "titre accroche", "phrase accroche", "porte offrir", "porte pour moi", "fourchette de prix"],
+  "collection": ["titre section", "chapô section", "tuile"],
+  "vitrine": ["bouquet fiche", "nom bouquet", "prix", "bascule offrir/moi", "action fiche", "note"]
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <!-- « Nous écrire » opens the site's own window, the message goes to the server (owner, 2026-11-01) -->
+  <script type="module" src="ecrire.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Un bouquet pour vous | Belai’s Garden</title>
+  <meta name="description" content="Quelqu’un vous offre un bouquet vivant, dessiné et animé tige à tige. Ouvrez-le : il éclôt sous vos yeux.">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="Un bouquet pour vous">
+  <meta property="og:description" content="Des fleurs dessinées et animées tige à tige, qui éclosent sous vos yeux. Rien à installer, rien à payer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="partage-cadeau.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="squelette.css">
+</head>
+<body class="page-recu">
+  <!-- The gift-received journey (AUDIT.md, level 2): retention first. One gesture to open, the reveal as a peak, then one
+       main way to keep it on a screen; thanking and coming back next; offering in return only at the end, never pushed. -->
+  <header class="tete tete-simple">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <a class="discret" href="mailto:lonjaret.hadrien@proton.me" data-t="aide">Besoin d’aide ?</a>
+  </header>
+  <!-- inside WeChat's own browser: the bouquet opens here; to place it on a screen, the page says how to leave WeChat -->
+  <p class="wechat" id="wechat" hidden data-t="wechat"></p>
+
+  <!-- every visible word carries its key in recu-langues.mjs: the giver chooses the recipient's language (?lang=) -->
+  <main>
+    <!-- 1. The envelope: a gift waits, and the code opens it. The link alone opens nothing (owner, 2026-11-02: the link and
+         the code are sent apart), so the envelope never says who offers it: that comes with the code, if the gift is signed -->
+    <section class="enveloppe" id="enveloppe" aria-labelledby="e-titre">
+      <div class="enveloppe-carte">
+        <p class="sur-titre" data-t="sur">Un bouquet pour vous</p>
+        <h1 id="e-titre" class="enveloppe-titre" data-t="e_titre">Quelqu’un vous offre des fleurs.</h1>
+        <p class="enveloppe-texte" data-t="e_texte">Elles vont éclore sous vos yeux, avec un mot. Montez le son si vous le pouvez.</p>
+        <!-- (never sent by the browser itself: a code typed before recu.js has loaded must not reload the page without its link) -->
+        <form class="code-cadeau" id="code-form" novalidate onsubmit="event.preventDefault()">
+          <label class="champ"><span data-t="e_code">Le code reçu à part</span><input id="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="40" required aria-describedby="code-etat e-aide"></label>
+          <button type="submit" class="btn btn-plein btn-grand" id="ouvrir" data-t="ouvrir">Ouvrir mon bouquet</button>
+          <p class="code-etat" id="code-etat" role="alert"></p>
+        </form>
+        <p class="enveloppe-petit" id="e-aide" data-t="e_aide">La personne qui vous l’offre vous a transmis ce lien et, à part, un code : le lien seul n’ouvre rien.</p>
+        <p class="enveloppe-petit" data-t="e_petit">Rien à installer : ni mot de passe, ni numéro. Il vit sur l’appareil où vous l’ouvrez, et ses trente jours commencent à ce moment-là.</p>
+        <p class="enveloppe-petit apercu-note" id="apercu-code" data-t="apercu_code">Aperçu : n’importe quel code de quatre signes ou plus ouvre ce bouquet.</p>
+      </div>
+    </section>
+
+    <!-- 2. The reveal: the bouquet grows, the message writes itself -->
+    <section class="revelation" id="revelation" hidden aria-labelledby="r-nom">
+      <div class="revelation-scene">
+        <div class="bouquet" id="r-bouquet" role="img" aria-label=""></div>
+      </div>
+      <div class="revelation-mot">
+        <!-- who offers it, only when the giver signed: a gift may stay unsigned (owner, 2026-11-02) -->
+        <p class="sur-titre" data-t="part" id="part" tabindex="-1">De la part de <span data-de>Claire</span></p>
+        <p class="mot" id="mot-p" tabindex="-1"><span id="mot" aria-hidden="true"></span><span class="visuellement-cache" id="mot-lu"></span></p>
+        <!-- the giver's voice message, optional, beside the word and the music (owner, 2026-11-02); shown only when the gift
+             has one (the account server gives its address with the gift, once the code is right) -->
+        <p class="vocal" id="vocal" hidden><button type="button" class="outil-clair" id="vocal-btn" data-t="vocal">Écouter son message vocal</button><audio id="vocal-son" preload="none"></audio></p>
+        <p class="musique" id="musique"><span data-t="musique">♪ <i>Nocturne</i>, en fond</span> <button type="button" class="outil-clair" id="son">Couper le son</button></p>
+        <h2 id="r-nom" class="nom-petit"></h2>
+        <!-- after the message, one way on: the bouquet stays in view (retention ID-02: the peak is not cut) -->
+        <a href="#apres" class="suite" id="suite" hidden data-t="suite">Le garder sur mon écran ↓</a>
+      </div>
+    </section>
+
+    <!-- 3. After the peak: how long it lives, then one main way and two quieter ones -->
+    <section class="apres" id="apres" hidden aria-labelledby="a-titre">
+      <h2 id="a-titre" class="titre" data-t="a_titre">Il fanera doucement jusqu’au <span id="jusqua"></span>.</h2>
+      <p class="chapo" data-t="a_chapo"></p>
+
+      <div class="choix">
+        <!-- kept without a phone number: the link and the code are enough (owner, 2026-10-31); it lives on one device, the one
+             it was opened on, and may be moved to another (owner, 2026-11-02) -->
+        <article class="choix-carte choix-principal">
+          <h3 data-t="g_h3">Le garder sur mon écran</h3>
+          <p data-t="g_p"></p>
+          <p class="os-ligne"><span class="os" aria-hidden="true"></span><span data-t="g_os"></span></p>
+          <ol class="pas">
+            <li data-t="g_pas1"></li>
+            <li data-t="g_pas2"></li>
+          </ol>
+          <button type="button" class="btn btn-plein" data-bouchon="garder" data-t="g_btn">Le garder sur mon écran</button>
+        </article>
+        <article class="choix-carte">
+          <h3 data-t="m_h3" id="m-h3">Remercier <span data-de>Claire</span></h3>
+          <p data-t="m_p" id="m-p"></p>
+          <label class="merci"><span class="visuellement-cache">Votre mot</span><textarea id="merci" rows="3" maxlength="280" data-t-ph="m_ph"></textarea></label>
+          <button type="button" class="btn btn-trait" id="merci-envoyer" data-t="m_btn">Envoyer mon merci</button>
+          <p class="merci-etat" id="merci-etat" role="status"></p>
+        </article>
+        <article class="choix-carte">
+          <h3 data-t="r_h3">Le retrouver</h3>
+          <p data-t="r_p"></p>
+          <form class="retrouver" id="retrouver" novalidate>
+            <label class="champ"><span data-t="r_mail">M’envoyer le lien par e-mail</span><input type="email" id="r-mail" autocomplete="email" inputmode="email"></label>
+            <label class="case"><input type="checkbox" id="r-nouvelles"> <span data-t="r_nouv">Et me prévenir des nouvelles collections</span></label>
+            <button type="submit" class="btn btn-trait" data-t="r_env">Envoyer</button>
+          </form>
+          <button type="button" class="btn btn-lien" id="garder-lien" data-t="r_btn">Copier le lien</button>
+          <p class="merci-etat" id="lien-etat" role="status"></p>
+        </article>
+      </div>
+
+      <!-- the only offer of the page comes after the thanks (retention ID-07), with the giver's name -->
+    </section>
+  </main>
+
+  <dialog class="bouchon" id="bouchon" aria-labelledby="bouchon-texte">
+    <p id="bouchon-texte"></p>
+    <form method="dialog"><button class="btn btn-trait btn-petit" data-t="fermer">Fermer</button></form>
+  </dialog>
+
+  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
+  <footer class="pied-court">
+    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
+    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
+  </footer>
+
+  <script src="../scene/eclosion.js"></script>
+  <script type="module" src="recu.js"></script>
+  <script type="module" src="vie.mjs"></script>
+</body>
+</html>

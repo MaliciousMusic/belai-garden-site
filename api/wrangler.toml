@@ -1,0 +1,59 @@
+# The shop's account and gift server (decor/COMPTE.md), a Cloudflare Worker with a D1 database.
+# Local: npm run dev (wrangler dev, a local D1, text messages written to the console). Online: once the owner has made the
+# Cloudflare account, `wrangler d1 create belai` gives the database_id below, and the secrets go in with
+# `wrangler secret put` (never in this file): POIVRE, CLE_NUMEROS, OVH_* (and STRIPE_* for lot C3).
+name = "belai-api"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# where the site is served from (cross-origin requests with their cookie are accepted from these)
+ORIGINES = "http://localhost:8851,http://127.0.0.1:8851"
+# "faux": the code is written to the console instead of being sent (on localhost only: refused online); "ovh": OVHcloud SMS
+SMS = "faux"
+# the calling codes a text may go to (compte.js, against SMS pumping), and the shop's ceiling of texts a day
+INDICATIFS_SMS = "33,32,41,352,49,34,39,44,1"
+SMS_JOUR = "300"
+# « Nous écrire »: the messages the whole shop takes in a day (message.js), and the mail that tells the owner of each one,
+# sent by Cloudflare (Email Routing on the shop's domain, the destination verified there; the [[send_email]] binding below).
+# The sender is an address of that domain: until the domain is chosen it stays empty and the messages are only kept.
+MESSAGES_JOUR = "200"
+EXPEDITEUR_MESSAGES = ""
+DESTINATAIRE_MESSAGES = "lonjaret.hadrien@proton.me"
+# the account's code by e-mail (compte.js, courriel.js; owner 2026-11-02): "faux" writes it to the console (on localhost
+# only: refused online), "cloudflare" sends it with the [[send_email]] binding CODES below, from EXPEDITEUR_CODES (an
+# address of the shop's domain, empty until the domain is chosen); and the shop's ceiling of such mails a day
+COURRIEL_CODES = "faux"
+EXPEDITEUR_CODES = ""
+COURRIEL_JOUR = "300"
+# the default country for a number written without its prefix (06 12 34 56 78)
+PAYS = "FR"
+# the payment: "faux" (a payment page of this server's own, on localhost only: refused online) or "stripe" (STRIPE_SECRET,
+# STRIPE_WEBHOOK_SECRET); anything else refuses to sell
+PAIEMENT = "faux"
+# what the shop sells: the site's own boutique.json (prices, the month's collection)
+CATALOGUE = "http://localhost:8851/scene/boutique.json"
+# the seller printed on the invoices (factures.js): as in the legal notice
+VENDEUR = '{"nom":"Hadrien Lonjaret, entrepreneur individuel (Agent 33)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488","courriel":"lonjaret.hadrien@proton.me"}'
+
+[[d1_databases]]
+binding = "DB"
+database_name = "belai"
+database_id = "local"
+migrations_dir = "migrations"
+
+# once a day: expired codes and sessions go, accounts deleted 30 days ago are anonymised (compte.js menage), unpaid orders
+# give their credit back (achat.js menageCommandes)
+[triggers]
+crons = ["17 3 * * *"]
+
+# the owner's mail for each message (message.js): to turn on once Email Routing is set up on the shop's domain
+# [[send_email]]
+# name = "COURRIER"
+# destination_address = "lonjaret.hadrien@proton.me"
+
+# the account's codes by e-mail (courriel.js): no destination_address, since they go to any visitor. Email Routing's own
+# binding only reaches its verified addresses: this needs Cloudflare's Email Sending on the domain (README, Le compte par
+# e-mail), to turn on once it is set up
+# [[send_email]]
+# name = "CODES"

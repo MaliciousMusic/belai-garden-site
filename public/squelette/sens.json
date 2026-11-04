@@ -1,0 +1,1411 @@
+{
+"rose-standard": {
+"sens": "Amour et beauté",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {
+"blanc": "Silence, « je suis digne de vous »",
+"jaune": null
+},
+"pays": {
+"FR": {
+"couleur": {
+"blanc": {
+"sens": "Silence",
+"source": "La Tour 1819",
+"tabou": false
+},
+"jaune": {
+"sens": "Infidélité",
+"source": "La Tour 1819",
+"tabou": true
+}
+},
+"sens": "Beauté",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"rouge": {
+"sens": "Pur et charmant",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"blanc": {
+"sens": "Je suis digne de vous",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"jaune": {
+"sens": "Déclin de l'amour, jalousie",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"rouge foncé": {
+"sens": "Rose cramoisie / rouge très foncé = deuil dans le tableau de l'Almanac",
+"source": "usage des fleuristes",
+"tabou": true
+}
+},
+"sens": "Amour",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {
+"rouge": {
+"sens": "Je ne connais rien de plus splendide que ta possession",
+"source": "Braun 1843",
+"tabou": false
+},
+"jaune": {
+"sens": "Si tu n'as pas encore d'admirateur, ne sois pas envieuse des plus…",
+"source": "Braun 1843",
+"tabou": false
+},
+"blanc": {
+"sens": "Bientôt je serai victime de mon amour sans espoir",
+"source": "Braun 1843",
+"tabou": true
+}
+}
+},
+"ES": {
+"couleur": {
+"jaune": {
+"sens": "Infidélité",
+"source": "Jazmín 1882",
+"tabou": true
+},
+"blanc": {
+"sens": "Silence, discrétion",
+"source": "Jazmín 1882",
+"tabou": false
+}
+},
+"sens": "Grâces",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"rose-aspect-jardin": {
+"sens": "Amour et beauté",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {
+"blanc": {
+"sens": "Silence",
+"source": "La Tour 1819",
+"tabou": false
+},
+"jaune": {
+"sens": "Infidélité",
+"source": "La Tour 1819",
+"tabou": true
+}
+},
+"sens": "Beauté",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"rouge": {
+"sens": "Pur et charmant",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"blanc": {
+"sens": "Je suis digne de vous",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"jaune": {
+"sens": "Déclin de l'amour, jalousie",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"rouge foncé": {
+"sens": "Rose cramoisie / rouge très foncé = deuil dans le tableau de l'Almanac",
+"source": "usage des fleuristes",
+"tabou": true
+}
+},
+"sens": "Amour",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {
+"rouge": {
+"sens": "Je ne connais rien de plus splendide que ta possession",
+"source": "Braun 1843",
+"tabou": false
+},
+"jaune": {
+"sens": "Si tu n'as pas encore d'admirateur, ne sois pas envieuse des plus…",
+"source": "Braun 1843",
+"tabou": false
+},
+"blanc": {
+"sens": "Bientôt je serai victime de mon amour sans espoir",
+"source": "Braun 1843",
+"tabou": true
+}
+}
+},
+"ES": {
+"couleur": {
+"jaune": {
+"sens": "Infidélité",
+"source": "Jazmín 1882",
+"tabou": true
+},
+"blanc": {
+"sens": "Silence, discrétion",
+"source": "Jazmín 1882",
+"tabou": false
+}
+},
+"sens": "Grâces",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"rose-de-jardin": {
+"sens": "Amour et beauté",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {
+"blanc": "Silence, « je suis digne de vous »",
+"jaune": null
+},
+"pays": {
+"FR": {
+"couleur": {
+"jaune": {
+"sens": "Jaune = infidélité / jalousie",
+"source": "La Tour 1819",
+"tabou": true
+}
+},
+"sens": "Grâces",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Ambassadrice de l'amour",
+"source": "Greenaway 1884",
+"tabou": false
+}
+}
+},
+"tulipe-simple": {
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819 · Phillips 1825",
+"niveau": "A",
+"couleur": {
+"rouge": "Déclaration d'amour",
+"jaune": null
+},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"rouge": {
+"sens": "Déclaration d'amour",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"panaché": {
+"sens": "Beaux yeux",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"jaune": {
+"sens": "Amour sans espoir",
+"source": "Greenaway 1884",
+"tabou": true
+}
+},
+"sens": "Déclaration d'amour",
+"source": "Phillips 1825",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Les formes charmantes de ta taille enflamment les désirs des hommes",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Déclaration d'amour",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"tulipe-double": {
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819 · Phillips 1825",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"rouge": {
+"sens": "Déclaration d'amour",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"panaché": {
+"sens": "Beaux yeux",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"jaune": {
+"sens": "Amour sans espoir",
+"source": "Greenaway 1884",
+"tabou": true
+}
+},
+"sens": "Déclaration d'amour",
+"source": "Phillips 1825",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Les formes charmantes de ta taille enflamment les désirs des hommes",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Déclaration d'amour",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"tulipe-perroquet": {
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819 · Phillips 1825",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"rouge": {
+"sens": "Déclaration d'amour",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"panaché": {
+"sens": "Beaux yeux",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"jaune": {
+"sens": "Amour sans espoir",
+"source": "Greenaway 1884",
+"tabou": true
+}
+},
+"sens": "Déclaration d'amour",
+"source": "Phillips 1825",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Les formes charmantes de ta taille enflamment les désirs des hommes",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Déclaration d'amour",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"tulipe-frangee": {
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819 · Phillips 1825",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"rouge": {
+"sens": "Déclaration d'amour",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"panaché": {
+"sens": "Beaux yeux",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"jaune": {
+"sens": "Amour sans espoir",
+"source": "Greenaway 1884",
+"tabou": true
+}
+},
+"sens": "Déclaration d'amour",
+"source": "Phillips 1825",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Les formes charmantes de ta taille enflamment les désirs des hommes",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Déclaration d'amour",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"renoncule-classique": {
+"sens": "Rayonnante de charme",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Vous êtes brillante d'attraits",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Vous êtes rayonnante de charmes",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Il semble que tu aimes le changement",
+"source": "Braun 1843",
+"tabou": false
+}
+}
+},
+"anemone-coronaria": {
+"sens": "Jette ta tristesse au vent",
+"source": "Braun 1843",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Abandon",
+"source": "La Tour 1819",
+"tabou": true
+},
+"UK": {
+"couleur": {},
+"sens": "Maladie",
+"source": "Phillips 1825",
+"tabou": true
+},
+"DE": {
+"couleur": {},
+"sens": "Jette ta tristesse au vent",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Abandon",
+"source": "Jazmín 1882",
+"tabou": true
+}
+}
+},
+"pois-de-senteur": {
+"sens": "Plaisirs délicats",
+"source": "Greenaway 1884 · Phillips 1825",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Plaisirs délicats",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "L'amour trouve chez moi sa reconnaissance",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Plaisirs délicats",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"jacinthe": {
+"sens": "Jeu et bienveillance",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {
+"bleu": "Constance",
+"violet": null,
+"blanc": "Charme discret"
+},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Bienveillance",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"blanc": {
+"sens": "Charme discret",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"violet": {
+"sens": "Chagrin",
+"source": "Ingram 1869",
+"tabou": true
+}
+},
+"sens": "Sport, jeu",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {
+"bleu": {
+"sens": "Tu restes pour moi à jamais un souvenir douloureux",
+"source": "Braun 1843",
+"tabou": false
+},
+"rouge": {
+"sens": "Ton souvenir me comble de joie",
+"source": "Braun 1843",
+"tabou": false
+}
+}
+},
+"ES": {
+"couleur": {
+"bleu": {
+"sens": "Constance",
+"source": "Jazmín 1882",
+"tabou": false
+},
+"violet": {
+"sens": "Regrets, peines",
+"source": "Jazmín 1882",
+"tabou": true
+}
+}
+}
+}
+},
+"muscari": {
+"sens": null,
+"source": null,
+"niveau": "D",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Souvenir dans de nombreuses cultures européennes",
+"source": "usage des fleuristes",
+"tabou": false
+}
+}
+},
+"narcisse-trompette": {
+"sens": "Désir, estime",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Désir",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Estime, considération",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "N'apaiseras-tu jamais mon désir ardent ?",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Tolérance, désir",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"narcisse-bouquet": {
+"sens": "Bonne fortune",
+"source": "tradition chinoise",
+"niveau": "B",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Désir / égoïsme selon le nom",
+"source": "La Tour 1819",
+"tabou": true
+},
+"CN": {
+"couleur": {},
+"sens": "Le narcisse tazette est une fleur du Nouvel An chinois, symbole de…",
+"source": "tradition chinoise",
+"tabou": false
+}
+}
+},
+"lilas": {
+"sens": "Premiers émois amoureux",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {
+"violet": "Premiers émois amoureux",
+"blanc": "Jeunesse, innocence"
+},
+"pays": {
+"FR": {
+"couleur": {
+"violet": {
+"sens": "Première émotion d'amour",
+"source": "La Tour 1819",
+"tabou": false
+},
+"blanc": {
+"sens": "Jeunesse",
+"source": "La Tour 1819",
+"tabou": false
+}
+}
+},
+"UK": {
+"couleur": {
+"violet": {
+"sens": "Premières émotions de l'amour",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"blanc": {
+"sens": "Innocence juvénile",
+"source": "Greenaway 1884",
+"tabou": false
+}
+},
+"sens": "Humilité",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Je te demande un rendez-vous au lieu convenu",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Première émotion d'amour",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"freesia": {
+"sens": "Amitié, confiance, innocence",
+"source": "usage des fleuristes",
+"niveau": "C",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Amitié, confiance, innocence",
+"source": "usage des fleuristes",
+"tabou": false
+}
+}
+},
+"viburnum-roseum": {
+"sens": "Bonne nouvelle",
+"source": "La Tour 1819",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Bonne nouvelle",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Hiver, âge",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"DE": {
+"couleur": {},
+"sens": "La froideur de ton cœur ne fondra-t-elle jamais ?",
+"source": "Braun 1843",
+"tabou": true
+}
+}
+},
+"fritillaire-meleagris": {
+"sens": null,
+"source": null,
+"niveau": "D",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Persécution",
+"source": "Greenaway 1884",
+"tabou": true
+}
+}
+},
+"iris-hollandais": {
+"sens": "Message, bonnes nouvelles",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {
+"jaune": "Feu d'amour",
+"bleu": "Confiance",
+"blanc": "Espérance, fidélité"
+},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Message",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Message",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "La douleur qui me transperce ne s'éteindra qu'avec la mort",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Nouvelles agréables",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"nerine": {
+"sens": null,
+"source": null,
+"niveau": "D",
+"couleur": {},
+"pays": {}
+},
+"dahlia-decoratif": {
+"sens": "Reconnaissance et estime",
+"source": "La Tour 1819 · Braun 1843",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Ma reconnaissance surpasse vos soins",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Instabilité",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"DE": {
+"couleur": {},
+"sens": "Tes qualités excitent le respect et l'admiration",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Ma reconnaissance dépasse ta sollicitude",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"scabieuse": {
+"sens": "Consolation dans la solitude",
+"source": "Braun 1843",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Amour malheureux",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"DE": {
+"couleur": {},
+"sens": "Puis-je te distraire dans ta solitude ?",
+"source": "Braun 1843",
+"tabou": false
+}
+}
+},
+"delphinium": {
+"sens": "Légèreté",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {
+"rose": null,
+"violet": null
+},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Légèreté",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"rose": {
+"sens": "Inconstance",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"violet": {
+"sens": "Hauteur, arrogance",
+"source": "Greenaway 1884",
+"tabou": true
+}
+},
+"sens": "Légèreté, frivolité",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Fie-toi à mon courage viril et à ma fidélité, et laisse-moi être ton…",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Guerre, légèreté",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"hortensia-boule": {
+"sens": null,
+"source": null,
+"niveau": "D",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Vous êtes froide",
+"source": "La Tour 1819",
+"tabou": true
+},
+"UK": {
+"couleur": {},
+"sens": "Un vantard",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"DE": {
+"couleur": {
+"blanc": {
+"sens": "Hortensia blanc lié à la mort et à ne pas offrir à des personnes…",
+"source": "usage des fleuristes",
+"tabou": true
+}
+},
+"sens": "Dommage que ton caractère ne soit pas ferme",
+"source": "Braun 1843",
+"tabou": true
+},
+"ES": {
+"couleur": {},
+"sens": "Vous êtes très froide",
+"source": "Jazmín 1882",
+"tabou": true
+},
+"JP": {
+"couleur": {},
+"sens": "Au Japon l'hortensia est associé à l'inconstance et à la froideur…",
+"source": "tradition japonaise",
+"tabou": true
+}
+}
+},
+"gerbera": {
+"sens": "Gaieté, joie, innocence",
+"source": "usage des fleuristes",
+"niveau": "C",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Gaieté, joie, innocence",
+"source": "usage des fleuristes",
+"tabou": false
+}
+}
+},
+"germini": {
+"sens": "Gaieté, joie, innocence",
+"source": "usage des fleuristes",
+"niveau": "C",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Gaieté, joie, innocence",
+"source": "usage des fleuristes",
+"tabou": false
+}
+}
+},
+"chrysantheme-disbud": {
+"sens": "Gaieté dans l’adversité, longévité",
+"source": "Greenaway 1884 · tradition chinoise",
+"niveau": "A",
+"couleur": {
+"rouge": "J'aime",
+"blanc": null,
+"jaune": null
+},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Fleur de la Toussaint et des cimetières",
+"source": "tradition française",
+"tabou": true
+},
+"UK": {
+"couleur": {
+"rouge": {
+"sens": "J'aime",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"blanc": {
+"sens": "Vérité",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"jaune": {
+"sens": "Amour dédaigné",
+"source": "Greenaway 1884",
+"tabou": true
+}
+},
+"sens": "Gaieté dans l'adversité",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"CN": {
+"couleur": {
+"jaune": {
+"sens": "Richesse",
+"source": "tradition chinoise",
+"tabou": false
+},
+"blanc": {
+"sens": "Chrysanthème blanc = fleur des funérailles en Chine",
+"source": "usage des fleuristes",
+"tabou": true
+}
+},
+"sens": "Symbole de longévité",
+"source": "tradition chinoise",
+"tabou": false
+},
+"JP": {
+"couleur": {
+"blanc": {
+"sens": "Chrysanthème blanc = fleur funéraire",
+"source": "usage des fleuristes",
+"tabou": true
+}
+},
+"sens": "Emblème de la famille impériale",
+"source": "tradition japonaise",
+"tabou": false
+}
+}
+},
+"oeillet-standard": {
+"sens": "Amour vif et pur",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {
+"rouge": "Amour vif et pur",
+"blanc": "Amour pur, ingénuité",
+"rose": "Amour de femme"
+},
+"pays": {
+"FR": {
+"couleur": {
+"jaune": {
+"sens": "Dédain",
+"source": "La Tour 1819",
+"tabou": true
+},
+"violet": {
+"sens": "En France l'œillet est une fleur traditionnelle de condoléances",
+"source": "tradition française",
+"tabou": true
+}
+},
+"sens": "Amour vif et pur",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"rouge foncé": {
+"sens": "Hélas, mon pauvre cœur",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"rayé": {
+"sens": "Refus",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"jaune": {
+"sens": "Dédain",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"rouge": {
+"sens": "Amour pur et ardent",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"blanc": {
+"sens": "Ingénuité, talent",
+"source": "Greenaway 1884",
+"tabou": false
+}
+},
+"sens": "Amour de femme",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {
+"rouge": {
+"sens": "Il est impossible de t'aimer plus ardemment que moi",
+"source": "Braun 1843",
+"tabou": false
+},
+"blanc": {
+"sens": "Tu me laisses longtemps dans une pénible incertitude, décide-toi enfin",
+"source": "Braun 1843",
+"tabou": false
+}
+},
+"sens": "Mon cœur n'est plus libre, contente-toi de mon amitié",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Amour vif et pur",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"arum-calla": {
+"sens": "Beauté magnifique",
+"source": "Greenaway 1884 · La Tour 1819",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Ardeur",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"blanc": {
+"sens": "Pureté, résurrection, renaissance",
+"source": "usage des fleuristes",
+"tabou": false
+}
+},
+"sens": "Beauté magnifique",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Je t'admire de loin, mais n'ose t'approcher",
+"source": "Braun 1843",
+"tabou": false
+}
+}
+},
+"phalaenopsis": {
+"sens": "Élégance, raffinement",
+"source": "usage des fleuristes",
+"niveau": "C",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {
+"blanc": {
+"sens": "Innocence, pureté, élégance",
+"source": "usage des fleuristes",
+"tabou": false
+}
+}
+},
+"CN": {
+"couleur": {},
+"sens": "L'orchidée fait partie des quatre gentilshommes de l'art chinois",
+"source": "tradition chinoise",
+"tabou": false
+}
+}
+},
+"cymbidium-grandes-fleurs": {
+"sens": "Noblesse d'âme, intégrité",
+"source": "tradition chinoise",
+"niveau": "B",
+"couleur": {},
+"pays": {
+"CN": {
+"couleur": {},
+"sens": "L'orchidée est l'un des quatre gentilshommes : vertu du lettré confucéen",
+"source": "tradition chinoise",
+"tabou": false
+}
+}
+},
+"anthurium-andraeanum": {
+"sens": "Hospitalité, bonheur",
+"source": "usage des fleuristes",
+"niveau": "C",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Hospitalité, bonheur, abondance",
+"source": "usage des fleuristes",
+"tabou": false
+}
+}
+},
+"gloriosa": {
+"sens": "Gloire",
+"source": "étymologie latine",
+"niveau": "C",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Le nom latin signifie « plein de gloire »",
+"source": "usage des fleuristes",
+"tabou": false
+}
+}
+},
+"alchemille": {
+"sens": null,
+"source": null,
+"niveau": "D",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Le nom anglais viendrait de la ressemblance des feuilles festonnées…",
+"source": "tradition anglaise",
+"tabou": false
+}
+}
+},
+"amarante-retombante": {
+"sens": "Immortalité, amour qui ne se fane pas",
+"source": "La Tour 1819 · Greenaway 1884",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Immortalité",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Immortalité, amour qui ne se fane pas",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Avec ruse et prudence on surmonte bien des obstacles",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Immortalité",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"cerisier-du-japon-sato-zakura": {
+"sens": "Beauté éphémère de la vie",
+"source": "tradition japonaise",
+"niveau": "B",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Bonne éducation",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Bonne éducation",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Tu éveilles en moi l'espoir",
+"source": "Braun 1843",
+"tabou": false
+},
+"JP": {
+"couleur": {},
+"sens": "La fleur de cerisier est la métaphore durable de la nature éphémère…",
+"source": "tradition japonaise",
+"tabou": false
+}
+}
+},
+"cognassier-du-japon": {
+"sens": "Le feu des fées",
+"source": "Greenaway 1884 · Braun 1843",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Le feu des fées",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Je souhaite une descendance nombreuse",
+"source": "Braun 1843",
+"tabou": false
+}
+}
+},
+"forsythia": {
+"sens": "Anticipation, espoir",
+"source": "usage des fleuristes",
+"niveau": "C",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Anticipation",
+"source": "usage des fleuristes",
+"tabou": false
+},
+"JP": {
+"couleur": {},
+"sens": "Au Japon",
+"source": "usage des fleuristes",
+"tabou": false
+}
+}
+},
+"glycine": {
+"sens": "Amitié tendre, bienvenue",
+"source": "La Tour 1819 · Ingram 1869",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Votre amitié m'est douce et agréable",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {},
+"sens": "Bienvenue, belle étrangère",
+"source": "Ingram 1869",
+"tabou": false
+}
+}
+},
+"anemone-sauvage": {
+"sens": "Jette ta tristesse au vent",
+"source": "Braun 1843",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Maladie",
+"source": "La Tour 1819",
+"tabou": true
+},
+"UK": {
+"couleur": {},
+"sens": "Maladie, attente",
+"source": "Greenaway 1884",
+"tabou": true
+},
+"DE": {
+"couleur": {},
+"sens": "Jette ta tristesse au vent",
+"source": "Braun 1843",
+"tabou": false
+}
+}
+},
+"mimosa": {
+"sens": "Amour secret",
+"source": "Greenaway 1884",
+"niveau": "A",
+"couleur": {},
+"pays": {
+"FR": {
+"couleur": {},
+"sens": "Pudeur",
+"source": "La Tour 1819",
+"tabou": false
+},
+"UK": {
+"couleur": {
+"jaune": {
+"sens": "Amour secret",
+"source": "Greenaway 1884",
+"tabou": false
+}
+},
+"sens": "Sensibilité",
+"source": "Greenaway 1884",
+"tabou": false
+},
+"DE": {
+"couleur": {},
+"sens": "Je révère ta pudeur virginale",
+"source": "Braun 1843",
+"tabou": false
+},
+"ES": {
+"couleur": {},
+"sens": "Pudeur",
+"source": "Jazmín 1882",
+"tabou": false
+}
+}
+},
+"cosmos": {
+"sens": "Harmonie, ordre",
+"source": "étymologie grecque",
+"niveau": "B",
+"couleur": {},
+"pays": {
+"UK": {
+"couleur": {},
+"sens": "Ordre, harmonie, équilibre",
+"source": "usage des fleuristes",
+"tabou": false
+},
+"JP": {
+"couleur": {},
+"sens": "Le nom vient d'un prêtre espagnol du Mexique qui, voyant les pétales…",
+"source": "tradition japonaise",
+"tabou": false
+}
+}
+}
+}

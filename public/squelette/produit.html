@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <!-- « Nous écrire » opens the site's own window, the message goes to the server (owner, 2026-11-01) -->
+  <script type="module" src="ecrire.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bouquet numérique | Belai’s Garden</title>
+  <meta name="description" content="Un bouquet numérique de la collection du mois, dessiné et animé tige à tige d’après de vraies fleurs, au prix de ses vraies tiges. À offrir ou à garder.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Un bouquet qui vit sur l’écran | Belai’s Garden">
+  <meta property="og:description" content="Dessiné et animé tige à tige d’après de vraies fleurs, à offrir ou à garder. Il fane doucement sur trente jours.">
+  <meta property="og:image" content="partage-cadeau.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-extralight.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-black.woff2">
+  <!-- the sprites of the bouquet of the address (?b=) are fetched with the page, not after its scripts: it shows from them
+  first, its SVG after -->
+  <script>(() => { const b = new URLSearchParams(location.search).get('b');
+    const d = `../scene/bouquets/${/^[a-z0-9-]{1,60}$/.test(b || '') ? b : 'printemps-a-la-carpe'}/sprites/`;
+    for (const [as, f] of [['fetch', 'sprites.json'], ['image', 'proche-0.webp']]) {
+      const l = document.createElement('link');
+      Object.assign(l, { rel: 'preload', as, href: d + f, fetchPriority: 'high' });
+      if (as === 'fetch') l.crossOrigin = 'anonymous';
+      document.head.append(l);
+    } })();</script>
+  <link rel="stylesheet" href="squelette.css">
+  <link rel="stylesheet" href="../scene/essai.css">
+  <!-- the choreography's waiting state is set before the first paint (no flash); only on a first visit of this page (a
+       returning visitor wants the bouquets at once, n2 army), never with reduced motion or without JS -->
+  <script>(() => { let seen = false; try { seen = localStorage.getItem('scene-vue-produit') === '1'; localStorage.setItem('scene-vue-produit', '1'); } catch (_) {}
+    if (!seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('scene');
+    // failsafe (jury n2): if the choreography never starts, nothing stays invisible
+    setTimeout(() => { if (!window.SCENE) document.documentElement.classList.remove('scene'); }, 4000); })();</script>
+</head>
+<body class="page-produit">
+  <a class="evitement" href="#contenu">Aller à la fiche</a>
+  <!-- Skeleton of the shop (ch/squelette), one page per use (owner, 2026-10-31). Choices and reasons in SQUELETTE.md. -->
+  <header class="tete">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="savoir-faire.html">L’atelier</a>
+    </nav>
+    <div class="tete-droite">
+      <!-- the way back where the landing has « J’ai reçu un bouquet » (owner, 2026-11-01) -->
+      <a href="index.html" class="retour-lien" id="retour-lien">← Retour</a>
+      <a href="compte.html" class="discret compte-lien" aria-label="Mes fleurs"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.7 3.7-5.6 7.2-5.6s6.3 1.9 7.2 5.6"/></svg><span>Mes fleurs</span></a>
+      <details class="langues">
+        <summary aria-label="Langue : français"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.8 2.6 14.2 0 17M12 3.5c-2.6 2.8-2.6 14.2 0 17"/></svg><span>FR</span></summary>
+        <ul>
+          <li><a href="#" aria-current="true" lang="fr">Français</a></li>
+          <li><a href="#" data-bouchon="langue" lang="en">English</a></li>
+          <li><a href="#" data-bouchon="langue" lang="zh-Hans">中文</a></li>
+          <li><a href="#" data-bouchon="langue" lang="de">Deutsch</a></li>
+          <li><a href="#" data-bouchon="langue" lang="es">Español</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- 1. The product: the bouquet alive on the left, a compact card, its composition and the try-on on the right -->
+    <section id="vitrine" class="vitrine" aria-labelledby="v-nom">
+      <div class="vitrine-scene">
+        <!-- on a phone the name and what it is stand in the bouquet's top left corner, under the drawing (owner, 2026-11-01) -->
+        <div class="scene-titre" aria-hidden="true"><p class="scene-nom" id="s-nom"></p><p class="scene-compo" id="s-compo"></p></div>
+        <div class="bouquet" id="bouquet" role="img" aria-label=""></div>
+        <!-- the magnifier (owner, 2026-10-31): zoom in on the drawing, drag to look around, double click to zoom where one points -->
+        <div class="loupe" role="group" aria-label="Zoom sur le bouquet">
+          <button type="button" id="loupe-moins" aria-label="Dézoomer" disabled>−</button>
+          <button type="button" id="loupe-taux" aria-label="Revenir à la taille entière">1×</button>
+          <button type="button" id="loupe-plus" aria-label="Zoomer">+</button>
+        </div>
+        <!-- while the florist recomposes, the old bouquet stays, softened, under a calm veil: never a blank -->
+        <div class="attente" id="attente" hidden><span class="attente-petales" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>Le fleuriste recompose…</span></div>
+        <!-- the composer's way in sits on the bouquet itself, where the colours are; the composer is its own page -->
+        <a class="btn btn-trait btn-moyen composer-scene" id="composer-scene" href="retouche.html" data-composer><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 100 18c1.2 0 1.8-.8 1.8-1.7 0-1.1-.9-1.5-.9-2.5 0-1 .8-1.6 1.9-1.6H17a4 4 0 004-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1.3"/><circle cx="10" cy="7" r="1.3"/><circle cx="14.5" cy="7" r="1.3"/></svg>Retouche</a>
+        <p class="etat-scene" id="v-etat" aria-live="polite">En direct, dans la brise.</p>
+      </div>
+      <div class="vitrine-cote">
+        <div class="fiche">
+          <!-- value before price: name, what it is, then the price and where it comes from, then the action -->
+          <h1 id="v-nom" class="nom" data-tour="1">Printemps à la carpe</h1>
+          <p class="compo" id="v-compo" data-tour="2"></p>
+          <p class="prix-sous" data-tour="2">Le prix de ses tiges chez un fleuriste, vase offert.<span id="v-tiges" hidden></span></p>
+          <!-- what a day of bloom costs (n7: the price felt high until divided by its thirty days) -->
+          <p class="prix-jour" id="v-jour"></p>
+          <!-- on a computer (owner, 2026-11-01): the name, the composition to unfold, the basket and the try-on, then for whom
+               and the purchase; the lines on what it is and its price per day are for the phone only (squelette.css) -->
+          <!-- the composition (owner, 2026-11-01): the florist's bill of the retouche, folded under the name; it opens on
+               a framed list that scrolls, each flower at the price of its stems; a touch on a flower lights it in the bouquet -->
+          <details class="composition" id="composition">
+            <summary>La composition</summary>
+            <p class="compo-aide">Chaque tige au prix d’un fleuriste en France en 2026. Touchez une fleur pour la voir dans le bouquet.</p>
+            <div class="compo-boite" id="compo-boite">
+              <table class="note-table" id="note-table">
+                <thead><tr><th scope="col">Fleur</th><th scope="col">Tiges</th><th scope="col">Total</th></tr></thead>
+                <tbody id="n-lignes"></tbody>
+                <tfoot>
+                  <tr><th scope="row" colspan="2">Vase</th><td>offert</td></tr>
+                  <tr class="note-total"><th scope="row" colspan="2">Le bouquet</th><td id="n-total"></td></tr>
+                </tfoot>
+              </table>
+            </div>
+            <a class="compo-retouche" href="retouche.html" data-composer>Changer les coloris dans la retouche</a>
+          </details>
+          <div class="actions-2">
+            <button type="button" class="btn btn-trait btn-moyen" id="v-panier">Ajouter au panier</button>
+            <button type="button" class="btn btn-trait btn-moyen" data-bouchon="essai" data-pour="moi" hidden>L’essayer sur mon bureau</button>
+          </div>
+          <!-- a setting, not an action: small, above the action it changes -->
+          <!-- « Pour moi » first and chosen by default (owner, 2026-11-01) -->
+          <div class="usage" role="radiogroup" aria-label="Pour qui" data-tour="3">
+            <button type="button" role="radio" aria-checked="true" data-usage="moi">Pour moi</button>
+            <button type="button" role="radio" aria-checked="false" data-usage="offrir">Pour offrir</button>
+            <button type="button" role="radio" aria-checked="false" data-usage="plusieurs">Pour plusieurs</button>
+          </div>
+          <!-- « Pour plusieurs » (owner, 2026-11-01): how many, then for each person their word and their way of unwrapping;
+               one payment, one invoice, one link each -->
+          <div class="plusieurs" id="plusieurs" hidden>
+            <div class="quantite">
+              <span class="cadeau-mot" id="qte-titre">Combien de bouquets</span>
+              <div class="pas" role="group" aria-labelledby="qte-titre">
+                <button type="button" id="qte-moins" aria-label="Un bouquet de moins">−</button><input id="qte" type="number" min="2" step="1" inputmode="numeric" value="2" aria-label="Nombre de bouquets"><button type="button" id="qte-plus" aria-label="Un bouquet de plus">+</button>
+              </div>
+            </div>
+            <!-- no limit (owner, 2026-11-01): a long list comes from a spreadsheet, one person a line -->
+            <details class="liste-coller">
+              <summary>Coller une liste depuis un tableur</summary>
+              <p class="cadeau-note">Une personne par ligne : son prénom, son mot, puis le déballage (papillons, déchiré ou pliage),
+                séparés par une tabulation ou un point-virgule. Le prénom peut rester vide.</p>
+              <textarea id="liste" rows="5" aria-label="La liste, une personne par ligne"></textarea>
+              <button type="button" class="btn btn-trait" id="liste-remplir">Remplir les cartes</button>
+              <p class="cadeau-note" id="liste-bilan" aria-live="polite"></p>
+            </details>
+            <ol class="destinataires" id="destinataires"></ol>
+            <p class="cadeau-note">Chacun reçoit son propre lien et son code, avec son mot et son papier. Un seul paiement, une seule facture.</p>
+          </div>
+          <!-- « Pour offrir » opens what makes it a gift (owner, 2026-11-01): the word that comes with it, its gift paper (its
+               drawings are still to be made), the language of its page and a look at that page -->
+          <div class="cadeau" id="cadeau" hidden>
+            <label class="cadeau-mot" for="mot">Votre mot</label>
+            <textarea id="mot" rows="3" maxlength="280" placeholder="Bon anniversaire, petite sœur. Il restera chez toi tout le mois."></textarea>
+            <!-- the signature, as one likes, or none (owner, 2026-11-02): an unsigned gift names no one, and the giver's e-mail
+                 never shows on it -->
+            <label class="cadeau-signe" for="signe">Signé</label>
+            <input type="text" id="signe" class="cadeau-champ" maxlength="30" autocomplete="off" placeholder="Votre prénom, un surnom, ou rien" aria-describedby="signe-note">
+            <p class="cadeau-note" id="signe-note">Facultatif : sans signature, le bouquet arrive sans nom.</p>
+            <!-- the music and the voice message, both optional, beside the word (owner, 2026-11-02). Prepared here, not yet
+                 carried to the payment: the recording stays in this page (vocal.mjs) -->
+            <div class="cadeau-son">
+              <label class="cadeau-musique">La musique
+                <select id="musique"><option value="nocturne">Nocturne</option><option value="">Sans musique</option></select></label>
+              <div class="vocal-enr" id="vocal-enr">
+                <p class="cadeau-titre" id="vocal-titre">Un message vocal <span class="bientot-mot">facultatif</span></p>
+                <div class="vocal-actions">
+                  <button type="button" class="btn btn-trait btn-petit" id="vocal-rec" aria-describedby="vocal-titre">Enregistrer</button>
+                  <audio id="vocal-ecoute" controls hidden></audio>
+                  <button type="button" class="btn btn-lien" id="vocal-effacer" hidden>Effacer</button>
+                </div>
+                <p class="cadeau-note" id="vocal-etat" role="status">Une minute au plus. Il s’écoute sur la page du cadeau, après le mot.</p>
+              </div>
+            </div>
+            <!-- the gift paper, by its way of unwrapping (owner, 2026-11-01); the drawings are still to be made -->
+            <div class="cadeau-papier">
+              <p class="cadeau-titre" id="deballage-titre">Le déballage <span class="bientot-mot">bientôt</span></p>
+              <div class="deballages" id="deballages" role="radiogroup" aria-labelledby="deballage-titre"></div>
+            </div>
+            <div class="cadeau-page">
+              <a href="#" class="btn btn-trait btn-moyen apercu-lien" data-apercu><span class="apercu-tel" aria-hidden="true"></span>Voir la page du cadeau</a>
+              <label class="sa-langue">Sa page en
+                <select id="sa-langue">
+                  <option value="fr">Français</option><option value="en">English</option><option value="es">Español</option>
+                  <option value="it">Italiano</option><option value="de">Deutsch</option><option value="ja">日本語</option>
+                  <option value="zh">中文</option><option value="fil">Filipino</option>
+                  <option value="pt">Português</option><option value="ko">한국어</option>
+                </select></label>
+            </div>
+            <p class="cadeau-note">Le bouquet s’ouvre sur son téléphone ou son ordinateur, sans rien installer.</p>
+          </div>
+          <p class="usage-texte" data-pour="moi" hidden>Sur votre écran avec Belai’s Launcher, à la taille et à la place que vous voulez.</p>
+          <!-- three levels of action, three looks: the purchase (filled champagne, the price in it), the try-on (outlined, smaller),
+               the preview (a plain link); the ways to pay in small black marks under the purchase (owner, 2026-11-01) -->
+          <div class="actions" data-tour="4">
+            <button type="button" class="btn btn-achat" id="v-acheter" data-bouchon="achat"><span id="v-acheter-mot">Offrir ce bouquet</span><span class="btn-prix" id="v-prix"></span></button>
+          </div>
+          <!-- who sells, said where one pays (n7: « qui est derrière ? », 47 brakes of trust; the facts were folded away) -->
+          <p class="vendeur">Vendu par Belai’s Garden, l’atelier d’Hadrien Lonjaret, entrepreneur individuel à Clermont-Ferrand. <a href="mailto:lonjaret.hadrien@proton.me">Nous écrire</a> <span class="delai">Réponse en 30 minutes environ, de 10 h à 23 h (heure de Paris), 7 jours sur 7.</span></p>
+          <ul class="faits" data-tour="5">
+            <li>Remis aussitôt · sans limite d’exemplaires, en vente jusqu’au <span data-fin></span></li>
+            <li>Il fane doucement sur trente jours, à partir du jour où on l’ouvre.</li>
+            <li class="confiance">Échange une fois sous 24 h, tant que son code n’a pas servi</li>
+            <!-- what one owns, who sells, and the withdrawal for digital content: open (owner, 2026-11-01; n7: 23 asked what they
+                 own, none opened it folded) -->
+            <li><details class="possede" open>
+              <summary>Ce que vous possédez</summary>
+              <dl>
+                <div><dt>L’usage</dt><dd>Un widget, à vous : vous le gardez, vous le montrez en direct ou en vidéo, vous en partagez des
+                  images.</dd><dd>Une fois téléchargé dans Belai’s Launcher, il vit sans nous, comme un film téléchargé.</dd><dd>Le
+                  fichier source n’est pas fourni, et l’œuvre n’est ni revendue ni reproduite. Pas de numéro d’exemplaire : il n’est sur
+                  aucune blockchain.</dd></div>
+                <div><dt>L’éditeur</dt><dd>Belai’s Garden est l’atelier d’Hadrien Lonjaret, entrepreneur individuel à Clermont-Ferrand. SIRET 853 801 488 00026.
+                  TVA non applicable, article 293 B du CGI. La facture est dans votre compte.</dd></div>
+                <div><dt>La rétractation</dt><dd>Un bouquet numérique est livré tout de suite : en l’achetant, vous demandez cette
+                  livraison et renoncez au droit de rétractation (article L221-28 du Code de la consommation). Il s’échange une fois,
+                  sous 24 h, tant qu’il n’a pas été offert.</dd></div>
+              </dl>
+              <a href="legal.html#terms">Conditions de vente</a>
+            </details></li>
+            <!-- a human contact for bespoke requests and the group purchase (owner, 2026-10-31) -->
+            <li class="autres-achats"><a href="sur-mesure.html">Une demande sur mesure</a></li>
+          </ul>
+        </div>
+
+        <!-- before choosing: the try-on, the main proof (moved here from the landing, owner 2026-10-31) -->
+        <div class="essai-encart" id="essayer">
+          <h2>Avant de choisir</h2>
+          <p>Partagez votre écran : le bouquet se pose sur votre bureau. L’image reste dans cet onglet, rien ne nous est envoyé.</p>
+          <button type="button" class="btn btn-trait" data-bouchon="essai">L’essayer sur mon bureau</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. What you get, in plain words: the digital objections answered before they are asked, one card each -->
+    <section id="recevez" class="bloc bloc-2" aria-labelledby="r-titre">
+      <div class="bloc-tete"><h2 id="r-titre" class="titre">Ce que vous recevez</h2></div>
+      <ul class="recevez">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 14h7l-.9 6.2a1 1 0 01-1 .8h-3.2a1 1 0 01-1-.8z"/><path d="M12 14V8M12 14c-.4-2.6-2-4.2-4.2-4.8M12 14c.4-2.6 2-4.2 4.2-4.8"/><circle cx="12" cy="5.8" r="2.2"/><circle cx="6.6" cy="8.4" r="1.7"/><circle cx="17.4" cy="8.4" r="1.7"/></svg><h3>Le bouquet</h3><p>Celui que vous voyez, tige pour tige, aux coloris choisis.</p></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4.5" width="13.5" height="10" rx="1.4"/><path d="M6.5 18.5h4.5M8.75 14.5v4"/><rect x="17" y="8.5" width="5" height="10" rx="1.2"/></svg><h3>Où il vit</h3><p>Dans votre compte, et sur votre écran avec Belai’s Launcher.</p></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="1.6"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13.5h0M12 13.5h0M16 13.5h0M8 17h0M12 17h0"/></svg><h3>Trente jours</h3><p>Il fane doucement sur trente jours à partir du jour où on l’ouvre, comme un soliflore.</p></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.6"/><path d="M3.6 6.6l8.4 6.4 8.4-6.4"/></svg><h3>Pour offrir</h3><p>Un mot, une musique, un code : rien à installer.</p></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5h14.5M15 5l3.5 3.5L15 12M20 15.5H5.5M9 12l-3.5 3.5L9 19"/></svg><h3>Changer d’avis</h3><p>Un échange sous 24 h, tant qu’il n’a pas été offert.</p></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 2.8v5.4c0 4.4-3 7.9-7 9.3-4-1.4-7-4.9-7-9.3V5.8z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></svg><h3>En cas de souci</h3><p>Nous le réparons et il récupère ses jours ; sinon, nous vous remboursons.</p></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <div class="pied-marque">
+      <p class="pied-nom"><span class="marque"><span class="visuellement-cache">Belai’s Garden</span></span></p>
+      <p>Bouquets dessinés et animés tige à tige. Belai’s Garden est l’atelier d’Hadrien Lonjaret, entrepreneur individuel à Clermont-Ferrand.</p>
+    </div>
+    <nav aria-label="Informations légales">
+      <a href="legal.html">Mentions légales</a>
+      <a href="legal.html#terms">Conditions de vente et échange</a>
+      <a href="legal.html#privacy">Confidentialité</a>
+    </nav>
+    <nav aria-label="Nous joindre">
+      <a href="mailto:lonjaret.hadrien@proton.me">Nous écrire</a>
+      <p class="delai">Réponse en 30 minutes environ, de 10 h à 23 h (heure de Paris), 7 jours sur 7.</p>
+      <a href="sur-mesure.html">Une demande sur mesure</a>
+      <a href="groupe.html">Offrir à plusieurs</a>
+    </nav>
+  </footer>
+
+  <!-- on a phone the pages live in a bar at the bottom, in the thumb's reach -->
+  <nav class="onglets" aria-label="Sections">
+    <a href="index.html">Collection</a>
+    <a href="savoir-faire.html">L’atelier</a>
+  </nav>
+  <!-- the price and the action stay at hand whenever the card's own buttons are out of sight (phone) -->
+  <div class="barre" id="barre" hidden>
+    <div><span class="barre-nom" id="b-nom"></span><span class="barre-prix" id="b-prix"></span></div>
+    <button type="button" class="btn btn-achat" id="b-acheter" data-bouchon="achat">Offrir</button>
+  </div>
+
+  <!-- what the person who receives it sees: the gift opened on a phone and on a computer, in any browser -->
+  <dialog class="apercu" id="apercu" aria-labelledby="ap-titre">
+    <form method="dialog" class="fermer-haut"><button class="fermer" aria-label="Fermer" autofocus>×</button></form>
+    <h2 id="ap-titre">La page du cadeau</h2>
+    <p>Un lien, et à part un code : le lien seul n’ouvre rien. Sa page est dans la langue que vous choisissez, et le bouquet s’ouvre dans son navigateur, sur son ordinateur ou son téléphone : ni mot de passe, ni numéro, rien à installer, rien à payer. Il vit ensuite sur cet appareil.</p>
+    <div class="apercu-ecrans">
+      <figure class="ap-tel">
+        <div class="ap-tel-ecran">
+          <p class="ap-de">De la part de <b>Claire</b></p>
+          <p class="ap-mot">« Bon anniversaire, petite sœur. Il restera chez toi tout le mois. »</p>
+          <div class="ap-eclosion" id="ap-eclosion"></div>
+          <p class="ap-musique">♪ Nocturne, en fond</p>
+          <span class="ap-bouton">Le garder sur mon écran</span>
+        </div>
+        <figcaption>Sur son téléphone</figcaption>
+      </figure>
+      <figure class="ap-ordi">
+        <div class="ap-ordi-ecran"><span class="ap-barre"></span><div class="ap-ordi-bq" id="ap-ordi-bq"></div><p class="ap-de">De la part de <b>Claire</b></p></div>
+        <figcaption>Sur son ordinateur</figcaption>
+      </figure>
+    </div>
+    <ol class="ap-etapes">
+      <li>Vous écrivez le mot, signé ou non, vous choisissez la musique, vous payez.</li>
+      <li>Vous recevez un lien et un code, à lui transmettre séparément, par message ou par e-mail. Rien ne presse : ses trente jours commencent à l’ouverture.</li>
+      <li>Le bouquet éclôt avec votre mot ; il peut se poser sur son bureau ou son écran d’accueil.</li>
+      <li>Vous êtes prévenu à l’ouverture, et vous recevez son merci.</li>
+    </ol>
+    <p class="ap-ouvrir"><a href="recu.html" id="ap-ouvrir" target="_blank" rel="noopener">Ouvrir la page du cadeau</a></p>
+    <form method="dialog"><button class="btn btn-plein btn-petit">Fermer</button></form>
+  </dialog>
+
+  <dialog class="recu-boite" id="recu-boite" aria-labelledby="rb-titre">
+    <h2 id="rb-titre">J’ai reçu un bouquet</h2>
+    <form id="recu-form">
+      <label>Le lien reçu<input id="rb-lien" type="text" inputmode="url" autocomplete="off" spellcheck="false" required></label>
+      <button class="btn btn-plein" type="submit">Ouvrir la page du cadeau</button>
+      <p class="rb-etat" id="rb-etat" role="status"></p>
+    </form>
+    <ol class="rb-etapes">
+      <li>La personne qui vous l’offre vous a transmis un lien et, à part, un code.</li>
+      <li>Le lien ouvre la page du cadeau, qui vous demande le code : ni mot de passe, ni numéro.</li>
+      <li>Le bouquet éclôt avec son mot, sur l’appareil où vous l’ouvrez. Vous pouvez le poser sur votre bureau ou votre écran d’accueil.</li>
+    </ol>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <dialog class="bouchon" id="bouchon" aria-labelledby="bouchon-texte">
+    <p id="bouchon-texte"></p>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <script src="mise-en-scene.js"></script>
+  <script src="../scene/eclosion.js"></script>
+  <script type="module" src="produit.mjs"></script>
+  <script type="module" src="vie.mjs"></script>
+  <!-- the bee's talk: the shop's answers, and someone of the atelier on the line (owner, 2026-11-02) -->
+  <script type="module" src="abeille.mjs"></script>
+</body>
+</html>

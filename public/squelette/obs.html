@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Belai’s Garden · source pour OBS</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- The bouquet alone, for a live stream (owner, 2026-11-01: « le droit de le montrer, bien sûr ; on ajoute la source
+       OBS »). In OBS: a « Browser » source with this address, any size; the ground is transparent, nothing but the bouquet,
+       which blooms then sways in its breeze. ?b=<id> picks the bouquet; ?fond=<colour> paints a ground instead (a chroma
+       key, say ?fond=00ff00). In the open shop this address comes with the bouquet one owns, from Belai’s Launcher. -->
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+    body { display: grid; place-items: end center; }
+    #bouquet { position: relative; }
+  </style>
+</head>
+<body>
+  <div id="bouquet" role="img"></div>
+  <script src="../scene/eclosion.js"></script>
+  <script type="module">
+    const SCENE = '../scene/';
+    const q = new URLSearchParams(location.search);
+    const shop = await fetch(`${SCENE}boutique.json`).then((r) => r.json());
+    const p = shop.produits.find((x) => x.id === q.get('b')) || shop.produits[0];
+    const fond = q.get('fond');
+    if (fond && /^[0-9a-f]{3,8}$/i.test(fond)) document.body.style.background = `#${fond}`;
+    const box = document.getElementById('bouquet');
+    box.setAttribute('aria-label', p.nom);
+    // as large as the source's frame allows, standing on its bottom edge
+    const { vb } = await fetch(`${SCENE}bouquets/${p.id}/sprites/sprites.json`).then((r) => r.json());
+    const fit = () => {
+      const w = Math.min(innerWidth, (innerHeight * vb[2]) / vb[3]);
+      Object.assign(box.style, { width: `${w}px`, height: `${(w * vb[3]) / vb[2]}px` });
+    };
+    fit();
+    addEventListener('resize', fit);
+    await Eclosion.ouvre(box, `${SCENE}bouquets/${p.id}/manifeste.json`);
+  </script>
+</body>
+</html>

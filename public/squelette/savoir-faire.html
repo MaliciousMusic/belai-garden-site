@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <!-- « Nous écrire » opens the site's own window, the message goes to the server (owner, 2026-11-01) -->
+  <script type="module" src="ecrire.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Savoir-faire : chaque pétale, d’après nature | Belai’s Garden</title>
+  <meta name="description" content="Comment naît un bouquet numérique de Belai’s Garden : chaque fleur redessinée d’après des variétés nommées, puis composée et animée tige à tige.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chaque pétale, d’après nature | Belai’s Garden">
+  <meta property="og:description" content="Aucune photo dans un bouquet : tout est dessiné, d’après de vraies fleurs, à Clermont-Ferrand.">
+  <meta property="og:image" content="partage.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-extralight.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-black.woff2">
+  <link rel="stylesheet" href="squelette.css">
+  <!-- the choreography's waiting state is set before the first paint (no flash); only on a first visit of this page (a
+       returning visitor wants the bouquets at once, n2 army), never with reduced motion or without JS -->
+  <script>(() => { let seen = false; try { seen = localStorage.getItem('scene-vue-savoir-faire') === '1'; localStorage.setItem('scene-vue-savoir-faire', '1'); } catch (_) {}
+    if (!seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('scene');
+    // failsafe (jury n2): if the choreography never starts, nothing stays invisible
+    setTimeout(() => { if (!window.SCENE) document.documentElement.classList.remove('scene'); }, 4000); })();</script>
+</head>
+<body class="page-savoir-faire">
+  <a class="evitement" href="#contenu">Aller au contenu</a>
+  <!-- Skeleton of the shop (ch/squelette), one page per use (owner, 2026-10-31). Choices and reasons in SQUELETTE.md. -->
+  <header class="tete">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="savoir-faire.html">L’atelier</a>
+    </nav>
+    <div class="tete-droite">
+      <a href="compte.html" class="discret compte-lien" aria-label="Mes fleurs"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.7 3.7-5.6 7.2-5.6s6.3 1.9 7.2 5.6"/></svg><span>Mes fleurs</span></a>
+      <details class="langues">
+        <summary aria-label="Langue : français"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.8 2.6 14.2 0 17M12 3.5c-2.6 2.8-2.6 14.2 0 17"/></svg><span>FR</span></summary>
+        <ul>
+          <li><a href="#" aria-current="true" lang="fr">Français</a></li>
+          <li><a href="#" data-bouchon="langue" lang="en">English</a></li>
+          <li><a href="#" data-bouchon="langue" lang="zh-Hans">中文</a></li>
+          <li><a href="#" data-bouchon="langue" lang="de">Deutsch</a></li>
+          <li><a href="#" data-bouchon="langue" lang="es">Español</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- Proof of authority: the film of the atelier, three facts that can be shown, and a named workshop -->
+    <section id="l-atelier" class="bloc l-atelier" aria-labelledby="a-titre">
+      <div class="bloc-tete">
+        <p class="sur-titre">L’atelier</p>
+        <h1 id="a-titre" class="titre">Chaque pétale, d’après nature.</h1>
+        <p class="chapo">Aucune photo dans un bouquet : tout est dessiné. Chaque fleur est redessinée d’après des photos de variétés
+          nommées, sous tous ses angles, ses couleurs mesurées, du bouton à la fleur ouverte. Puis le bouquet est composé et
+          animé tige à tige.</p>
+      </div>
+      <!-- the bridge outward: the long film of the atelier, on YouTube (placeholder until it is online); its poster is the
+           month's bouquet, drawn -->
+      <a class="film film-grand" id="film" href="#" data-bouchon="film">
+        <span class="film-image" aria-hidden="true"><span class="film-bq" id="film-bq"></span><span class="film-lecture"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.2v9.6l7.6-4.8z"/></svg></span></span>
+        <span class="film-texte">
+          <span class="sur-titre">Film d’atelier · YouTube<svg class="dehors" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5h10v10M19 5L6 18"/></svg></span>
+          <b>Comment naît un bouquet</b>
+          <span>De la première photo au vase : angles, stades, coloris, animation, règles de placement.</span>
+        </span>
+      </a>
+      <ul class="chiffres chiffres-3">
+        <li><b>533</b><span>espèces dessinées</span></li>
+        <li><b>3 771</b><span>variétés et coloris</span></li>
+        <li><b id="n-tiges">70</b><span>tiges dans le plus grand bouquet de ce mois</span></li>
+      </ul>
+      <!-- the owner's own word (2026-11-01): real flowers come first when they can be given by hand -->
+      <blockquote class="mot-atelier">
+        <p>Rien ne remplace de vraies fleurs. Je dessine celles-ci parce que je suis plein d’allergies, et parce
+          qu’on est parfois loin. Si vous pouvez offrir un vrai bouquet en main propre, faites-le.</p>
+        <footer>Hadrien, l’atelier</footer>
+      </blockquote>
+      <p class="signature">Atelier Belai’s Garden, Clermont-Ferrand.</p>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="pied-marque">
+      <p class="pied-nom"><span class="marque"><span class="visuellement-cache">Belai’s Garden</span></span></p>
+      <p>Bouquets dessinés et animés tige à tige. Belai’s Garden est l’atelier d’Hadrien Lonjaret, entrepreneur individuel à Clermont-Ferrand.</p>
+    </div>
+    <nav aria-label="Informations légales">
+      <a href="legal.html">Mentions légales</a>
+      <a href="legal.html#terms">Conditions de vente et échange</a>
+      <a href="legal.html#privacy">Confidentialité</a>
+    </nav>
+    <nav aria-label="Nous joindre">
+      <a href="mailto:lonjaret.hadrien@proton.me">Nous écrire</a>
+      <p class="delai">Réponse en 30 minutes environ, de 10 h à 23 h (heure de Paris), 7 jours sur 7.</p>
+      <a href="sur-mesure.html">Une demande sur mesure</a>
+      <a href="groupe.html">Offrir à plusieurs</a>
+    </nav>
+  </footer>
+
+  <!-- on a phone the pages live in a bar at the bottom, in the thumb's reach -->
+  <nav class="onglets" aria-label="Sections">
+    <a href="index.html">Collection</a>
+    <a href="savoir-faire.html">L’atelier</a>
+  </nav>
+
+  <dialog class="recu-boite" id="recu-boite" aria-labelledby="rb-titre">
+    <h2 id="rb-titre">J’ai reçu un bouquet</h2>
+    <form id="recu-form">
+      <label>Le lien reçu<input id="rb-lien" type="text" inputmode="url" autocomplete="off" spellcheck="false" required></label>
+      <button class="btn btn-plein" type="submit">Ouvrir la page du cadeau</button>
+      <p class="rb-etat" id="rb-etat" role="status"></p>
+    </form>
+    <ol class="rb-etapes">
+      <li>La personne qui vous l’offre vous a transmis un lien et, à part, un code.</li>
+      <li>Le lien ouvre la page du cadeau, qui vous demande le code : ni mot de passe, ni numéro.</li>
+      <li>Le bouquet éclôt avec son mot, sur l’appareil où vous l’ouvrez. Vous pouvez le poser sur votre bureau ou votre écran d’accueil.</li>
+    </ol>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <dialog class="bouchon" id="bouchon" aria-labelledby="bouchon-texte">
+    <p id="bouchon-texte"></p>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <script src="mise-en-scene.js"></script>
+  <script src="../scene/eclosion.js"></script>
+  <script type="module" src="savoir-faire.mjs"></script>
+  <script type="module" src="vie.mjs"></script>
+  <!-- the bee's talk: the shop's answers, and someone of the atelier on the line (owner, 2026-11-02) -->
+  <script type="module" src="abeille.mjs"></script>
+</body>
+</html>

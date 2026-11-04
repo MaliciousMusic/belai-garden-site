@@ -1,0 +1,13519 @@
+{
+"des_centimes": 80,
+"jours": 30,
+"fleurs": [
+{
+"sid": "anthurium-andraeanum",
+"nom": "Anthurium",
+"latin": "Anthurium andraeanum",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c3121f",
+"coloris": [
+[
+"rouge laqué",
+"#c3121f"
+],
+[
+"rouge sang",
+"#8c0b1b"
+],
+[
+"noir velours",
+"#2c0a11"
+],
+[
+"chocolat",
+"#4d1d17"
+],
+[
+"terracotta",
+"#9d4b2d"
+],
+[
+"orange",
+"#e6662b"
+],
+[
+"corail",
+"#ef6f5b"
+],
+[
+"rose saumon",
+"#f39a80"
+]
+],
+"sens": "Hospitalité, bonheur",
+"source": "usage des fleuristes",
+"prix": 850,
+"vase": "soliflore"
+},
+{
+"sid": "anemone-coronaria",
+"nom": "Anémone des fleuristes",
+"latin": "Anemone coronaria",
+"famille": "Printemps & bulbes",
+"mois": [
+10,
+11,
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#c8102e",
+"coloris": [
+[
+"blanc à cœur noir",
+"#f7f5f0"
+],
+[
+"blanc à cœur vert",
+"#f7f5f0"
+],
+[
+"rouge",
+"#c8102e"
+],
+[
+"bleu violet",
+"#5b4aa8"
+],
+[
+"lilas",
+"#b8a2d8"
+],
+[
+"fuchsia",
+"#d81f7a"
+],
+[
+"rose pâle",
+"#f2c4cf"
+],
+[
+"rose saumon",
+"#f2a8a0"
+]
+],
+"sens": "Jette ta tristesse au vent",
+"source": "Braun 1843",
+"prix": 360,
+"vase": "soliflore"
+},
+{
+"sid": "arum-calla",
+"nom": "Arum",
+"latin": "Zantedeschia aethiopica",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4cf3a",
+"coloris": [
+[
+"blanc (grand arum)",
+"#f8f7f0"
+],
+[
+"blanc pointe verte",
+"#f5f6ea"
+],
+[
+"blanc rosé",
+"#f8efec"
+],
+[
+"crème",
+"#f4ecd4"
+],
+[
+"crème à gorge pourpre",
+"#f2ebd8"
+],
+[
+"jaune",
+"#f4cf3a"
+],
+[
+"jaune d’or",
+"#ecb11e"
+],
+[
+"pêche",
+"#f6b48e"
+]
+],
+"sens": "Beauté magnifique",
+"source": "Greenaway 1884 · La Tour 1819",
+"prix": 700,
+"vase": "soliflore"
+},
+{
+"sid": "viburnum-roseum",
+"nom": "Boule-de-neige",
+"latin": "Viburnum opulus 'Roseum'",
+"famille": "Printemps & bulbes",
+"mois": [
+11,
+12,
+1,
+2,
+3,
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#c5d86a",
+"coloris": [
+[
+"vert anis (boule verte)",
+"#c5d86a"
+],
+[
+"vert tendre (virant au blanc)",
+"#dbe6a0"
+],
+[
+"blanc",
+"#f7f5ee"
+],
+[
+"blanc crème",
+"#f2eedb"
+],
+[
+"blanc rosé (fin de saison)",
+"#efc8d4"
+]
+],
+"sens": "Bonne nouvelle",
+"source": "La Tour 1819",
+"prix": 650,
+"vase": "soliflore"
+},
+{
+"sid": "cerisier-du-japon-sato-zakura",
+"nom": "Cerisier à fleurs du Japon",
+"latin": "Prunus serrulata",
+"famille": "Branches & baies",
+"mois": [
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#e27f9e",
+"coloris": [
+[
+"rose vif (Kanzan)",
+"#e27f9e"
+],
+[
+"rose (Pink Perfection)",
+"#efb3c4"
+],
+[
+"rose tendre (Ichiyo)",
+"#f6d6de"
+],
+[
+"blanc (Shirotae, Mont Fuji)",
+"#fbf8f4"
+],
+[
+"jaune verdâtre (Ukon)",
+"#f1eed6"
+]
+],
+"sens": "Beauté éphémère de la vie",
+"source": "tradition japonaise",
+"prix": 1050,
+"vase": "colonne"
+},
+{
+"sid": "chrysantheme-disbud",
+"nom": "Chrysanthème à grosse fleur",
+"latin": "Chrysanthemum × morifolium",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f5d22c",
+"coloris": [
+[
+"blanc",
+"#f7f5ee"
+],
+[
+"crème",
+"#f2ead0"
+],
+[
+"jaune",
+"#f5d22c"
+],
+[
+"vert (Feeling Green)",
+"#c8d86a"
+],
+[
+"rose",
+"#e8b0c0"
+],
+[
+"rose poudré",
+"#e2cfdb"
+],
+[
+"lilas",
+"#c3a6dc"
+],
+[
+"violet",
+"#7a2a6a"
+]
+],
+"sens": "Gaieté dans l’adversité, longévité",
+"source": "Greenaway 1884 · tradition chinoise",
+"prix": 450,
+"vase": "colonne"
+},
+{
+"sid": "cognassier-du-japon",
+"nom": "Cognassier du Japon",
+"latin": "Chaenomeles speciosa",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#ec7a5e",
+"coloris": [
+[
+"corail saumoné (Salmon Horizon)",
+"#ec7a5e"
+],
+[
+"rouge écarlate (Crimson and Gold)",
+"#c42a2c"
+],
+[
+"rose (Pink Lady)",
+"#ee9fae"
+],
+[
+"blanc (Nivalis)",
+"#fbf6f1"
+],
+[
+"saumon abricot (× superba)",
+"#f19a7e"
+],
+[
+"orange vif (Orange Trail)",
+"#ec6430"
+],
+[
+"panaché blanc, rose et rouge (Toyo-Nishiki)",
+"#f4c4c8"
+]
+],
+"sens": "Le feu des fées",
+"source": "Greenaway 1884 · Braun 1843",
+"prix": 850,
+"vase": "colonne"
+},
+{
+"sid": "cosmos",
+"nom": "Cosmos",
+"latin": "Cosmos bipinnatus",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#ec8fb4",
+"coloris": [
+[
+"blanc (Purity)",
+"#f7f5ee"
+],
+[
+"rose pâle",
+"#f4c9d2"
+],
+[
+"rose",
+"#ec8fb4"
+],
+[
+"magenta (Dazzler)",
+"#c8205a"
+],
+[
+"rouge rubis",
+"#a8183a"
+],
+[
+"abricot",
+"#f2b48e"
+],
+[
+"blanc liseré de rose",
+"#f7f2f2"
+],
+[
+"blanc rayé de cerise",
+"#f7f2f2"
+]
+],
+"sens": "Harmonie, ordre",
+"source": "étymologie grecque",
+"prix": 250,
+"vase": "soliflore"
+},
+{
+"sid": "cymbidium-grandes-fleurs",
+"nom": "Cymbidium à grandes fleurs",
+"latin": "Cymbidium hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#bfd176",
+"coloris": [
+[
+"blanc",
+"#f9f6ee"
+],
+[
+"ivoire",
+"#f4ecd8"
+],
+[
+"crème à labelle rose",
+"#f3e8d6"
+],
+[
+"blanc à labelle rouge",
+"#f9f6ee"
+],
+[
+"vert pomme",
+"#bfd176"
+],
+[
+"vert menthe",
+"#cfe0b0"
+],
+[
+"jaune",
+"#efd476"
+],
+[
+"rose pâle",
+"#f0cdd4"
+]
+],
+"sens": "Noblesse d'âme, intégrité",
+"source": "tradition chinoise",
+"prix": 2800,
+"vase": "soliflore"
+},
+{
+"sid": "dahlia-decoratif",
+"nom": "Dahlia décoratif",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#f2b48a",
+"coloris": [
+[
+"blanc (Bridezilla)",
+"#f8f6ee"
+],
+[
+"nacre rosé",
+"#f6ebe8"
+],
+[
+"crème",
+"#f2e6c8"
+],
+[
+"pêche abricot",
+"#f2b48a"
+],
+[
+"corail",
+"#f2957a"
+],
+[
+"saumon et lavande",
+"#f2a898"
+],
+[
+"rose profond",
+"#e05a8a"
+],
+[
+"fuchsia",
+"#c62a6c"
+]
+],
+"sens": "Reconnaissance et estime",
+"source": "La Tour 1819 · Braun 1843",
+"prix": 500,
+"vase": "colonne"
+},
+{
+"sid": "delphinium",
+"nom": "Delphinium",
+"latin": "Delphinium elatum hybrides",
+"famille": "Été & classiques",
+"mois": [
+4,
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#9ebfee",
+"coloris": [
+[
+"bleu ciel à œil blanc",
+"#9ebfee"
+],
+[
+"bleu azur teinté mauve",
+"#6f94e2"
+],
+[
+"bleu moyen à œil noir",
+"#5877d0"
+],
+[
+"bleu roi à œil blanc",
+"#4a4cbc"
+],
+[
+"bleu nuit",
+"#2e3d98"
+],
+[
+"bleu gentiane (belladonna)",
+"#3350c6"
+],
+[
+"bleu ciel (belladonna)",
+"#a8c5ee"
+],
+[
+"lavande",
+"#b4a7e2"
+]
+],
+"sens": "Légèreté",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 600,
+"vase": "colonne"
+},
+{
+"sid": "forsythia",
+"nom": "Forsythia",
+"latin": "Forsythia × intermedia",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#eebc22",
+"coloris": [
+[
+"jaune d'or (× intermedia Spectabilis)",
+"#eebc22"
+],
+[
+"jaune vif (Lynwood Gold)",
+"#f3cf33"
+]
+],
+"sens": "Anticipation, espoir",
+"source": "usage des fleuristes",
+"prix": 380,
+"vase": "colonne"
+},
+{
+"sid": "freesia",
+"nom": "Freesia",
+"latin": "Freesia × hybrida",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4e6c4",
+"coloris": [
+[
+"blanc",
+"#f6f3ea"
+],
+[
+"crème",
+"#f4e6c4"
+],
+[
+"jaune",
+"#f5d22c"
+],
+[
+"orange",
+"#f08a2a"
+],
+[
+"rouge",
+"#d8282e"
+],
+[
+"rose pâle",
+"#f4c6d4"
+],
+[
+"rose",
+"#e88aac"
+],
+[
+"fuchsia",
+"#e04a8a"
+]
+],
+"sens": "Amitié, confiance, innocence",
+"source": "usage des fleuristes",
+"prix": 270,
+"vase": "soliflore"
+},
+{
+"sid": "gerbera",
+"nom": "Gerbera",
+"latin": "Gerbera × hybrida",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4e6c0",
+"coloris": [
+[
+"blanc à cœur vert",
+"#f8f6ee"
+],
+[
+"blanc à cœur noir",
+"#f7f4ec"
+],
+[
+"crème vanille",
+"#f4e6c0"
+],
+[
+"jaune à cœur noir",
+"#f6c81e"
+],
+[
+"jaune citron à cœur vert",
+"#f4dc3a"
+],
+[
+"orange à cœur noir",
+"#f07a1e"
+],
+[
+"abricot",
+"#f6b06a"
+],
+[
+"saumon",
+"#f29a7a"
+]
+],
+"sens": "Gaieté, joie, innocence",
+"source": "usage des fleuristes",
+"prix": 300,
+"vase": "soliflore"
+},
+{
+"sid": "germini",
+"nom": "Germini",
+"latin": "Gerbera × hybrida",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4e6c0",
+"coloris": [
+[
+"blanc à cœur vert",
+"#f8f6ee"
+],
+[
+"crème à cœur noir",
+"#f4e6c0"
+],
+[
+"jaune à cœur noir",
+"#f6c81e"
+],
+[
+"orange",
+"#f07a1e"
+],
+[
+"pêche",
+"#f6b88a"
+],
+[
+"corail à cœur vert",
+"#f2725a"
+],
+[
+"rouge à cœur noir",
+"#d01e2a"
+],
+[
+"cerise",
+"#c41848"
+]
+],
+"sens": "Gaieté, joie, innocence",
+"source": "usage des fleuristes",
+"prix": 220,
+"vase": "soliflore"
+},
+{
+"sid": "gloriosa",
+"nom": "Gloriosa",
+"latin": "Gloriosa superba",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#cc1f2e",
+"coloris": [
+[
+"rouge bordé de jaune",
+"#cc1f2e"
+],
+[
+"jaune",
+"#f0c838"
+],
+[
+"orange",
+"#ee7a2a"
+],
+[
+"rouge",
+"#c41c2a"
+],
+[
+"bordeaux",
+"#7a1a2a"
+]
+],
+"sens": "Gloire",
+"source": "étymologie latine",
+"prix": 650,
+"vase": "soliflore"
+},
+{
+"sid": "glycine",
+"nom": "Glycine",
+"latin": "Wisteria floribunda",
+"famille": "Branches & baies",
+"mois": [
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#a48ccc",
+"coloris": [
+[
+"mauve (Wisteria sinensis)",
+"#a48ccc"
+],
+[
+"violet bleuté (floribunda Multijuga)",
+"#8a7ec8"
+],
+[
+"blanc (Alba, Shiro-noda)",
+"#f4f2ec"
+],
+[
+"rose (Rosea, Honbeni)",
+"#e4aac4"
+],
+[
+"violet profond (Black Dragon)",
+"#62428a"
+]
+],
+"sens": "Amitié tendre, bienvenue",
+"source": "La Tour 1819 · Ingram 1869",
+"prix": 1850,
+"vase": "colonne"
+},
+{
+"sid": "iris-hollandais",
+"nom": "Iris de Hollande",
+"latin": "Iris × hollandica",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#4a44a8",
+"coloris": [
+[
+"bleu (Blue Magic)",
+"#4a44a8"
+],
+[
+"bleu nuit (Professor Blaauw)",
+"#26307a"
+],
+[
+"violet (Purple Sensation)",
+"#5a2a90"
+],
+[
+"bleu ciel",
+"#8a9ad8"
+],
+[
+"bleu pâle et blanc (Silvery Beauty)",
+"#b0bce8"
+],
+[
+"blanc (White Excelsior)",
+"#f7f5ee"
+],
+[
+"jaune (Golden Harvest)",
+"#f5d02a"
+],
+[
+"blanc et jaune (Apollo)",
+"#f6f4ec"
+]
+],
+"sens": "Message, bonnes nouvelles",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 260,
+"vase": "soliflore"
+},
+{
+"sid": "jacinthe",
+"nom": "Jacinthe",
+"latin": "Hyacinthus orientalis",
+"famille": "Printemps & bulbes",
+"mois": [
+11,
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#6a86d0",
+"coloris": [
+[
+"bleu (Delft Blue)",
+"#6a86d0"
+],
+[
+"bleu nuit (Blue Jacket)",
+"#3a46a8"
+],
+[
+"violet (Peter Stuyvesant)",
+"#4a3a9a"
+],
+[
+"mauve (Splendid Cornelia)",
+"#b49ad6"
+],
+[
+"rose (Pink Pearl)",
+"#ec9fbd"
+],
+[
+"rose pâle (Fondant)",
+"#f2c6d4"
+],
+[
+"fuchsia (Jan Bos)",
+"#d4306c"
+],
+[
+"blanc (Carnegie)",
+"#f7f4ec"
+]
+],
+"sens": "Jeu et bienveillance",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 340,
+"vase": "soliflore"
+},
+{
+"sid": "narcisse-trompette",
+"nom": "Jonquille",
+"latin": "Narcissus",
+"famille": "Printemps & bulbes",
+"mois": [
+12,
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#f5d22c",
+"coloris": [
+[
+"jaune (Dutch Master)",
+"#f5d22c"
+],
+[
+"jaune d'or (Golden Harvest)",
+"#f4c41e"
+],
+[
+"citron, trompette blanchissante (Spellbinder)",
+"#f1e05a"
+],
+[
+"blanc (Mount Hood)",
+"#f8f5ea"
+],
+[
+"crème, trompette citron (Bravoure)",
+"#f2e8cc"
+],
+[
+"bicolore blanc et jaune (Las Vegas)",
+"#f6f2e2"
+]
+],
+"sens": "Désir, estime",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 160,
+"vase": "soliflore"
+},
+{
+"sid": "lilas",
+"nom": "Lilas",
+"latin": "Syringa vulgaris",
+"famille": "Printemps & bulbes",
+"mois": [
+10,
+11,
+12,
+1,
+2,
+3,
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#b58ccc",
+"coloris": [
+[
+"lilas mauve (Ruhm von Horstenstein)",
+"#b58ccc"
+],
+[
+"blanc (Madame Florent Stepman)",
+"#f6f4ec"
+],
+[
+"pourpre (Andenken an Ludwig Späth)",
+"#7a3a86"
+],
+[
+"pourpre double (Charles Joly)",
+"#8a3a7e"
+],
+[
+"bleu lavande double (Président Grévy)",
+"#a99ad8"
+],
+[
+"lilas double (Michel Buchner)",
+"#c3a2d6"
+],
+[
+"rose (Lucie Baltet)",
+"#e8b6cc"
+],
+[
+"pourpre liseré de blanc (Sensation)",
+"#8a4a96"
+]
+],
+"sens": "Premiers émois amoureux",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 800,
+"vase": "colonne"
+},
+{
+"sid": "narcisse-bouquet",
+"nom": "Narcisse à bouquet",
+"latin": "Narcissus tazetta",
+"famille": "Printemps & bulbes",
+"mois": [
+10,
+11,
+12,
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#f2e7a6",
+"coloris": [
+[
+"blanc pur (Paperwhite Ziva)",
+"#fbfaf4"
+],
+[
+"blanc à coupe orange (Geranium)",
+"#faf8f0"
+],
+[
+"jaune primevère à coupe jaune (Minnow)",
+"#f2e7a6"
+],
+[
+"blanc à coupe jaune (Avalanche)",
+"#f9f7ee"
+],
+[
+"jaune à coupe orange (Grand Soleil d’Or)",
+"#f4cb2e"
+],
+[
+"blanc à coupe orange vif (Cragford)",
+"#f8f6ee"
+],
+[
+"blanc à coupe jaune d’or (tazetta chinensis)",
+"#fbf9f0"
+],
+[
+"crème à coupe citron pâle (Silver Chimes)",
+"#f6f2e2"
+]
+],
+"sens": "Bonne fortune",
+"source": "tradition chinoise",
+"prix": 220,
+"vase": "soliflore"
+},
+{
+"sid": "phalaenopsis",
+"nom": "Phalaenopsis",
+"latin": "Phalaenopsis spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ee98b8",
+"coloris": [
+[
+"blanc",
+"#fbfaf6"
+],
+[
+"blanc à labelle rouge",
+"#fbfaf6"
+],
+[
+"blanc à labelle jaune",
+"#fbfaf6"
+],
+[
+"rose pâle",
+"#f6d2de"
+],
+[
+"rose",
+"#ee98b8"
+],
+[
+"fuchsia",
+"#d6408c"
+],
+[
+"lilas",
+"#caa2d8"
+],
+[
+"pourpre",
+"#8e2b7c"
+]
+],
+"sens": "Élégance, raffinement",
+"source": "usage des fleuristes",
+"prix": 2400,
+"vase": "soliflore"
+},
+{
+"sid": "pois-de-senteur",
+"nom": "Pois de senteur",
+"latin": "Lathyrus odoratus",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5,
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#f2b6c8",
+"coloris": [
+[
+"blanc",
+"#f7f3ec"
+],
+[
+"crème",
+"#f2e8c8"
+],
+[
+"rose pâle",
+"#f2c6d2"
+],
+[
+"rose",
+"#f2b6c8"
+],
+[
+"saumon",
+"#f2a08a"
+],
+[
+"corail",
+"#f08070"
+],
+[
+"cerise",
+"#e2457e"
+],
+[
+"rouge",
+"#c8203a"
+]
+],
+"sens": "Plaisirs délicats",
+"source": "Greenaway 1884 · Phillips 1825",
+"prix": 320,
+"vase": "soliflore"
+},
+{
+"sid": "renoncule-classique",
+"nom": "Renoncule",
+"latin": "Ranunculus asiaticus",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#f3c4cc",
+"coloris": [
+[
+"blanc",
+"#f7f3ea"
+],
+[
+"crème",
+"#f4ead0"
+],
+[
+"rose pâle",
+"#f3c4cc"
+],
+[
+"rose",
+"#ec8fb0"
+],
+[
+"fuchsia",
+"#e2457b"
+],
+[
+"rouge",
+"#c41e2e"
+],
+[
+"bordeaux",
+"#6a1426"
+],
+[
+"orange",
+"#f07a2a"
+]
+],
+"sens": "Rayonnante de charme",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 400,
+"vase": "soliflore"
+},
+{
+"sid": "rose-aspect-jardin",
+"nom": "Rose d'aspect jardin",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e07f9c",
+"coloris": [
+[
+"blanc nacré",
+"#f7f3ec"
+],
+[
+"crème",
+"#f4e8d0"
+],
+[
+"champagne (tons terre)",
+"#eadcc4"
+],
+[
+"rose pâle",
+"#f4ccd2"
+],
+[
+"rose moyen",
+"#e07f9c"
+],
+[
+"rose bonbon",
+"#f08ab0"
+],
+[
+"rose vif",
+"#e04a80"
+],
+[
+"pêche",
+"#f4c2a1"
+]
+],
+"sens": "Amour et beauté",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 700,
+"vase": "soliflore"
+},
+{
+"sid": "rose-de-jardin",
+"nom": "Rose de jardin",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4e2a8",
+"coloris": [
+[
+"blanc crème à cœur ivoire",
+"#f6ecd9"
+],
+[
+"ivoire",
+"#f4ecd8"
+],
+[
+"beurre",
+"#f4e2a8"
+],
+[
+"rose blush",
+"#f6d6d4"
+],
+[
+"rose pâle",
+"#f2b9c4"
+],
+[
+"rose dragée",
+"#f4a8c0"
+],
+[
+"rose moyen",
+"#e07f9c"
+],
+[
+"vieux rose saumoné",
+"#d0909a"
+]
+],
+"sens": "Amour et beauté",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 900,
+"vase": "soliflore"
+},
+{
+"sid": "rose-standard",
+"nom": "Rose standard",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f0b8c4",
+"coloris": [
+[
+"blanc pur",
+"#fbfaf5"
+],
+[
+"blanc crème",
+"#f7f1e2"
+],
+[
+"ivoire champagne",
+"#f4e8d4"
+],
+[
+"blanc à cœur pêche",
+"#f7f0e6"
+],
+[
+"blanc aux pétales verdâtres",
+"#f6f2e2"
+],
+[
+"rose blush",
+"#f6dcdc"
+],
+[
+"rose poudré",
+"#f0b8c4"
+],
+[
+"rose moyen",
+"#e88aa6"
+]
+],
+"sens": "Amour et beauté",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 450,
+"vase": "soliflore"
+},
+{
+"sid": "scabieuse",
+"nom": "Scabieuse",
+"latin": "Scabiosa atropurpurea",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#3a0c1c",
+"coloris": [
+[
+"pourpre noir",
+"#3a0c1c"
+],
+[
+"bordeaux",
+"#5a1030"
+],
+[
+"lie-de-vin",
+"#7a1f3c"
+],
+[
+"framboise",
+"#a8285a"
+],
+[
+"rose",
+"#e8a2bc"
+],
+[
+"rose poudré",
+"#f0c8d4"
+],
+[
+"lavande",
+"#a29bd2"
+],
+[
+"bleu (Fama)",
+"#8a8ed0"
+]
+],
+"sens": "Consolation dans la solitude",
+"source": "Braun 1843",
+"prix": 400,
+"vase": "soliflore"
+},
+{
+"sid": "tulipe-double",
+"nom": "Tulipe double",
+"latin": "Tulipa gesneriana",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f3bccb",
+"coloris": [
+[
+"rose pâle",
+"#f3bccb"
+],
+[
+"blanc",
+"#f6f2e8"
+],
+[
+"abricot poudré",
+"#f0c4a8"
+],
+[
+"pêche",
+"#f6c0a0"
+],
+[
+"rose vif",
+"#e2457e"
+],
+[
+"jaune",
+"#f4d23c"
+],
+[
+"orange flammé de pourpre",
+"#f08040"
+],
+[
+"rouge",
+"#c41e3a"
+]
+],
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819 · Phillips 1825",
+"prix": 420,
+"vase": "soliflore"
+},
+{
+"sid": "tulipe-frangee",
+"nom": "Tulipe frangée",
+"latin": "Tulipa gesneriana",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#e99ab6",
+"coloris": [
+[
+"rose à cœur blanc",
+"#e99ab6"
+],
+[
+"blanc",
+"#f7f3ea"
+],
+[
+"jaune",
+"#f6d02a"
+],
+[
+"rouge bordeaux",
+"#a3182e"
+],
+[
+"lilas",
+"#a888c8"
+],
+[
+"pourpre noir",
+"#3a0f2c"
+],
+[
+"fuchsia",
+"#d8508a"
+],
+[
+"orange rosé",
+"#f08a5a"
+]
+],
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819 · Phillips 1825",
+"prix": 420,
+"vase": "soliflore"
+},
+{
+"sid": "tulipe-perroquet",
+"nom": "Tulipe perroquet",
+"latin": "Tulipa gesneriana",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f4a873",
+"coloris": [
+[
+"abricot",
+"#f4a873"
+],
+[
+"rouge",
+"#c41f2c"
+],
+[
+"blanc",
+"#f6f1e2"
+],
+[
+"jaune d’or",
+"#f5cf2e"
+],
+[
+"pourpre noir",
+"#3f1030"
+],
+[
+"saumon",
+"#f28a6e"
+],
+[
+"rose",
+"#f2a2bc"
+],
+[
+"cerise",
+"#c8407e"
+]
+],
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819 · Phillips 1825",
+"prix": 450,
+"vase": "soliflore"
+},
+{
+"sid": "tulipe-simple",
+"nom": "Tulipe simple",
+"latin": "Tulipa gesneriana",
+"famille": "Printemps & bulbes",
+"mois": [
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#c81f2c",
+"coloris": [
+[
+"rouge (Ile de France)",
+"#c81f2c"
+],
+[
+"rouge feu",
+"#d8342a"
+],
+[
+"orange",
+"#f0772a"
+],
+[
+"orange bordé d’or",
+"#e6532a"
+],
+[
+"or",
+"#ebb23c"
+],
+[
+"abricot",
+"#f2a86a"
+],
+[
+"corail",
+"#f08468"
+],
+[
+"jaune",
+"#f6cf2a"
+]
+],
+"sens": "Déclaration d'amour",
+"source": "La Tour 1819 · Phillips 1825",
+"prix": 220,
+"vase": "soliflore"
+},
+{
+"sid": "oeillet-standard",
+"nom": "Œillet standard",
+"latin": "Dianthus caryophyllus",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4d23a",
+"coloris": [
+[
+"blanc",
+"#f8f6ee"
+],
+[
+"crème",
+"#f4e8c8"
+],
+[
+"jaune",
+"#f4d23a"
+],
+[
+"pêche",
+"#f6b890"
+],
+[
+"orange",
+"#f08a2a"
+],
+[
+"rose clair",
+"#f4c0cc"
+],
+[
+"rose",
+"#ec7fa0"
+],
+[
+"cerise (Bizet)",
+"#d8205a"
+]
+],
+"sens": "Amour vif et pur",
+"source": "La Tour 1819 · Greenaway 1884",
+"prix": 220,
+"vase": "soliflore"
+},
+{
+"sid": "abricotier-du-japon-ume",
+"nom": "Abricotier du Japon",
+"latin": "Prunus mume",
+"famille": "Branches & baies",
+"mois": [
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#f1b6c6",
+"coloris": [
+[
+"blanc (Ryokugaku, calice vert)",
+"#fbf8f3"
+],
+[
+"rose tendre double (Dawn)",
+"#f1b6c6"
+],
+[
+"rose vif double (Peggy Clarke)",
+"#df7896"
+],
+[
+"rouge carmin (Beni-chidori)",
+"#b5223e"
+],
+[
+"blanc double (Alba Plena)",
+"#fdfaf5"
+],
+[
+"rose simple (Omoi-no-mama)",
+"#f6d0da"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1300,
+"vase": "colonne"
+},
+{
+"sid": "achillee",
+"nom": "Achillée",
+"latin": "Achillea millefolium et hybrides",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#e8d65a",
+"coloris": [
+[
+"jaune soufre (Moonshine)",
+"#e8d65a"
+],
+[
+"blanc",
+"#f4f1e4"
+],
+[
+"crème (Summer Pastels)",
+"#efe2b0"
+],
+[
+"jaune d’or (filipendulina Cloth of Gold)",
+"#e8b224"
+],
+[
+"or vif (filipendulina Parker’s Variety)",
+"#dfa21c"
+],
+[
+"terracotta",
+"#d2774c"
+],
+[
+"saumon (Salmon Beauty)",
+"#ef9f80"
+],
+[
+"rose (Pink Grapefruit)",
+"#e7a2b8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 300,
+"vase": "soliflore"
+},
+{
+"sid": "aconit",
+"nom": "Aconit",
+"latin": "Aconitum carmichaelii",
+"famille": "Été & classiques",
+"mois": [
+4,
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#3e3a98",
+"coloris": [
+[
+"bleu profond (carmichaelii Arendsii)",
+"#3e3a98"
+],
+[
+"bleu violet (napellus)",
+"#4a3a9a"
+],
+[
+"bleu clair (carmichaelii)",
+"#6a6ab8"
+],
+[
+"gris bleuté (Stainless Steel)",
+"#9a9ec8"
+],
+[
+"bicolore blanc et bleu (× cammarum Bicolor)",
+"#f2f0f4"
+],
+[
+"ivoire (Ivorine)",
+"#eee8cc"
+],
+[
+"rose pâle (napellus Carneum)",
+"#e6bccc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 460,
+"vase": "colonne"
+},
+{
+"sid": "agapanthe",
+"nom": "Agapanthe",
+"latin": "Agapanthus",
+"famille": "Été & classiques",
+"mois": [
+3,
+4,
+5,
+6,
+7,
+8
+],
+"toute_annee": false,
+"col": "#5d72c6",
+"coloris": [
+[
+"bleu",
+"#5d72c6"
+],
+[
+"blanc",
+"#f4f5ef"
+],
+[
+"bleu profond",
+"#34449a"
+],
+[
+"bleu pâle",
+"#a9badf"
+],
+[
+"bleu ciel",
+"#9ac0ec"
+],
+[
+"bleu vif",
+"#4a62d8"
+],
+[
+"bleu violet",
+"#5e53ad"
+],
+[
+"lavande",
+"#a8a0d8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "colonne"
+},
+{
+"sid": "allium-grosse-tete",
+"nom": "Ail d'ornement à grosse tête",
+"latin": "Allium giganteum",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5,
+6,
+7
+],
+"toute_annee": false,
+"col": "#7b3fa6",
+"coloris": [
+[
+"violet (Globemaster)",
+"#7b3fa6"
+],
+[
+"pourpre profond (Ambassador)",
+"#5a2a7e"
+],
+[
+"lilas à cœur vert (Gladiator)",
+"#9a6ac4"
+],
+[
+"blanc (Mount Everest)",
+"#f4f2ea"
+],
+[
+"lilas rosé (giganteum)",
+"#b06aa8"
+],
+[
+"lilas clair (His Excellency)",
+"#c4a6d8"
+],
+[
+"lavande bleutée (Purple Rain)",
+"#8e78c0"
+],
+[
+"étoile de Perse (cristophii)",
+"#a07ec0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "colonne"
+},
+{
+"sid": "allium-petit",
+"nom": "Ail d'ornement à petite tête",
+"latin": "Allium sphaerocephalon",
+"famille": "Printemps & bulbes",
+"mois": [
+5,
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#7d1f45",
+"coloris": [
+[
+"bordeaux et vert (drumstick)",
+"#7d1f45"
+],
+[
+"bordeaux (drumstick mûr)",
+"#6a1838"
+],
+[
+"vert (drumstick jeune)",
+"#9aaa5a"
+],
+[
+"bordeaux à houppe blanche (Red Mohican)",
+"#6e1a3c"
+],
+[
+"pourpre (Purple Sensation)",
+"#6b2d8f"
+],
+[
+"bleu (caeruleum)",
+"#7f9fd8"
+],
+[
+"rose (Pink Jewel)",
+"#d58fb0"
+],
+[
+"blanc étoilé (Graceful Beauty)",
+"#f3f0ea"
+]
+],
+"sens": "",
+"source": "",
+"prix": 200,
+"vase": "soliflore"
+},
+{
+"sid": "alpinia-purpurata",
+"nom": "Alpinia",
+"latin": "Alpinia purpurata",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c81e32",
+"coloris": [
+[
+"jungle King rouge",
+"#c81e32"
+],
+[
+"jungle Queen rose",
+"#ee8aa8"
+],
+[
+"eileen McDonald rose vif",
+"#e05a8a"
+],
+[
+"rose tendre",
+"#f4c4cc"
+],
+[
+"tahitian rouge sombre (tête ronde)",
+"#a8142a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 900,
+"vase": "colonne"
+},
+{
+"sid": "alstroemere",
+"nom": "Alstrœmère",
+"latin": "Alstroemeria",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f2b8c8",
+"coloris": [
+[
+"blanc (Virginia)",
+"#f7f3ea"
+],
+[
+"blanc champagne (Prestige)",
+"#f4ecdc"
+],
+[
+"blanc à pointes roses",
+"#f8f0ee"
+],
+[
+"rose tendre",
+"#f2b8c8"
+],
+[
+"rose",
+"#e886a8"
+],
+[
+"fuchsia",
+"#d0407a"
+],
+[
+"lilas",
+"#b890d0"
+],
+[
+"pourpre",
+"#8a3a86"
+]
+],
+"sens": "",
+"source": "",
+"prix": 260,
+"vase": "soliflore"
+},
+{
+"sid": "amandier-en-fleurs",
+"nom": "Amandier",
+"latin": "Prunus dulcis",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#fbf6f4",
+"coloris": [
+[
+"blanc à cœur rouge (Prunus dulcis)",
+"#fbf6f4"
+],
+[
+"blanc rosé (Princesse)",
+"#f6dfe2"
+],
+[
+"rose tendre (Robijn)",
+"#e6c3d6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "colonne"
+},
+{
+"sid": "amandier-de-chine-cerisier-nain",
+"nom": "Amandier de Chine & cerisier nain ",
+"latin": "Prunus triloba",
+"famille": "Branches & baies",
+"mois": [
+3,
+4
+],
+"toute_annee": false,
+"col": "#e5889f",
+"coloris": [
+[
+"rose vif (Prunus triloba Multiplex)",
+"#e5889f"
+],
+[
+"rose tendre (Prunus glandulosa Sinensis)",
+"#f3c4d0"
+],
+[
+"blanc (Prunus glandulosa Alba Plena)",
+"#fbf8f6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 900,
+"vase": "colonne"
+},
+{
+"sid": "amaryllis-hippeastrum",
+"nom": "Amaryllis",
+"latin": "Hippeastrum",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#bf1a2c",
+"coloris": [
+[
+"rouge (Red Lion)",
+"#bf1a2c"
+],
+[
+"rouge vif (Ferrari)",
+"#d0202a"
+],
+[
+"bordeaux velouté (Benfica)",
+"#7a1424"
+],
+[
+"blanc (Mont Blanc)",
+"#faf7f0"
+],
+[
+"blanc rosé (Apple Blossom)",
+"#f8eeea"
+],
+[
+"rose (Pink Surprise)",
+"#ec8aa6"
+],
+[
+"saumon (Rilona)",
+"#f29c84"
+],
+[
+"pêche (Terra Cotta Star)",
+"#f5c0a0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "colonne"
+},
+{
+"sid": "amaryllis",
+"nom": "Amaryllis",
+"latin": "Hippeastrum hybrides",
+"famille": "Printemps & bulbes",
+"mois": [
+9,
+10,
+11,
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f1a6bc",
+"coloris": [
+[
+"rose (type)",
+"#f1a6bc"
+],
+[
+"rose pâle",
+"#f6ccd8"
+],
+[
+"rose vif à gorge blanche (Johannesburg)",
+"#e4709a"
+],
+[
+"rose magenta (× Amarygia)",
+"#d4507e"
+],
+[
+"blanc (Alba)",
+"#f8f4ee"
+],
+[
+"blanc rosé (Hathor)",
+"#f8ece8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1100,
+"vase": "colonne"
+},
+{
+"sid": "amelanchier",
+"nom": "Amélanchier",
+"latin": "Amelanchier lamarckii",
+"famille": "Branches & baies",
+"mois": [
+3,
+4
+],
+"toute_annee": false,
+"col": "#fbf9f4",
+"coloris": [
+[
+"blanc, feuilles bronze (A. lamarckii)",
+"#fbf9f4"
+],
+[
+"blanc rosé (Robin Hill)",
+"#f6e6e8"
+],
+[
+"blanc pur, feuilles cuivrées (Ballerina)",
+"#fdfcf8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 680,
+"vase": "colonne"
+},
+{
+"sid": "ananas-ornemental",
+"nom": "Ananas ornemental sur tige",
+"latin": "Ananas comosus",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e0507a",
+"coloris": [
+[
+"rose (var. bracteatus)",
+"#e0507a"
+],
+[
+"rose, feuilles panachées (Tricolor)",
+"#d84a6a"
+],
+[
+"rouge (Champaca)",
+"#c42a3c"
+],
+[
+"vert (var. nanus)",
+"#6aa040"
+],
+[
+"doré (var. nanus mûr)",
+"#d4a83a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 950,
+"vase": "soliflore"
+},
+{
+"sid": "ancolie",
+"nom": "Ancolie",
+"latin": "Aquilegia vulgaris et hybrides",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5,
+6,
+7
+],
+"toute_annee": false,
+"col": "#4f5cc0",
+"coloris": [
+[
+"bleu et blanc (Origami Blue & White)",
+"#4f5cc0"
+],
+[
+"bleu lavande (vulgaris)",
+"#7c80d4"
+],
+[
+"violet et blanc (Winky Purple-White)",
+"#5a3496"
+],
+[
+"rose et blanc (Origami Rose & White)",
+"#dc78a0"
+],
+[
+"rose tendre (Swan Pink)",
+"#eeaabf"
+],
+[
+"rouge et blanc (Origami Red & White)",
+"#b8243a"
+],
+[
+"rouge et jaune (Origami Red & Yellow)",
+"#c4303a"
+],
+[
+"bordeaux et blanc (Winky Red-White)",
+"#7a1a32"
+]
+],
+"sens": "",
+"source": "",
+"prix": 340,
+"vase": "soliflore"
+},
+{
+"sid": "anthurium-obake",
+"nom": "Anthurium obake",
+"latin": "Anthurium andraeanum",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c41e2e",
+"coloris": [
+[
+"obake rouge",
+"#c41e2e"
+],
+[
+"obake rose",
+"#e88aa8"
+],
+[
+"obake rose vif",
+"#d8487e"
+],
+[
+"obake pêche",
+"#f4a882"
+],
+[
+"obake blanc",
+"#f6f2ea"
+],
+[
+"obake vert et rose",
+"#e79ab2"
+],
+[
+"obake vert et rouge",
+"#b81a2c"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1100,
+"vase": "colonne"
+},
+{
+"sid": "anthurium-tulipe",
+"nom": "Anthurium tulipe",
+"latin": "Anthurium amnicola et hybrides",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e890b4",
+"coloris": [
+[
+"tulipe rose",
+"#e890b4"
+],
+[
+"tulipe fuchsia",
+"#c8307e"
+],
+[
+"tulipe violette",
+"#8a4a9a"
+],
+[
+"tulipe lilas",
+"#c8a6d8"
+],
+[
+"tulipe blanche",
+"#f6f2ee"
+],
+[
+"tulipe rouge",
+"#c0202e"
+],
+[
+"tulipe saumon",
+"#f0a088"
+]
+],
+"sens": "",
+"source": "",
+"prix": 800,
+"vase": "soliflore"
+},
+{
+"sid": "anemone-japonaise",
+"nom": "Anémone du Japon",
+"latin": "Anemone × hybrida",
+"famille": "Printemps & bulbes",
+"mois": [
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#f0bcd0",
+"coloris": [
+[
+"blanc (Honorine Jobert)",
+"#f8f6f0"
+],
+[
+"blanc semi-double (Whirlwind)",
+"#f7f5ee"
+],
+[
+"rose argenté (September Charm)",
+"#f2cad6"
+],
+[
+"rose pâle semi-double (Königin Charlotte)",
+"#f0bcd0"
+],
+[
+"rose (Serenade)",
+"#e8a2bc"
+],
+[
+"rose foncé (Hadspen Abundance)",
+"#cf5a8a"
+],
+[
+"rose vif (Pamina)",
+"#d4588e"
+],
+[
+"magenta (Prinz Heinrich)",
+"#b8306e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 380,
+"vase": "soliflore"
+},
+{
+"sid": "arachnis-aranthera",
+"nom": "Arachnis",
+"latin": "Arachnis",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e8cf5a",
+"coloris": [
+[
+"jaune barré de rouge (Maggie Oei Red Ribbon)",
+"#e8cf5a"
+],
+[
+"jaune barré de brun (Maggie Oei Yellow Ribbon)",
+"#efd96e"
+],
+[
+"rouge sang moucheté (Aranthera James Storie)",
+"#a8202a"
+],
+[
+"orange tacheté de rouge (Aranthera Anne Black)",
+"#e2662a"
+],
+[
+"vert-jaune barré de pourpre (flos-aeris)",
+"#c8c87a"
+],
+[
+"crème tacheté de pourpre (hookeriana)",
+"#f2ead6"
+],
+[
+"jaune or tacheté de rouge",
+"#f2c43a"
+],
+[
+"brun acajou barré (Aranthera)",
+"#7a3a1e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 780,
+"vase": "soliflore"
+},
+{
+"sid": "aranda",
+"nom": "Aranda",
+"latin": "× Aranda",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c49ad8",
+"coloris": [
+[
+"lilas moucheté de pourpre (Christine)",
+"#c49ad8"
+],
+[
+"bleu-violet en damier (Noorah Alsagoff)",
+"#7a5aa8"
+],
+[
+"jaune moucheté de rouge",
+"#f2c63a"
+],
+[
+"blanc moucheté de rose",
+"#f4f0ec"
+],
+[
+"orange tacheté",
+"#e06a28"
+],
+[
+"rouge",
+"#b0282a"
+],
+[
+"saumon pêche",
+"#e88a6a"
+],
+[
+"rose vif (Chark Kuan Pink)",
+"#e05a96"
+]
+],
+"sens": "",
+"source": "",
+"prix": 620,
+"vase": "soliflore"
+},
+{
+"sid": "arbousier-a-fruits",
+"nom": "Arbousier à fruits",
+"latin": "Arbutus unedo",
+"famille": "Branches & baies",
+"mois": [
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#d4452a",
+"coloris": [
+[
+"fruits mêlés vert, jaune, orange et rouge",
+"#d4452a"
+],
+[
+"rouge (fruits mûrs)",
+"#c8261f"
+],
+[
+"orange",
+"#e5782a"
+],
+[
+"jaune",
+"#e6c03a"
+],
+[
+"vert (fruits verts)",
+"#9fb04a"
+],
+[
+"fruits rouges et fleurs blanches",
+"#c42a2a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "soliflore"
+},
+{
+"sid": "callicarpa",
+"nom": "Arbuste aux bonbons",
+"latin": "Callicarpa bodinieri",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#9a4fb0",
+"coloris": [
+[
+"violet vif (Profusion)",
+"#9a4fb0"
+],
+[
+"violet profond (Issai)",
+"#76308a"
+],
+[
+"lilas (C. dichotoma)",
+"#b47ac8"
+],
+[
+"blanc nacré (Alba)",
+"#f2eee6"
+],
+[
+"violet, feuillage d'automne",
+"#9a4fb0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "colonne"
+},
+{
+"sid": "ascocenda",
+"nom": "Ascocenda et Ascocentrum",
+"latin": "× Ascocenda",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f07a22",
+"coloris": [
+[
+"orange",
+"#f07a22"
+],
+[
+"mandarine réticulé",
+"#f49a34"
+],
+[
+"rouge",
+"#c8262c"
+],
+[
+"rose vif",
+"#e04a8a"
+],
+[
+"magenta réticulé",
+"#c8307a"
+],
+[
+"pourpre",
+"#8a2a7a"
+],
+[
+"bleu-violet réticulé",
+"#7a6ac8"
+],
+[
+"jaune",
+"#f2c430"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "soliflore"
+},
+{
+"sid": "aster-vivace-symphyotrichum",
+"nom": "Aster vivace de fleur coupée",
+"latin": "Symphyotrichum",
+"famille": "Été & classiques",
+"mois": [
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#b7a3db",
+"coloris": [
+[
+"blanc (Monte Cassino)",
+"#f6f4ec"
+],
+[
+"lavande",
+"#b7a3db"
+],
+[
+"mauve",
+"#a682c4"
+],
+[
+"rose",
+"#eaa0c2"
+],
+[
+"rose vif",
+"#c64e8a"
+],
+[
+"bleu violet",
+"#7466c0"
+],
+[
+"violet",
+"#7e3a8a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 240,
+"vase": "colonne"
+},
+{
+"sid": "astilbe",
+"nom": "Astilbe",
+"latin": "Astilbe × arendsii et A. chinensis",
+"famille": "Été & classiques",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#f0b2c8",
+"coloris": [
+[
+"rose pâle (Europa)",
+"#f0b2c8"
+],
+[
+"blanc (Washington)",
+"#f6f3ea"
+],
+[
+"ivoire (Bridal Veil)",
+"#efe7cf"
+],
+[
+"rose saumon (Peach Blossom)",
+"#f1a8a2"
+],
+[
+"rose (Rheinland)",
+"#e47aa6"
+],
+[
+"rose vif (Gloria Purpurea)",
+"#d6457c"
+],
+[
+"rouge (Montgomery)",
+"#c8305a"
+],
+[
+"rouge sombre (Fanal)",
+"#8e1a3a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 330,
+"vase": "colonne"
+},
+{
+"sid": "aulax",
+"nom": "Aulax",
+"latin": "Aulax cancellata",
+"famille": "Exotiques",
+"mois": [
+9,
+10,
+11,
+12,
+1,
+2
+],
+"toute_annee": false,
+"col": "#b4282e",
+"coloris": [
+[
+"coupe rouge (femelle)",
+"#b4282e"
+],
+[
+"coupe bordeaux (femelle)",
+"#7c1c2c"
+],
+[
+"coupe verte rougie (femelle)",
+"#8c8a3c"
+],
+[
+"épis jaunes plumeux (mâle)",
+"#ecc936"
+],
+[
+"épis jaune citron (mâle)",
+"#dcd44e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 480,
+"vase": "colonne"
+},
+{
+"sid": "banksia",
+"nom": "Banksia",
+"latin": "Banksia spp.",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c8282a",
+"coloris": [
+[
+"rouge écarlate (B. coccinea)",
+"#c8282a"
+],
+[
+"orange gland (B. prionotes)",
+"#e8782a"
+],
+[
+"jaune-vert (B. baxteri)",
+"#d4c84e"
+],
+[
+"orange et crème (B. hookeriana)",
+"#ee8a28"
+],
+[
+"crème jaune (B. speciosa)",
+"#e8dc8a"
+],
+[
+"bordeaux et or (B. menziesii)",
+"#8a2638"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "soliflore"
+},
+{
+"sid": "bleuet",
+"nom": "Bleuet",
+"latin": "Centaurea cyanus",
+"famille": "Été & classiques",
+"mois": [
+5,
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#3f5bc8",
+"coloris": [
+[
+"bleu vif (Blue Boy)",
+"#3f5bc8"
+],
+[
+"bleu ciel (Blue Diadem)",
+"#5a7ed8"
+],
+[
+"blanc (Snowman)",
+"#f4f4ee"
+],
+[
+"rose (Pinkie)",
+"#e6a0bc"
+],
+[
+"blanc à cœur rose (Classic Romantic)",
+"#f4eef0"
+],
+[
+"lavande",
+"#b6a0d4"
+],
+[
+"violet pourpre",
+"#6a3a8a"
+],
+[
+"violet à pointes blanches (Classic Magic)",
+"#6a54b4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 230,
+"vase": "soliflore"
+},
+{
+"sid": "bomarea",
+"nom": "Bomarea",
+"latin": "Bomarea spp.",
+"famille": "Exotiques",
+"mois": [
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#d8352a",
+"coloris": [
+[
+"bomarea rouge corail",
+"#d8352a"
+],
+[
+"bomarea multiflora orange",
+"#e05a2e"
+],
+[
+"bomarea edulis saumon",
+"#f09a80"
+],
+[
+"bomarea salsilla magenta",
+"#c8407e"
+],
+[
+"bomarea edulis rose",
+"#ec9ab0"
+],
+[
+"bomarea jaune",
+"#e6c23a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "soliflore"
+},
+{
+"sid": "bougainvillea",
+"nom": "Bougainvillier",
+"latin": "Bougainvillea glabra",
+"famille": "Exotiques",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#b3266d",
+"coloris": [
+[
+"magenta (Glabra Sanderiana)",
+"#b3266d"
+],
+[
+"rouge (Scarlett O'Hara)",
+"#c13149"
+],
+[
+"rouge fuchsia (Barbara Karst)",
+"#c81c58"
+],
+[
+"rose (Pink Pixie)",
+"#df5b97"
+],
+[
+"rose tendre (Thai Delight)",
+"#f2a2bc"
+],
+[
+"pourpre (Purple Queen)",
+"#7a2b74"
+],
+[
+"mauve lilas (Blueberry Ice)",
+"#c3a1d2"
+],
+[
+"orange (California Gold)",
+"#e57b3a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "colonne"
+},
+{
+"sid": "bouleau",
+"nom": "Bouleau",
+"latin": "Betula pendula",
+"famille": "Branches & baies",
+"mois": [
+11,
+12,
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#c9a54a",
+"coloris": [
+[
+"rameaux brun pourpré à chatons",
+"#5a3332"
+],
+[
+"vert (rameaux feuillés)",
+"#6f9a3c"
+],
+[
+"or (feuillage d’automne)",
+"#c9a54a"
+],
+[
+"écorce blanche (bouleau de l’Himalaya)",
+"#efece4"
+],
+[
+"gris argenté (écorce)",
+"#c8c8c8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 420,
+"vase": "colonne"
+},
+{
+"sid": "bouvardia",
+"nom": "Bouvardia",
+"latin": "Bouvardia",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f2a2bc",
+"coloris": [
+[
+"blanc (Royal Daphne Supreme White)",
+"#f8f6f0"
+],
+[
+"blanc double",
+"#f6f4ec"
+],
+[
+"crème",
+"#f2ead0"
+],
+[
+"rose pâle",
+"#f6ccd8"
+],
+[
+"rose (Royal Daphne)",
+"#f2a2bc"
+],
+[
+"rose double",
+"#f0a6c0"
+],
+[
+"rose à cœur foncé",
+"#e886aa"
+],
+[
+"rose vif",
+"#e6528a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 420,
+"vase": "soliflore"
+},
+{
+"sid": "brassia",
+"nom": "Brassia",
+"latin": "Brassia spp.",
+"famille": "Orchidées",
+"mois": [
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#c6d27a",
+"coloris": [
+[
+"vert pâle tacheté de brun (verrucosa)",
+"#c6d27a"
+],
+[
+"jaune-vert tacheté de brun (Rex)",
+"#d4cc56"
+],
+[
+"jaune d'or tacheté (Eternal Wind)",
+"#e6c63c"
+],
+[
+"orange cuivré tacheté",
+"#e2904a"
+],
+[
+"pourpre prune (Miltassia)",
+"#7c3262"
+],
+[
+"vert pomme strié de brun",
+"#b4c858"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1300,
+"vase": "colonne"
+},
+{
+"sid": "bromeliacees",
+"nom": "Broméliacées à fleurs",
+"latin": "Guzmania",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#d0202e",
+"coloris": [
+[
+"guzmania rouge",
+"#d0202e"
+],
+[
+"guzmania orange",
+"#ee7a2a"
+],
+[
+"guzmania jaune",
+"#f2c42a"
+],
+[
+"guzmania rose",
+"#e870a0"
+],
+[
+"guzmania pourpre",
+"#7a3a8a"
+],
+[
+"guzmania bordeaux",
+"#6a1a30"
+],
+[
+"vriesea épée rouge",
+"#d42a26"
+],
+[
+"vriesea épée jaune",
+"#f2c42a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 900,
+"vase": "colonne"
+},
+{
+"sid": "buisson-ardent",
+"nom": "Buisson ardent",
+"latin": "Pyracantha spp.",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#e4651c",
+"coloris": [
+[
+"orange (Orange Glow)",
+"#e4651c"
+],
+[
+"orange vif (Saphyr Orange)",
+"#ef7a22"
+],
+[
+"rouge (Saphyr Rouge)",
+"#c4262a"
+],
+[
+"rouge orangé (Red Column)",
+"#d8401e"
+],
+[
+"jaune (Soleil d'Or)",
+"#e9b52a"
+],
+[
+"jaune or (Saphyr Jaune)",
+"#f0c43a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "soliflore"
+},
+{
+"sid": "calathea-crotalifera",
+"nom": "Calathea crotalifera",
+"latin": "Calathea crotalifera",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f0c22e",
+"coloris": [
+[
+"crotale jaune d’or",
+"#f0c22e"
+],
+[
+"crotale jaune citron",
+"#e8d43a"
+],
+[
+"crotale jaune-vert",
+"#c8c83c"
+],
+[
+"crotale orangé à bord rouge",
+"#f0a02e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 750,
+"vase": "colonne"
+},
+{
+"sid": "camassia",
+"nom": "Camassia",
+"latin": "Camassia leichtlinii",
+"famille": "Printemps & bulbes",
+"mois": [
+5,
+6
+],
+"toute_annee": false,
+"col": "#5a5ab8",
+"coloris": [
+[
+"bleu violet (leichtlinii Caerulea)",
+"#5a5ab8"
+],
+[
+"bleu indigo (quamash)",
+"#4038a0"
+],
+[
+"bleu pâle (cusickii)",
+"#9fb8e6"
+],
+[
+"lavande (Blue Heaven)",
+"#b4a6dc"
+],
+[
+"blanc crème (Alba)",
+"#f3eedb"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "colonne"
+},
+{
+"sid": "cambria",
+"nom": "Cambria et hybrides intergénérique",
+"latin": "Hybrides intergénériques Oncidiinae : × Vuylstekeara",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#8c1a2e",
+"coloris": [
+[
+"rouge velours à labelle blanc (Vuylstekeara Cambria Plush)",
+"#8c1a2e"
+],
+[
+"rouge orangé à cœur jaune (Burrageara Nelly Isler)",
+"#d4402c"
+],
+[
+"blanc moucheté de pourpre (Beallara Tahoma Glacier)",
+"#f8f4f2"
+],
+[
+"pourpre tacheté à labelle clair (Beallara Marfitch)",
+"#a8306e"
+],
+[
+"jaune marbré de brun-rouge (Colmanara Wildcat)",
+"#ecbc34"
+],
+[
+"rose moucheté (Wilsonara)",
+"#e88aaa"
+],
+[
+"rouge à labelle clair bordé de rouge (Odontioda)",
+"#b8202e"
+],
+[
+"blanc pur, labelle taché de rose",
+"#fbf8f4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "soliflore"
+},
+{
+"sid": "campanule",
+"nom": "Campanule",
+"latin": "Campanula medium",
+"famille": "Été & classiques",
+"mois": [
+3,
+4,
+5,
+6,
+7
+],
+"toute_annee": false,
+"col": "#6f7fd0",
+"coloris": [
+[
+"bleu (Champion Blue)",
+"#6f7fd0"
+],
+[
+"bleu violet profond",
+"#4a4aa8"
+],
+[
+"lavande (Champion Lavender)",
+"#b0a2e0"
+],
+[
+"mauve",
+"#a06ab8"
+],
+[
+"rose (Champion Pink)",
+"#f0b2c8"
+],
+[
+"blanc (Champion White)",
+"#f7f5ee"
+],
+[
+"bleu, tasse et soucoupe (calycanthema)",
+"#7a8ad8"
+],
+[
+"rose, tasse et soucoupe (calycanthema)",
+"#eeb6cc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 380,
+"vase": "colonne"
+},
+{
+"sid": "nelumbo-capsule",
+"nom": "Capsule de lotus",
+"latin": "Nelumbo nucifera",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#7a5636",
+"coloris": [
+[
+"brun naturel (séchée)",
+"#7a5636"
+],
+[
+"brun clair (séchée)",
+"#a07a4e"
+],
+[
+"vert (fraîche)",
+"#8f9a45"
+],
+[
+"vert tendre (jeune)",
+"#a9bb62"
+],
+[
+"blanchie",
+"#ece5d4"
+],
+[
+"peinte argent",
+"#c0c0bc"
+],
+[
+"peinte or",
+"#b8984a"
+],
+[
+"teintée noire",
+"#2c2826"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "soliflore"
+},
+{
+"sid": "cattleya",
+"nom": "Cattleya et hybrides",
+"latin": "Cattleya spp. et hybrides intergénériques",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c78ac8",
+"coloris": [
+[
+"lavande (labiata)",
+"#c78ac8"
+],
+[
+"fuchsia",
+"#c8308a"
+],
+[
+"blanc à gorge jaune (alba)",
+"#f8f6f0"
+],
+[
+"blanc à labelle pourpre (semi-alba)",
+"#faf2f4"
+],
+[
+"jaune à labelle orangé",
+"#f0d050"
+],
+[
+"vert à labelle fuchsia",
+"#c8d86a"
+],
+[
+"orange corail",
+"#e8803a"
+],
+[
+"lavande flammée de pourpre",
+"#d8b0e0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 2200,
+"vase": "soliflore"
+},
+{
+"sid": "cerisiers-hatifs-fleurs-simples",
+"nom": "Cerisiers hâtifs à fleurs simples",
+"latin": "Prunus spp.",
+"famille": "Branches & baies",
+"mois": [
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#f0b2c3",
+"coloris": [
+[
+"rose (Keio-zakura)",
+"#f0b2c3"
+],
+[
+"rose tendre (Okame)",
+"#f6d5de"
+],
+[
+"ivoire rosé (Somei-yoshino)",
+"#f8e8eb"
+],
+[
+"blanc (Prunus incisa)",
+"#fbf8f5"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1250,
+"vase": "colonne"
+},
+{
+"sid": "chrysantheme-araignee",
+"nom": "Chrysanthème araignée et japonais",
+"latin": "Chrysanthemum × morifolium",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f5d22c",
+"coloris": [
+[
+"blanc",
+"#f7f5ee"
+],
+[
+"vert (Anastasia)",
+"#b8cf5a"
+],
+[
+"jaune",
+"#f5d22c"
+],
+[
+"bronze",
+"#c8823a"
+],
+[
+"lilas",
+"#c3a6dc"
+],
+[
+"rose",
+"#ec9fb8"
+],
+[
+"saumon",
+"#f0a888"
+],
+[
+"violet",
+"#8a3a7a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "colonne"
+},
+{
+"sid": "chrysantheme-santini-pompon",
+"nom": "Chrysanthème santini",
+"latin": "Chrysanthemum × morifolium",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#b8cc48",
+"coloris": [
+[
+"vert chartreuse (Kermit)",
+"#b8cc48"
+],
+[
+"vert anis (Yoko Ono)",
+"#c8d66e"
+],
+[
+"jaune à cœur vert (Maverick Sunny)",
+"#f5d22c"
+],
+[
+"blanc (Madiba)",
+"#f7f5ee"
+],
+[
+"rose (Madiba)",
+"#e8a0be"
+],
+[
+"lilas (Madiba)",
+"#c3a6dc"
+],
+[
+"rose fuchsia",
+"#d8508a"
+],
+[
+"crème (Madiba)",
+"#f2e8c4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 320,
+"vase": "colonne"
+},
+{
+"sid": "chrysantheme-marguerite-spray",
+"nom": "Chrysanthème spray marguerite et d",
+"latin": "Chrysanthemum × morifolium",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f2e6b8",
+"coloris": [
+[
+"blanc à cœur vert (Bacardi)",
+"#f7f5ee"
+],
+[
+"crème à cœur vert (Bacardi Cream)",
+"#f2e6b8"
+],
+[
+"jaune à cœur vert (Bacardi Sunny)",
+"#f5d22c"
+],
+[
+"blanc à cœur jaune",
+"#f6f3ea"
+],
+[
+"rose à cœur jaune",
+"#ec8fb0"
+],
+[
+"rose fuchsia à cœur jaune",
+"#e2457e"
+],
+[
+"orange cuivré",
+"#f08a2a"
+],
+[
+"rouge à cœur jaune",
+"#c41f2e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 340,
+"vase": "colonne"
+},
+{
+"sid": "chene-branches-glands",
+"nom": "Chêne",
+"latin": "Quercus robur",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#9a5a2a",
+"coloris": [
+[
+"vert (frais, glands verts)",
+"#5a7a3a"
+],
+[
+"roux d’automne",
+"#9a5a2a"
+],
+[
+"orangé cuivré (automne)",
+"#b06a3a"
+],
+[
+"or (automne)",
+"#c9a03c"
+],
+[
+"rouge (chêne rouge d’Amérique)",
+"#a8322a"
+],
+[
+"brun (stabilisé)",
+"#4a2e22"
+],
+[
+"vert (stabilisé)",
+"#4c6634"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "soliflore"
+},
+{
+"sid": "clematite",
+"nom": "Clématite",
+"latin": "Clematis",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#5f5aa8",
+"coloris": [
+[
+"bleu violet",
+"#5f5aa8"
+],
+[
+"pourpre (Jackmanii)",
+"#5b3a8c"
+],
+[
+"blanc",
+"#f6f4ee"
+],
+[
+"rose barré (Nelly Moser)",
+"#e8b8d0"
+],
+[
+"rose",
+"#dea0c0"
+],
+[
+"lilas",
+"#b9a0d2"
+],
+[
+"rouge sombre",
+"#6e1e3a"
+],
+[
+"lie-de-vin",
+"#a2345e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 750,
+"vase": "soliflore"
+},
+{
+"sid": "coelogyne",
+"nom": "Coelogyne",
+"latin": "Coelogyne spp.",
+"famille": "Orchidées",
+"mois": [
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#b8cc6a",
+"coloris": [
+[
+"blanc à crêtes jaunes",
+"#f8f8f4"
+],
+[
+"blanc à crêtes citron",
+"#f8f8f2"
+],
+[
+"blanc à gorge orangée",
+"#f9f8f4"
+],
+[
+"crème à labelle brun",
+"#f4eedc"
+],
+[
+"vert jade à labelle noir",
+"#b8cc6a"
+],
+[
+"blanc à yeux ocre",
+"#f8f6f0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1250,
+"vase": "soliflore"
+},
+{
+"sid": "cornouiller-a-bois-colore",
+"nom": "Cornouiller à bois coloré",
+"latin": "Cornus alba",
+"famille": "Branches & baies",
+"mois": [
+10,
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#b8402e",
+"coloris": [
+[
+"rouge corail (C. alba Sibirica)",
+"#b8402e"
+],
+[
+"pourpre noir (C. alba Kesselringii)",
+"#3a2232"
+],
+[
+"jaune vert (C. sericea Flaviramea)",
+"#a8b04a"
+],
+[
+"orange flamme (C. sanguinea Midwinter Fire)",
+"#e0782a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 320,
+"vase": "colonne"
+},
+{
+"sid": "cornouiller-a-fleurs",
+"nom": "Cornouiller à fleurs",
+"latin": "Cornus florida",
+"famille": "Branches & baies",
+"mois": [
+3,
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#eeb0c4",
+"coloris": [
+[
+"blanc (Cornus florida)",
+"#f7f4ec"
+],
+[
+"rose (C. florida Rubra)",
+"#eeb0c4"
+],
+[
+"rose rouge (Cherokee Chief)",
+"#c2364e"
+],
+[
+"vert anis, bractées naissantes (C. kousa)",
+"#cfe0a0"
+],
+[
+"blanc étoilé (C. kousa chinensis)",
+"#f8f6ee"
+],
+[
+"rose (C. kousa Satomi)",
+"#e8a0b4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "colonne"
+},
+{
+"sid": "costus",
+"nom": "Costus",
+"latin": "Costus spp.",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c81e2a",
+"coloris": [
+[
+"costus barbatus rouge, fleurs jaunes",
+"#c81e2a"
+],
+[
+"costus comosus rouge orangé",
+"#d8402a"
+],
+[
+"costus spiralis rose",
+"#d6506e"
+],
+[
+"costus curvibracteatus orange",
+"#ec7a2a"
+],
+[
+"costus woodsonii écarlate",
+"#d42a22"
+],
+[
+"costus pictus vert rougi",
+"#6c9a3e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 850,
+"vase": "colonne"
+},
+{
+"sid": "cotoneaster",
+"nom": "Cotonéaster",
+"latin": "Cotoneaster spp.",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#c0262c",
+"coloris": [
+[
+"rouge (horizontalis)",
+"#c0262c"
+],
+[
+"rouge vif (Coral Beauty)",
+"#d63426"
+],
+[
+"orange (franchetii)",
+"#e0702a"
+],
+[
+"jaune crème (Rothschildianus)",
+"#ead9a0"
+],
+[
+"vert (baies vertes)",
+"#9fae5a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 320,
+"vase": "soliflore"
+},
+{
+"sid": "crocosmia",
+"nom": "Crocosmia",
+"latin": "Crocosmia × crocosmiiflora et hybrides",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#c8302a",
+"coloris": [
+[
+"rouge écarlate (Lucifer)",
+"#c8302a"
+],
+[
+"orange à macule acajou (Emily McKenzie)",
+"#e3702a"
+],
+[
+"orange (montbrétia)",
+"#c9552a"
+],
+[
+"orange rouge à gorge sombre (Babylon)",
+"#d8502a"
+],
+[
+"saumon orangé (Severn Sunrise)",
+"#ea8460"
+],
+[
+"abricot à cœur clair (Star of the East)",
+"#f0a860"
+],
+[
+"jaune d'or (George Davison)",
+"#e8b83a"
+],
+[
+"jaune (Columbus)",
+"#f2c444"
+]
+],
+"sens": "",
+"source": "",
+"prix": 260,
+"vase": "colonne"
+},
+{
+"sid": "crocus",
+"nom": "Crocus",
+"latin": "Crocus vernus",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#6a3a9e",
+"coloris": [
+[
+"violet (Flower Record)",
+"#6a3a9e"
+],
+[
+"pourpre (Remembrance)",
+"#5a2a86"
+],
+[
+"lavande (Ruby Giant)",
+"#8c5cb6"
+],
+[
+"lilas argenté (Vanguard)",
+"#b9a6d8"
+],
+[
+"blanc (Jeanne d’Arc)",
+"#f7f5ee"
+],
+[
+"blanc strié de violet (Pickwick)",
+"#f2eef6"
+],
+[
+"blanc, dos bleu pâle (Blue Pearl)",
+"#f4f2f2"
+],
+[
+"blanc, dos pourpre liseré (Ladykiller)",
+"#f6f2f2"
+]
+],
+"sens": "",
+"source": "",
+"prix": 150,
+"vase": "soliflore"
+},
+{
+"sid": "curcuma",
+"nom": "Curcuma",
+"latin": "Curcuma alismatifolia et hybrides",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#e48ab4",
+"coloris": [
+[
+"chiang Mai Pink rose",
+"#e48ab4"
+],
+[
+"siam Tulip rose tendre",
+"#f2bcd4"
+],
+[
+"chiang Mai Snow blanc",
+"#f6f2ee"
+],
+[
+"siam Ruby rubis",
+"#b42e50"
+],
+[
+"siam Shadow violet",
+"#9c4a98"
+],
+[
+"laddawan rose à pointe verte",
+"#e090c0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "soliflore"
+},
+{
+"sid": "cyclamen-fleur-coupee",
+"nom": "Cyclamen de Perse",
+"latin": "Cyclamen persicum",
+"famille": "Printemps & bulbes",
+"mois": [
+9,
+10,
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#ec9ab8",
+"coloris": [
+[
+"blanc pur",
+"#f8f6f2"
+],
+[
+"blanc à œil rose",
+"#f8f4f4"
+],
+[
+"rose pâle",
+"#f4c8d6"
+],
+[
+"rose",
+"#ec9ab8"
+],
+[
+"saumon",
+"#f2a494"
+],
+[
+"fuchsia",
+"#d63c7c"
+],
+[
+"rouge",
+"#c01f35"
+],
+[
+"bordeaux",
+"#7e1432"
+]
+],
+"sens": "",
+"source": "",
+"prix": 400,
+"vase": "soliflore"
+},
+{
+"sid": "cymbidium-mini",
+"nom": "Cymbidium mini",
+"latin": "Cymbidium hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#eccc5a",
+"coloris": [
+[
+"blanc",
+"#f8f5ec"
+],
+[
+"crème rosé",
+"#f4e6d6"
+],
+[
+"jaune à labelle rouge",
+"#eccc5a"
+],
+[
+"vert",
+"#bccb6e"
+],
+[
+"vert à labelle bordeaux",
+"#b8c870"
+],
+[
+"vert pastel",
+"#d6e2b6"
+],
+[
+"rose",
+"#e8a8bc"
+],
+[
+"rose pastel",
+"#f2d2da"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1400,
+"vase": "soliflore"
+},
+{
+"sid": "cypripedium",
+"nom": "Cypripedium",
+"latin": "Cypripedium spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+3,
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#f2cc2e",
+"coloris": [
+[
+"sabot jaune, tépales brun pourpre (C. parviflorum, Inge)",
+"#f2cc2e"
+],
+[
+"jaune pâle, tépales verts striés (C. kentuckiense, Hank Small)",
+"#f2df7a"
+],
+[
+"sabot rose, tépales bruns (Gisela)",
+"#dc6c9c"
+],
+[
+"blanc à sabot rose (C. reginae, Ventricosum)",
+"#ec98ba"
+],
+[
+"pourpre (Michael, Philipp)",
+"#9a2c5c"
+],
+[
+"blanc pur (Ulla Silkens)",
+"#f8f5ee"
+]
+],
+"sens": "",
+"source": "",
+"prix": 2500,
+"vase": "soliflore"
+},
+{
+"sid": "celastre-bittersweet",
+"nom": "Célastre",
+"latin": "Celastrus orbiculatus",
+"famille": "Branches & baies",
+"mois": [
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#e38a2a",
+"coloris": [
+[
+"orange, graines rouges (C. orbiculatus)",
+"#e38a2a"
+],
+[
+"jaune d'or, graines rouges",
+"#e3b437"
+],
+[
+"orange vif (C. scandens Autumn Revolution)",
+"#ec7422"
+],
+[
+"vert (capsules fermées)",
+"#8f9e4c"
+]
+],
+"sens": "",
+"source": "",
+"prix": 580,
+"vase": "colonne"
+},
+{
+"sid": "dahlia-balle",
+"nom": "Dahlia balle",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#f2c23a",
+"coloris": [
+[
+"blanc",
+"#f6f2ea"
+],
+[
+"crème",
+"#f2e6c6"
+],
+[
+"jaune",
+"#f2c23a"
+],
+[
+"abricot bronze",
+"#e8a25a"
+],
+[
+"saumon, mauve et pêche",
+"#f0a088"
+],
+[
+"corail pêche",
+"#f29a7c"
+],
+[
+"orange",
+"#e8782a"
+],
+[
+"bronze orangé",
+"#c8682a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 450,
+"vase": "soliflore"
+},
+{
+"sid": "dahlia-cactus",
+"nom": "Dahlia cactus et semi-cactus",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#f2e05a",
+"coloris": [
+[
+"blanc",
+"#f7f4ee"
+],
+[
+"jaune citron",
+"#f2e05a"
+],
+[
+"jaune",
+"#f5d02a"
+],
+[
+"orange",
+"#f07a1e"
+],
+[
+"rose",
+"#f0a0c0"
+],
+[
+"rose et blanc",
+"#f6e8ee"
+],
+[
+"pourpre éclairci aux pointes",
+"#7a1f6a"
+],
+[
+"rouge",
+"#c41f2e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 480,
+"vase": "colonne"
+},
+{
+"sid": "dahlia-collerette",
+"nom": "Dahlia collerette",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#7a0f22",
+"coloris": [
+[
+"rouge sombre à collerette blanche (Night Butterfly)",
+"#7a0f22"
+],
+[
+"écarlate à collerette jaune (La Gioconda)",
+"#c41f2e"
+],
+[
+"rouge à pointes jaunes (Pooh)",
+"#d0282a"
+],
+[
+"corail à collerette crème",
+"#f2724e"
+],
+[
+"orange à collerette jaune (Alstergruss)",
+"#f08a2a"
+],
+[
+"crème à collerette blanche (Dentelle de Venise)",
+"#f4ead2"
+],
+[
+"rose à collerette pâle (Teesbrooke Audrey)",
+"#e98fb0"
+],
+[
+"pourpre rosé à collerette blanche (Bumble Rumble)",
+"#b8487a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 440,
+"vase": "soliflore"
+},
+{
+"sid": "dahlia-assiette",
+"nom": "Dahlia géant 'assiette'",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#f2d8c4",
+"coloris": [
+[
+"crème pêche (Café au Lait)",
+"#f2d8c4"
+],
+[
+"rose poudré (Café au Lait Rosé)",
+"#f0c2c6"
+],
+[
+"rose lilas (Café au Lait Royal)",
+"#dca6c0"
+],
+[
+"ivoire crème",
+"#f7f3e8"
+],
+[
+"pêche saumon (Penhill Watermelon)",
+"#f4b49a"
+],
+[
+"jaune pâle (Kelvin Floodlight)",
+"#f6dc6a"
+],
+[
+"orange bronze (Babylon Bronze)",
+"#ec8a3a"
+],
+[
+"rose (Otto’s Thrill)",
+"#ec98b4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 800,
+"vase": "colonne"
+},
+{
+"sid": "dahlia-lacinie",
+"nom": "Dahlia lacinié",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#e878a8",
+"coloris": [
+[
+"rose à pointes blanches",
+"#e878a8"
+],
+[
+"jaune lavé de rose",
+"#f5df8a"
+],
+[
+"mauve et orange",
+"#b48ab8"
+],
+[
+"jaune à pointes rouges",
+"#f4cc3a"
+],
+[
+"rouge à pointes jaunes",
+"#c8202e"
+],
+[
+"jaune d’or",
+"#f0b82a"
+],
+[
+"bronze doré",
+"#c9873a"
+],
+[
+"blanc rosé",
+"#f6ebe6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "colonne"
+},
+{
+"sid": "dahlia-nenuphar",
+"nom": "Dahlia nénuphar",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#f2c22a",
+"coloris": [
+[
+"blanc crème (Le Castel)",
+"#f6efdc"
+],
+[
+"jaune (Glorie van Heemstede)",
+"#f2c22a"
+],
+[
+"rose tendre (Gerrie Hoek)",
+"#f2b8c8"
+],
+[
+"pêche abricot (Linda’s Baby)",
+"#f6c4a4"
+],
+[
+"orange cuivré (Brown Sugar)",
+"#e88a3a"
+],
+[
+"lavande (Lauren Michele)",
+"#c8a8d8"
+],
+[
+"blanc lavé de rose (Sweet Nathalie)",
+"#f6e6ec"
+],
+[
+"rouge chocolat (Karma Choc)",
+"#5a1e1e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 520,
+"vase": "soliflore"
+},
+{
+"sid": "dahlia-pompon",
+"nom": "Dahlia pompon",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#f5d02a",
+"coloris": [
+[
+"blanc",
+"#f7f4ee"
+],
+[
+"jaune",
+"#f5d02a"
+],
+[
+"orange pêche",
+"#f0a04a"
+],
+[
+"bronze ambré",
+"#c8783a"
+],
+[
+"saumon et jaune",
+"#f2987a"
+],
+[
+"rose",
+"#ec8fb0"
+],
+[
+"lavande liseré",
+"#c8b0e0"
+],
+[
+"pourpre",
+"#7a1f5a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 420,
+"vase": "soliflore"
+},
+{
+"sid": "dahlia-simple",
+"nom": "Dahlia simple",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#d8281e",
+"coloris": [
+[
+"écarlate, feuillage noir (Bishop of Llandaff)",
+"#d8281e"
+],
+[
+"jaune, feuillage noir (Bishop of York)",
+"#f5d02a"
+],
+[
+"orange, feuillage noir (Bishop of Oxford)",
+"#f08a2a"
+],
+[
+"magenta, feuillage noir (Bishop of Canterbury)",
+"#c22a7a"
+],
+[
+"blanc, feuillage noir (Bishop of Dover)",
+"#f7f4ee"
+],
+[
+"abricot à œil rouge, feuillage noir (Moonfire)",
+"#f4c25a"
+],
+[
+"rose (Mignon)",
+"#e98fb0"
+],
+[
+"rouge (Mignon)",
+"#c41f2e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 400,
+"vase": "soliflore"
+},
+{
+"sid": "dahlia-anemone",
+"nom": "Dahlia à fleur d'anémone",
+"latin": "Dahlia × hortensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#b7a6d8",
+"coloris": [
+[
+"lavande à coussin pourpre (Blue Bayou)",
+"#b7a6d8"
+],
+[
+"rose à coussin jaune (Boogie Woogie)",
+"#e88aae"
+],
+[
+"mandarine à coussin rose (Totally Tangerine)",
+"#f29a5a"
+],
+[
+"rouge à coussin pourpre (Mambo)",
+"#c41f2e"
+],
+[
+"rose lilas à coussin crème (Siemen Doorenbos)",
+"#d9a3c4"
+],
+[
+"blanc à coussin crème",
+"#f7f4ee"
+],
+[
+"crème à coussin jaune",
+"#f3e6c4"
+],
+[
+"pourpre à coussin sombre",
+"#7a2a6e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 460,
+"vase": "soliflore"
+},
+{
+"sid": "dendrobium-coupe",
+"nom": "Dendrobium coupé",
+"latin": "Dendrobium hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#b8328a",
+"coloris": [
+[
+"pourpre à cœur blanc (Sonia)",
+"#b8328a"
+],
+[
+"blanc pur",
+"#f8f6f0"
+],
+[
+"pourpre",
+"#9a2a7a"
+],
+[
+"vert-jaune strié",
+"#cfd77a"
+],
+[
+"crème à labelle pourpre",
+"#f2ead2"
+],
+[
+"blanc bordé de pourpre",
+"#f6f2f2"
+],
+[
+"blanc bordé de vert",
+"#f6f6ee"
+],
+[
+"rose à base blanche",
+"#e88ab8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "soliflore"
+},
+{
+"sid": "dendrobium-nobile",
+"nom": "Dendrobium nobile et dendrobiums e",
+"latin": "Dendrobium nobile et hybrides",
+"famille": "Orchidées",
+"mois": [
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f4c6da",
+"coloris": [
+[
+"blanc à pointes améthyste (nobile type)",
+"#f8f2f4"
+],
+[
+"blanc pur à gorge pourpre (Yukidaruma)",
+"#fbf9f4"
+],
+[
+"blanc à gorge jaune (Spring Dream Apollon)",
+"#fbf9f2"
+],
+[
+"rose tendre à pointes vives",
+"#f4c6da"
+],
+[
+"rose vif (Akatsuki)",
+"#e070a8"
+],
+[
+"pourpre magenta (Comet King)",
+"#b02a7a"
+],
+[
+"jaune d'or à gorge brune (Golden Blossom)",
+"#f2d050"
+],
+[
+"orangé à gorge rouge (Stardust)",
+"#f0a040"
+]
+],
+"sens": "",
+"source": "",
+"prix": 750,
+"vase": "soliflore"
+},
+{
+"sid": "deutzia",
+"nom": "Deutzia",
+"latin": "Deutzia spp.",
+"famille": "Branches & baies",
+"mois": [
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#eeb0c6",
+"coloris": [
+[
+"blanc étoilé (D. gracilis Nikko)",
+"#fbfaf4"
+],
+[
+"rose étoilé (Mont Rose)",
+"#f2c8d8"
+],
+[
+"rose vif (Strawberry Fields)",
+"#eeb0c6"
+],
+[
+"blanc double (Pride of Rochester)",
+"#fbf6f4"
+],
+[
+"rose pâle en clochette (D. × rosea)",
+"#f6dce4"
+],
+[
+"rose carmin en clochette (Rosealind)",
+"#f0c2d0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 600,
+"vase": "colonne"
+},
+{
+"sid": "digitale",
+"nom": "Digitale",
+"latin": "Digitalis purpurea et hybrides",
+"famille": "Été & classiques",
+"mois": [
+4,
+5,
+6,
+7
+],
+"toute_annee": false,
+"col": "#b5559a",
+"coloris": [
+[
+"pourpre rosé (purpurea)",
+"#b5559a"
+],
+[
+"rose (Dalmatian Rose)",
+"#eaa2c2"
+],
+[
+"pourpre (Dalmatian Purple)",
+"#8e3a8a"
+],
+[
+"lavande (Camelot Lavender)",
+"#c7a6d6"
+],
+[
+"abricot (Sutton’s Apricot)",
+"#f2c09e"
+],
+[
+"crème (Camelot Cream)",
+"#f4ead6"
+],
+[
+"blanc (Alba)",
+"#f8f6ef"
+],
+[
+"blanc, gorge marron (Pam’s Choice)",
+"#f6f2ee"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "colonne"
+},
+{
+"sid": "disa",
+"nom": "Disa",
+"latin": "Disa uniflora et Disa spp.",
+"famille": "Orchidées",
+"mois": [
+6,
+7,
+8
+],
+"toute_annee": false,
+"col": "#e0302a",
+"coloris": [
+[
+"rouge écarlate (D. uniflora)",
+"#e0302a"
+],
+[
+"rouge carmin (Kewensis)",
+"#c01e3a"
+],
+[
+"orange (Diores)",
+"#f07a2a"
+],
+[
+"rose (Watsonii)",
+"#e888a8"
+],
+[
+"jaune (uniflora aurata)",
+"#f0c038"
+],
+[
+"mauve",
+"#c88ab0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 2500,
+"vase": "soliflore"
+},
+{
+"sid": "enkianthus-dodan",
+"nom": "Enkianthus",
+"latin": "Enkianthus perulatus",
+"famille": "Branches & baies",
+"mois": [
+4,
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#c42a22",
+"coloris": [
+[
+"vert vif (feuillé, été)",
+"#5e9e34"
+],
+[
+"vert tendre, clochettes blanches (printemps)",
+"#88b848"
+],
+[
+"rouge écarlate (automne)",
+"#c42a22"
+],
+[
+"orange et rouge (automne)",
+"#de6a26"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1950,
+"vase": "soliflore"
+},
+{
+"sid": "epidendrum",
+"nom": "Epidendrum",
+"latin": "Epidendrum spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f07a22",
+"coloris": [
+[
+"orange",
+"#f07a22"
+],
+[
+"rouge",
+"#c8282a"
+],
+[
+"rouge orangé",
+"#e0482a"
+],
+[
+"jaune",
+"#f2c430"
+],
+[
+"rose",
+"#e888b0"
+],
+[
+"fuchsia",
+"#c8348a"
+],
+[
+"lavande",
+"#b880c0"
+],
+[
+"blanc",
+"#f6f4ee"
+]
+],
+"sens": "",
+"source": "",
+"prix": 680,
+"vase": "soliflore"
+},
+{
+"sid": "eremurus",
+"nom": "Eremurus",
+"latin": "Eremurus stenophyllus",
+"famille": "Printemps & bulbes",
+"mois": [
+5,
+6,
+7
+],
+"toute_annee": false,
+"col": "#f08c2a",
+"coloris": [
+[
+"orange (Cleopatra)",
+"#f08c2a"
+],
+[
+"orange doré (Pinokkio)",
+"#f2a83a"
+],
+[
+"jaune (stenophyllus)",
+"#f5d22a"
+],
+[
+"jaune pâle (Line Dance)",
+"#f3e08a"
+],
+[
+"saumon (Romance)",
+"#f4a88a"
+],
+[
+"abricot (Cleopatra clair)",
+"#f2a87a"
+],
+[
+"rose (robustus)",
+"#efb0c0"
+],
+[
+"blanc (himalaicus)",
+"#f7f5ee"
+]
+],
+"sens": "",
+"source": "",
+"prix": 900,
+"vase": "colonne"
+},
+{
+"sid": "figuier-branche",
+"nom": "Figuier",
+"latin": "Ficus carica",
+"famille": "Branches & baies",
+"mois": [
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#c9b44a",
+"coloris": [
+[
+"vertes (figues vertes)",
+"#8fa64a"
+],
+[
+"jaune-vert (Blanche d'Argenteuil)",
+"#c9b44a"
+],
+[
+"violettes (Violette Dauphine)",
+"#5e2e52"
+],
+[
+"brun violacé (Brown Turkey)",
+"#4e2a30"
+],
+[
+"noires (Noire de Caromb)",
+"#2e1a28"
+],
+[
+"panachées (Panachée, Tiger)",
+"#c4c98a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 950,
+"vase": "soliflore"
+},
+{
+"sid": "musa-fleur",
+"nom": "Fleur de bananier ornemental",
+"latin": "Musa coccinea",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#d8302a",
+"coloris": [
+[
+"musa coccinea écarlate",
+"#d8302a"
+],
+[
+"musa ornata rose lilas",
+"#d898c4"
+],
+[
+"musa ornata pourpre",
+"#8e5aa6"
+],
+[
+"musa velutina rose",
+"#e47a9a"
+],
+[
+"musa ornata orange",
+"#e8662a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "colonne"
+},
+{
+"sid": "nelumbo-nucifera",
+"nom": "Fleur de lotus",
+"latin": "Nelumbo nucifera",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ec8aa8",
+"coloris": [
+[
+"rose (Rosea)",
+"#ec8aa8"
+],
+[
+"rose pâle",
+"#f4d0d8"
+],
+[
+"rose foncé (Red Lotus)",
+"#c8304a"
+],
+[
+"blanc (Alba Grandiflora)",
+"#f8f6f0"
+],
+[
+"blanc liseré rose (Chawan Basu)",
+"#f8f2f0"
+],
+[
+"jaune (N. lutea)",
+"#f2dc7a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "colonne"
+},
+{
+"sid": "plumeria",
+"nom": "Frangipanier",
+"latin": "Plumeria rubra",
+"famille": "Exotiques",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#f4d46a",
+"coloris": [
+[
+"blanc à cœur jaune (Celadine)",
+"#f8f3e6"
+],
+[
+"blanc pur à petit cœur jaune (Singapore, P. obtusa)",
+"#faf8f2"
+],
+[
+"blanc rosé au revers rose (Daisy Wilcox)",
+"#f8efe8"
+],
+[
+"jaune soleil (Kaneohe Sunburst)",
+"#f4d46a"
+],
+[
+"jaune d'or (Aztec Gold)",
+"#f0bb36"
+],
+[
+"coucher de soleil, orangé rosé (Sunset)",
+"#f6a878"
+],
+[
+"rose tendre (Pink Pearl)",
+"#f4b8c8"
+],
+[
+"rose vif (Vera Cruz Rose)",
+"#e88aae"
+]
+],
+"sens": "",
+"source": "",
+"prix": 200,
+"vase": "soliflore"
+},
+{
+"sid": "fritillaire-michailovskyi",
+"nom": "Fritillaire de Michailovski et pet",
+"latin": "Fritillaria michailovskyi",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5
+],
+"toute_annee": false,
+"col": "#6b2a3e",
+"coloris": [
+[
+"pourpre brun à bord jaune (michailovskyi)",
+"#6b2a3e"
+],
+[
+"prune pruineux liseré d’or (uva-vulpis)",
+"#5a3a4e"
+],
+[
+"vert et brun (acmopetala)",
+"#8a8f4a"
+],
+[
+"or tacheté de brun (aurea)",
+"#f0c21e"
+],
+[
+"jaune primevère (pallidiflora)",
+"#e9e48a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 450,
+"vase": "soliflore"
+},
+{
+"sid": "fritillaire-persica",
+"nom": "Fritillaire de Perse",
+"latin": "Fritillaria persica",
+"famille": "Printemps & bulbes",
+"mois": [
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#5a2a4a",
+"coloris": [
+[
+"pourpre prune pruineux (Adiyaman)",
+"#5a2a4a"
+],
+[
+"aubergine (presque noir)",
+"#46263e"
+],
+[
+"pourpre lie-de-vin",
+"#6e2e48"
+],
+[
+"vert crème (Ivory Bells)",
+"#e2e0bc"
+],
+[
+"vert tendre",
+"#a3b066"
+]
+],
+"sens": "",
+"source": "",
+"prix": 700,
+"vase": "colonne"
+},
+{
+"sid": "fritillaire-imperiale",
+"nom": "Fritillaire impériale",
+"latin": "Fritillaria imperialis",
+"famille": "Printemps & bulbes",
+"mois": [
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#e8691e",
+"coloris": [
+[
+"orange (Aurora)",
+"#e8691e"
+],
+[
+"rouge orangé (Rubra Maxima)",
+"#c23a1e"
+],
+[
+"jaune (Maxima Lutea)",
+"#f2c21c"
+],
+[
+"orange vif (Garland Star)",
+"#ee7a1a"
+],
+[
+"orange pâle (Premier)",
+"#f2a35e"
+],
+[
+"rouge brique (Rubra)",
+"#9a3a20"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "soliflore"
+},
+{
+"sid": "fritillaire-meleagris",
+"nom": "Fritillaire pintade",
+"latin": "Fritillaria meleagris",
+"famille": "Printemps & bulbes",
+"mois": [
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#7a3060",
+"coloris": [
+[
+"damier pourpre (meleagris)",
+"#7a3060"
+],
+[
+"damier bordeaux sombre (Charon)",
+"#5c1f3e"
+],
+[
+"damier rouge violacé (Saturnus)",
+"#a0306a"
+],
+[
+"damier lavande pâle (Poseidon)",
+"#c7a8d0"
+],
+[
+"blanc veiné de vert (Alba)",
+"#f4f2ee"
+],
+[
+"crème (Aphrodite)",
+"#efe8d2"
+]
+],
+"sens": "",
+"source": "",
+"prix": 300,
+"vase": "soliflore"
+},
+{
+"sid": "tapeinochilos-ananassae",
+"nom": "Gingembre de cire",
+"latin": "Tapeinochilos ananassae",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#d2202a",
+"coloris": [
+[
+"gingembre ananas rouge vif",
+"#d2202a"
+],
+[
+"gingembre ananas carmin",
+"#ae1828"
+],
+[
+"gingembre ananas rouge orangé",
+"#e0402a"
+],
+[
+"gingembre ananas rose",
+"#e0607a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1150,
+"vase": "colonne"
+},
+{
+"sid": "zingiber",
+"nom": "Gingembre ruche et gingembre shamp",
+"latin": "Zingiber spectabile",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#eab43a",
+"coloris": [
+[
+"ruche dorée jaune",
+"#eab43a"
+],
+[
+"ruche jaune virant au rouge",
+"#e9a83a"
+],
+[
+"ruche rouge",
+"#c8302a"
+],
+[
+"pink Maraca rose",
+"#e8829a"
+],
+[
+"shampoing vert (jeune)",
+"#7aa040"
+],
+[
+"shampoing rouge",
+"#c0282a"
+],
+[
+"pomme de pin chocolat",
+"#5a2e22"
+]
+],
+"sens": "",
+"source": "",
+"prix": 950,
+"vase": "colonne"
+},
+{
+"sid": "giroflee-matthiole",
+"nom": "Giroflée",
+"latin": "Matthiola incana",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4e4a2",
+"coloris": [
+[
+"blanc",
+"#f7f5ee"
+],
+[
+"crème",
+"#f4ebd2"
+],
+[
+"jaune pâle",
+"#f4e4a2"
+],
+[
+"abricot",
+"#f3c19c"
+],
+[
+"cuivre ancien",
+"#d99a78"
+],
+[
+"rose poudré",
+"#f7d2da"
+],
+[
+"rose",
+"#f0aac4"
+],
+[
+"rose mauve",
+"#e3a0c4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 330,
+"vase": "colonne"
+},
+{
+"sid": "glaieul",
+"nom": "Glaïeul",
+"latin": "Gladiolus × grandiflorus et G. nanus",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f5d548",
+"coloris": [
+[
+"blanc (White Prosperity)",
+"#f7f5ee"
+],
+[
+"crème",
+"#f3e9cc"
+],
+[
+"jaune (Nova Lux)",
+"#f5d548"
+],
+[
+"vert (Green Star)",
+"#d8e39c"
+],
+[
+"pêche",
+"#f6c3ad"
+],
+[
+"saumon (Peter Pears)",
+"#f3a07c"
+],
+[
+"orange",
+"#ef7c32"
+],
+[
+"corail",
+"#ef8c82"
+]
+],
+"sens": "",
+"source": "",
+"prix": 320,
+"vase": "colonne"
+},
+{
+"sid": "glaieul-nain",
+"nom": "Glaïeul nain",
+"latin": "Gladiolus × colvillii",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5,
+6,
+7
+],
+"toute_annee": false,
+"col": "#f4c0d0",
+"coloris": [
+[
+"blanc à macules crème bordées de rouge (Nymph)",
+"#f8f4ee"
+],
+[
+"blanc pur (The Bride)",
+"#f8f7f0"
+],
+[
+"blanc à macules carmin (Blushing Bride)",
+"#f8f2ee"
+],
+[
+"blanc à macules pourpres (Prins Claus)",
+"#f8f5f0"
+],
+[
+"rose pâle à macules rose vif (Impressive)",
+"#f4c0d0"
+],
+[
+"rose lilas à gorge blanche (Charm)",
+"#d86aa8"
+],
+[
+"rose à macules rouges (Elvira)",
+"#f09ab8"
+],
+[
+"saumon à macules blanches tiquetées de violet (Amanda Mahy)",
+"#f08a74"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "colonne"
+},
+{
+"sid": "godetia-clarkia",
+"nom": "Godétia et clarkia",
+"latin": "Clarkia amoena",
+"famille": "Été & classiques",
+"mois": [
+5,
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#ef8aa8",
+"coloris": [
+[
+"rose (Grace Rose Pink)",
+"#ef8aa8"
+],
+[
+"saumon (Grace Salmon)",
+"#f3a088"
+],
+[
+"blanc (Grace White)",
+"#f8f4f0"
+],
+[
+"rouge carmin (Grace Red)",
+"#c42a3e"
+],
+[
+"lavande (Grace Lavender)",
+"#c8a0d0"
+],
+[
+"corail",
+"#ee7a6a"
+],
+[
+"rose coquillage (Grace Shell Pink)",
+"#f6c4cc"
+],
+[
+"double rose (Apple Blossom)",
+"#f2a6b6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 280,
+"vase": "colonne"
+},
+{
+"sid": "grenade-branche",
+"nom": "Grenadier",
+"latin": "Punica granatum",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#b8292f",
+"coloris": [
+[
+"rouge profond (Wonderful)",
+"#b8292f"
+],
+[
+"rouge orangé (Mollar)",
+"#d4532f"
+],
+[
+"jaune doré à joue rose (Mollar de Elche)",
+"#d9b058"
+],
+[
+"vert (grenades vertes)",
+"#93a04c"
+],
+[
+"bordeaux (Purple Heart)",
+"#7a1c28"
+],
+[
+"pourpre noir (Black, Kara Kalinsky)",
+"#5e1a26"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "soliflore"
+},
+{
+"sid": "grevillea",
+"nom": "Grevillea",
+"latin": "Grevillea spp. et hybrides",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#d42e48",
+"coloris": [
+[
+"rouge rosé (Robyn Gordon)",
+"#d42e48"
+],
+[
+"saumon et jaune (Superb)",
+"#f08a5a"
+],
+[
+"orange miel (Honey Gem)",
+"#ee9a2a"
+],
+[
+"ivoire (Moonlight)",
+"#f2ecd4"
+],
+[
+"rose et crème (Coconut Ice)",
+"#e8849c"
+],
+[
+"orange rouge (Ned Kelly)",
+"#e65a2c"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "soliflore"
+},
+{
+"sid": "groseillier-a-fleurs",
+"nom": "Groseillier à fleurs",
+"latin": "Ribes sanguineum",
+"famille": "Branches & baies",
+"mois": [
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#c42446",
+"coloris": [
+[
+"rouge cramoisi (King Edward VII)",
+"#c42446"
+],
+[
+"rouge vif (Pulborough Scarlet)",
+"#d4283e"
+],
+[
+"rose rouge (Koja)",
+"#d84a6e"
+],
+[
+"pourpre rouge (Atrorubens)",
+"#a2203e"
+],
+[
+"rose tendre (Pokey’s Pink)",
+"#ee9ab4"
+],
+[
+"blanc (White Icicle)",
+"#f6f2ea"
+]
+],
+"sens": "",
+"source": "",
+"prix": 600,
+"vase": "colonne"
+},
+{
+"sid": "gui",
+"nom": "Gui",
+"latin": "Viscum album",
+"famille": "Branches & baies",
+"mois": [
+11,
+12
+],
+"toute_annee": false,
+"col": "#f4f2e4",
+"coloris": [
+[
+"baies blanc nacré (naturel)",
+"#f4f2e4"
+],
+[
+"baies ivoire (bien mûres)",
+"#efe6c6"
+],
+[
+"baies vert d'eau (cueillette précoce)",
+"#e2e8c8"
+],
+[
+"rameau sans baies (pied mâle)",
+"#f4f2e4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "colonne"
+},
+{
+"sid": "hakea",
+"nom": "Hakea",
+"latin": "Hakea laurina et autres Hakea à fleurs",
+"famille": "Exotiques",
+"mois": [
+5,
+6,
+7,
+8
+],
+"toute_annee": false,
+"col": "#c4202e",
+"coloris": [
+[
+"rouge à épingles crème",
+"#c4202e"
+],
+[
+"cramoisi à épingles dorées",
+"#9c1a2e"
+],
+[
+"rose à épingles blanches",
+"#e05a7e"
+],
+[
+"rouge rosé à épingles roses",
+"#cc3248"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "soliflore"
+},
+{
+"sid": "hamamelis",
+"nom": "Hamamélis",
+"latin": "Hamamelis × intermedia",
+"famille": "Branches & baies",
+"mois": [
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#f2c41c",
+"coloris": [
+[
+"jaune vif (Arnold Promise)",
+"#f2c41c"
+],
+[
+"jaune soufre (Pallida)",
+"#f1df6c"
+],
+[
+"jaune d'or (H. mollis)",
+"#eeb21e"
+],
+[
+"orange cuivré (Jelena)",
+"#ea8a30"
+],
+[
+"orange (Aphrodite)",
+"#ef8e20"
+],
+[
+"rouge cuivré (Diane)",
+"#b63c28"
+],
+[
+"rouge orangé (Feuerzauber)",
+"#d8582a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1250,
+"vase": "colonne"
+},
+{
+"sid": "hellebore-orientalis",
+"nom": "Hellébore d'Orient",
+"latin": "Helleborus × hybridus",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#f0e3a2",
+"coloris": [
+[
+"blanc",
+"#f5f2e6"
+],
+[
+"blanc moucheté de pourpre",
+"#f6f0ea"
+],
+[
+"jaune primevère",
+"#f0e3a2"
+],
+[
+"vert anis",
+"#d2dca6"
+],
+[
+"rose pâle",
+"#f2d2da"
+],
+[
+"rose moucheté",
+"#ecb2c6"
+],
+[
+"blanc liseré de rose (picotee)",
+"#f6eeea"
+],
+[
+"abricot",
+"#f2c8a2"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "soliflore"
+},
+{
+"sid": "hibiscus",
+"nom": "Hibiscus tropical",
+"latin": "Hibiscus rosa-sinensis et autres Hibiscus",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#cc1428",
+"coloris": [
+[
+"rouge (Brilliant)",
+"#cc1428"
+],
+[
+"rouge sang (Adonicus Red)",
+"#a80f22"
+],
+[
+"rose (Seminole Pink)",
+"#ee7ea6"
+],
+[
+"rose saumon (Adonicus Salmon)",
+"#f39a88"
+],
+[
+"orange à cœur blanc et rouge (Fiesta)",
+"#f07a30"
+],
+[
+"jaune à œil rouge (Hula Girl)",
+"#f6d23c"
+],
+[
+"jaune d'or (Adonicus Yellow)",
+"#f4c62e"
+],
+[
+"pêche (hybride tahitien)",
+"#f6b88a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "colonne"
+},
+{
+"sid": "hortensia-arborescens",
+"nom": "Hortensia arborescent",
+"latin": "Hydrangea arborescens",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#d5e3a0",
+"coloris": [
+[
+"blanc (Annabelle)",
+"#f7f6ee"
+],
+[
+"vert tilleul",
+"#d5e3a0"
+],
+[
+"crème",
+"#f2ecd6"
+],
+[
+"rose (Invincibelle)",
+"#e8a0b8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 950,
+"vase": "colonne"
+},
+{
+"sid": "hortensia-boule",
+"nom": "Hortensia boule",
+"latin": "Hydrangea macrophylla",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#a9b88a",
+"coloris": [
+[
+"blanc",
+"#f6f4ea"
+],
+[
+"vert émeraude",
+"#a8c86a"
+],
+[
+"vert antique",
+"#a9b88a"
+],
+[
+"bleu",
+"#6f8ee0"
+],
+[
+"bleu violet profond",
+"#4a5cc8"
+],
+[
+"lavande",
+"#a8a6e0"
+],
+[
+"lilas",
+"#c3a6dc"
+],
+[
+"rose pâle",
+"#f2c8d6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "colonne"
+},
+{
+"sid": "hortensia-paniculata",
+"nom": "Hortensia paniculé",
+"latin": "Hydrangea paniculata",
+"famille": "Été & classiques",
+"mois": [
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#dbe6a8",
+"coloris": [
+[
+"blanc",
+"#f4f2e6"
+],
+[
+"crème",
+"#f0e8cc"
+],
+[
+"vert tilleul (Limelight)",
+"#dbe6a8"
+],
+[
+"rose",
+"#f0c4cf"
+],
+[
+"blanc virant au rose",
+"#f6f0ea"
+],
+[
+"rouge framboise",
+"#c84a6a"
+],
+[
+"rose foncé",
+"#d8708e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "colonne"
+},
+{
+"sid": "hortensia-lacecap",
+"nom": "Hortensia à fleurs plates",
+"latin": "Hydrangea macrophylla",
+"famille": "Été & classiques",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#6f8ee0",
+"coloris": [
+[
+"bleu",
+"#6f8ee0"
+],
+[
+"blanc",
+"#f5f3ec"
+],
+[
+"blanc liseré de rouge",
+"#f8f4f0"
+],
+[
+"crème",
+"#f0e8d0"
+],
+[
+"bleu vif",
+"#3f5fc8"
+],
+[
+"lilas",
+"#b9a6dc"
+],
+[
+"rose mauve",
+"#c88ab8"
+],
+[
+"rose",
+"#e990b4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1100,
+"vase": "colonne"
+},
+{
+"sid": "houx-verticille-ilex",
+"nom": "Houx verticillé",
+"latin": "Ilex verticillata",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#c4161f",
+"coloris": [
+[
+"rouge (Winter Red)",
+"#c4161f"
+],
+[
+"rouge orangé (Berry Heavy)",
+"#d63a22"
+],
+[
+"orange (Winter Gold)",
+"#e8782c"
+],
+[
+"saumon rosé (Winter Gold)",
+"#ee9a78"
+],
+[
+"jaune or (Berry Heavy Gold)",
+"#eec03a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 950,
+"vase": "colonne"
+},
+{
+"sid": "houx-a-baies",
+"nom": "Houx à baies",
+"latin": "Ilex aquifolium",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#b51d24",
+"coloris": [
+[
+"rouge (J.C. van Tol)",
+"#b51d24"
+],
+[
+"rouge vif (Alaska)",
+"#cc2228"
+],
+[
+"jaune (Bacciflava)",
+"#e2b62c"
+],
+[
+"orange (Amber)",
+"#e07a2a"
+],
+[
+"panaché crème, baies rouges (Argentea Marginata)",
+"#c01e26"
+],
+[
+"panaché doré, baies rouges (Golden King)",
+"#c01e26"
+]
+],
+"sens": "",
+"source": "",
+"prix": 600,
+"vase": "soliflore"
+},
+{
+"sid": "heliconia-bihai",
+"nom": "Héliconia bihai",
+"latin": "Heliconia bihai",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c8202a",
+"coloris": [
+[
+"lobster Claw rouge",
+"#c8202a"
+],
+[
+"kamehameha rouge vif",
+"#d8262c"
+],
+[
+"chocolate Dancer",
+"#6a2e1e"
+],
+[
+"yellow Dancer",
+"#f0c430"
+],
+[
+"emerald Forest",
+"#6aa040"
+],
+[
+"balisier orange",
+"#ee7a3a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1300,
+"vase": "colonne"
+},
+{
+"sid": "heliconia-caribaea",
+"nom": "Héliconia caribaea",
+"latin": "Heliconia caribaea et hybrides H. bihai × H. caribaea",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c01e28",
+"coloris": [
+[
+"purpurea rouge",
+"#c01e28"
+],
+[
+"black Magic bordeaux",
+"#5a1420"
+],
+[
+"gold jaune",
+"#eab830"
+],
+[
+"jacquinii (× bihai) rouge à lèvre jaune",
+"#c8202a"
+],
+[
+"crème",
+"#efe2b0"
+],
+[
+"chartreuse",
+"#c8d060"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1550,
+"vase": "colonne"
+},
+{
+"sid": "heliconia-chartacea",
+"nom": "Héliconia chartacea « Sexy Pink »",
+"latin": "Heliconia chartacea",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e8789e",
+"coloris": [
+[
+"sexy Pink rose bordé de vert",
+"#e8789e"
+],
+[
+"sexy Scarlet rouge bordé de vert",
+"#d42c3c"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1700,
+"vase": "colonne"
+},
+{
+"sid": "heliconia-orthotricha",
+"nom": "Héliconia orthotricha",
+"latin": "Heliconia orthotricha",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e2507e",
+"coloris": [
+[
+"she rose bordé de vert",
+"#e2507e"
+],
+[
+"total Eclipse rouge rosé, liseré vert sombre",
+"#d8283e"
+],
+[
+"eden Pink rose vif",
+"#ec709c"
+],
+[
+"edge of Night orange rouge, liseré noir",
+"#e8562c"
+],
+[
+"orange velours",
+"#ee7e2e"
+],
+[
+"garden of Eden rouge sombre",
+"#b81a30"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1350,
+"vase": "colonne"
+},
+{
+"sid": "heliconia-rostrata",
+"nom": "Héliconia pendant",
+"latin": "Heliconia rostrata",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#cf2027",
+"coloris": [
+[
+"pince de homard rouge et jaune",
+"#cf2027"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1500,
+"vase": "colonne"
+},
+{
+"sid": "heliconia-psittacorum",
+"nom": "Héliconia perroquet",
+"latin": "Heliconia psittacorum et hybrides",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#d2302c",
+"coloris": [
+[
+"st. Vincent Red",
+"#d2302c"
+],
+[
+"lady Di rouge",
+"#c8222e"
+],
+[
+"andromeda orange",
+"#ee7a2a"
+],
+[
+"golden Torch jaune",
+"#f0c030"
+],
+[
+"sassy rose",
+"#e87a9a"
+],
+[
+"rouge sombre",
+"#8e1e2a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "colonne"
+},
+{
+"sid": "heliconia-stricta",
+"nom": "Héliconia stricta",
+"latin": "Heliconia stricta",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#cc2530",
+"coloris": [
+[
+"dwarf Jamaican rouge",
+"#cc2530"
+],
+[
+"tagami rose",
+"#e87a98"
+],
+[
+"fire Bird rouge orangé",
+"#e85a32"
+],
+[
+"bucky orange",
+"#ee8a32"
+],
+[
+"jaune",
+"#f2c63a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1100,
+"vase": "colonne"
+},
+{
+"sid": "heliconia-wagneriana",
+"nom": "Héliconia wagneriana",
+"latin": "Heliconia wagneriana",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e0504c",
+"coloris": [
+[
+"rouge corail classique",
+"#e0504c"
+],
+[
+"big Red",
+"#cc2a32"
+],
+[
+"rainbow rose",
+"#ec8a9c"
+],
+[
+"turbo crème et rose",
+"#efe2b0"
+],
+[
+"verte",
+"#8ab452"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1400,
+"vase": "colonne"
+},
+{
+"sid": "heliconia-velues",
+"nom": "Héliconias pendants velus",
+"latin": "Heliconia vellerigera",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#a8442c",
+"coloris": [
+[
+"vellerigera rouille velours",
+"#a8442c"
+],
+[
+"vellerigera orangé velours",
+"#d0702c"
+],
+[
+"xanthovillosa jaune velours",
+"#d8c048"
+],
+[
+"chartacea Sexy Pink",
+"#e87aa0"
+],
+[
+"chartacea Sexy Scarlet",
+"#d8303a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1800,
+"vase": "colonne"
+},
+{
+"sid": "hetre-branches",
+"nom": "Hêtre",
+"latin": "Fagus sylvatica",
+"famille": "Branches & baies",
+"mois": [
+4,
+5,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#5a2232",
+"coloris": [
+[
+"vert (frais)",
+"#6a9a3e"
+],
+[
+"vert tendre (jeunes feuilles)",
+"#9ab84e"
+],
+[
+"pourpre (hêtre pourpre)",
+"#5a2232"
+],
+[
+"cuivré (stabilisé)",
+"#a85e32"
+],
+[
+"brun (stabilisé)",
+"#6e4a32"
+],
+[
+"rouge (stabilisé)",
+"#9a3026"
+],
+[
+"vert (stabilisé)",
+"#4e6e36"
+],
+[
+"orange d’automne",
+"#d9822e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 400,
+"vase": "soliflore"
+},
+{
+"sid": "immortelle-xerochrysum",
+"nom": "Immortelle à bractées",
+"latin": "Xerochrysum bracteatum",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#eab83a",
+"coloris": [
+[
+"jaune d’or",
+"#eab83a"
+],
+[
+"jaune citron",
+"#f2d64a"
+],
+[
+"orange",
+"#ef8a2a"
+],
+[
+"abricot",
+"#f0a060"
+],
+[
+"saumon",
+"#ee9a7a"
+],
+[
+"rose",
+"#e7889e"
+],
+[
+"rose pâle",
+"#f2c4cc"
+],
+[
+"rose pâle pointé de rouge",
+"#f4cad0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 280,
+"vase": "soliflore"
+},
+{
+"sid": "iris-barbu",
+"nom": "Iris barbu",
+"latin": "Iris germanica",
+"famille": "Printemps & bulbes",
+"mois": [
+5,
+6
+],
+"toute_annee": false,
+"col": "#6a6ac8",
+"coloris": [
+[
+"bleu violet (Victoria Falls)",
+"#6a6ac8"
+],
+[
+"pourpre noir (Superstition)",
+"#3a1a3e"
+],
+[
+"blanc (Immortality)",
+"#f6f4ee"
+],
+[
+"jaune (Harvest of Memories)",
+"#f2cc3a"
+],
+[
+"abricot (Orange Harvest)",
+"#f2b080"
+],
+[
+"rose (Beverly Sills)",
+"#ecb4c2"
+],
+[
+"jaune et violet (Edith Wolford)",
+"#f2e07a"
+],
+[
+"jaune et brun rouge (Rajah)",
+"#f2c22a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "colonne"
+},
+{
+"sid": "isopogon",
+"nom": "Isopogon",
+"latin": "Isopogon spp.",
+"famille": "Exotiques",
+"mois": [
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#eccd3a",
+"coloris": [
+[
+"jaune (I. anemonifolius)",
+"#eccd3a"
+],
+[
+"jaune citron",
+"#e2d65a"
+],
+[
+"rose (I. formosus)",
+"#e68cb2"
+],
+[
+"rose magenta (I. dubius)",
+"#c4568e"
+],
+[
+"cône séché naturel",
+"#7a6450"
+],
+[
+"cône séché gris argent",
+"#a8a294"
+]
+],
+"sens": "",
+"source": "",
+"prix": 520,
+"vase": "soliflore"
+},
+{
+"sid": "ixia",
+"nom": "Ixia",
+"latin": "Ixia hybrides",
+"famille": "Printemps & bulbes",
+"mois": [
+2,
+3,
+4,
+5,
+6,
+7,
+8
+],
+"toute_annee": false,
+"col": "#e0457e",
+"coloris": [
+[
+"blanc à cœur pourpre (Panorama)",
+"#f6f0e2"
+],
+[
+"crème à cœur pourpre (Giant)",
+"#f2e6c8"
+],
+[
+"rose cerise (Mabel)",
+"#e0457e"
+],
+[
+"rose tendre (Rose Emperor)",
+"#f2b4c4"
+],
+[
+"jaune à cœur brun (Yellow Emperor)",
+"#f2df58"
+],
+[
+"rouge carmin (Castor)",
+"#c4203e"
+],
+[
+"orange (Hogarth)",
+"#f2943a"
+],
+[
+"bleu-vert à œil noir (viridiflora)",
+"#6fc8bc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 170,
+"vase": "soliflore"
+},
+{
+"sid": "ixora",
+"nom": "Ixora",
+"latin": "Ixora coccinea et hybrides",
+"famille": "Exotiques",
+"mois": [
+5,
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#d8282a",
+"coloris": [
+[
+"rouge (Super King)",
+"#d8282a"
+],
+[
+"rouge orangé (coccinea)",
+"#e03a2e"
+],
+[
+"orange (Thai Dwarf Orange)",
+"#e8742a"
+],
+[
+"saumon (Sunkist)",
+"#f08c6a"
+],
+[
+"jaune d'or (Thai Dwarf Yellow)",
+"#dca21c"
+],
+[
+"jaune (Maui Yellow)",
+"#ecc23a"
+],
+[
+"rose (Nora Grant)",
+"#ec8aa6"
+],
+[
+"rose vif (Dwarf Pink)",
+"#e2557e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 380,
+"vase": "soliflore"
+},
+{
+"sid": "jacinthe-des-bois",
+"nom": "Jacinthe des bois",
+"latin": "Hyacinthoides non-scripta",
+"famille": "Printemps & bulbes",
+"mois": [],
+"toute_annee": false,
+"col": "#4c4cb6",
+"coloris": [
+[
+"bleu violet (non-scripta)",
+"#4c4cb6"
+],
+[
+"bleu (hispanica Excelsior)",
+"#6476d2"
+],
+[
+"bleu porcelaine (hispanica Blue Queen)",
+"#9cb0e8"
+],
+[
+"blanc (hispanica White City)",
+"#f6f5ee"
+],
+[
+"rose (hispanica Queen of the Pinks)",
+"#e4a8c8"
+],
+[
+"blanc (non-scripta Alba)",
+"#f7f6f0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 220,
+"vase": "soliflore"
+},
+{
+"sid": "kumquat-branche",
+"nom": "Kumquat",
+"latin": "Citrus japonica",
+"famille": "Branches & baies",
+"mois": [
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#f2851a",
+"coloris": [
+[
+"orange vif (Nagami, ovale)",
+"#f2851a"
+],
+[
+"orange doré (Meiwa, rond)",
+"#f49d22"
+],
+[
+"orange (Marumi, rond)",
+"#ec7c1c"
+],
+[
+"orange profond (Fukushu)",
+"#e2681a"
+],
+[
+"panaché vert et or (Centennial Variegated)",
+"#f2a52a"
+],
+[
+"vert (fruits verts)",
+"#7c9e34"
+]
+],
+"sens": "",
+"source": "",
+"prix": 900,
+"vase": "soliflore"
+},
+{
+"sid": "laurier-tin-a-baies",
+"nom": "Laurier-tin à baies",
+"latin": "Viburnum tinus",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11,
+12,
+1,
+2
+],
+"toute_annee": false,
+"col": "#3e4f8a",
+"coloris": [
+[
+"bleu métallique (type)",
+"#3e4f8a"
+],
+[
+"bleu nuit (Gwenllian)",
+"#2c3664"
+],
+[
+"bleu-noir (très mûr)",
+"#1f2433"
+],
+[
+"bleu, violet et vert (mi-mûr)",
+"#3e4f8a"
+],
+[
+"baies bleues et boutons roses (Eve Price)",
+"#3e4f8a"
+],
+[
+"baies bleues et boutons blancs (French White)",
+"#3e4f8a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "soliflore"
+},
+{
+"sid": "leucadendron",
+"nom": "Leucadendron",
+"latin": "Leucadendron spp. et hybrides",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#a2a444",
+"coloris": [
+[
+"cône vert doré (L. platyspermum frais)",
+"#a2a444"
+],
+[
+"cône bronze (L. platyspermum mûr)",
+"#8a5632"
+],
+[
+"argenté (L. argenteum, arbre d’argent)",
+"#c6cabe"
+],
+[
+"séché naturel",
+"#6e4428"
+],
+[
+"séché blanchi",
+"#e6dcbe"
+]
+],
+"sens": "",
+"source": "",
+"prix": 420,
+"vase": "soliflore"
+},
+{
+"sid": "leucospermum",
+"nom": "Leucospermum",
+"latin": "Leucospermum cordifolium et hybrides",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f07a22",
+"coloris": [
+[
+"orange (Tango)",
+"#f07a22"
+],
+[
+"jaune d’or (High Gold)",
+"#f2bc22"
+],
+[
+"orange rouge (Succession)",
+"#e8562a"
+],
+[
+"rouge écarlate (Scarlet Ribbon)",
+"#d42c2a"
+],
+[
+"saumon",
+"#f09078"
+],
+[
+"jaune à rubans rouges (Veldfire)",
+"#e8481f"
+]
+],
+"sens": "",
+"source": "",
+"prix": 750,
+"vase": "soliflore"
+},
+{
+"sid": "liane-de-kiwi",
+"nom": "Liane de kiwi",
+"latin": "Actinidia deliciosa",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#8a6a42",
+"coloris": [
+[
+"kiwis bruns duveteux (Hayward)",
+"#8a6a42"
+],
+[
+"kiwis dorés (Actinidia chinensis Gold)",
+"#a88446"
+],
+[
+"kiwaïs verts (A. arguta Issai)",
+"#8aac3a"
+],
+[
+"kiwaïs rouges (Ken's Red)",
+"#7a2a3e"
+],
+[
+"sarment nu (liane sèche)",
+"#6e4a32"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "colonne"
+},
+{
+"sid": "liatris",
+"nom": "Liatris",
+"latin": "Liatris spicata",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#95409c",
+"coloris": [
+[
+"pourpre violet (Floristan Violett)",
+"#95409c"
+],
+[
+"pourpre profond (Kobold)",
+"#6e2a7e"
+],
+[
+"mauve rosé",
+"#c07ab8"
+],
+[
+"blanc (Floristan Weiss)",
+"#f2efe6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 270,
+"vase": "colonne"
+},
+{
+"sid": "lis-ot-orienpet",
+"nom": "Lis OT",
+"latin": "Lilium",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f8efc4",
+"coloris": [
+[
+"jaune citron à bord crème (Conca d'Or)",
+"#f8efc4"
+],
+[
+"jaune primevère (Yelloween)",
+"#f4dc5a"
+],
+[
+"fuchsia à cœur blanc (Robina)",
+"#c63a78"
+],
+[
+"saumon orangé (Zelmira)",
+"#f2a070"
+],
+[
+"rose à bord blanc (Anastasia)",
+"#e98aae"
+],
+[
+"blanc rosé (Pretty Woman)",
+"#fbf3ee"
+],
+[
+"blanc crème (Big Brother)",
+"#faf6e8"
+],
+[
+"jaune rosé (Boogie Woogie)",
+"#f6d27a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1150,
+"vase": "colonne"
+},
+{
+"sid": "hymenocallis",
+"nom": "Lis araignée",
+"latin": "Hymenocallis spp.",
+"famille": "Exotiques",
+"mois": [
+6,
+7,
+8
+],
+"toute_annee": false,
+"col": "#efe08a",
+"coloris": [
+[
+"hymenocallis festalis blanc",
+"#fbfaf5"
+],
+[
+"hymenocallis littoralis crème",
+"#f5f0dc"
+],
+[
+"hymenocallis blanc verdâtre",
+"#eef0dc"
+],
+[
+"ismene Sulphur Queen",
+"#efe08a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1150,
+"vase": "colonne"
+},
+{
+"sid": "lis-asiatique-la",
+"nom": "Lis asiatique et hybrides LA",
+"latin": "Lilium",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4cd3a",
+"coloris": [
+[
+"blanc",
+"#faf7ee"
+],
+[
+"jaune",
+"#f4cd3a"
+],
+[
+"abricot",
+"#f3a868"
+],
+[
+"orange",
+"#ec7a24"
+],
+[
+"rose",
+"#ec8cae"
+],
+[
+"rouge",
+"#c0242e"
+],
+[
+"rouge noir",
+"#5c0e1c"
+],
+[
+"rouge à cœur noir",
+"#c8282e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "colonne"
+},
+{
+"sid": "cyrtanthus",
+"nom": "Lis de feu",
+"latin": "Cyrtanthus elatus",
+"famille": "Printemps & bulbes",
+"mois": [
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#c8202a",
+"coloris": [
+[
+"rouge écarlate",
+"#c8202a"
+],
+[
+"rouge sang",
+"#9a1c26"
+],
+[
+"orange",
+"#e8702a"
+],
+[
+"saumon",
+"#f0907a"
+],
+[
+"rose",
+"#eca0b0"
+],
+[
+"crème",
+"#f8f5ef"
+],
+[
+"jaune",
+"#efd25a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "soliflore"
+},
+{
+"sid": "lis-longiflorum-trompette",
+"nom": "Lis longiflorum et lis trompette",
+"latin": "Lilium longiflorum",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f1ae6e",
+"coloris": [
+[
+"blanc pur (White Heaven)",
+"#fbfaf2"
+],
+[
+"blanc à gorge verte (White Fox)",
+"#f8f8ee"
+],
+[
+"crème (trompette)",
+"#f5efd8"
+],
+[
+"abricot (African Queen)",
+"#f1ae6e"
+],
+[
+"jaune (Golden Splendor)",
+"#f2d462"
+],
+[
+"rose (Pink Perfection)",
+"#e8a0b8"
+],
+[
+"blanc revers pourpre (L. regale)",
+"#faf6ee"
+]
+],
+"sens": "",
+"source": "",
+"prix": 880,
+"vase": "colonne"
+},
+{
+"sid": "lis-oriental",
+"nom": "Lis oriental",
+"latin": "Lilium",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#d33a74",
+"coloris": [
+[
+"blanc (Casa Blanca)",
+"#fbf9f2"
+],
+[
+"blanc moucheté de rose",
+"#fbf5f2"
+],
+[
+"cramoisi bordé de blanc (Stargazer)",
+"#d33a74"
+],
+[
+"rose tendre",
+"#f4c2d2"
+],
+[
+"rose à bord clair",
+"#ea8ab0"
+],
+[
+"rose fuchsia",
+"#cf3f7c"
+],
+[
+"rose saumoné",
+"#f2a08e"
+],
+[
+"rouge bordé de blanc",
+"#b8203c"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1050,
+"vase": "colonne"
+},
+{
+"sid": "lisianthus",
+"nom": "Lisianthus",
+"latin": "Eustoma grandiflorum",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ece2a8",
+"coloris": [
+[
+"blanc",
+"#f7f5ee"
+],
+[
+"champagne",
+"#ecdcc2"
+],
+[
+"jaune pâle",
+"#ece2a8"
+],
+[
+"vert (Arena Green)",
+"#d6e3a6"
+],
+[
+"rose pâle",
+"#f2c4d2"
+],
+[
+"rose",
+"#eeb0c0"
+],
+[
+"rose vif",
+"#d84a8a"
+],
+[
+"abricot",
+"#f4c8aa"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "soliflore"
+},
+{
+"sid": "litchi-branche",
+"nom": "Litchi",
+"latin": "Litchi chinensis",
+"famille": "Branches & baies",
+"mois": [
+11,
+12,
+1
+],
+"toute_annee": false,
+"col": "#cf2a3a",
+"coloris": [
+[
+"rouge vif (Feizixiao)",
+"#cf2a3a"
+],
+[
+"rouge carmin (Guiwei)",
+"#b41e34"
+],
+[
+"rouge rosé (Brewster)",
+"#dc4c5c"
+],
+[
+"rouge profond (Nuomici)",
+"#951a2c"
+],
+[
+"rose épaulé de vert (Mauritius)",
+"#d65468"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1100,
+"vase": "colonne"
+},
+{
+"sid": "ludisia",
+"nom": "Ludisia",
+"latin": "Ludisia discolor",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#4a1e2a",
+"coloris": [
+[
+"pourpre à nervures cuivrées",
+"#4a1e2a"
+],
+[
+"noir velours (Nigrescens)",
+"#241a1e"
+],
+[
+"vert à nervures claires (Alba)",
+"#3a5a32"
+]
+],
+"sens": "",
+"source": "",
+"prix": 600,
+"vase": "soliflore"
+},
+{
+"sid": "lycaste",
+"nom": "Lycaste",
+"latin": "Lycaste spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#e898b4",
+"coloris": [
+[
+"blanc (virginalis alba)",
+"#f8f6f0"
+],
+[
+"rose (skinneri)",
+"#f0c8d4"
+],
+[
+"rose vif",
+"#e898b4"
+],
+[
+"rouge",
+"#b8283a"
+],
+[
+"jaune (aromatica)",
+"#f0cc4a"
+],
+[
+"vert pomme",
+"#c4cc78"
+],
+[
+"olive à pétales blancs (macrophylla)",
+"#9a7a44"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1500,
+"vase": "soliflore"
+},
+{
+"sid": "magnolia-branches",
+"nom": "Magnolia",
+"latin": "Magnolia × soulangeana",
+"famille": "Branches & baies",
+"mois": [
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#e8b4c8",
+"coloris": [
+[
+"blanc lavé de rose pourpre (M. × soulangeana)",
+"#e8b4c8"
+],
+[
+"blanc (M. × soulangeana Alba Superba)",
+"#faf6ef"
+],
+[
+"pourpre (M. liliiflora Nigra)",
+"#7a2f5e"
+],
+[
+"jaune primevère (Yellow Bird)",
+"#efe4a0"
+],
+[
+"blanc étoilé (M. stellata)",
+"#f8f3ee"
+],
+[
+"rose tendre étoilé (M. stellata Rosea)",
+"#f3dde3"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1600,
+"vase": "colonne"
+},
+{
+"sid": "masdevallia",
+"nom": "Masdevallia",
+"latin": "Masdevallia spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+4,
+5,
+6,
+7,
+8
+],
+"toute_annee": false,
+"col": "#ef7022",
+"coloris": [
+[
+"orange (M. veitchiana, Copper Angel)",
+"#ef7022"
+],
+[
+"rouge (Redwing)",
+"#d8302a"
+],
+[
+"magenta (M. coccinea)",
+"#c0287a"
+],
+[
+"jaune (Angel Frost, coccinea xanthina)",
+"#f2c838"
+],
+[
+"blanc crème (coccinea alba)",
+"#f2ecd8"
+],
+[
+"rose vif",
+"#e8508e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "soliflore"
+},
+{
+"sid": "miltoniopsis",
+"nom": "Miltoniopsis et Miltonia",
+"latin": "Miltoniopsis spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e67aa6",
+"coloris": [
+[
+"blanc à masque rouge (Herr Alexandre)",
+"#fbf8f6"
+],
+[
+"rose pâle à cascade rouge (Waterfall)",
+"#f6d8e6"
+],
+[
+"rose vif à masque pourpre",
+"#e67aa6"
+],
+[
+"rose à labelle blanc (Pink Cadillac)",
+"#d8508a"
+],
+[
+"rouge velours à masque sombre",
+"#b0182e"
+],
+[
+"bordeaux liseré de blanc",
+"#7a1430"
+],
+[
+"blanc à masque jaune (Jean Sabourin)",
+"#fbf8f0"
+],
+[
+"lavande à masque violet",
+"#cba6dc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1500,
+"vase": "soliflore"
+},
+{
+"sid": "mimetes",
+"nom": "Mimetes",
+"latin": "Mimetes spp.",
+"famille": "Exotiques",
+"mois": [
+8,
+9,
+10,
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#d42a26",
+"coloris": [
+[
+"rouge et jaune (M. cucullatus)",
+"#d42a26"
+],
+[
+"orange flamme",
+"#ec7426"
+],
+[
+"jaune à pointes rouges (M. hirtus)",
+"#ecbc34"
+],
+[
+"saumon (forme claire)",
+"#ee8a6a"
+],
+[
+"argenté rosé (M. argenteus)",
+"#cfcfc6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1400,
+"vase": "soliflore"
+},
+{
+"sid": "mitsumata",
+"nom": "Mitsumata",
+"latin": "Edgeworthia chrysantha",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#7a5a3e",
+"coloris": [
+[
+"blanchi (écorcé)",
+"#f2ece0"
+],
+[
+"naturel (écorce brune, boutons argentés)",
+"#7a5a3e"
+],
+[
+"fleuri jaune (Edgeworthia chrysantha)",
+"#f0c430"
+],
+[
+"fleuri orange (Akebono, Red Dragon)",
+"#e8702a"
+],
+[
+"teint rose",
+"#e46a9e"
+],
+[
+"teint rouge",
+"#c4262e"
+],
+[
+"teint violet",
+"#6e3a8e"
+],
+[
+"teint bleu",
+"#2e5aa8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 850,
+"vase": "colonne"
+},
+{
+"sid": "mokara",
+"nom": "Mokara",
+"latin": "× Mokara",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ef7a2a",
+"coloris": [
+[
+"orange",
+"#ef7a2a"
+],
+[
+"rouge orangé",
+"#e0482a"
+],
+[
+"rouge",
+"#c0282e"
+],
+[
+"corail",
+"#e86a5a"
+],
+[
+"jaune",
+"#f2c838"
+],
+[
+"jaune pâle tacheté",
+"#f2e080"
+],
+[
+"jaune or",
+"#e8a820"
+],
+[
+"pêche",
+"#f4b08a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 700,
+"vase": "soliflore"
+},
+{
+"sid": "muflier",
+"nom": "Muflier",
+"latin": "Antirrhinum majus",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f2e48c",
+"coloris": [
+[
+"blanc",
+"#f7f4e8"
+],
+[
+"ivoire",
+"#f3ead0"
+],
+[
+"jaune citron",
+"#f2e48c"
+],
+[
+"jaune d’or",
+"#f6cf38"
+],
+[
+"pêche",
+"#f4b49a"
+],
+[
+"abricot",
+"#f4a46c"
+],
+[
+"corail",
+"#ee8a6a"
+],
+[
+"orange",
+"#ee7a3a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 320,
+"vase": "colonne"
+},
+{
+"sid": "muguet",
+"nom": "Muguet",
+"latin": "Convallaria majalis",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#fbfaf4",
+"coloris": [
+[
+"blanc (majalis)",
+"#fbfaf4"
+],
+[
+"blanc ivoire, grosses clochettes (Bordeaux)",
+"#f6f2e4"
+],
+[
+"rose pâle (rosea)",
+"#efd0d8"
+],
+[
+"blanc double (Flore Pleno)",
+"#faf8f0"
+],
+[
+"blanc, feuilles liserées de crème (Hardwick Hall)",
+"#fbfaf4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 230,
+"vase": "soliflore"
+},
+{
+"sid": "muscari",
+"nom": "Muscari",
+"latin": "Muscari armeniacum",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#3a54bc",
+"coloris": [
+[
+"bleu (armeniacum)",
+"#3a54bc"
+],
+[
+"bleu saphir (Saffier)",
+"#2c3f9c"
+],
+[
+"bleu ciel (Valerie Finnis)",
+"#94b4e4"
+],
+[
+"bleu double (Blue Spike)",
+"#4a68cc"
+],
+[
+"bleu à tête blanche (aucheri Mount Hood)",
+"#3c5cc4"
+],
+[
+"bleu nuit à tête claire (latifolium)",
+"#1e2a6c"
+],
+[
+"blanc (botryoides Album)",
+"#f6f4ec"
+],
+[
+"rose pâle (Pink Sunrise)",
+"#ecc4cc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 180,
+"vase": "soliflore"
+},
+{
+"sid": "meleze-a-cones",
+"nom": "Mélèze à cônes",
+"latin": "Larix decidua",
+"famille": "Branches & baies",
+"mois": [
+10,
+11,
+12,
+1,
+2
+],
+"toute_annee": false,
+"col": "#8a6a48",
+"coloris": [
+[
+"brun naturel à cônes (rameaux nus)",
+"#8a6a48"
+],
+[
+"gris argenté (vieux rameaux, cônes anciens)",
+"#8e8a84"
+],
+[
+"vert tendre (aiguilles de printemps)",
+"#a8c46a"
+],
+[
+"or d’automne (aiguilles dorées)",
+"#d8a83a"
+],
+[
+"mélèze du Japon, rameaux pourpres (L. kaempferi)",
+"#6a3a34"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "colonne"
+},
+{
+"sid": "nandina-a-baies",
+"nom": "Nandina",
+"latin": "Nandina domestica",
+"famille": "Branches & baies",
+"mois": [
+10,
+11,
+12,
+1,
+2
+],
+"toute_annee": false,
+"col": "#d42a24",
+"coloris": [
+[
+"rouge vif (type)",
+"#d42a24"
+],
+[
+"rouge corail",
+"#d8452e"
+],
+[
+"rouge, feuillage d'hiver pourpré",
+"#c8222a"
+],
+[
+"blanc crème (Alba)",
+"#f0e6c8"
+],
+[
+"vert (baies vertes)",
+"#8fae4a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 600,
+"vase": "colonne"
+},
+{
+"sid": "narcisse-double",
+"nom": "Narcisse double",
+"latin": "Narcissus",
+"famille": "Printemps & bulbes",
+"mois": [
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#f5d22c",
+"coloris": [
+[
+"jaune et orange (Tahiti)",
+"#f5d22c"
+],
+[
+"jaune d’or (Golden Ducat)",
+"#f4c41e"
+],
+[
+"jaune soufre étoilé (Rip van Winkle)",
+"#f1e05a"
+],
+[
+"blanc à cœur jaune pâle (Ice King)",
+"#f6eedb"
+],
+[
+"blanc et orange (Acropolis)",
+"#f8f5ea"
+],
+[
+"blanc à cœur rose abricot (Replete)",
+"#f8f2ea"
+],
+[
+"crème à cœur safran, multiflore (Bridal Crown)",
+"#f8f5ea"
+],
+[
+"jaune pâle multiflore (Yellow Cheerfulness)",
+"#f2e6a8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 200,
+"vase": "soliflore"
+},
+{
+"sid": "nigelle",
+"nom": "Nigelle de Damas",
+"latin": "Nigella damascena",
+"famille": "Été & classiques",
+"mois": [
+5,
+6,
+7,
+8
+],
+"toute_annee": false,
+"col": "#8daedb",
+"coloris": [
+[
+"bleu ciel (Miss Jekyll)",
+"#8daedb"
+],
+[
+"bleu profond (Oxford Blue)",
+"#3b58a6"
+],
+[
+"bleu pâle (Miss Jekyll Light Blue)",
+"#b9cbe6"
+],
+[
+"blanc (Miss Jekyll Alba)",
+"#f5f6f0"
+],
+[
+"rose (Mulberry Rose)",
+"#e9a6c0"
+],
+[
+"rose soutenu (Persian Rose)",
+"#c8628e"
+],
+[
+"mauve (Persian Jewels)",
+"#b49ad2"
+],
+[
+"violet (Delft Blue)",
+"#7a4a92"
+]
+],
+"sens": "",
+"source": "",
+"prix": 250,
+"vase": "soliflore"
+},
+{
+"sid": "niveole",
+"nom": "Nivéole",
+"latin": "Leucojum aestivum",
+"famille": "Printemps & bulbes",
+"mois": [],
+"toute_annee": false,
+"col": "#f8f7f0",
+"coloris": [
+[
+"blanc pointé de vert (aestivum)",
+"#f8f7f0"
+],
+[
+"blanc pointé de vert, grandes clochettes (Gravetye Giant)",
+"#f9f8f2"
+],
+[
+"blanc pointé de vert, nivéole de printemps (vernum)",
+"#faf9f4"
+],
+[
+"blanc pointé de jaune (vernum carpathicum)",
+"#faf8f0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 250,
+"vase": "soliflore"
+},
+{
+"sid": "noisetier-tortueux-chatons",
+"nom": "Noisetier",
+"latin": "Corylus avellana",
+"famille": "Branches & baies",
+"mois": [
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#7a6a5a",
+"coloris": [
+[
+"brun gris à chatons jaunes",
+"#7a6a5a"
+],
+[
+"pourpre à chatons pourpres (Red Majestic)",
+"#5a3040"
+],
+[
+"brun gris (rameaux nus)",
+"#6e6050"
+]
+],
+"sens": "",
+"source": "",
+"prix": 750,
+"vase": "colonne"
+},
+{
+"sid": "nepenthes",
+"nom": "Népenthès",
+"latin": "Nepenthes spp. et hybrides",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#9aa84a",
+"coloris": [
+[
+"vert taché de rouge (ventrata)",
+"#7aa040"
+],
+[
+"vert (alata Gaya)",
+"#9aa84a"
+],
+[
+"vert citron (Lime)",
+"#b8d04a"
+],
+[
+"jaune vert marbré (Miranda)",
+"#a8b04a"
+],
+[
+"rouge (Bloody Mary)",
+"#b8282e"
+],
+[
+"bordeaux (Lady Luck)",
+"#6a1a2a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "colonne"
+},
+{
+"sid": "nerine",
+"nom": "Nérine",
+"latin": "Nerine bowdenii",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e8578a",
+"coloris": [
+[
+"rose vif",
+"#e8578a"
+],
+[
+"rose",
+"#f19bbb"
+],
+[
+"rose pâle",
+"#f6c9d8"
+],
+[
+"blanc",
+"#f7f4ee"
+],
+[
+"rouge profond",
+"#a8122f"
+],
+[
+"cerise",
+"#d02050"
+],
+[
+"rouge écarlate",
+"#d8302a"
+],
+[
+"orange saumon",
+"#f07a6a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "soliflore"
+},
+{
+"sid": "odontoglossum",
+"nom": "Odontoglossum",
+"latin": "Odontoglossum",
+"famille": "Orchidées",
+"mois": [
+10,
+11,
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#eccb4a",
+"coloris": [
+[
+"blanc moucheté de rouge (crispum)",
+"#f8f4ee"
+],
+[
+"crème tacheté de brun",
+"#f2e6c8"
+],
+[
+"jaune barré de brun (Oncidesa Gower Ramsey)",
+"#eccb4a"
+],
+[
+"jaune soleil (Oncidesa Sweet Sugar)",
+"#f4d838"
+],
+[
+"rose moucheté de pourpre",
+"#f2c6d6"
+],
+[
+"rouge bordé d’or (Odontioda)",
+"#b8222e"
+],
+[
+"orange tacheté (Odontioda)",
+"#e8782a"
+],
+[
+"brun cuivré bordé de jaune",
+"#9a3a28"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "soliflore"
+},
+{
+"sid": "strelitzia-reginae",
+"nom": "Oiseau de paradis",
+"latin": "Strelitzia reginae",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f07a1e",
+"coloris": [
+[
+"oiseau de paradis orange",
+"#f07a1e"
+],
+[
+"reginae orange vif",
+"#f0601a"
+],
+[
+"mandela’s Gold",
+"#f2c430"
+],
+[
+"reginae abricot",
+"#f3a24a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 780,
+"vase": "colonne"
+},
+{
+"sid": "oncidium",
+"nom": "Oncidium",
+"latin": "Oncidium et Oncidesa",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f4cb2c",
+"coloris": [
+[
+"jaune strié de brun",
+"#f4cb2c"
+],
+[
+"jaune vif",
+"#f6d630"
+],
+[
+"jaune citron",
+"#f2e05a"
+],
+[
+"brun chocolat",
+"#6a3424"
+],
+[
+"bordeaux et blanc",
+"#7a1e32"
+],
+[
+"rouge",
+"#c8283a"
+],
+[
+"pourpre",
+"#8a2a6a"
+],
+[
+"rose (Twinkle)",
+"#e89ab8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 730,
+"vase": "soliflore"
+},
+{
+"sid": "ornithogale",
+"nom": "Ornithogale",
+"latin": "Ornithogalum thyrsoides",
+"famille": "Printemps & bulbes",
+"mois": [
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#f07a1e",
+"coloris": [
+[
+"blanc (thyrsoides)",
+"#f8f6ee"
+],
+[
+"blanc crème (thyrsoides Mount Fuji)",
+"#f3ead2"
+],
+[
+"blanc à œil noir (arabicum)",
+"#f7f5ee"
+],
+[
+"blanc à œil noir vert (saundersiae)",
+"#f4f4ea"
+],
+[
+"orange (dubium)",
+"#f07a1e"
+],
+[
+"jaune (dubium)",
+"#f2c41e"
+],
+[
+"blanc verdâtre (thyrsoides)",
+"#eef0dc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 330,
+"vase": "soliflore"
+},
+{
+"sid": "paphiopedilum",
+"nom": "Paphiopedilum",
+"latin": "Paphiopedilum spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#b8c87a",
+"coloris": [
+[
+"vert et blanc (Maudiae album)",
+"#b8c87a"
+],
+[
+"pourpre vin (Maudiae coloratum)",
+"#6a1a2a"
+],
+[
+"jaune d’or (armeniacum)",
+"#e8c040"
+],
+[
+"blanc moucheté (niveum)",
+"#f4f2e8"
+],
+[
+"acajou tacheté (hybrides complexes)",
+"#8a5a2a"
+],
+[
+"rose tendre (delenatii)",
+"#e8a8b8"
+],
+[
+"vert-jaune et brun, sommet blanc (insigne)",
+"#b0a050"
+]
+],
+"sens": "",
+"source": "",
+"prix": 2100,
+"vase": "soliflore"
+},
+{
+"sid": "passiflora",
+"nom": "Passiflore",
+"latin": "Passiflora spp.",
+"famille": "Exotiques",
+"mois": [
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#b8a0d8",
+"coloris": [
+[
+"bleue (caerulea)",
+"#f2eef2"
+],
+[
+"blanche (Constance Elliott)",
+"#f6f4ec"
+],
+[
+"lilas (Amethyst)",
+"#b8a0d8"
+],
+[
+"pourpre (Purple Haze)",
+"#6a2a6a"
+],
+[
+"rose (Lady Margaret)",
+"#e898b8"
+],
+[
+"rouge (racemosa)",
+"#c8202e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "colonne"
+},
+{
+"sid": "anigozanthos",
+"nom": "Patte de kangourou",
+"latin": "Anigozanthos spp. et hybrides",
+"famille": "Exotiques",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#c4262c",
+"coloris": [
+[
+"rouge (Big Red)",
+"#c4262c"
+],
+[
+"jaune (Bush Gold)",
+"#e9c43a"
+],
+[
+"orange (Orange Cross)",
+"#ec7a2c"
+],
+[
+"rose (Pink Joey)",
+"#e48aa6"
+],
+[
+"vert à tige rouge (A. manglesii)",
+"#5c9a3e"
+],
+[
+"vert chartreuse (Kings Park)",
+"#a8b84a"
+],
+[
+"bordeaux (Bush Ruby)",
+"#8a2236"
+]
+],
+"sens": "",
+"source": "",
+"prix": 480,
+"vase": "soliflore"
+},
+{
+"sid": "pavot-islande",
+"nom": "Pavot d'Islande",
+"latin": "Papaver nudicaule",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5,
+6,
+7
+],
+"toute_annee": false,
+"col": "#f07a2a",
+"coloris": [
+[
+"orange",
+"#f07a2a"
+],
+[
+"jaune",
+"#f6d23a"
+],
+[
+"blanc",
+"#f7f3ea"
+],
+[
+"rose",
+"#ef8a8e"
+],
+[
+"saumon pêche",
+"#f6c2a0"
+],
+[
+"rouge écarlate",
+"#e0302a"
+],
+[
+"crème citron",
+"#f6eaa8"
+],
+[
+"abricot",
+"#f6a660"
+]
+],
+"sens": "",
+"source": "",
+"prix": 450,
+"vase": "soliflore"
+},
+{
+"sid": "phlox",
+"nom": "Phlox",
+"latin": "Phlox paniculata",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#b6a6e0",
+"coloris": [
+[
+"lilas bleuté (Blue Paradise)",
+"#b6a6e0"
+],
+[
+"blanc (David)",
+"#f7f5ee"
+],
+[
+"rose à œil rouge (Bright Eyes)",
+"#e98fb0"
+],
+[
+"rose cerise (Miss Pepper)",
+"#d8287e"
+],
+[
+"saumon à œil carmin (Orange Perfection)",
+"#f2836a"
+],
+[
+"lavande à œil pourpre (Franz Schubert)",
+"#c3a6dc"
+],
+[
+"rouge cramoisi (Starfire)",
+"#c0183a"
+],
+[
+"pourpre à œil blanc (Laura)",
+"#8a4aa8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 300,
+"vase": "colonne"
+},
+{
+"sid": "phragmipedium",
+"nom": "Phragmipedium",
+"latin": "Phragmipedium spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#c8222c",
+"coloris": [
+[
+"rouge (Hanne Popow, Jason Fischer)",
+"#c8222c"
+],
+[
+"orange (Eric Young, Don Wimber)",
+"#e8642c"
+],
+[
+"saumon (Fritz Schomburg)",
+"#f29a7a"
+],
+[
+"rose et blanc (Sedenii, Cardinale)",
+"#f6dde2"
+],
+[
+"jaune (besseae flavum)",
+"#f2cc3a"
+],
+[
+"vert et brun à longs rubans (Grande, caudatum)",
+"#c8c88a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 2400,
+"vase": "soliflore"
+},
+{
+"sid": "pied-alouette-annuel",
+"nom": "Pied-d'alouette annuel",
+"latin": "Consolida ajacis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#34409f",
+"coloris": [
+[
+"bleu foncé",
+"#34409f"
+],
+[
+"bleu moyen",
+"#5a74cc"
+],
+[
+"bleu clair",
+"#97b6ea"
+],
+[
+"lavande bleutée",
+"#9b8dd2"
+],
+[
+"lilas",
+"#c5a8da"
+],
+[
+"violet",
+"#6f45a8"
+],
+[
+"rose clair",
+"#f5c6d4"
+],
+[
+"rose",
+"#ee9fbc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 300,
+"vase": "colonne"
+},
+{
+"sid": "pigamon",
+"nom": "Pigamon",
+"latin": "Thalictrum spp.",
+"famille": "Été & classiques",
+"mois": [
+5,
+6,
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#b98ac8",
+"coloris": [
+[
+"mauve (aquilegiifolium)",
+"#b98ac8"
+],
+[
+"rose mauve",
+"#d8a6cf"
+],
+[
+"pourpre (Thundercloud)",
+"#a2489a"
+],
+[
+"violet (Black Stockings)",
+"#8a5ca6"
+],
+[
+"blanc (Album)",
+"#f5f2ec"
+],
+[
+"lilas à étamines jaunes (delavayi)",
+"#b9a2d4"
+],
+[
+"lavande (rochebruneanum)",
+"#a796cc"
+],
+[
+"blanc à étamines jaunes (Splendide White)",
+"#f4f0f2"
+]
+],
+"sens": "",
+"source": "",
+"prix": 520,
+"vase": "colonne"
+},
+{
+"sid": "pin-a-cones",
+"nom": "Pin à cônes",
+"latin": "Pinus spp.",
+"famille": "Branches & baies",
+"mois": [
+11,
+12,
+1
+],
+"toute_annee": false,
+"col": "#7a5232",
+"coloris": [
+[
+"pin sylvestre à cônes bruns",
+"#7a5232"
+],
+[
+"pin noir à cônes blonds",
+"#a0683a"
+],
+[
+"pin de Weymouth à longs cônes",
+"#8a6440"
+],
+[
+"givré blanc (cônes et aiguilles)",
+"#efebe2"
+],
+[
+"cônes dorés",
+"#c9a54a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 380,
+"vase": "soliflore"
+},
+{
+"sid": "pivoine-arbustive",
+"nom": "Pivoine arbustive",
+"latin": "Paeonia × suffruticosa",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5
+],
+"toute_annee": false,
+"col": "#e9a4c0",
+"coloris": [
+[
+"rose",
+"#e9a4c0"
+],
+[
+"blanc à macule pourpre",
+"#f7f3ec"
+],
+[
+"rouge",
+"#c8203a"
+],
+[
+"pourpre",
+"#7a2a6e"
+],
+[
+"jaune",
+"#f5d23e"
+],
+[
+"saumon",
+"#f2a08a"
+],
+[
+"lavande",
+"#c8a8d8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1500,
+"vase": "colonne"
+},
+{
+"sid": "pivoine-corail",
+"nom": "Pivoine corail",
+"latin": "Paeonia hybrides semi-doubles",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#f2715a",
+"coloris": [
+[
+"corail vif",
+"#f2715a"
+],
+[
+"corail",
+"#f49a82"
+],
+[
+"saumon",
+"#f4b3a0"
+],
+[
+"pêche",
+"#f6c49e"
+],
+[
+"abricot",
+"#f3a46a"
+],
+[
+"crème (fanée)",
+"#f4ebd8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 900,
+"vase": "colonne"
+},
+{
+"sid": "pivoine-herbacee-double",
+"nom": "Pivoine herbacée double",
+"latin": "Paeonia lactiflora",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+11,
+12
+],
+"toute_annee": false,
+"col": "#f0a6c0",
+"coloris": [
+[
+"rose (Sarah Bernhardt)",
+"#f0a6c0"
+],
+[
+"blanc (Duchesse de Nemours)",
+"#f7f1e6"
+],
+[
+"blush (Shirley Temple)",
+"#f6cfd6"
+],
+[
+"rouge (Red Charm)",
+"#c81f4c"
+],
+[
+"fuchsia (Karl Rosenfield)",
+"#d2357e"
+],
+[
+"cerise (Kansas)",
+"#d8305a"
+],
+[
+"bordeaux",
+"#7a0f2a"
+],
+[
+"vieux rose",
+"#e8bccb"
+]
+],
+"sens": "",
+"source": "",
+"prix": 800,
+"vase": "colonne"
+},
+{
+"sid": "pivoine-itoh",
+"nom": "Pivoine intersectionnelle",
+"latin": "Paeonia Groupe Itoh",
+"famille": "Printemps & bulbes",
+"mois": [
+5,
+6
+],
+"toute_annee": false,
+"col": "#f2d73a",
+"coloris": [
+[
+"jaune (Bartzella)",
+"#f2d73a"
+],
+[
+"blanc à macule (Cora Louise)",
+"#f3ead8"
+],
+[
+"orange cuivré",
+"#f2a35e"
+],
+[
+"magenta",
+"#c63c7e"
+],
+[
+"lilas rosé",
+"#d9a3c4"
+],
+[
+"rouge",
+"#c0272e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "colonne"
+},
+{
+"sid": "pivoine-herbacee-simple",
+"nom": "Pivoine simple",
+"latin": "Paeonia lactiflora",
+"famille": "Printemps & bulbes",
+"mois": [
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#ec8fb4",
+"coloris": [
+[
+"rose",
+"#ec8fb4"
+],
+[
+"blanc",
+"#f7f3ea"
+],
+[
+"magenta",
+"#e0457b"
+],
+[
+"rouge",
+"#d6212f"
+],
+[
+"corail",
+"#f2836a"
+],
+[
+"crème",
+"#f1dcc0"
+],
+[
+"rose à cœur crème (Bowl of Beauty)",
+"#e88aae"
+],
+[
+"rouge à cœur doré (japonaise)",
+"#c8203a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 750,
+"vase": "soliflore"
+},
+{
+"sid": "pieris-japonica",
+"nom": "Piéris",
+"latin": "Pieris japonica et hybrides",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ec9cb8",
+"coloris": [
+[
+"blanc (Debutante)",
+"#f8f6ee"
+],
+[
+"blanc crème (Purity)",
+"#ece4cc"
+],
+[
+"blanc, pousses rouges (Forest Flame)",
+"#faf8f0"
+],
+[
+"rose (Passion)",
+"#ec9cb8"
+],
+[
+"rose, pousses pourpres (Katsura)",
+"#d87098"
+],
+[
+"rose profond (Valley Valentine)",
+"#b8385e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 450,
+"vase": "colonne"
+},
+{
+"sid": "pommetier-a-fruits",
+"nom": "Pommetier à fruits décoratifs",
+"latin": "Malus spp.",
+"famille": "Branches & baies",
+"mois": [
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#b8202a",
+"coloris": [
+[
+"rouge (Red Sentinel)",
+"#b8202a"
+],
+[
+"jaune d'or (Golden Hornet)",
+"#e3b23a"
+],
+[
+"orange flammé (John Downie)",
+"#e0702a"
+],
+[
+"pourpre (Royalty)",
+"#5a1f3a"
+],
+[
+"rouge orangé (Evereste)",
+"#d0553a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 800,
+"vase": "colonne"
+},
+{
+"sid": "pommier-pommetier-en-fleurs",
+"nom": "Pommier & pommetier à fleurs",
+"latin": "Malus spp.",
+"famille": "Branches & baies",
+"mois": [
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f0b9c8",
+"coloris": [
+[
+"blanc (Evereste)",
+"#fbf7f2"
+],
+[
+"blanc rosé (pommier domestique)",
+"#f8e4e8"
+],
+[
+"rose tendre (Malus floribunda)",
+"#f0b9c8"
+],
+[
+"rose vif (Rudolph)",
+"#e07a9a"
+],
+[
+"pourpre (Royalty)",
+"#8e2c4e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 950,
+"vase": "colonne"
+},
+{
+"sid": "protea-eximia",
+"nom": "Protée duchesse",
+"latin": "Protea eximia",
+"famille": "Exotiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#e8aaa2",
+"coloris": [
+[
+"rose saumoné",
+"#e8aaa2"
+],
+[
+"rose carmin",
+"#d8506e"
+],
+[
+"rose tendre",
+"#eeaab4"
+],
+[
+"rouge (Fiery Duchess)",
+"#c42c40"
+],
+[
+"corail",
+"#ec9a84"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1150,
+"vase": "soliflore"
+},
+{
+"sid": "protea-magnifica",
+"nom": "Protée reine",
+"latin": "Protea magnifica",
+"famille": "Exotiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+1
+],
+"toute_annee": false,
+"col": "#e898ae",
+"coloris": [
+[
+"crème",
+"#f2ead4"
+],
+[
+"vert pâle",
+"#dfe2b8"
+],
+[
+"rose pâle",
+"#f2c6cc"
+],
+[
+"rose",
+"#e898ae"
+],
+[
+"carmin",
+"#c4405e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1400,
+"vase": "colonne"
+},
+{
+"sid": "protea-cynaroides",
+"nom": "Protée royale",
+"latin": "Protea cynaroides",
+"famille": "Exotiques",
+"mois": [
+4,
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#eaa2b6",
+"coloris": [
+[
+"rose argenté",
+"#eaa2b6"
+],
+[
+"rose soutenu",
+"#e07a98"
+],
+[
+"rouge (Red King)",
+"#b8283e"
+],
+[
+"blanc crème (Arctic Ice)",
+"#f2ecdc"
+],
+[
+"rose saumoné",
+"#f0a690"
+],
+[
+"rose rouge, petite tête (Madiba)",
+"#d0506e"
+],
+[
+"rouge à cœur blanc, petite tête (Little Prince)",
+"#c43448"
+]
+],
+"sens": "",
+"source": "",
+"prix": 2200,
+"vase": "colonne"
+},
+{
+"sid": "protea-repens",
+"nom": "Protée sucrière",
+"latin": "Protea repens",
+"famille": "Exotiques",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#b8283a",
+"coloris": [
+[
+"rouge",
+"#b8283a"
+],
+[
+"rose",
+"#ec9ab0"
+],
+[
+"crème à pointes rouges",
+"#f0e6c8"
+],
+[
+"blanc crème",
+"#f2ecd8"
+],
+[
+"rose pâle",
+"#f4c8d0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 900,
+"vase": "soliflore"
+},
+{
+"sid": "protea-neriifolia",
+"nom": "Protée à feuilles de laurier-rose",
+"latin": "Protea neriifolia",
+"famille": "Exotiques",
+"mois": [
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#e690a8",
+"coloris": [
+[
+"rose à barbe noire (Pink Mink)",
+"#e690a8"
+],
+[
+"rose foncé à barbe noire",
+"#c43a5e"
+],
+[
+"blanc à barbe noire (White Mink)",
+"#f2eee2"
+],
+[
+"vert crème à barbe noire",
+"#d8dca0"
+],
+[
+"rose à barbe blanche",
+"#ec9eb0"
+],
+[
+"saumon à barbe noire",
+"#ef9e8c"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1100,
+"vase": "soliflore"
+},
+{
+"sid": "protea-hybrides",
+"nom": "Protées hybrides et petites protée",
+"latin": "Protea hybrides",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e2809c",
+"coloris": [
+[
+"rose givré (Pink Ice)",
+"#e2809c"
+],
+[
+"cerise (Sylvia)",
+"#c83a5c"
+],
+[
+"crème à barbe pourpre (Niobe)",
+"#ece2c4"
+],
+[
+"rouge (Cardinal)",
+"#ae2a3c"
+],
+[
+"rose crème (Susara)",
+"#ecbcc4"
+],
+[
+"rose framboise (Brenda)",
+"#d6607c"
+],
+[
+"petite protée vert crème (P. scolymocephala)",
+"#d9dca4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1050,
+"vase": "soliflore"
+},
+{
+"sid": "pecher-a-fleurs",
+"nom": "Pêcher à fleurs",
+"latin": "Prunus persica",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#e8709a",
+"coloris": [
+[
+"rose vif double (Klara Meyer)",
+"#e8709a"
+],
+[
+"rose vif simple (Prunus persica)",
+"#ec8fac"
+],
+[
+"rouge cerise double (Russell's Red)",
+"#c42c4c"
+],
+[
+"rouge pourpre double (Melred)",
+"#8e1f3a"
+],
+[
+"blanc double (Iceberg)",
+"#fbf7f4"
+],
+[
+"blanc strié de rouge (Peppermint Stick)",
+"#f6e4e6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "colonne"
+},
+{
+"sid": "reine-marguerite",
+"nom": "Reine-marguerite",
+"latin": "Callistephus chinensis",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#5c4fa6",
+"coloris": [
+[
+"violet (Matsumoto)",
+"#5c4fa6"
+],
+[
+"bleu nuit (Matsumoto)",
+"#3f3a92"
+],
+[
+"bleu lavande (Matsumoto)",
+"#b9a6dc"
+],
+[
+"rose (Matsumoto)",
+"#e889ac"
+],
+[
+"blanc (Matsumoto)",
+"#f6f3ea"
+],
+[
+"rouge écarlate (Matsumoto)",
+"#b8202e"
+],
+[
+"abricot (Matsumoto)",
+"#f2b07a"
+],
+[
+"jaune pâle (Matsumoto)",
+"#f0dc90"
+]
+],
+"sens": "",
+"source": "",
+"prix": 260,
+"vase": "soliflore"
+},
+{
+"sid": "renoncule-butterfly",
+"nom": "Renoncule Butterfly",
+"latin": "Ranunculus asiaticus",
+"famille": "Printemps & bulbes",
+"mois": [
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f3c4cc",
+"coloris": [
+[
+"rose (Hermione)",
+"#f3c4cc"
+],
+[
+"crème (Ariadne)",
+"#f7eedb"
+],
+[
+"rose vif",
+"#e98fa8"
+],
+[
+"orange (Apollon)",
+"#f2a06a"
+],
+[
+"jaune (Ataraxie)",
+"#f2e04a"
+],
+[
+"pourpre (Kalya)",
+"#7a2a6a"
+],
+[
+"lilas",
+"#c8a8dc"
+],
+[
+"corail",
+"#f08a7a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 620,
+"vase": "colonne"
+},
+{
+"sid": "renoncule-cloni",
+"nom": "Renoncule Cloni",
+"latin": "Ranunculus asiaticus",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#f6c4a6",
+"coloris": [
+[
+"rose blush (Hanoi)",
+"#efc4c8"
+],
+[
+"blanc",
+"#f7f3ea"
+],
+[
+"pêche",
+"#f6c4a6"
+],
+[
+"abricot",
+"#f2a46e"
+],
+[
+"corail",
+"#f2765e"
+],
+[
+"fuchsia",
+"#d81f7a"
+],
+[
+"rose",
+"#ee98b6"
+],
+[
+"jaune pâle",
+"#f4e2a0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 580,
+"vase": "soliflore"
+},
+{
+"sid": "renoncule-natura-moderna",
+"nom": "Renoncule Natura Moderna",
+"latin": "Ranunculus asiaticus × renoncules sauvages",
+"famille": "Printemps & bulbes",
+"mois": [
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f5cf3a",
+"coloris": [
+[
+"blanc",
+"#f6efe0"
+],
+[
+"jaune",
+"#f5cf3a"
+],
+[
+"orange",
+"#f08a3a"
+],
+[
+"pêche",
+"#f4c09a"
+],
+[
+"fuchsia",
+"#e0457b"
+],
+[
+"prune",
+"#5a1a4a"
+],
+[
+"rose",
+"#f2a8c0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "colonne"
+},
+{
+"sid": "renoncule-pon-pon",
+"nom": "Renoncule Pon-Pon",
+"latin": "Ranunculus asiaticus",
+"famille": "Printemps & bulbes",
+"mois": [
+11,
+12,
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f2c4d0",
+"coloris": [
+[
+"blanc à cœur vert",
+"#f7f3ea"
+],
+[
+"rose pâle à cœur vert",
+"#f2c4d0"
+],
+[
+"rose à cœur vert",
+"#e98fb0"
+],
+[
+"lilas à cœur vert",
+"#b48ab8"
+],
+[
+"prune à cœur vert",
+"#7a2a6a"
+],
+[
+"jaune à cœur vert",
+"#f2b33a"
+],
+[
+"corail à cœur vert",
+"#f28a6e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "soliflore"
+},
+{
+"sid": "rhynchostylis",
+"nom": "Rhynchostylis",
+"latin": "Rhynchostylis spp.",
+"famille": "Orchidées",
+"mois": [
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#8e1e3e",
+"coloris": [
+[
+"blanc moucheté de pourpre",
+"#f6f2f4"
+],
+[
+"blanc pur",
+"#f8f6f2"
+],
+[
+"rose pâle moucheté",
+"#f2cadb"
+],
+[
+"rouge carmin",
+"#8e1e3e"
+],
+[
+"bleu lavande (R. coelestis)",
+"#d8d2ee"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "colonne"
+},
+{
+"sid": "ronce-mures-en-fruits",
+"nom": "Ronce à mûres en fruits",
+"latin": "Rubus fruticosus agg.",
+"famille": "Branches & baies",
+"mois": [
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#b52a3a",
+"coloris": [
+[
+"mûres mêlées vertes, rouges et noires",
+"#24161e"
+],
+[
+"noires (mûres mûres)",
+"#1c1420"
+],
+[
+"rouges (mûres qui tournent)",
+"#b52a3a"
+],
+[
+"vertes (mûres vertes)",
+"#8aa646"
+],
+[
+"framboises (Rubus idaeus)",
+"#cc3550"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "soliflore"
+},
+{
+"sid": "rose-ancienne-parfumee",
+"nom": "Rose ancienne et rose parfumée",
+"latin": "Rosa gallica",
+"famille": "Roses",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#ec9fbc",
+"coloris": [
+[
+"rose tendre (Constance Spry)",
+"#ec9fbc"
+],
+[
+"blanc rosé (Madame Alfred Carrière)",
+"#f6eee2"
+],
+[
+"rose profond (Gertrude Jekyll)",
+"#de4f88"
+],
+[
+"rose strié de cramoisi (Ferdinand Pichard)",
+"#f2c6d4"
+],
+[
+"rose chair (Souvenir de la Malmaison)",
+"#f6cdd2"
+],
+[
+"fuchsia (Rose de Resht)",
+"#c2347a"
+],
+[
+"cramoisi pourpre (Charles de Mills)",
+"#8a1f4e"
+],
+[
+"mauve violacé (Reine des Violettes)",
+"#a46aa2"
+]
+],
+"sens": "",
+"source": "",
+"prix": 700,
+"vase": "soliflore"
+},
+{
+"sid": "rose-anglaise-david-austin",
+"nom": "Rose anglaise David Austin",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f6c8a8",
+"coloris": [
+[
+"pêche à cœur abricot (Juliet)",
+"#f6c8a8"
+],
+[
+"blanc laiteux à cœur beurre",
+"#f8f2e6"
+],
+[
+"crème marbré de framboise",
+"#f6e8e0"
+],
+[
+"rose dragée à cœur cerise",
+"#f2b0c4"
+],
+[
+"rose ballerine à cœur crème",
+"#f2c0cc"
+],
+[
+"rose pêche à étamines vertes",
+"#f2b8a8"
+],
+[
+"fuchsia",
+"#d0306e"
+],
+[
+"rouge framboise",
+"#b8203e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "soliflore"
+},
+{
+"sid": "rose-branchue",
+"nom": "Rose branchue",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ec8cae",
+"coloris": [
+[
+"lydia (rose lilas)",
+"#ec8cae"
+],
+[
+"mimi Eden (bicolore rose, extérieur ivoire)",
+"#f4e8dc"
+],
+[
+"white Majolica (crème)",
+"#f4eedc"
+],
+[
+"snowflake (blanc)",
+"#f8f6f0"
+],
+[
+"babe (rose cerise)",
+"#d8306a"
+],
+[
+"yellow Babe (jaune)",
+"#f4d03a"
+],
+[
+"fire King (orange rouge)",
+"#e0482a"
+],
+[
+"rubicon (rouge)",
+"#b8142a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 480,
+"vase": "colonne"
+},
+{
+"sid": "hellebore-niger",
+"nom": "Rose de Noël",
+"latin": "Helleborus niger",
+"famille": "Printemps & bulbes",
+"mois": [
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#dca0b2",
+"coloris": [
+[
+"blanc pur (Christmas Carol)",
+"#fbfaf4"
+],
+[
+"blanc, grande fleur (Potter’s Wheel)",
+"#faf8f0"
+],
+[
+"blanc crème (Praecox)",
+"#f6f1e0"
+],
+[
+"blanc au revers rosé (Josef Lemper)",
+"#faf4f2"
+],
+[
+"rose tendre (virant)",
+"#f2d2da"
+],
+[
+"vieux rose (fin de floraison)",
+"#dca0b2"
+],
+[
+"blanc verdissant (fin de floraison)",
+"#e4ecd0"
+],
+[
+"rose poudré au revers pourpre (× ericsmithii Pink Frost)",
+"#eec4d0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "soliflore"
+},
+{
+"sid": "etlingera-elatior",
+"nom": "Rose de porcelaine",
+"latin": "Etlingera elatior",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ec7a9a",
+"coloris": [
+[
+"pink Torch rose",
+"#ec7a9a"
+],
+[
+"red Torch rouge",
+"#c81e32"
+],
+[
+"bloody Mary rouge sang bordé de blanc",
+"#7a1424"
+],
+[
+"thai Queen rose tendre",
+"#f4a8b8"
+],
+[
+"rose saumoné",
+"#f29a8a"
+],
+[
+"blanche rosée",
+"#f6e0e0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1100,
+"vase": "colonne"
+},
+{
+"sid": "rose-intermediaire-kenya",
+"nom": "Rose intermédiaire et sweetheart",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ec96b0",
+"coloris": [
+[
+"blanc ivoire",
+"#f8f4ea"
+],
+[
+"crème",
+"#f4e8cc"
+],
+[
+"rose",
+"#ec96b0"
+],
+[
+"rose vif",
+"#e8558a"
+],
+[
+"cerise",
+"#c81e4a"
+],
+[
+"orange",
+"#f07c2a"
+],
+[
+"jaune",
+"#f6d23a"
+],
+[
+"rouge",
+"#c41e2e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 280,
+"vase": "soliflore"
+},
+{
+"sid": "rose-japonaise",
+"nom": "Rose japonaise",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#ecc4a4",
+"coloris": [
+[
+"miyabi (beige rosé poudré)",
+"#e8d0c6"
+],
+[
+"tsumugi (mauve brun poudré)",
+"#c8aeb0"
+],
+[
+"senlitsu (crème rosé, extérieur vert)",
+"#f2e4d6"
+],
+[
+"rose tendre frangé",
+"#efd3d0"
+],
+[
+"lavande grisée",
+"#c3aecb"
+],
+[
+"blanc vert",
+"#f4eee3"
+],
+[
+"abricot poudré",
+"#ecc4a4"
+],
+[
+"vieux rose brun",
+"#b48f86"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1200,
+"vase": "soliflore"
+},
+{
+"sid": "rose-stabilisee",
+"nom": "Rose stabilisée",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#a50f22",
+"coloris": [
+[
+"rouge passion",
+"#a50f22"
+],
+[
+"rouge vif",
+"#c8162e"
+],
+[
+"bordeaux",
+"#6a0f24"
+],
+[
+"fuchsia",
+"#dd1a5c"
+],
+[
+"rose vif",
+"#e0457b"
+],
+[
+"rose pâle",
+"#f2c4cf"
+],
+[
+"rose poudré (vieux rose)",
+"#d8a8ae"
+],
+[
+"pêche",
+"#f4bfa0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 950,
+"vase": "soliflore"
+},
+{
+"sid": "rose-teintee",
+"nom": "Rose teintée et rose fantaisie",
+"latin": "Rosa × hybrida",
+"famille": "Roses",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e8303a",
+"coloris": [
+[
+"arc-en-ciel (Rainbow)",
+"#e8303a"
+],
+[
+"arc-en-ciel pastel",
+"#f2a0b4"
+],
+[
+"bleu roi",
+"#2b5fc4"
+],
+[
+"bleu ciel",
+"#86b4ea"
+],
+[
+"noir",
+"#2a1a26"
+],
+[
+"vert émeraude",
+"#3fa34d"
+],
+[
+"violet",
+"#7a3fa8"
+],
+[
+"orange",
+"#f07c1e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 850,
+"vase": "soliflore"
+},
+{
+"sid": "rosier-a-cynorrhodons",
+"nom": "Rosier à cynorrhodons",
+"latin": "Rosa canina et rosiers à fruits",
+"famille": "Branches & baies",
+"mois": [
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": false,
+"col": "#c0202a",
+"coloris": [
+[
+"rouge",
+"#c0202a"
+],
+[
+"rouge orangé",
+"#d8401f"
+],
+[
+"orange",
+"#e6672a"
+],
+[
+"bordeaux",
+"#74141f"
+],
+[
+"vert (fruits verts)",
+"#9aac4e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 600,
+"vase": "soliflore"
+},
+{
+"sid": "rudbeckia",
+"nom": "Rudbeckia",
+"latin": "Rudbeckia hirta",
+"famille": "Été & classiques",
+"mois": [
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#f2b01c",
+"coloris": [
+[
+"jaune d’or (Indian Summer)",
+"#f2b01c"
+],
+[
+"orange doré (Toto)",
+"#ea8c1c"
+],
+[
+"or à anneau acajou (Denver Daisy)",
+"#f2b41e"
+],
+[
+"tons d’automne (Autumn Colors)",
+"#e89a28"
+],
+[
+"rouge cerise (Cherry Brandy)",
+"#9b2b2e"
+],
+[
+"acajou à pointes d’or (Cappuccino)",
+"#a35a2a"
+],
+[
+"or à pointes citron, cœur vert (Prairie Sun)",
+"#f2b01c"
+],
+[
+"jaune à cœur vert (Irish Eyes)",
+"#f5cd2e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 260,
+"vase": "soliflore"
+},
+{
+"sid": "sauge-salvia",
+"nom": "Sauge ornementale",
+"latin": "Salvia nemorosa",
+"famille": "Été & classiques",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#4a2e7a",
+"coloris": [
+[
+"violet profond (Caradonna)",
+"#4a2e7a"
+],
+[
+"bleu violet (Ostfriesland)",
+"#5a4aa6"
+],
+[
+"bleu (farinacea Victoria Blue)",
+"#4a5ab6"
+],
+[
+"bleu à calice argent (farinacea Strata)",
+"#4a5ab6"
+],
+[
+"mauve (Amethyst)",
+"#9a5aa0"
+],
+[
+"rose (Sensation Rose)",
+"#e090b8"
+],
+[
+"blanc (Schneehügel)",
+"#e6e8f2"
+]
+],
+"sens": "",
+"source": "",
+"prix": 260,
+"vase": "colonne"
+},
+{
+"sid": "saule-fascie-sekka",
+"nom": "Saule fascié 'Sekka'",
+"latin": "Salix udensis 'Sekka'",
+"famille": "Branches & baies",
+"mois": [
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#5a2e22",
+"coloris": [
+[
+"brun-rouge luisant",
+"#5a2e22"
+],
+[
+"brun-rouge à chatons argentés",
+"#c4c2bd"
+],
+[
+"acajou (bois foncé)",
+"#3e2420"
+],
+[
+"peint blanc",
+"#efeae0"
+],
+[
+"peint or",
+"#c9a54a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 480,
+"vase": "colonne"
+},
+{
+"sid": "saule-tortueux",
+"nom": "Saule tortueux",
+"latin": "Salix matsudana 'Tortuosa'",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#6b5a3a",
+"coloris": [
+[
+"naturel brun olive",
+"#6b5a3a"
+],
+[
+"vert olive (jeunes rameaux)",
+"#6c7a3e"
+],
+[
+"doré orangé (Golden Curls)",
+"#c4842e"
+],
+[
+"rouge (Scarlet Curls)",
+"#992f27"
+],
+[
+"peint blanc",
+"#efeae0"
+],
+[
+"peint or",
+"#c9a54a"
+],
+[
+"peint argent",
+"#bfc1be"
+],
+[
+"peint noir",
+"#2e2c2d"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "colonne"
+},
+{
+"sid": "saule-a-chatons",
+"nom": "Saule à chatons",
+"latin": "Salix caprea",
+"famille": "Branches & baies",
+"mois": [
+12,
+1,
+2,
+3,
+4
+],
+"toute_annee": false,
+"col": "#e6b7c4",
+"coloris": [
+[
+"argent (Salix caprea)",
+"#c9c7c2"
+],
+[
+"blanc soyeux (S. discolor)",
+"#f2efe8"
+],
+[
+"noir (S. gracilistyla Melanostachys)",
+"#2b2a2c"
+],
+[
+"rose (S. gracilistyla Mount Aso)",
+"#e6b7c4"
+],
+[
+"rouge (chatons teintés)",
+"#b8343a"
+],
+[
+"jaune pollen (chatons mâles en fleur)",
+"#e8cf4a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 320,
+"vase": "colonne"
+},
+{
+"sid": "scille",
+"nom": "Scille",
+"latin": "Scilla siberica",
+"famille": "Printemps & bulbes",
+"mois": [],
+"toute_annee": false,
+"col": "#4a4ec6",
+"coloris": [
+[
+"bleu violet (peruviana)",
+"#4a4ec6"
+],
+[
+"blanc (peruviana Alba)",
+"#f4f3ec"
+],
+[
+"bleu lilas (peruviana Lilacina)",
+"#9a8ed6"
+],
+[
+"bleu gentiane (siberica Spring Beauty)",
+"#2f4cd0"
+],
+[
+"blanc (siberica Alba)",
+"#f6f6f2"
+],
+[
+"bleu pâle strié (mischtschenkoana Tubergeniana)",
+"#c8d4f2"
+]
+],
+"sens": "",
+"source": "",
+"prix": 280,
+"vase": "soliflore"
+},
+{
+"sid": "seringat",
+"nom": "Seringat",
+"latin": "Philadelphus spp.",
+"famille": "Branches & baies",
+"mois": [
+5,
+6
+],
+"toute_annee": false,
+"col": "#faf6e6",
+"coloris": [
+[
+"blanc crème (P. coronarius)",
+"#faf6e6"
+],
+[
+"blanc à cœur pourpre (Belle Étoile)",
+"#fbf9f4"
+],
+[
+"blanc à cœur rose pourpre (Sybille)",
+"#fbf8f6"
+],
+[
+"blanc pur double (Virginal)",
+"#fcfbf8"
+],
+[
+"blanc double (Minnesota Snowflake)",
+"#fbfbf6"
+],
+[
+"blanc ivoire double (Manteau d'Hermine)",
+"#f8f4e4"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "colonne"
+},
+{
+"sid": "serruria",
+"nom": "Serruria",
+"latin": "Serruria florida et hybrides",
+"famille": "Exotiques",
+"mois": [
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#eeaabf",
+"coloris": [
+[
+"blanc rosé nacré (Blushing Bride)",
+"#f6ece9"
+],
+[
+"blanc à cœur rose soutenu (Sugar ’n’ Spice)",
+"#f4dfe4"
+],
+[
+"rose vif (Pretty in Pink)",
+"#eeaabf"
+],
+[
+"blanc crème (S. florida)",
+"#f4eedb"
+]
+],
+"sens": "",
+"source": "",
+"prix": 800,
+"vase": "soliflore"
+},
+{
+"sid": "sorbier-baies",
+"nom": "Sorbier",
+"latin": "Sorbus aucuparia et sorbiers asiatiques",
+"famille": "Branches & baies",
+"mois": [
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#e5602a",
+"coloris": [
+[
+"orange vif (aucuparia)",
+"#e5602a"
+],
+[
+"rouge (Autumn Spire)",
+"#c62a28"
+],
+[
+"rouge corail (Rossica Major)",
+"#e0442a"
+],
+[
+"rose (Pink Pagoda, hupehensis)",
+"#e8a3b6"
+],
+[
+"blanc (cashmiriana)",
+"#f4f1ea"
+],
+[
+"jaune (Joseph Rock)",
+"#efd47a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "soliflore"
+},
+{
+"sid": "souci-calendula",
+"nom": "Souci",
+"latin": "Calendula officinalis",
+"famille": "Été & classiques",
+"mois": [
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#ef8a1a",
+"coloris": [
+[
+"orange à cœur brun (Pacific Beauty)",
+"#ef8a1a"
+],
+[
+"orange à cœur orange (Orange King)",
+"#f07a10"
+],
+[
+"jaune d’or (Pacific Beauty)",
+"#f5c02a"
+],
+[
+"jaune citron à cœur clair (Pacific Lemon)",
+"#f6d84a"
+],
+[
+"abricot (Sunset Buff)",
+"#f2b070"
+],
+[
+"saumon (Pink Surprise)",
+"#efa48a"
+],
+[
+"crème à cœur brun (Ivory Princess)",
+"#f2ead2"
+],
+[
+"orange au revers acajou (Indian Prince)",
+"#e8781a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 240,
+"vase": "soliflore"
+},
+{
+"sid": "sparaxis",
+"nom": "Sparaxis",
+"latin": "Sparaxis tricolor",
+"famille": "Printemps & bulbes",
+"mois": [
+3,
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#f0662a",
+"coloris": [
+[
+"orange à cœur jaune cerclé de noir",
+"#f0662a"
+],
+[
+"rouge à cœur jaune cerclé de noir",
+"#c8202e"
+],
+[
+"rose vif à cœur jaune",
+"#e66a9e"
+],
+[
+"blanc crème à cœur jaune cerclé de pourpre",
+"#f6f0de"
+],
+[
+"jaune à cœur cerclé de noir",
+"#f4d02a"
+],
+[
+"pourpre à cœur jaune",
+"#82287e"
+],
+[
+"saumon à cœur jaune cerclé de noir",
+"#f49470"
+]
+],
+"sens": "",
+"source": "",
+"prix": 200,
+"vase": "soliflore"
+},
+{
+"sid": "spiree",
+"nom": "Spirée",
+"latin": "Spiraea spp.",
+"famille": "Branches & baies",
+"mois": [
+3,
+4,
+5,
+6
+],
+"toute_annee": false,
+"col": "#fbfaf3",
+"coloris": [
+[
+"blanc (S. × vanhouttei)",
+"#fbfaf3"
+],
+[
+"blanc pur (S. × cinerea Grefsheim)",
+"#fcfbf7"
+],
+[
+"blanc neige (S. thunbergii)",
+"#fafaf2"
+],
+[
+"blanc rosé (S. thunbergii Fujino Pink)",
+"#f8e4ea"
+]
+],
+"sens": "",
+"source": "",
+"prix": 360,
+"vase": "colonne"
+},
+{
+"sid": "strelitzia-nicolai",
+"nom": "Strelitzia blanc géant",
+"latin": "Strelitzia nicolai",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#fbfaf6",
+"coloris": [
+[
+"strelitzia nicolai blanc et bleu",
+"#fbfaf6"
+],
+[
+"nicolai spathe bordeaux",
+"#faf8f2"
+],
+[
+"nicolai spathe glauque",
+"#fbfbf8"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1000,
+"vase": "colonne"
+},
+{
+"sid": "tagete-oeillet-d-inde",
+"nom": "Tagète",
+"latin": "Tagetes erecta",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#ef821e",
+"coloris": [
+[
+"orange (erecta)",
+"#ef821e"
+],
+[
+"jaune d’or (erecta)",
+"#f6b51e"
+],
+[
+"jaune citron (erecta)",
+"#f5cf38"
+],
+[
+"orange foncé (erecta)",
+"#df5e1a"
+],
+[
+"vanille (erecta)",
+"#f2ebc6"
+],
+[
+"acajou liseré d’or (patula)",
+"#7a2a1e"
+],
+[
+"acajou rayé d’or (Harlequin)",
+"#8a2a18"
+],
+[
+"orange flammé d’acajou (patula)",
+"#e88a1e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 220,
+"vase": "soliflore"
+},
+{
+"sid": "tamaris",
+"nom": "Tamaris",
+"latin": "Tamarix spp.",
+"famille": "Branches & baies",
+"mois": [
+4,
+5,
+8,
+9
+],
+"toute_annee": false,
+"col": "#e8a6be",
+"coloris": [
+[
+"rose (Pink Cascade)",
+"#e8a6be"
+],
+[
+"rose soutenu (Rubra)",
+"#d0708f"
+],
+[
+"rose pâle",
+"#f2cfda"
+],
+[
+"blanc (Alba)",
+"#f1ebe6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "colonne"
+},
+{
+"sid": "tillandsia",
+"nom": "Tillandsia",
+"latin": "Tillandsia spp.",
+"famille": "Exotiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#e0609a",
+"coloris": [
+[
+"rose classique (cyanea)",
+"#e0609a"
+],
+[
+"rose vif (Anita)",
+"#e8487e"
+],
+[
+"rouge",
+"#d0304a"
+],
+[
+"rose pâle",
+"#eca2bc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 600,
+"vase": "soliflore"
+},
+{
+"sid": "tournesol",
+"nom": "Tournesol",
+"latin": "Helianthus annuus",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f6b40c",
+"coloris": [
+[
+"jaune d’or sans pollen (ProCut Gold)",
+"#f6b40c"
+],
+[
+"orange (ProCut Orange)",
+"#f28a0c"
+],
+[
+"jaune citron (ProCut Lemon)",
+"#f6dc3a"
+],
+[
+"jaune à cœur vert (Sunrich)",
+"#f6c010"
+],
+[
+"jaune d’or à pollen",
+"#f4b20e"
+],
+[
+"bicolore rouge et or (ProCut Bicolor)",
+"#f2a60c"
+],
+[
+"bordeaux (Moulin Rouge)",
+"#7a1f2a"
+],
+[
+"rouge chocolat",
+"#8a3018"
+]
+],
+"sens": "",
+"source": "",
+"prix": 400,
+"vase": "colonne"
+},
+{
+"sid": "trachelium",
+"nom": "Trachélium",
+"latin": "Trachelium caeruleum",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#6c4a94",
+"coloris": [
+[
+"violet (Lake Michigan Purple)",
+"#6c4a94"
+],
+[
+"pourpre noir (Devotion Purple)",
+"#4e2c6e"
+],
+[
+"bleu violet (Lake Louise Blue)",
+"#7c78c4"
+],
+[
+"lavande (Corporate Lavender)",
+"#b6a2d4"
+],
+[
+"lilas gris (Lake Michigan)",
+"#a596c0"
+],
+[
+"blanc (Lake Louise White)",
+"#f2f2ea"
+],
+[
+"blanc verdi",
+"#dfe6c8"
+],
+[
+"vert (boutons, Jade)",
+"#b6c68a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 300,
+"vase": "colonne"
+},
+{
+"sid": "triteleia",
+"nom": "Triteleia",
+"latin": "Triteleia laxa",
+"famille": "Printemps & bulbes",
+"mois": [
+5,
+6,
+7
+],
+"toute_annee": false,
+"col": "#5d5cc4",
+"coloris": [
+[
+"bleu violet (Queen Fabiola)",
+"#5d5cc4"
+],
+[
+"violet profond (Corrina)",
+"#4a3aa8"
+],
+[
+"blanc strié de violet (Rudy)",
+"#f1eff6"
+],
+[
+"blanc argenté (Silver Queen)",
+"#f6f5f1"
+],
+[
+"bleu ciel (Aquarius)",
+"#a9b6ea"
+],
+[
+"jaune pâle (ixioides Starlight)",
+"#f2e48c"
+]
+],
+"sens": "",
+"source": "",
+"prix": 180,
+"vase": "soliflore"
+},
+{
+"sid": "kniphofia",
+"nom": "Tritoma",
+"latin": "Kniphofia uvaria et hybrides",
+"famille": "Été & classiques",
+"mois": [
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#d8452a",
+"coloris": [
+[
+"rouge et jaune (Royal Castle)",
+"#d8452a"
+],
+[
+"flammé rouge orangé (Flamenco)",
+"#e05a30"
+],
+[
+"orange (Alcazar)",
+"#e0662a"
+],
+[
+"rouge vif (Redhot Popsicle)",
+"#d8302a"
+],
+[
+"orange mangue (Mango Popsicle)",
+"#f0a85a"
+],
+[
+"pêche saumoné (Timothy)",
+"#e89a86"
+],
+[
+"jaune citron (Lemon Popsicle)",
+"#ecc23a"
+],
+[
+"jaune vert (Percy's Pride)",
+"#e2e090"
+]
+],
+"sens": "",
+"source": "",
+"prix": 400,
+"vase": "colonne"
+},
+{
+"sid": "troene-a-baies",
+"nom": "Troène à baies",
+"latin": "Ligustrum vulgare",
+"famille": "Branches & baies",
+"mois": [
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#1e1f2b",
+"coloris": [
+[
+"noir bleuté (baies mûres)",
+"#1e1f2b"
+],
+[
+"bleu-noir pruiné",
+"#2c3248"
+],
+[
+"vert (baies vertes)",
+"#8fb04a"
+],
+[
+"vert et violine (mi-mûr)",
+"#4a2a4a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 300,
+"vase": "soliflore"
+},
+{
+"sid": "tubereuse",
+"nom": "Tubéreuse",
+"latin": "Polianthes tuberosa",
+"famille": "Été & classiques",
+"mois": [
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#fbfaf2",
+"coloris": [
+[
+"blanc simple (Mexican Single)",
+"#fbfaf2"
+],
+[
+"blanc double (The Pearl)",
+"#fbf8ee"
+],
+[
+"crème ivoire",
+"#f4ecd4"
+],
+[
+"rosé (Pink Sapphire)",
+"#f4d6da"
+],
+[
+"blanc à boutons rosés (Sensation)",
+"#faf6f0"
+]
+],
+"sens": "",
+"source": "",
+"prix": 650,
+"vase": "colonne"
+},
+{
+"sid": "tulipe-rembrandt",
+"nom": "Tulipe Rembrandt",
+"latin": "Tulipa gesneriana",
+"famille": "Printemps & bulbes",
+"mois": [
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#e98fa8",
+"coloris": [
+[
+"blanc flammé de rouge (Carnaval de Rio)",
+"#f6f1ea"
+],
+[
+"blanc flammé de pourpre (Zurel)",
+"#f6f0f2"
+],
+[
+"crème flammé de bordeaux (Grand Perfection)",
+"#f4eccc"
+],
+[
+"blanc plumé de rose (Sorbet)",
+"#f7f0f0"
+],
+[
+"rose plumé de framboise",
+"#e98fa8"
+],
+[
+"jaune flammé de rouge (Olympic Flame)",
+"#f4d23c"
+],
+[
+"jaune flammé de brun (Absalon)",
+"#f2cc48"
+],
+[
+"jaune flammé de pourpre (Insulinde)",
+"#f4d860"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "soliflore"
+},
+{
+"sid": "tulipe-francaise",
+"nom": "Tulipe française",
+"latin": "Tulipa gesneriana",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#f4b49e",
+"coloris": [
+[
+"blanc",
+"#f6f3ea"
+],
+[
+"crème",
+"#f3ebcf"
+],
+[
+"rose blush",
+"#f6d6d2"
+],
+[
+"rose abricot",
+"#f4b49e"
+],
+[
+"saumon",
+"#f08c74"
+],
+[
+"abricot",
+"#f6c3a0"
+],
+[
+"rose",
+"#ee98b4"
+],
+[
+"jaune",
+"#f4d24a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 500,
+"vase": "soliflore"
+},
+{
+"sid": "tulipe-viridiflora",
+"nom": "Tulipe viridiflora",
+"latin": "Tulipa gesneriana",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#ee94b0",
+"coloris": [
+[
+"ivoire flammé de vert (Spring Green)",
+"#f4f0da"
+],
+[
+"rose flammé de vert (Groenland)",
+"#ee94b0"
+],
+[
+"rose tendre flammé de vert (China Town)",
+"#f4b2c6"
+],
+[
+"saumon orangé flammé de vert (Artist)",
+"#e8865a"
+],
+[
+"orange doré flammé de vert (Golden Artist)",
+"#f2a83a"
+],
+[
+"crème rosé flammé de vert (Florosa)",
+"#f2d0c8"
+],
+[
+"rouge flammé de vert (Esperanto)",
+"#c8242e"
+],
+[
+"pourpre flammé de vert (Night Rider)",
+"#7a3a86"
+]
+],
+"sens": "",
+"source": "",
+"prix": 450,
+"vase": "soliflore"
+},
+{
+"sid": "tulipe-fleur-de-lys",
+"nom": "Tulipe à fleur de lis",
+"latin": "Tulipa gesneriana",
+"famille": "Printemps & bulbes",
+"mois": [
+1,
+2,
+3,
+4,
+5
+],
+"toute_annee": false,
+"col": "#b8367c",
+"coloris": [
+[
+"magenta liseré de blanc (Ballade)",
+"#b8367c"
+],
+[
+"jaune d’or (West Point)",
+"#f4c81e"
+],
+[
+"blanc (White Triumphator)",
+"#f7f4ec"
+],
+[
+"orange mandarine (Ballerina)",
+"#f07a2a"
+],
+[
+"rouge à cœur bleu (Red Shine)",
+"#c41a2a"
+],
+[
+"blanc flammé de framboise (Marilyn)",
+"#f6f0ee"
+],
+[
+"rose satiné (Mariette)",
+"#e87aa0"
+],
+[
+"rose tendre (China Pink)",
+"#f0a2bc"
+]
+],
+"sens": "",
+"source": "",
+"prix": 360,
+"vase": "soliflore"
+},
+{
+"sid": "vanda",
+"nom": "Vanda",
+"latin": "Vanda spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#6a5cb8",
+"coloris": [
+[
+"bleu indigo",
+"#6a5cb8"
+],
+[
+"mosaïque bleue sur blanc",
+"#e8e8f6"
+],
+[
+"bleu-violet en damier",
+"#7a5ab8"
+],
+[
+"blanc",
+"#f6f4f2"
+],
+[
+"crème bordé de pourpre, tacheté",
+"#f2e8e8"
+],
+[
+"pourpre aubergine",
+"#8a2a7a"
+],
+[
+"bordeaux velours",
+"#5a1432"
+],
+[
+"rose vif à sépales bordeaux",
+"#e0508e"
+]
+],
+"sens": "",
+"source": "",
+"prix": 2000,
+"vase": "soliflore"
+},
+{
+"sid": "vigne-sarments",
+"nom": "Vigne",
+"latin": "Vitis vinifera",
+"famille": "Branches & baies",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#6e5038",
+"coloris": [
+[
+"brun naturel (sarment sec)",
+"#6e5038"
+],
+[
+"blanchi (sarment écorcé)",
+"#cdb791"
+],
+[
+"gris argenté (vieux sarment)",
+"#8f8273"
+],
+[
+"vert (feuillé, petite grappe)",
+"#7a9a45"
+],
+[
+"rouge d’automne (Vitis coignetiae)",
+"#a8322a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 700,
+"vase": "colonne"
+},
+{
+"sid": "violette",
+"nom": "Violette",
+"latin": "Viola odorata et Viola × parmensis",
+"famille": "Printemps & bulbes",
+"mois": [
+10,
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#5a2e92",
+"coloris": [
+[
+"violet (Königin Charlotte)",
+"#5a2e92"
+],
+[
+"violet profond (Czar)",
+"#40227a"
+],
+[
+"blanc (Alba)",
+"#f7f5ee"
+],
+[
+"rose (Rosea)",
+"#d48ab4"
+],
+[
+"pourpre rougeâtre (Red Charm)",
+"#8a2a6e"
+],
+[
+"abricot (Sulphurea)",
+"#ecc08e"
+],
+[
+"rose saumoné (Cœur d’Alsace)",
+"#e2a0b4"
+],
+[
+"lavande double (Duchesse de Parme)",
+"#a894d2"
+]
+],
+"sens": "",
+"source": "",
+"prix": 80,
+"vase": "soliflore"
+},
+{
+"sid": "viorne-d-hiver",
+"nom": "Viorne d’hiver",
+"latin": "Viburnum × bodnantense",
+"famille": "Branches & baies",
+"mois": [
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#f3c4d6",
+"coloris": [
+[
+"rose (Dawn)",
+"#f3c4d6"
+],
+[
+"rose vif (Charles Lamont)",
+"#efa6c2"
+],
+[
+"blanc rosé (Deben)",
+"#f9ebef"
+],
+[
+"blanc (V. farreri Candidissimum)",
+"#f9f7ef"
+]
+],
+"sens": "",
+"source": "",
+"prix": 620,
+"vase": "colonne"
+},
+{
+"sid": "viornes-a-baies",
+"nom": "Viornes à baies",
+"latin": "Viburnum opulus",
+"famille": "Branches & baies",
+"mois": [
+8,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#c8202c",
+"coloris": [
+[
+"rouge translucide (V. opulus)",
+"#c8202c"
+],
+[
+"rouge cerise (V. opulus Compactum)",
+"#a8162a"
+],
+[
+"orange corail (V. opulus Aurantiacum)",
+"#e8702e"
+],
+[
+"jaune ambré (V. opulus Xanthocarpum)",
+"#e6b43a"
+],
+[
+"bleu (V. dentatum Blue Muffin)",
+"#2e3a5e"
+],
+[
+"rose et bleu (V. nudum Brandywine)",
+"#2e3a5e"
+],
+[
+"rose (V. nudum, en mûrissement)",
+"#d58aa6"
+]
+],
+"sens": "",
+"source": "",
+"prix": 520,
+"vase": "soliflore"
+},
+{
+"sid": "telopea",
+"nom": "Waratah",
+"latin": "Telopea speciosissima et hybrides",
+"famille": "Exotiques",
+"mois": [
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#c8142c",
+"coloris": [
+[
+"rouge écarlate (T. speciosissima)",
+"#c8142c"
+],
+[
+"cramoisi (Shady Lady Crimson)",
+"#a40e2a"
+],
+[
+"rose (Shady Lady Pink)",
+"#e2668e"
+],
+[
+"blanc (Shady Lady White)",
+"#f2efdf"
+],
+[
+"jaune doré (Shady Lady Yellow)",
+"#f0cf62"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1400,
+"vase": "soliflore"
+},
+{
+"sid": "zinnia",
+"nom": "Zinnia",
+"latin": "Zinnia elegans",
+"famille": "Été & classiques",
+"mois": [
+7,
+8,
+9,
+10
+],
+"toute_annee": false,
+"col": "#cc1f26",
+"coloris": [
+[
+"écarlate (Benary’s Giant Scarlet)",
+"#cc1f26"
+],
+[
+"orange (Benary’s Giant Orange)",
+"#f2701c"
+],
+[
+"jaune d’or (Benary’s Giant Golden Yellow)",
+"#f6b81e"
+],
+[
+"jaune citron (Benary’s Giant Lemon)",
+"#f4dc4a"
+],
+[
+"vert lime (Envy)",
+"#c8d86a"
+],
+[
+"rose vif (Benary’s Giant Bright Pink)",
+"#e2457e"
+],
+[
+"rose carmin (Benary’s Giant Carmine Rose)",
+"#d42a5e"
+],
+[
+"corail (Benary’s Giant Coral)",
+"#f2725a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 220,
+"vase": "soliflore"
+},
+{
+"sid": "zygopetalum",
+"nom": "Zygopetalum",
+"latin": "Zygopetalum spp. et hybrides",
+"famille": "Orchidées",
+"mois": [
+10,
+11,
+12,
+1,
+2,
+3
+],
+"toute_annee": false,
+"col": "#5e2030",
+"coloris": [
+[
+"vert taché de brun, labelle veiné de violet (Louisendorf)",
+"#9ab048"
+],
+[
+"vert presque couvert de brun (Alan Greatwood)",
+"#8aa040"
+],
+[
+"bordeaux, labelle violet (Titanic)",
+"#5e2030"
+],
+[
+"pourpre à labelle bleu-violet (Zygonisia)",
+"#6e3a78"
+],
+[
+"vert tendre taché, labelle finement veiné",
+"#b8c870"
+],
+[
+"brun chocolat, labelle blanc et violet",
+"#6a3428"
+]
+],
+"sens": "",
+"source": "",
+"prix": 1400,
+"vase": "soliflore"
+},
+{
+"sid": "echinacea",
+"nom": "Échinacée",
+"latin": "Echinacea purpurea et hybrides",
+"famille": "Été & classiques",
+"mois": [
+7,
+8,
+9
+],
+"toute_annee": false,
+"col": "#c45a8e",
+"coloris": [
+[
+"rose pourpre",
+"#c45a8e"
+],
+[
+"blanc (White Swan)",
+"#f4f1e4"
+],
+[
+"rose",
+"#ef8ab6"
+],
+[
+"orange",
+"#ef8a3c"
+],
+[
+"rouge",
+"#b42a5a"
+],
+[
+"jaune",
+"#f1e2a2"
+],
+[
+"vert (Green Jewel)",
+"#b8c890"
+],
+[
+"cône séché",
+"#5a2a18"
+]
+],
+"sens": "",
+"source": "",
+"prix": 350,
+"vase": "soliflore"
+},
+{
+"sid": "erable-du-japon",
+"nom": "Érable du Japon",
+"latin": "Acer palmatum",
+"famille": "Branches & baies",
+"mois": [
+4,
+5,
+6,
+9,
+10,
+11
+],
+"toute_annee": false,
+"col": "#c0302a",
+"coloris": [
+[
+"vert (été)",
+"#6f9a3e"
+],
+[
+"rouge écarlate (automne, Osakazuki)",
+"#c0302a"
+],
+[
+"orange (automne)",
+"#e0782a"
+],
+[
+"jaune d’or (automne, Katsura)",
+"#e6b830"
+],
+[
+"pourpre foncé (Bloodgood, Atropurpureum)",
+"#5a1f2e"
+],
+[
+"mélange d’automne (vert, or, orange, rouge)",
+"#d0582a"
+],
+[
+"vert tendre, bois corail (Sango-kaku)",
+"#a8b84a"
+],
+[
+"vert, feuilles en dentelle (Dissectum Viridis)",
+"#7aa040"
+]
+],
+"sens": "",
+"source": "",
+"prix": 550,
+"vase": "soliflore"
+},
+{
+"sid": "oeillet-de-poete-dianthus",
+"nom": "Œillet de poète et dianthus de fle",
+"latin": "Dianthus barbatus",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f29a88",
+"coloris": [
+[
+"blanc",
+"#f7f5ee"
+],
+[
+"saumon",
+"#f29a88"
+],
+[
+"corail",
+"#f07a6a"
+],
+[
+"rose",
+"#e98fb0"
+],
+[
+"blanc virant au rose",
+"#f6e6ea"
+],
+[
+"cerise néon",
+"#c8204a"
+],
+[
+"écarlate",
+"#d8202e"
+],
+[
+"rouge",
+"#b8182a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 320,
+"vase": "soliflore"
+},
+{
+"sid": "oeillet-spray",
+"nom": "Œillet à petites fleurs",
+"latin": "Dianthus caryophyllus",
+"famille": "Été & classiques",
+"mois": [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12
+],
+"toute_annee": true,
+"col": "#f0dcc0",
+"coloris": [
+[
+"blanc",
+"#f7f5ee"
+],
+[
+"champagne",
+"#f0dcc0"
+],
+[
+"jaune",
+"#f5d22c"
+],
+[
+"orange",
+"#f08a2a"
+],
+[
+"rose",
+"#f2b8c8"
+],
+[
+"cerise",
+"#e2457e"
+],
+[
+"rouge",
+"#c41f2e"
+],
+[
+"pourpre",
+"#8a2a7a"
+]
+],
+"sens": "",
+"source": "",
+"prix": 270,
+"vase": "colonne"
+}
+]
+}

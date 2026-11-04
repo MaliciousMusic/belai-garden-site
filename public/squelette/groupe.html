@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Offrir à plusieurs | Belai’s Garden</title>
+  <meta name="description" content="Un bouquet pour chacun, un mot pour chacun, le même jour : une équipe, un mariage, une classe.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
+  <footer class="pied-court">
+    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
+    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
+  </footer>
+
+  <link rel="stylesheet" href="squelette.css">
+</head>
+<body class="page-groupe">
+  <!-- The group purchase (owner, 2026-10-31: « oui, page simple »): one bouquet for each person, a word for each, a date
+       to send, an invoice. Several recipients only; the price is the bouquet's, nothing else is promised here. -->
+  <header class="tete tete-simple">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <nav class="nav-compte" aria-label="Retour"><a href="index.html">La collection</a><a href="sur-mesure.html">Une demande sur mesure</a></nav>
+  </header>
+
+  <main class="bloc formulaire">
+    <p class="sur-titre">Équipes, mariages, classes</p>
+    <h1 class="titre">Offrir à plusieurs</h1>
+    <p class="chapo">Un bouquet pour chacun, un mot pour chacun, le même jour. Chacun reçoit son lien et son code.</p>
+
+    <form id="groupe" novalidate>
+      <fieldset>
+        <legend>Le bouquet</legend>
+        <label class="champ">Bouquet<select id="g-bouquet"></select></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Les personnes</legend>
+        <ol class="personnes" id="personnes"></ol>
+        <button type="button" class="btn btn-trait btn-moyen" id="ajouter">Ajouter une personne</button>
+        <label class="champ">Un mot pour tous, si vous voulez<textarea id="g-mot" rows="2" maxlength="280" placeholder="Merci pour cette année"></textarea></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>L’envoi</legend>
+        <label class="champ">Le jour où chacun reçoit son lien<input type="date" id="g-date"></label>
+        <label class="champ">Signé<input id="g-signe" maxlength="60" placeholder="L’équipe Lumen" autocomplete="organization"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>La facture</legend>
+        <label class="champ">Société ou nom<input id="g-societe" autocomplete="organization"></label>
+        <label class="champ">Adresse<input id="g-adresse" autocomplete="street-address"></label>
+        <label class="champ">Numéro de TVA, si vous en avez un<input id="g-tva"></label>
+        <label class="champ">E-mail pour la facture<input type="email" id="g-mail" autocomplete="email"></label>
+      </fieldset>
+
+      <div class="total" aria-live="polite"><span id="g-calc"></span><b id="g-total"></b></div>
+      <button type="submit" class="btn btn-achat">Préparer la commande</button>
+      <p class="confidentialite">Votre e-mail sert seulement à vous répondre. <a href="legal.html#privacy">Confidentialité</a></p>
+      <p class="merci-etat" id="g-etat" role="status"></p>
+    </form>
+  </main>
+
+  <script type="module" src="groupe.js"></script>
+</body>
+</html>

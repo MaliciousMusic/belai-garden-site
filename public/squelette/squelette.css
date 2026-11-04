@@ -1,0 +1,2094 @@
+/* squelette.css: the shop skeleton (ch/squelette). The funnel is plain (price, one action, guarantees); the skin is the
+   brand's: every bouquet on a plain white ground, two calligraphic hands (Italianno for names and titles, a light
+   Cormorant italic for the running text, its semibold for labels, prices and buttons), gold for small labels, carnation
+   red for counts only. The florist's bill is an ivory receipt. */
+
+@font-face { font-family: 'Nunito'; font-weight: 200; font-display: swap; src: url('../scene/polices/nunito-extralight.woff2') format('woff2'); }
+/* the titles' hand (owner, 2026-10-31): Italianno, a fine chancery script (SIL OFL 1.1, scene/polices/OFL-Italianno.txt),
+   scaled up at the face so a size reads like the Nunito it replaces */
+/* the running text's hand (owner, 2026-10-31): Cormorant Garamond italic, medium for reading (the light cut lacked
+   contrast) and bold for whatever asks for weight (labels, prices, buttons) (SIL OFL 1.1, scene/polices/OFL-Cormorant.txt) */
+@font-face { font-family: 'Cormorant'; font-weight: 100 549; font-display: swap; size-adjust: 132%; src: url('../scene/polices/cormorant-italique-500.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant'; font-weight: 550 1000; font-display: swap; size-adjust: 132%; src: url('../scene/polices/cormorant-italique-700.woff2') format('woff2'); }
+@font-face { font-family: 'Italianno'; font-weight: 400; font-display: swap; size-adjust: 150%; src: url('../scene/polices/italianno.woff2') format('woff2'); }
+@font-face { font-family: 'Nunito'; font-weight: 900; font-display: swap; src: url('../scene/polices/nunito-black.woff2') format('woff2'); }
+
+:root {
+  color-scheme: light;
+  /* the ground and its steps (cards, raised surfaces), the halo under a bouquet, the words and their quieter steps; the
+     *-rgb channels give the same colours with an alpha. A plain white ground at every hour (owner, 2026-10-31: no night
+     blue, no blue-white), the words in a warm black (owner, 2026-10-31), the accent a darker gold to read on white. */
+  --nuit: #ffffff;
+  --nuit-2: #ffffff;
+  --nuit-3: #fafafa;
+  --halo: #ffffff;
+  --relief: #e8e8e8;
+  --bg-rgb: 255 255 255;
+  --fg-rgb: 31 26 22;
+  --ivoire: #1f1a16;
+  --ivoire-1: #2b2520;
+  --ivoire-2: #4a423a;
+  --blanc: #16120f;
+  /* the purchase's own blue, the one bright colour of a page (owner, 2026-10-31) */
+  --achat: #0a66d8;
+  --achat-clair: #0b74f5;
+  --ligne: rgb(var(--fg-rgb) / 0.13);
+  /* no gold (owner, 2026-11-01): what was gold is a warm ink, darker than the running grey, lighter than the words */
+  --or: #3a322b;
+  --or-rgb: 58 50 43;
+  --or-clair: #5a5047;
+  --sur-or: #ffffff;
+  --oeillet: #d8566a;
+  --papier: #f4efe6;
+  --encre: #1b1714;
+  --encre-2: #6b6359;
+  /* the ground every bouquet stands on */
+  --scene: var(--nuit);
+  --texte: 'Cormorant', Georgia, serif;
+  --titre: var(--texte);
+  --calli: 'Italianno', var(--texte);
+  --gouttiere: clamp(16px, 4vw, 64px);
+}
+/* the dark theme (owner, 2026-11-01): the first skeleton's dark brown back, without its gold; set on <html> by the head
+   script of every page (the visitor's choice, else the system's), switched by the sun and moon in the header */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --nuit: #0d0c0b;
+  --nuit-2: #141210;
+  --nuit-3: #1d1a17;
+  --halo: #0d0c0b;
+  --relief: #2a2622;
+  --bg-rgb: 13 12 11;
+  --fg-rgb: 241 236 226;
+  --ivoire: #f1ece2;
+  --ivoire-1: #e4ddd1;
+  --ivoire-2: #b5ad9f;
+  --blanc: #faf6ef;
+  --achat: #1f74e0;
+  --achat-clair: #3b8af0;
+  --or: #d9d0c2;
+  --or-rgb: 217 208 194;
+  --or-clair: #c4baab;
+  --sur-or: #0d0c0b;
+  --papier: #1d1a17;
+  --encre: #f1ece2;
+  --encre-2: #b5ad9f;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+body { margin: 0; background: var(--nuit); color: var(--ivoire); font: 400 16px/1.55 var(--texte); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+sup { font-size: 0.6em; }
+
+/* ---------- header */
+.tete {
+  position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 24px;
+  height: 56px; padding: 0 var(--gouttiere);
+  background: rgb(var(--bg-rgb) / 0.82); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ligne);
+}
+/* the mark signs the page without competing with the bouquet and the title for the first look */
+.marque:hover { color: var(--ivoire); }
+.nav { display: flex; gap: 24px; margin: 0 auto; }
+.nav a, .discret { font-size: 14px; color: var(--ivoire-2); text-decoration: none; }
+.nav a:hover, .discret:hover { color: var(--ivoire); }
+.tete-droite { display: flex; gap: 16px; align-items: center; }
+
+/* ---------- type scale: label 11.5 / small 13 / body 16 / lead 18 / name 40-56 / title 30-50 / hook 44-88 */
+.sur-titre { margin: 0 0 12px; font: 900 14px/1.3 var(--titre); letter-spacing: 0.16em; text-transform: uppercase; color: var(--or); }
+.titre { margin: 0 0 14px; font: 400 clamp(30px, 4vw, 50px)/1.08 var(--calli); letter-spacing: 0; }
+.chapo { margin: 0; max-width: 60ch; color: var(--ivoire-2); font-size: 16px; }
+
+/* ---------- buttons: one filled action per block */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 26px;
+  border-radius: 999px; font: 900 16px/1 var(--titre); letter-spacing: 0.02em; cursor: pointer; text-decoration: none; white-space: nowrap;
+}
+.btn-plein { background: var(--ivoire); color: var(--nuit); border: 1px solid var(--ivoire); }
+.btn-plein:hover { background: var(--blanc); }
+.btn-trait { background: transparent; color: var(--ivoire); border: 1px solid rgb(var(--fg-rgb) / 0.55); }
+.btn-trait:hover { border-color: var(--ivoire); background: rgb(var(--fg-rgb) / 0.06); }
+.btn-lien { background: none; border: 0; color: inherit; text-decoration: underline; text-underline-offset: 3px; padding: 0 6px; }
+.btn-petit { min-height: 38px; padding: 0 18px; font-size: 14px; }
+.btn:focus-visible, .usage button:focus-visible, .grille button:focus-visible, .pastille:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+/* the purchase: the one filled champagne surface of the page, the price inside it (one target carries what and how much) */
+.btn-achat { gap: 16px; min-height: 58px; padding: 0 30px; background: var(--achat); color: #fff; border: 1px solid var(--achat); font-size: 17px; }
+.btn-achat:hover { background: var(--achat-clair); border-color: var(--achat-clair); }
+.btn-prix { padding-left: 16px; border-left: 1px solid rgb(var(--bg-rgb) / 0.28); font-weight: 400; letter-spacing: 0.03em; }
+.btn-moyen { min-height: 44px; padding: 0 20px; font-size: 14px; }
+.fiche .actions { display: grid; justify-items: start; gap: 8px; }
+.actions-2 { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; margin-top: 10px; }
+.moyens { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 2px 0 0 4px; font-size: 14px; color: var(--ivoire-2); }
+.pay { display: inline-flex; align-items: center; gap: 4px; color: var(--ivoire); font: 600 14px/1 var(--texte); }
+.pay svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.pay svg.plein { fill: currentColor; stroke: none; }
+.pay b { font: 900 14px/1 var(--titre); }
+
+/* ---------- the bouquet boxes (eclosion.js places its pieces inside) */
+.bouquet { position: relative; margin: 0 auto; }
+.bouquet > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* ---------- 0. the hook */
+.accroche {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(20px, 4vw, 64px); align-items: center;
+  min-height: calc(100svh - 56px); padding: clamp(24px, 4vw, 56px) var(--gouttiere);
+  background: radial-gradient(ellipse 48% 70% at 74% 54%, var(--halo) 0%, var(--nuit-2) 45%, var(--nuit) 80%);
+}
+/* the title is the brightest thing after the bouquet: pure white, a soft halo of the same spotlight behind it; the doors
+   and the words under it step down in value, so the eye reads bouquet, title, sentence, doors, then the fine print */
+/* optical alignment: the light D carries a side bearing of 0.07 em; the title is pulled to the label's edge */
+.accroche-titre { margin: 0 0 18px -0.065em; font: 400 clamp(46px, 6.2vw, 92px)/1.0 var(--calli); letter-spacing: 0; color: var(--blanc); }
+.accroche-sous { margin: 0 0 30px; max-width: 30em; font-size: 21px; color: var(--ivoire-1); }
+.portes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 560px; }
+.porte {
+  display: flex; flex-direction: column; padding: 12px 14px 15px; min-height: 48px;
+  border: 1px solid rgb(var(--fg-rgb) / 0.22); border-radius: 6px; background: rgb(var(--fg-rgb) / 0.035); text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.porte:hover { border-color: rgb(var(--fg-rgb) / 0.55); background: rgb(var(--fg-rgb) / 0.07); }
+.porte:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; }
+/* each door carries a line mark of where it leads, drawn like the OS marks: the picture is the bouquet behind them */
+.porte-signe svg { display: block; width: 30px; height: 30px; margin-bottom: 12px; fill: none; stroke: var(--or); stroke-width: 1.3; stroke-linejoin: round; stroke-linecap: round; }
+.porte-titre { font: 900 19px/1.3 var(--titre); color: var(--ivoire); }
+/* the doors read in whole words: no hyphenation inside a choice */
+.porte { -webkit-hyphens: manual; hyphens: manual; }
+.porte-texte { margin-top: 4px; font-size: 15px; line-height: 1.45; color: var(--ivoire-1); }
+.porte-suite { margin-top: 10px; font: 900 14px/1.2 var(--titre); color: var(--or); }
+.porte-suite::after { content: ' →'; }
+/* prices said the way a house says them: quiet, light, spaced, never in bold */
+.fourchette { margin: 22px 0 0; font: 400 14px/1.4 var(--texte); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ivoire-2); }
+/* the close-up: the bouquet larger than its window fills the right of the hook, whole at the top and on the left, cut only
+   on the right and below (no fade: a fade read as a loading veil), so the detail is the first thing seen */
+.accroche { position: relative; overflow-x: clip; }
+.accroche-texte { position: relative; z-index: 2; }
+.accroche-bouquet { position: absolute; top: 0; right: 0; bottom: -340px; left: 40%; margin: 0; overflow: hidden; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 400px), rgba(0, 0, 0, 0.35) calc(100% - 230px), transparent calc(100% - 110px));
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 400px), rgba(0, 0, 0, 0.35) calc(100% - 230px), transparent calc(100% - 110px)); }
+.accroche-bouquet #bouquet-accroche, .accroche-bouquet #bouquet-accroche-2 { pointer-events: auto; }
+/* the next section's words stand over the bouquet's fading foot */
+#collection { position: relative; z-index: 1; }
+#bouquet-accroche, #bouquet-accroche-2 { position: absolute; margin: 0; }
+/* the maker's mark: a hallmark struck in champagne, the atelier's name, and the way out to the film */
+.poincon { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: -12px 0 26px; font-size: 14px; color: var(--ivoire-2); }
+.poincon a { display: inline-flex; align-items: center; gap: 4px; min-height: 40px; color: var(--ivoire); text-decoration: underline;
+  text-underline-offset: 4px; text-decoration-color: rgb(var(--fg-rgb) / 0.35); }
+.dehors { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+
+/* ---------- blocks */
+.bloc { padding: clamp(64px, 9vw, 120px) var(--gouttiere); }
+.bloc-2 { background: var(--nuit-2); }
+.bloc-tete { margin-bottom: clamp(28px, 4vw, 48px); }
+
+/* ---------- 1. the collection: each bouquet as large as its tile allows */
+.grille { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: clamp(14px, 2vw, 24px); }
+.grille button { all: unset; display: block; width: 100%; cursor: pointer; }
+.tuile-scene { display: flex; align-items: flex-end; justify-content: center; aspect-ratio: 4 / 5; padding: 5% 4% 3%; border-radius: 4px; background: var(--scene); overflow: hidden; }
+.tuile-bq { position: relative; display: block; flex: none; transform-origin: 50% 100%; transition: transform 0.5s ease; }
+.grille button:hover .tuile-bq { transform: scale(1.035); }
+.tuile-nom { display: block; margin-top: 12px; font: 400 21px/1.2 var(--calli); letter-spacing: 0; }
+.tuile-info { display: flex; justify-content: space-between; gap: 8px; margin-top: 2px; font-size: 14px; color: var(--ivoire-2); }
+.tuile-info b { color: var(--ivoire-2); font: 300 14px/1.4 var(--texte); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+.grille li[aria-current='true'] .tuile-scene { box-shadow: inset 0 0 0 1px var(--or); }
+
+/* ---------- 2. the product: the bouquet stays in view while the card and its composition scroll */
+.vitrine { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr); border-top: 1px solid var(--ligne); }
+.vitrine-scene {
+  position: sticky; top: 56px; height: calc(100svh - 56px); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 28px var(--gouttiere) 18px; background: var(--scene);
+}
+.etat-scene { margin: 12px 0 0; font-size: 14px; color: var(--ivoire-2); }
+.composer-scene { gap: 10px; margin-top: 14px; background: rgb(var(--bg-rgb) / 0.6); }
+.composer-scene svg { width: 20px; height: 20px; fill: none; stroke: var(--or); stroke-width: 1.4; }
+.composer-scene svg circle { fill: var(--or); stroke: none; }
+/* the flower being changed: the rest of the drawing steps back, the vase a little less */
+#bouquet > svg [data-o], #bouquet > svg > g[data-l] { transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+#bouquet > svg.vise-une [data-o]:not(.vise) { opacity: 0.14; }
+#bouquet > svg.vise-une > g[data-l='stems'] > :not([data-o]), #bouquet > svg.vise-une > g[data-l='fst'] > :not([data-o]) { opacity: 0.14; }
+#bouquet > svg.vise-une > g[data-l='vase'], #bouquet > svg.vise-une > g[data-l='vback'], #bouquet > svg.vise-une > g[data-l='plinth'] { opacity: 0.4; }
+#n-lignes tr.vise > td { background: var(--surligne); }
+.vitrine-cote { padding: clamp(32px, 5vw, 72px) var(--gouttiere); display: grid; gap: 40px; align-content: start; }
+.fiche { max-width: 440px; }
+.nom { margin: 0 0 6px; font: 400 clamp(38px, 4.4vw, 56px)/1.02 var(--calli); letter-spacing: 0; }
+.compo { margin: 0 0 18px; font-size: 14px; color: var(--ivoire-2); }
+.prix-sous { margin: -10px 0 22px; font-size: 14px; color: var(--ivoire-2); }
+.usage { display: inline-flex; padding: 3px; border-radius: 999px; border: 1px solid var(--ligne); }
+/* every [hidden] stays hidden, whatever display a class gives (the gift preview showed under "for me") */
+[hidden] { display: none !important; }
+.usage button { min-height: 34px; padding: 0 16px; border: 0; border-radius: 999px; background: transparent; font: 900 14px/1 var(--titre); color: var(--ivoire-2); cursor: pointer; }
+.usage button[aria-checked='true'] { background: var(--ivoire); color: var(--nuit); }
+.usage-texte { margin: 8px 0 16px; max-width: 30em; font-size: 14px; color: var(--ivoire-2); }
+.faits { margin: 22px 0 0; padding: 14px 0 0; list-style: none; border-top: 1px solid var(--ligne); font-size: 14px; color: var(--ivoire-2); }
+.faits li { margin: 0 0 6px; }
+.faits li:nth-child(2) { color: var(--ivoire); }
+
+/* the florist's bill, where colours are chosen */
+.note { max-width: 520px; padding: 24px 26px 20px; background: var(--papier); color: var(--encre); border-radius: 3px; box-shadow: 0 24px 50px -30px rgba(0, 0, 0, 0.9); }
+.note-tete h3 { margin: 0 0 4px; font: 900 14px/1.4 var(--titre); letter-spacing: 0.16em; text-transform: uppercase; }
+.note-tete p { margin: 0 0 14px; font-size: 14px; color: var(--encre-2); }
+.note-table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+.note-table th, .note-table td { padding: 6px 0; text-align: right; border-bottom: 1px dotted rgb(var(--fg-rgb) / 0.18); vertical-align: middle; }
+.note-table th:first-child, .note-table td:first-child { text-align: left; }
+.note-table thead th { font: 900 14px/1.3 var(--titre); letter-spacing: 0.12em; text-transform: uppercase; color: var(--encre-2); }
+.note-table tfoot th { text-align: left; font-weight: 400; color: var(--encre-2); }
+.note-total th, .note-total td { padding-top: 12px; border-top: 1px solid var(--encre); border-bottom: 0; font: 900 21px/1.2 var(--titre); color: var(--encre); }
+.fleur { display: flex; align-items: center; gap: 10px; }
+.fleur small { display: block; color: var(--encre-2); font-size: 14px; line-height: 1.2; }
+.pastille { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgb(var(--fg-rgb) / 0.25); padding: 0; cursor: pointer; }
+.pastille[disabled] { cursor: default; }
+.palette { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 0 10px 32px; }
+.palette button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid rgb(var(--fg-rgb) / 0.25); padding: 0; cursor: pointer; }
+.palette button[aria-pressed='true'] { box-shadow: 0 0 0 2px var(--papier), 0 0 0 3.5px var(--encre); }
+.note-pied { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 16px; }
+.note .btn-trait { color: var(--encre); border-color: rgb(var(--fg-rgb) / 0.5); }
+.note .btn-trait:hover { background: rgb(var(--fg-rgb) / 0.06); }
+.note-table tr.change td, .note-table tr.change th { background: var(--surligne); }
+
+/* ---------- 3. the soliflore, until it is drawn: what each flower says, no empty card */
+.sens { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 clamp(20px, 3vw, 40px); max-width: 980px; }
+.sens li { display: flex; flex-direction: column; padding: 16px 0; border-top: 1px solid var(--ligne); }
+.sens b { font: 400 28px/1.2 var(--calli); letter-spacing: 0; }
+.sens span { margin-top: 3px; font-size: 14px; color: var(--ivoire-2); font-style: italic; }
+.bientot { margin: 22px 0 0; font: 900 14px/1.3 var(--titre); letter-spacing: 0.16em; text-transform: uppercase; color: var(--or); }
+
+/* ---------- 4. alive */
+.vivant { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
+.vivant-scene { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 28px; border-radius: 4px; background: var(--scene); }
+.essai-encart { padding: 22px 24px; border: 1px solid var(--ligne); border-radius: 4px; }
+.essai-encart h3 { margin: 0 0 6px; font: 900 16px/1.3 var(--titre); }
+.essai-encart p { margin: 0 0 16px; color: var(--ivoire-2); font-size: 16px; }
+
+/* ---------- 5. what you get: see .recevez, with the pages of 2026-10-31 at the end */
+
+/* ---------- 6. the workshop */
+.chiffres { list-style: none; margin: 0 0 32px; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.chiffres li { display: flex; flex-direction: column; gap: 4px; padding-top: 14px; border-top: 1px solid rgb(var(--fg-rgb) / 0.5); }
+.chiffres b { font: 400 clamp(40px, 5vw, 64px)/1 var(--calli); letter-spacing: 0; font-variant-numeric: tabular-nums; }
+.chiffres span { font-size: 14px; color: var(--ivoire-2); }
+.signature { margin: 0; font-size: 14px; color: var(--ivoire-2); }
+
+/* ---------- 7. questions */
+.faq { max-width: 760px; }
+.faq details { border-top: 1px solid var(--ligne); }
+.faq summary { padding: 18px 0; cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; font: 200 21px/1 var(--titre); color: var(--or); }
+.faq details[open] summary::after { content: '–'; }
+.faq p { margin: 0 0 20px; color: var(--ivoire-2); }
+
+/* ---------- 8. the garden, now a place to visit */
+.jardin { display: flex; align-items: flex-end; min-height: 46vh; padding: clamp(40px, 6vw, 80px) var(--gouttiere); background: linear-gradient(180deg, #7ba4d4 0%, #a9c3e2 50%, #dde6ee 100%); color: #18202c; }
+.jardin-texte { max-width: 520px; }
+.jardin p { margin: 0 0 22px; font-size: 16px; color: #4b5666; }
+.jardin .btn-plein { background: #18202c; color: #fdfdfb; border-color: #18202c; }
+
+.pied { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; padding: 28px var(--gouttiere) 96px; font-size: 14px; color: var(--ivoire-2); }
+.pied nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.pied a { text-decoration: none; }
+
+/* ---------- the sticky bar (phone) and the stub dialog */
+.barre { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgb(var(--bg-rgb) / 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--ligne); }
+.barre[hidden] { display: none; }
+.barre > div { display: flex; flex-direction: column; min-width: 0; }
+.barre-nom { font: 400 16px/1.2 var(--calli); letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.barre-prix { font: 300 14px/1.3 var(--texte); letter-spacing: 0.04em; color: var(--ivoire-2); }
+.bouchon { max-width: 420px; border: 1px solid var(--ligne); border-radius: 8px; padding: 24px; color: var(--ivoire); background: var(--nuit-3); }
+.bouchon::backdrop { background: rgba(0, 0, 0, 0.55); }
+.bouchon p { margin: 0 0 18px; }
+
+/* ---------- the choreography (mise-en-scene.js, REGLES.md §1): a part waits transparent and 12 px low, then rises into
+   place at its turn (--d); expo-out, the curve of a thing that settles. No blur: the n2 army read blurred text as a page
+   loading badly, and it hurt the low-vision persona. Only when html.scene is set (JS, first visit, no reduced motion). */
+.scene [data-tour] { opacity: 0; transform: translateY(12px); }
+.scene [data-tour].vu {
+  opacity: 1; transform: none;
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms);
+}
+/* lists cascade: the list is there, each item rises after the one before */
+.scene [data-tour]:is(ul, ol, dl, .grille) { opacity: 1; transform: none; }
+.scene [data-tour]:is(ul, ol, dl, .grille) > * { opacity: 0; transform: translateY(10px); }
+.scene [data-tour].vu:is(ul, ol, dl, .grille) > * {
+  opacity: 1; transform: none;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms);
+}
+/* the one underlined word: a champagne line traced under it once its line is in focus (von Restorff) */
+.surligne { background: linear-gradient(var(--or), var(--or)) 0 92% / 0 2px no-repeat; }
+.surligne.trace { background-size: 100% 2px; transition: background-size 0.6s cubic-bezier(0.65, 0, 0.35, 1) var(--d, 0ms); }
+:root:not(.scene) .surligne { background-size: 100% 2px; }
+
+/* ---------- lot A: the received-gift way in, next collection, trust by the price, folded bill, what the receiver sees */
+.recu-lien { font: 900 14px/1 var(--titre); color: var(--or); text-decoration: none; white-space: nowrap; }
+.recu-lien:hover { text-decoration: underline; }
+.suivante { margin: 10px 0 0; font-size: 14px; color: var(--ivoire-2); }
+.suivante a { color: var(--ivoire); }
+.confiance a { color: var(--ivoire-2); }
+.usage-texte a { color: var(--or); white-space: nowrap; }
+.note-ouvrir { display: block; width: 100%; min-height: 44px; margin: 0 0 4px; padding: 0; border: 0; border-top: 1px dotted rgb(var(--fg-rgb) / 0.25); background: none; color: var(--encre); font: 600 14px/1 var(--texte); text-align: left; cursor: pointer; }
+.note-ouvrir::after { content: ' ↓'; }
+.note-ouvrir[aria-expanded='true']::after { content: ' ↑'; }
+.note.repliee .note-table thead, .note.repliee .note-table tbody { display: none; }
+.sens-fleur { display: block; font-style: italic; color: var(--encre-2); font-size: 14px; line-height: 1.3; }
+
+.apercu { max-width: 760px; width: calc(100% - 32px); border: 1px solid var(--ligne); border-radius: 10px; padding: 28px; color: var(--ivoire); background: var(--nuit-2); }
+.apercu::backdrop { background: rgba(0, 0, 0, 0.6); }
+.apercu h2 { margin: 0 0 6px; font: 400 28px/1.1 var(--calli); letter-spacing: 0; }
+.apercu > p { margin: 0 0 22px; color: var(--ivoire-2); }
+.apercu-ecrans { display: flex; gap: 24px; align-items: flex-end; justify-content: center; flex-wrap: wrap; }
+.apercu figure { margin: 0; text-align: center; }
+.apercu figcaption { margin-top: 8px; font-size: 14px; color: var(--ivoire-2); }
+.ap-tel-ecran { position: relative; width: 190px; height: 380px; padding: 22px 14px 14px; border: 6px solid var(--relief); border-radius: 30px; background: var(--scene); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.ap-de { margin: 0; font-size: 14px; color: var(--ivoire-2); }
+.ap-de b { color: var(--ivoire); }
+.ap-mot { margin: 8px 0 0; font: 400 16px/1.3 var(--calli); letter-spacing: 0; }
+.ap-musique { margin: 0 0 8px; font-size: 14px; color: var(--or); }
+.ap-bouton { padding: 8px 12px; border-radius: 999px; background: var(--ivoire); color: var(--nuit); font: 900 14px/1 var(--titre); }
+.ap-ordi-ecran { position: relative; width: 340px; height: 220px; border: 6px solid var(--relief); border-bottom-width: 14px; border-radius: 8px; background: var(--scene); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 8px; }
+.ap-barre { position: absolute; top: 0; left: 0; right: 0; height: 14px; background: var(--relief); }
+.ap-ordi-bq { position: relative; flex: none; margin-bottom: 4px; }
+.ap-etapes { margin: 22px auto 18px; max-width: 560px; padding-left: 20px; color: var(--ivoire-2); font-size: 14px; }
+.ap-etapes li { margin: 4px 0; }
+
+
+/* ---------- the colour atelier, a game (REGLES.md: immediate feedback under 100 ms, variable reward, IKEA effect) */
+.btn-plein-papier { background: var(--encre); color: var(--papier); border: 1px solid var(--encre); }
+.btn-plein-papier:hover { background: #2e2823; }
+.atelier:not([hidden]) { display: grid; gap: 14px; margin: 6px 0 14px; }
+.harmonies { display: flex; flex-wrap: wrap; gap: 6px; }
+.harmonies button {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 0 12px 0 8px; border: 1px solid rgb(var(--fg-rgb) / 0.22);
+  border-radius: 999px; background: var(--nuit); color: var(--encre); font: 600 14px/1 var(--texte); cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.15s;
+}
+.harmonies button:hover { border-color: var(--encre); transform: translateY(-1px); }
+.harmonies button:active { transform: scale(0.96); }
+.harmonies button[aria-pressed='true'] { background: var(--encre); color: var(--papier); border-color: var(--encre); }
+.atelier-outils { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.outil { min-height: 36px; padding: 0 14px; border: 1px solid rgb(var(--fg-rgb) / 0.35); border-radius: 999px; background: none; color: var(--encre); font: 600 14px/1 var(--texte); cursor: pointer; user-select: none; touch-action: none; }
+.outil:disabled { opacity: 0.4; cursor: default; }
+#comparer:active { background: var(--encre); color: var(--papier); }
+.changes { font-size: 14px; color: var(--encre-2); }
+.nom-compo { display: grid; gap: 5px; font-size: 14px; color: var(--encre-2); }
+.nom-compo input { min-height: 40px; padding: 0 12px; border: 1px solid rgb(var(--fg-rgb) / 0.25); border-radius: 6px; background: var(--nuit); color: var(--encre); font: 400 21px/1 var(--calli); letter-spacing: 0; }
+.nom-compo input:focus { outline: 2px solid var(--or); outline-offset: 1px; }
+/* a swatch blooms when its flower changes: the answer to a touch, at once */
+.pastille { transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1); }
+.pastille:hover { transform: scale(1.12); }
+.pastille.eclot { animation: eclot 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+@keyframes eclot { 0% { transform: scale(0.4); } 55% { transform: scale(1.35); } 100% { transform: scale(1); } }
+/* the fan of petals: every colourway as a petal, a little lift where the eye lands, the chosen one ringed */
+.palette { gap: 4px; padding: 10px 0 4px 32px; }
+.palette .petale {
+  width: 26px; height: 34px; border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%; border: 1px solid rgb(var(--fg-rgb) / 0.18);
+  transform-origin: 50% 100%; transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: petale-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: calc(var(--i) * 18ms);
+}
+.palette .petale { display: block; }
+.petale-choix { display: grid; justify-items: center; align-content: start; gap: 5px; width: 62px; min-height: 64px; padding: 0; border: 0;
+  background: none; cursor: pointer; font: 400 14px/1.15 var(--texte); color: var(--encre-2); text-align: center; }
+.petale-choix span { overflow-wrap: anywhere; }
+.petale-choix:hover .petale, .petale-choix:focus-visible .petale { transform: translateY(-4px) scale(1.12); }
+.petale-choix[aria-pressed='true'] .petale { box-shadow: 0 0 0 2px var(--papier), 0 0 0 3.5px var(--encre); }
+.petale-choix[aria-pressed='true'] span { color: var(--encre); font-weight: 600; }
+.petale-choix:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; border-radius: 6px; }
+@keyframes petale-in { from { transform: translateY(8px) scale(0.6); opacity: 0; } to { transform: none; opacity: 1; } }
+.palette-nom { margin: 0 0 8px 32px; min-height: 1.4em; font-size: 14px; font-style: italic; color: var(--encre); }
+/* the veil: the old bouquet stays, softened; petals turn on the compositor even while the page draws */
+.vitrine-scene { position: sticky; }
+.attente:not([hidden]) {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  background: radial-gradient(ellipse at 50% 55%, rgb(var(--bg-rgb) / 0.25), rgb(var(--bg-rgb) / 0.55)); color: var(--ivoire); font-size: 14px;
+  pointer-events: none;
+}
+.attente-petales { position: relative; width: 44px; height: 44px; animation: tourne 2.4s linear infinite; will-change: transform; }
+.attente-petales i { position: absolute; left: 17px; top: 0; width: 10px; height: 20px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; background: var(--or); transform-origin: 5px 22px; opacity: 0.85; }
+.attente-petales i:nth-child(2) { transform: rotate(72deg); }
+.attente-petales i:nth-child(3) { transform: rotate(144deg); }
+.attente-petales i:nth-child(4) { transform: rotate(216deg); }
+.attente-petales i:nth-child(5) { transform: rotate(288deg); }
+@keyframes tourne { to { transform: rotate(360deg); } }
+/* hold to compare: the original over the composition */
+.bouquet > svg.original:not(:only-of-type) { display: none; }
+.bouquet.compare > svg.original { display: block; }
+.bouquet.compare > svg:not(.original) { visibility: hidden; }
+/* jury n2 (mouvement): selection in the house colour; on the ivory bill the focus ring turns ink (champagne was 1.7:1) */
+::selection { background: rgb(var(--fg-rgb) / 0.16); color: inherit; }
+.note :focus-visible { outline: 2px solid #1b1714; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .pastille.eclot, .palette .petale, .attente-petales { animation: none; } }
+
+
+/* ---------- n3: the jury's corrections (audit/n2/JURY.md) */
+/* M3: one focus ring everywhere, ink on the light grounds */
+:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; }
+.note :focus-visible, .jardin :focus-visible { outline-color: #1b1714; }
+
+/* M2: fields to come take the house colour */
+input { caret-color: var(--or); accent-color: var(--or); }
+/* A2: a skip link for the keyboard */
+.evitement { position: absolute; left: 16px; top: -60px; z-index: 50; padding: 12px 16px; border-radius: 6px; background: var(--ivoire); color: var(--nuit); font-weight: 600; }
+.evitement:focus { top: 8px; }
+/* R11: every target at least 48 px, without changing the drawing (a wider hit zone where the mark is small) */
+.btn-petit { min-height: 48px; }
+.usage { padding: 3px; gap: 2px; }
+.usage button { min-height: 40px; padding: 0 14px; font-size: 14px; }
+.tete a, .pied a, .suivante a, .confiance a { display: inline-flex; align-items: center; min-height: 48px; }
+.pastille, .palette .petale { position: relative; }
+.pastille::after { content: ''; position: absolute; inset: -12px; }
+.note-table td, .note-table th { padding-top: 10px; padding-bottom: 10px; }
+@media (pointer: coarse) { .palette { gap: 6px; } .palette .petale { width: 32px; height: 42px; } }
+/* R7: champagne only for labels, the underlined word, the way-in arrow, the focus ring and the one purchase button */
+/* the received-gift way in is findable, not the first thing seen (n3 gaze: in bold ivory it took the phone's first look) */
+.recu-lien { color: var(--ivoire-2); font: 600 14px/1 var(--texte); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgb(var(--fg-rgb) / 0.35); }
+/* S3: the doors a step up in value; S2: the choice of the screen, not a second focal point */
+/* the doors stand on the close-up: an opaque ground keeps their words on one quiet value */
+.porte { background: var(--nuit-3); border-color: rgb(var(--fg-rgb) / 0.35); }
+.porte:hover { background: var(--relief); }
+.porte-titre { color: var(--blanc); }
+.suivante { color: #a39c90; }
+/* S2: one focal tile in the collection: the month's bouquet, twice as large (wide screens) */
+@media (min-width: 901px) { .grille:not(.grille-soli) > li:first-child { grid-column: span 2; grid-row: span 2; } .grille > li:first-child .tuile-nom { font-size: 28px; } }
+/* S2/C8: the folded bill is a narrow band, not the largest light mass of the screen */
+.note.repliee { padding: 14px 20px 12px; background: var(--nuit); }
+.note.repliee .note-tete p { display: none; }
+.note.repliee .note-tete h3 { margin: 0; }
+/* R13: the bouquet stands on a ground: a contact shadow and a warm pool of light under the vase */
+.sol { position: absolute; width: var(--w); height: 22px; transform: translate(-50%, -55%); pointer-events: none;
+  background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(0, 0, 0, 0.6) 0 38%, rgb(var(--or-rgb) / 0.12) 52%, rgb(var(--or-rgb) / 0) 72%); }
+/* S4: the page breathes: questions with their title on the left third (what you get: the cards of .recevez) */
+@media (min-width: 901px) {
+  #questions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; align-items: start; }
+}
+/* R3: lines a reader can follow; titles in balanced lines */
+.accroche-sous, .chapo, .faq p { max-width: 27em; }
+.titre { max-width: 13em; text-wrap: balance; }
+.accroche-titre { max-width: 9em; text-wrap: balance; }
+.nom { text-wrap: balance; }
+/* S8: the footer in three columns, who publishes the shop first */
+.pied { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; padding-bottom: 32px; }
+.pied nav { display: grid; gap: 0; }
+.pied p { margin: 0; max-width: 34em; }
+.pied-nom { margin: 0 0 6px; color: var(--ivoire); }
+/* P5: one quiet line for a returning visitor, under the header (20) (owner, 2026-11-01) */
+.retour { position: relative; z-index: 16; margin: 0; padding: 10px var(--gouttiere); background: var(--nuit-2); color: var(--ivoire-2); font-size: 14px; text-align: center; }
+.retour a { color: var(--ivoire); }
+/* P3: the received-gift window */
+.recu-boite { max-width: 460px; width: calc(100% - 32px); border: 1px solid var(--ligne); border-radius: 10px; padding: 28px; color: var(--ivoire); background: var(--nuit-2); }
+.recu-boite::backdrop { background: rgba(0, 0, 0, 0.6); }
+.recu-boite h2 { margin: 0 0 18px; font: 400 28px/1.1 var(--calli); letter-spacing: 0; }
+.recu-boite form:not([method]) { display: grid; gap: 14px; }
+.recu-boite label { display: grid; gap: 6px; font-size: 14px; color: var(--ivoire-2); }
+.recu-boite input { min-height: 48px; padding: 0 14px; border: 1px solid rgb(var(--fg-rgb) / 0.3); border-radius: 6px; background: var(--nuit); color: var(--ivoire); font: 400 16px/1 var(--texte); }
+.rb-etat { margin: 0; min-height: 1.4em; font-size: 14px; color: var(--ivoire); }
+.rb-etapes { margin: 18px 0; padding-left: 20px; color: var(--ivoire-2); font-size: 14px; }
+/* C14: dialogs open with a short rise; the bar slides in */
+dialog[open] { animation: monte 0.26s cubic-bezier(0.16, 1, 0.3, 1); }
+@keyframes monte { from { opacity: 0; transform: translateY(10px); } }
+.barre:not([hidden]) { animation: glisse 0.32s cubic-bezier(0.16, 1, 0.3, 1); }
+@keyframes glisse { from { transform: translateY(100%); } }
+.barre.hors { display: none; }
+.ap-eclosion { position: relative; margin: auto 0 6px; }
+/* M9: a bouquet that did not load says so */
+.echec { position: absolute; inset: auto 0 40% 0; text-align: center; color: var(--ivoire); font-size: 14px; }
+.echec button { margin-left: 6px; min-height: 40px; padding: 0 14px; border: 1px solid var(--ivoire); border-radius: 999px; background: none; color: var(--ivoire); cursor: pointer; }
+#bouquet-accroche, #bouquet-accroche-2 { cursor: pointer; }
+/* L1, L2, L3: ready for the other scripts and longer words (Chinese, Japanese, Korean, German) */
+:lang(zh), :lang(ja), :lang(ko) { letter-spacing: 0; }
+:lang(zh) .sur-titre, :lang(ja) .sur-titre, :lang(ko) .sur-titre, :lang(zh) .bientot, :lang(ja) .bientot, :lang(ko) .bientot { text-transform: none; letter-spacing: 0.04em; }
+:lang(zh) :is(h1, .titre, .nom), :lang(ja) :is(h1, .titre, .nom), :lang(ko) :is(h1, .titre, .nom) { line-height: 1.3; letter-spacing: 0; }
+:lang(zh) body, :lang(ja) body, :lang(ko) body { line-height: 1.75; }
+:lang(zh) .sens span, :lang(ja) .sens span, :lang(ko) .sens span { font-style: normal; }
+:lang(ja) { line-break: strict; }
+:lang(ko) { word-break: keep-all; }
+:lang(zh-Hans) { --titre: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+:lang(zh-Hant) { --titre: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
+:lang(ja) { --titre: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', sans-serif; }
+:lang(ko) { --titre: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+/* Korean running text in a serif (myeongjo), as Cormorant has no hangul (owner, 2026-11-01: Korean added) */
+:lang(ko) { --texte: 'Cormorant', 'Noto Serif KR', 'AppleMyungjo', 'Batang', serif; }
+html { overflow-wrap: break-word; hyphens: manual; }
+.btn { white-space: normal; text-align: center; line-height: 1.2; padding-top: 12px; padding-bottom: 12px; }
+/* M12: the florist's bill prints clean */
+@media print {
+  :root { color-scheme: light; }
+  body { background: #fff; color: #1b1714; }
+  .tete, .retour, .barre, .jardin, .vitrine-scene, .accroche, #collection, #soliflore, #vivant, .note-ouvrir, .note-pied, .atelier, dialog, .fiche .actions, .usage { display: none !important; }
+  .vitrine { display: block; border: 0; }
+  .note { box-shadow: none; border: 1px solid #1b1714; max-width: none; break-inside: avoid; }
+  .note.repliee .note-table thead, .note.repliee .note-table tbody { display: table-row-group; }
+}
+@media (max-width: 900px) {
+  .pied { grid-template-columns: 1fr; padding-bottom: 96px; }
+  .suivante { font-size: 14px; color: #7d776c; }
+  .retour { padding: 8px 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+
+/* ---------- the owner's decisions of 2026-10-31: devices, payment, ownership, soliflore calendar */
+.os { display: inline-flex; gap: 8px; }
+.os svg { width: 18px; height: 18px; fill: none; stroke: var(--ivoire-2); stroke-width: 1.4; stroke-linejoin: round; }
+.os svg:first-child, .os svg:nth-child(2) { fill: var(--ivoire-2); stroke: none; }
+.calendrier { display: grid; gap: 2px; max-width: 1100px; overflow-x: auto; }
+.cal-ligne { display: grid; grid-template-columns: minmax(200px, 2.4fr) repeat(12, minmax(22px, 1fr)) minmax(96px, 1fr); align-items: center; gap: 3px; min-height: 48px; }
+.cal-tete { min-height: 32px; font: 900 14px/1 var(--titre); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ivoire-2); }
+.cal-tete .cal-fleur { display: block; }
+.cal-fleur { display: grid; grid-template-columns: 14px 1fr; column-gap: 10px; align-items: center; }
+.cal-fleur i { grid-row: span 2; width: 14px; height: 14px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15); }
+.cal-fleur b { font: 400 21px/1.1 var(--calli); letter-spacing: 0; }
+.cal-fleur small { font-size: 14px; font-style: italic; color: var(--ivoire-2); }
+.cal-ligne:not(.cal-tete) .cal-mois { height: 12px; border-radius: 6px; background: rgb(var(--fg-rgb) / 0.06); }
+.cal-ligne .cal-mois.on { background: color-mix(in srgb, var(--c) 72%, var(--nuit)); }
+.cal-tete .cal-mois { text-align: center; }
+.cal-mois.maintenant { outline: 1px solid var(--or); outline-offset: 2px; }
+.cal-tete .cal-mois.maintenant { color: var(--or); outline: none; }
+.cal-prix { font-size: 14px; color: var(--ivoire-2); text-align: right; }
+.cal-ligne.dispo .cal-prix { color: var(--ivoire); font-weight: 600; }
+.cal-ligne.dispo .cal-fleur b { color: var(--blanc); }
+@media (max-width: 900px) {
+  .cal-ligne { grid-template-columns: minmax(112px, 1fr) repeat(12, 11px) 64px; gap: 2px; }
+  .cal-fleur b { font-size: 16px; }
+  .cal-tete .cal-mois { font-size: 0; }
+  .cal-tete .cal-mois.maintenant { font-size: 14px; }
+}
+
+/* n4: "what she receives" is a visible way, not a link lost in a sentence */
+.apercu-lien { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; color: var(--ivoire-2); font: 600 14px/1 var(--texte);
+  text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgb(var(--fg-rgb) / 0.35); }
+.apercu-lien:hover { color: var(--ivoire); }
+.apercu-tel { width: 12px; height: 20px; border: 1.5px solid var(--or); border-radius: 4px; background: radial-gradient(circle at 50% 60%, var(--oeillet) 0 3px, transparent 4px); }
+
+/* ---------- level 2 journeys: the gift received (recu.html) and the monthly return (compte.html) */
+.tete-simple { justify-content: space-between; }
+.nav-compte { display: flex; gap: 20px; }
+.nav-compte a { color: var(--ivoire-2); text-decoration: none; font-size: 14px; }
+.visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* the envelope: one name, one button, large for every eye (Margaret, Rosa) */
+.enveloppe { display: grid; place-items: center; min-height: calc(100svh - 56px); padding: 32px var(--gouttiere);
+  background: radial-gradient(ellipse 60% 60% at 50% 45%, var(--halo) 0%, var(--nuit-2) 50%, var(--nuit) 90%); }
+.enveloppe-carte { max-width: 560px; text-align: center; }
+.enveloppe-titre { margin: 0 0 16px; font: 400 clamp(38px, 6vw, 67px)/1.06 var(--calli); letter-spacing: 0; color: var(--blanc); text-wrap: balance; }
+.enveloppe-texte { margin: 0 auto 28px; max-width: 26em; font-size: 21px; color: var(--ivoire-1); }
+.btn-grand { min-height: 60px; padding: 0 36px; font-size: 18px; }
+.enveloppe-petit { margin: 18px 0 0; font-size: 16px; color: var(--ivoire-2); }
+/* the reveal */
+.revelation { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); align-items: center; gap: 32px;
+  min-height: calc(100svh - 56px); padding: 24px var(--gouttiere); background: var(--scene); }
+.revelation-scene { display: flex; justify-content: center; }
+.mot { margin: 0 0 18px; min-height: 3.2em; font: 400 clamp(26px, 3vw, 38px)/1.25 var(--calli); letter-spacing: 0; color: var(--blanc); }
+.musique { margin: 0 0 22px; font-size: 16px; color: var(--or); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.outil-clair { min-height: 40px; padding: 0 14px; border: 1px solid rgb(var(--fg-rgb) / 0.35); border-radius: 999px; background: none; color: var(--ivoire); font: 600 14px/1 var(--texte); cursor: pointer; }
+.nom-petit { margin: 0; font: 900 14px/1.3 var(--titre); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ivoire-2); }
+/* after the peak: one main way, two quieter ones */
+.apres { padding: clamp(56px, 8vw, 110px) var(--gouttiere); }
+.choix { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px; margin-top: 36px; }
+.choix-carte { display: flex; flex-direction: column; gap: 10px; padding: 24px; border: 1px solid var(--ligne); border-radius: 8px; }
+.choix-carte h3 { margin: 0; font: 400 28px/1.15 var(--calli); letter-spacing: 0; }
+.choix-carte p { margin: 0; color: var(--ivoire-2); font-size: 16px; }
+.choix-carte .btn { margin-top: auto; align-self: flex-start; }
+.choix-principal { background: rgb(var(--fg-rgb) / 0.06); border-color: rgb(var(--fg-rgb) / 0.35); }
+.os-ligne { display: flex; align-items: center; gap: 10px; }
+.pas { margin: 0; padding-left: 20px; color: var(--ivoire-2); font-size: 16px; }
+.merci textarea { width: 100%; padding: 12px; border: 1px solid rgb(var(--fg-rgb) / 0.3); border-radius: 6px; background: var(--nuit); color: var(--ivoire); font: 400 16px/1.4 var(--texte); resize: vertical; }
+.merci-etat { min-height: 1.4em; font-size: 14px; color: var(--ivoire); }
+.retour-offre { margin: 40px 0 0; font-size: 16px; color: var(--ivoire-2); }
+.retour-offre a { color: var(--ivoire); }
+/* the monthly return */
+.fin-floraison { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr); gap: 40px; align-items: center; }
+.fin-image { margin: 0; text-align: center; padding: 24px; border-radius: 6px; background: var(--scene); }
+.fin-bq { position: relative; margin: 0 auto; filter: saturate(0.45) sepia(0.25) brightness(0.82); }
+.fin-image figcaption { margin-top: 10px; font-size: 14px; color: var(--ivoire-2); }
+.rappel { display: grid; gap: 14px; margin-top: 24px; max-width: 520px; }
+.rappel fieldset { margin: 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.rappel legend { margin-bottom: 10px; font: 900 14px/1.3 var(--titre); letter-spacing: 0.14em; text-transform: uppercase; color: var(--or); }
+.rappel label { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 16px; }
+.rappel .btn { justify-self: start; }
+.mes { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.mes li { display: flex; flex-direction: column; }
+.ma-fleur.fane .tuile-bq { filter: saturate(0.45) sepia(0.25) brightness(0.82); }
+.etat { margin-top: 4px; font-size: 14px; color: var(--ivoire-2); }
+.ma-fleur.en-vie .etat { color: var(--ivoire); }
+.soli-scene { position: relative; }
+.soli-scene i { position: absolute; left: 50%; bottom: 18%; width: 28%; aspect-ratio: 1; border-radius: 50%; transform: translateX(-50%);
+  background: radial-gradient(circle at 40% 35%, color-mix(in srgb, var(--c) 70%, #fff), var(--c)); box-shadow: 0 30px 0 -12px var(--halo); }
+.saison { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0 32px; }
+.saison li { display: grid; grid-template-columns: 14px 1fr auto; column-gap: 12px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--ligne); }
+.saison i { width: 12px; height: 12px; border-radius: 50%; background: var(--c); }
+.saison b { font: 400 21px/1.2 var(--calli); letter-spacing: 0; }
+.saison small { grid-column: 2; color: var(--ivoire-2); font-style: italic; font-size: 14px; }
+.saison span { grid-row: 1; grid-column: 3; font: 900 16px/1 var(--titre); }
+.offerts { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; max-width: 720px; }
+.offerts li { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-top: 1px solid var(--ligne); }
+.offerts-bq, .offert-bq { position: relative; flex: none; width: 64px; height: 80px; }
+.offerts b { display: block; font: 400 21px/1.2 var(--calli); letter-spacing: 0; }
+.offerts small { color: var(--ivoire-2); font-size: 14px; }
+@media (max-width: 900px) {
+  .revelation, .fin-floraison { grid-template-columns: minmax(0, 1fr); }
+  .choix { grid-template-columns: 1fr; }
+  .enveloppe-texte { font-size: 18px; }
+}
+
+/* ---------- narrow screens: the bouquet first, then the words; the bar holds the action */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .tete-droite { margin-left: auto; }
+  .accroche { grid-template-columns: 1fr; min-height: 0; gap: 8px; padding-top: 12px;
+    background: radial-gradient(ellipse 80% 40% at 50% 22%, var(--halo) 0%, var(--nuit-2) 50%, var(--nuit) 85%); }
+  /* on a phone the bouquet fills the top and goes on under the label, the title and the sentence; the words stand on a
+     veil that rises from the page's night (the bouquet itself is never faded) */
+  .accroche-bouquet { position: absolute; inset: 0 0 auto 0; width: auto; height: calc(var(--bq-h) + 260px); -webkit-mask-image: none; mask-image: none; }
+  .accroche { --bq-h: 42svh; }
+  .accroche-texte { padding-top: calc(var(--bq-h) - 34px); }
+  .accroche-texte::before { content: ''; position: absolute; z-index: -1; left: calc(var(--gouttiere) * -1); right: calc(var(--gouttiere) * -1);
+    top: calc(var(--bq-h) - 150px); height: 470px; pointer-events: none;
+    background: linear-gradient(to bottom, rgb(var(--bg-rgb) / 0) 0, rgb(var(--bg-rgb) / 0.62) 105px, rgb(var(--bg-rgb) / 0.85) 200px,
+      rgb(var(--bg-rgb) / 0.94) 330px, var(--nuit) 420px); }
+  /* the price range before the doors on a phone: the n2 army looked for the price and found it under the fold */
+  .accroche-texte { display: flex; flex-direction: column; }
+  .accroche-texte > * { order: 2; }
+  .accroche-texte > .fourchette { order: 3; margin: 0 0 14px; }
+  .accroche-texte > .portes { order: 4; }
+  .poincon { margin: -6px 0 18px; }
+  .accroche .sur-titre .sur-titre-suite { display: none; }
+  .accroche-titre { font-size: clamp(38px, 11vw, 52px); margin-bottom: 12px; }
+  .accroche-sous { font-size: 16px; margin-bottom: 18px; }
+  /* the doors stay side by side, their sentence left for the wider screens: title and way are enough here */
+  .portes { gap: 8px; }
+  .porte { padding: 10px 12px 12px; }
+  .porte-signe svg { width: 24px; height: 24px; margin-bottom: 8px; }
+  .porte-texte { display: none; }
+  .tete .discret[data-bouchon="communaute"], .tete-droite > span.discret { display: none; }
+  .tete-droite { gap: 12px; }
+  .tete-droite a { white-space: nowrap; }
+  .tete-droite .discret[data-bouchon="compte"] { font-size: 14px; }
+  .marque { font-size: 24px; }
+  .recu-lien { font-size: 14px; }
+  .porte-suite { margin-top: 6px; font-size: 14px; }
+  .fourchette { margin-top: 16px; font-size: 14px; }
+  .vitrine, .vivant { grid-template-columns: minmax(0, 1fr); }
+  .vitrine > *, .vivant > *, .accroche > * { min-width: 0; }
+  .vitrine-scene { position: relative; top: 0; height: auto; padding: 20px 16px; }
+  .vivant { grid-template-columns: 1fr; }
+  .chiffres { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grille { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tuile-nom { font-size: 21px; }
+  .tuile-info { flex-direction: column; gap: 0; }
+  .note { padding: 20px 16px 16px; }
+}
+@media (min-width: 901px) { .barre { display: none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .tuile-bq { transition: none; } }
+
+/* ---------- the bee (vie.mjs): a canvas over everything, the bee's talk included (owner, 2026-11-02); one under the
+   product's bouquet */
+.vie { position: fixed; inset: 0; pointer-events: none; }
+/* in front of everything on the page, its own talk and welcome included (owner, 2026-11-03: « devant TOUT le reste ») */
+.vie-devant { z-index: 2147483000; }
+.vitrine-scene > .bouquet { z-index: 1; }
+
+/* ---------- the atelier's film (YouTube): a card with the month's bouquet as its picture, the way out marked */
+.film { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; align-items: center; margin: 0 0 40px; padding: 0;
+  color: inherit; text-decoration: none; }
+.film-image { position: relative; display: grid; place-items: end center; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--ligne);
+  border-radius: 8px; background: radial-gradient(ellipse 60% 70% at 50% 60%, var(--halo) 0%, var(--nuit-2) 55%, var(--nuit) 100%); }
+.film-bq { position: relative; }
+.film-lecture { position: absolute; left: 50%; top: 50%; display: grid; place-items: center; width: 72px; height: 72px; margin: -36px 0 0 -36px;
+  border-radius: 50%; background: rgb(var(--bg-rgb) / 0.72); border: 1px solid rgb(var(--fg-rgb) / 0.5); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.film-lecture svg { width: 30px; height: 30px; fill: var(--ivoire); margin-left: 3px; }
+.film:hover .film-lecture { transform: scale(1.08); }
+.film-texte { display: grid; gap: 10px; }
+.film-texte .sur-titre { display: inline-flex; align-items: center; gap: 6px; margin: 0; }
+.film-texte b { font: 400 clamp(26px, 3vw, 40px)/1.1 var(--calli); letter-spacing: 0; }
+.film-texte > span:last-child { color: var(--ivoire-2); max-width: 34em; }
+.film:focus-visible { outline: 2px solid var(--or); outline-offset: 6px; border-radius: 8px; }
+@media (max-width: 900px) { .film { grid-template-columns: 1fr; gap: 16px; } }
+
+/* the citation of a meaning: small, upright, a step quieter than the meaning it backs */
+.sens-source { font-style: normal; font-size: 14px; letter-spacing: 0.01em; opacity: 0.72; white-space: nowrap; }
+.sens-source::before { content: '— '; }
+
+/* the meanings' toggle: a quiet row of choices, the atelier's first; a taboo in a country's reading is said plainly */
+.pays { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 0 0 14px; }
+.pays-titre { margin-right: 6px; font: 900 14px/1 var(--titre); letter-spacing: 0.12em; text-transform: uppercase; color: var(--or); }
+.pays button { min-height: 32px; padding: 0 11px; border: 1px solid var(--ligne); border-radius: 999px; background: transparent; color: var(--ivoire-2);
+  font: 600 14px/1 var(--texte); cursor: pointer; }
+.pays button[aria-checked='true'] { background: var(--ivoire); border-color: var(--ivoire); color: var(--nuit); }
+.pays button:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+.note .pays { margin: 4px 0 12px; }
+.note .pays-titre { color: var(--encre-2); }
+.note .pays button { border-color: rgb(var(--fg-rgb) / 0.22); color: var(--encre-2); }
+.note .pays button[aria-checked='true'] { background: var(--encre); border-color: var(--encre); color: var(--papier); }
+.tabou { display: inline-block; padding: 1px 6px; border-radius: 3px; background: var(--oeillet); color: #fff; font: 700 14px/1.4 var(--texte);
+  font-style: normal; letter-spacing: 0.02em; vertical-align: 1px; }
+
+/* ---------- the phone's section bar, and composing with the bouquet in view */
+.onglets { display: none; }
+@media (max-width: 900px) {
+  .onglets { position: fixed; left: 0; right: 0; bottom: 0; z-index: 31; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); background: rgb(var(--bg-rgb) / 0.94); border-top: 1px solid var(--ligne);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+  .onglets a { display: grid; place-items: center; min-height: 44px; color: var(--ivoire-2); text-decoration: none; font: 600 14px/1.1 var(--texte); }
+  .onglets svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+  .onglets a[aria-current] { color: var(--or); }
+
+  .pied { padding-bottom: 170px; }
+  /* composing: the bouquet stays at the top of the screen while the bill and the colours scroll under it */
+  .compose .vitrine-scene { position: sticky; top: 56px; z-index: 6; align-self: start; height: 34svh; padding: 6px 16px 4px;
+    border-bottom: 1px solid var(--ligne); }
+  .compose .vitrine-scene .etat-scene, .compose .vitrine-scene .composer-scene { display: none; }
+  .compose .harmonies { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px 4px; }
+  .compose .harmonies button { flex: none; }
+  .compose .nom-compo { font-size: 14px; }
+}
+
+/* the language menu: a globe and the language, a short list under it; on a phone too */
+.langues { position: relative; }
+.langues summary { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; list-style: none; cursor: pointer; font-size: 14px; color: var(--ivoire-2); }
+.langues summary::-webkit-details-marker { display: none; }
+.langues summary svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.3; }
+.langues[open] summary, .langues summary:hover { color: var(--ivoire); }
+.langues ul { position: absolute; right: 0; top: calc(100% - 4px); z-index: 40; min-width: 150px; margin: 0; padding: 6px; list-style: none;
+  background: var(--nuit-3); border: 1px solid var(--ligne); border-radius: 8px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); }
+.langues a { display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 6px; color: var(--ivoire-2); text-decoration: none; }
+.langues a:hover { background: rgb(var(--fg-rgb) / 0.06); color: var(--ivoire); }
+.langues a[aria-current] { color: var(--or); }
+/* the soliflores' calendar on a phone: the flower and its state on one line, its twelve months on a full-width line under it */
+@media (max-width: 900px) {
+  .cal-ligne { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 6px 3px; padding: 10px 0; border-top: 1px solid var(--ligne); }
+  .cal-ligne .cal-fleur { grid-column: 1 / 10; grid-row: 1; }
+  .cal-ligne .cal-prix { grid-column: 10 / 13; grid-row: 1; align-self: start; }
+  .cal-ligne .cal-mois { grid-row: 2; }
+  .cal-tete { border-top: 0; padding-bottom: 0; }
+  .cal-tete .cal-mois { font-size: 14px; letter-spacing: 0; overflow: hidden; }
+  .cal-tete .cal-mois.maintenant { font-size: 14px; }
+}
+
+/* the named petals are wider than the old round swatches (.palette button), and on a phone the header keeps the globe only */
+.palette .petale-choix { width: 62px; height: auto; border: 0; border-radius: 0; }
+@media (max-width: 900px) {
+  .langues summary span { display: none; }
+  .langues summary { min-width: 32px; justify-content: center; }
+  .tete-droite { gap: 9px; }
+  .tete { gap: 10px; padding: 0 12px; }
+  .palette { padding-left: 0; gap: 4px; }
+  .palette .petale-choix { width: 56px; }
+  .cal-tete .cal-mois, .cal-tete .cal-mois.maintenant { font-size: 0; }
+  .cal-tete .cal-mois::before { content: attr(data-l); font-size: 14px; }
+}
+
+/* the botanical name under the flower's French name: small italic, for the botanist and the florist */
+.latin { display: block; font-size: 14px; font-style: italic; color: var(--encre-2); letter-spacing: 0.01em; }
+
+/* the WeChat note: one quiet line under the header, only inside WeChat */
+.wechat { margin: 0; padding: 10px var(--gouttiere); background: var(--nuit-2); color: var(--ivoire); font-size: 14px; text-align: center; }
+
+/* the recipient's language, chosen by the giver next to the preview */
+.sa-langue { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; font-size: 14px; color: var(--ivoire-2); }
+.sa-langue select { min-height: 36px; padding: 0 10px; border: 1px solid var(--ligne); border-radius: 999px; background: var(--nuit); color: var(--ivoire);
+  font: 600 14px/1 var(--texte); }
+.ap-ouvrir { margin: 0 0 16px; text-align: center; }
+.ap-ouvrir a { color: var(--ivoire); }
+
+/* what one owns: folded under the facts, opened in one touch */
+.possede summary { display: inline-flex; align-items: center; min-height: 40px; cursor: pointer; color: var(--ivoire); text-decoration: underline;
+  text-underline-offset: 4px; text-decoration-color: rgb(var(--fg-rgb) / 0.35); list-style: none; }
+.possede summary::-webkit-details-marker { display: none; }
+.possede summary::after { content: ' ↓'; }
+.possede[open] summary::after { content: ' ↑'; }
+.possede dl { margin: 6px 0 10px; display: grid; gap: 10px; }
+.possede dt { color: var(--ivoire); font-weight: 600; }
+.possede dd { margin: 2px 0 0; max-width: 34em; }
+.possede > a, .autres-achats a { color: var(--ivoire-2); }
+.autres-achats { display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; }
+.autres-achats a { display: inline-flex; align-items: center; min-height: 40px; }
+
+/* ---------- the forms of the group purchase and the bespoke request: one column, labels above, calm fields */
+.formulaire { max-width: 760px; }
+.formulaire form { display: grid; gap: 22px; margin-top: 28px; }
+.formulaire fieldset { display: grid; gap: 14px; margin: 0; padding: 20px; border: 1px solid var(--ligne); border-radius: 8px; }
+.formulaire legend { padding: 0 6px; font: 900 14px/1 var(--titre); letter-spacing: 0.14em; text-transform: uppercase; color: var(--or); }
+.champ { display: grid; gap: 6px; font-size: 14px; color: var(--ivoire-2); }
+.champ input, .champ select, .champ textarea { min-height: 46px; padding: 10px 12px; border: 1px solid rgb(var(--fg-rgb) / 0.3); border-radius: 6px;
+  background: var(--nuit); color: var(--ivoire); font: 400 16px/1.4 var(--texte); }
+.champ input:focus-visible, .champ select:focus-visible, .champ textarea:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+.personnes { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: p; }
+.personne { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 10px; align-items: end; padding-top: 12px;
+  border-top: 1px solid var(--ligne); }
+.personne .champ-large { grid-column: 1 / 3; }
+.retirer { min-height: 46px; padding: 0 12px; border: 0; background: none; color: var(--ivoire-2); text-decoration: underline; cursor: pointer; font: inherit; }
+.total { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 14px 0; border-top: 1px solid var(--ligne);
+  color: var(--ivoire-2); }
+.total b { font: 300 21px/1.2 var(--texte); letter-spacing: 0.03em; color: var(--ivoire); }
+.formulaire .btn-achat { justify-self: start; }
+.choix-ligne { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.choix-ligne label { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--ivoire); }
+@media (max-width: 900px) {
+  .personne { grid-template-columns: minmax(0, 1fr); }
+  .personne .champ-large { grid-column: auto; }
+  .formulaire fieldset { padding: 16px; }
+}
+/* the house's name keeps its own letters in every language; a short header on the phone's form pages */
+@media (max-width: 900px) { .page-groupe .nav-compte a + a, .page-mesure .nav-compte a + a { display: none; } }
+.palette .petale-choix[aria-pressed='true'] { box-shadow: none; }
+
+/* the account: its name on a computer, a quiet profile mark on a phone (the header keeps the logotype, the gift and the language) */
+.compte-lien svg { display: none; width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+@media (max-width: 900px) {
+  .compte-lien span { display: none; }
+  .compte-lien svg { display: block; }
+  .compte-lien { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 48px; }
+  .marque { font-size: 22px; }
+}
+
+/* ---------- no scrollbar anywhere (owner, 2026-10-31): every area scrolls, none shows a bar */
+html, body, * { scrollbar-width: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar, *::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+/* ---------- one bar at a time at the bottom of a phone (n6 a11y ID-01/02): the sections or the purchase, never over the hook */
+@media (max-width: 900px) {
+  .onglets { transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s; }
+  body.accueil .onglets, body.compose .onglets, body:has(.barre:not([hidden]):not(.hors)) .onglets { transform: translateY(100%); visibility: hidden; }
+  .barre { bottom: 0; padding: 8px 16px calc(8px + env(safe-area-inset-bottom)); }
+  .barre .btn-achat { min-height: 48px; padding: 0 22px; font-size: 15px; }
+  html { scroll-padding-bottom: 84px; }
+  body.compose { scroll-padding-top: calc(56px + 34svh); }
+}
+@media (max-width: 900px) and (max-height: 700px) { .accroche { --bq-h: 30svh; } .porte-signe { display: none; } .compose .vitrine-scene { height: 30svh; } }
+@media (max-width: 900px) and (max-height: 500px) { .tete { position: static; } .onglets { display: none; } }
+/* the header holds at 360 and 320 px (a11y ID-07) */
+@media (max-width: 400px) { .tete { gap: 8px; padding: 0 10px; } .tete-droite { gap: 6px; } .marque { font-size: 20px; } .recu-lien { font-size: 14px; } }
+@media (max-width: 359px) { .recu-lien .long { display: none; } }
+/* contrasts (a11y ID-09/10): sources read fully, the taboo label darker, empty months outlined, field edges firmer */
+.sens-source { opacity: 1; }
+.tabou { background: #b23a4e; }
+.cal-ligne:not(.cal-tete) .cal-mois { background: none; box-shadow: inset 0 0 0 1px rgb(var(--fg-rgb) / 0.32); }
+.cal-ligne .cal-mois.on { background: var(--c); box-shadow: inset 0 0 0 1px rgb(var(--fg-rgb) / 0.5); }
+.champ :is(input, select, textarea), .recu-boite input, .merci textarea { border-color: rgb(var(--fg-rgb) / 0.45); }
+.nom-compo input, .palette .petale { border-color: rgb(var(--fg-rgb) / 0.55); }
+.nom-compo input:focus-visible { outline-color: var(--encre); }
+/* forms on a phone: 16 px fields never zoom the page (a11y ID-12) */
+.sa-langue select { font-size: 16px; }
+/* reduced motion everywhere (a11y ID-13) */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
+
+/* the dialogs open on their close button, at the top; the preview's computer fits a phone (a11y ID-08) */
+.fermer-haut { position: sticky; top: 0; z-index: 2; display: flex; justify-content: flex-end; margin: -8px -8px 0 0; }
+.fermer { width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgb(var(--bg-rgb) / 0.7); color: var(--ivoire); font: 300 28px/1 var(--texte); cursor: pointer; }
+.ap-ordi-ecran { width: min(340px, 100%); height: auto; aspect-ratio: 340 / 220; }
+@media (max-width: 600px) { .apercu { padding: 20px 16px; } }
+.personne-n { grid-column: 1 / -1; margin: 0; font: 900 14px/1 var(--titre); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ivoire-2); }
+
+/* ---------- n6 lot 1c: the card's neighbours, the composer's purchase, the gift's way on, the account's links */
+.rang { min-width: 32px; min-height: 32px; padding: 0 6px; border: 0; background: none; color: var(--or); font: 900 16px/1 var(--titre); cursor: pointer; vertical-align: -1px; }
+.rang:hover { color: var(--ivoire); }
+.note-achat { display: grid; justify-items: start; gap: 8px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgb(var(--fg-rgb) / 0.2); }
+.note-achat[hidden] { display: none; }
+.n-ecart { font-size: 14px; color: var(--encre-2); font-variant-numeric: tabular-nums; }
+.suite { display: inline-flex; align-items: center; min-height: 48px; margin-top: 18px; color: var(--ivoire); text-decoration: underline; text-underline-offset: 5px;
+  text-decoration-color: rgb(var(--or-rgb) / 0.7); font-size: 18px; }
+.retrouver { display: grid; gap: 10px; }
+.case { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; color: var(--ivoire-2); }
+.pied-court { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 28px var(--gouttiere) 40px; border-top: 1px solid var(--ligne); font-size: 14px; color: var(--ivoire-2); }
+.pied-court a { color: var(--ivoire-2); }
+.confidentialite { margin: 0; font-size: 14px; color: var(--ivoire-2); }
+.confidentialite a { color: var(--ivoire-2); }
+.fin-liens { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 18px 0 0; }
+/* inline-block, not flex: a flex link would drop the spaces at the edges of its spans */
+.fin-liens a { display: inline-block; padding: 12px 0; color: var(--ivoire); }
+.agenda { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; color: var(--ivoire-2); }
+.ma-fleur-lien { display: flex; flex-direction: column; color: inherit; text-decoration: none; }
+.grille.mes > li:first-child { grid-column: auto; grid-row: auto; }
+.offerts q { display: block; margin-top: 4px; font: 400 16px/1.35 var(--calli); letter-spacing: 0; color: var(--ivoire); quotes: '« ' ' »'; }
+.offerts li > .btn-lien { margin-left: auto; white-space: nowrap; }
+/* the gift's envelope becomes the florist's card, on the same paper as the bill (identity ID-02) */
+.enveloppe-carte { padding: 44px 40px 34px; background: var(--papier); color: var(--encre); border-radius: 3px; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.75); }
+.enveloppe-carte .sur-titre { color: var(--or); }
+.enveloppe-carte .enveloppe-titre { color: var(--encre); }
+.enveloppe-carte .enveloppe-texte, .enveloppe-carte .enveloppe-petit { color: var(--encre-2); }
+.enveloppe-carte .btn-plein { background: var(--encre); color: var(--papier); border-color: var(--encre); }
+/* the code, asked on the card: the link alone opens nothing (owner, 2026-11-02) */
+.code-cadeau { display: grid; gap: 14px; max-width: 360px; margin: 0 auto; text-align: left; }
+.enveloppe-carte .champ { color: var(--encre-2); font-size: 15px; }
+.enveloppe-carte .champ input { background: #fff; color: var(--encre); border-color: rgb(0 0 0 / 0.35); font-size: 20px; letter-spacing: 0.12em; text-align: center; }
+.enveloppe-carte .champ input:focus-visible { outline-color: var(--encre); }
+.code-etat { margin: 0; min-height: 1.4em; font-size: 15px; color: #8a1c1c; text-align: center; }
+.code-etat:empty { min-height: 0; }
+.enveloppe-carte .apercu-note { font-size: 14px; font-style: italic; }
+.vocal { margin: 0 0 14px; }
+/* on a phone the bouquet stays at the top while one reads on (composition ID-03) */
+@media (max-width: 900px) { .revelation-scene { position: sticky; top: 56px; z-index: 2; background: var(--scene); } }
+.choix-carte > :last-child { margin-top: auto; }
+
+/* ---------- n6 lot 1d: the hook in four groups (promise, signature, choice, terms), doors with the same foot */
+@media (min-width: 901px) {
+  .accroche-titre { line-height: 1.04; margin-bottom: 24px; }
+  .accroche-sous { margin-bottom: 16px; }
+  .poincon { margin: 0 0 44px; }
+  .fourchette { margin-top: 18px; }
+}
+.surligne { background-position: 0 100%; }
+.porte-suite { margin-top: auto; padding-top: 10px; }
+/* two voices (identity ID-09): the thin one says, the capitals point; Nunito Black never in lower case on a door */
+.porte-titre { font: 400 26px/1.15 var(--calli); letter-spacing: 0; }
+.btn { font: 900 14px/1 var(--titre); letter-spacing: 0.12em; text-transform: uppercase; }
+.btn-achat { font-size: 14px; }
+.btn-prix { letter-spacing: 0.06em; }
+.btn-lien { text-transform: none; letter-spacing: 0; font: 600 14px/1.2 var(--texte); }
+.essai-encart h3 { font: 400 24px/1.2 var(--calli); letter-spacing: 0; }
+@media (max-width: 900px) { .porte-titre { font-size: 22px; } .bloc-tete .suivante { display: none; } }
+/* chapters marked plainly: one ground, a hairline between sections (composition ID-13) */
+.bloc-2 { background: var(--nuit); }
+main > section + section { border-top: 1px solid var(--ligne); }
+/* the film's play mark in its corner, off the bouquet's heart (composition ID-12) */
+.film-lecture { inset: auto 20px 20px auto; margin: 0; left: auto; top: auto; }
+/* the tiles' bouquets are never revealed by a fade: only their names and prices come in (owner's rule, performance ID-07) */
+.scene .grille[data-tour] > * { opacity: 1; transform: none; }
+.scene .grille[data-tour] > * :is(.tuile-nom, .tuile-info) { opacity: 0; transform: translateY(10px); }
+.scene .grille[data-tour].vu > * :is(.tuile-nom, .tuile-info) { opacity: 1; transform: none;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms); }
+p, li, dd { text-wrap: pretty; }
+.sur-titre sup { text-transform: none; }
+.possede summary::after { content: '\00a0↓'; }
+.possede[open] summary::after { content: '\00a0↑'; }
+
+/* a dialog never shows a bar: its content scrolls, hidden (owner, 2026-10-31) */
+dialog { overflow: hidden auto; scrollbar-width: none; }
+dialog::-webkit-scrollbar { display: none; }
+
+/* the try-on (../scene/essai.mjs) speaks in night-blue glass bubbles, at every moment of the day: its words are white */
+:root {
+  --glass: rgb(10 18 34 / 0.78);
+  --glass-texte: rgb(10 18 34 / 0.9);
+  --glass-flou: blur(18px) saturate(1.2);
+  --glass-bord: rgb(236 240 247 / 0.22);
+  --glass-ombre: 0 24px 50px -20px rgb(0 0 0 / 0.6);
+  --glass-encre: none;
+}
+
+/* the logotype: « Belai’s Garden » in Pinyon Script, kept as one SVG path (logotype.svg, outils/logotype.py), shown through a
+   mask so it takes the colour of the moment; no font is fetched for it (owner, 2026-10-31) */
+.marque, :lang(zh-Hans) .marque, :lang(ja) .marque, :lang(ko) .marque {
+  display: inline-block; flex: none; height: 34px; aspect-ratio: 11009 / 1750; font-size: 0; color: var(--ivoire); background: currentColor;
+  -webkit-mask: url('logotype.svg') center / contain no-repeat; mask: url('logotype.svg') center / contain no-repeat; }
+.marque:hover { color: var(--blanc); }
+.pied-nom .marque { height: 40px; }
+/* the same selectors as above, or the Chinese and Japanese pages keep the computer's size on a phone */
+@media (max-width: 900px) { .marque, :lang(zh-Hans) .marque, :lang(ja) .marque, :lang(ko) .marque { height: 26px; } }
+@media (max-width: 400px) { .marque, :lang(zh-Hans) .marque, :lang(ja) .marque, :lang(ko) .marque { height: 22px; } }
+/* the header's links are 48 px tall for the thumb; the logotype keeps its own height, its link area padded around it */
+.tete .marque { min-height: 0; padding: 7px 0; -webkit-mask-origin: content-box; mask-origin: content-box; -webkit-mask-clip: content-box; mask-clip: content-box; box-sizing: content-box; }
+
+/* ---------- the soliflores on sale: search, families, season, and a grid of flowers (placeholders until drawn) */
+/* the bar of filters (owner, 2026-11-02): held under « Bouquets / Soliflores », the search then every menu on one line */
+.soli-outils { position: sticky; top: var(--sous-bascule, 104px); z-index: 14; display: flex; align-items: center; gap: 10px 14px;
+  margin: 0 calc(var(--gouttiere) * -1) 14px; padding: 10px var(--gouttiere); border-bottom: 1px solid var(--ligne);
+  background: rgb(var(--bg-rgb) / 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.soli-cherche { position: relative; flex: 0 1 280px; min-width: 200px; }
+.soli-cherche svg { position: absolute; left: 14px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%); fill: none; stroke: var(--ivoire-2); stroke-width: 1.5; pointer-events: none; }
+.soli-cherche input { height: 40px; min-height: 40px; padding: 0 14px 0 40px; border-radius: 999px; }
+.soli-outils .soli-menus { flex: 1 1 auto; flex-basis: auto; flex-wrap: nowrap; align-items: center; overflow-x: auto; scrollbar-width: none; }
+.soli-outils .soli-menus::-webkit-scrollbar { display: none; }
+.soli-outils .menu-btn { white-space: nowrap; }
+/* a menu left at « all » says only its name; chosen, it says its choice */
+.soli-outils .menu-btn:not(.menu-actif) .menu-val { display: none; }
+.soli-outils .menu-liste { position: fixed; z-index: 40; min-width: 0; }
+.soli-saison { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px 0 12px; border: 1px solid var(--ligne); border-radius: 999px;
+  font: 600 14px/1 var(--texte); color: var(--ivoire-2); white-space: nowrap; cursor: pointer; }
+.soli-saison input { width: 16px; height: 16px; margin: 0; accent-color: var(--ivoire); }
+.soli-saison:has(input:checked) { border-color: var(--ivoire); color: var(--ivoire); }
+.soli-saison:has(input:focus-visible) { outline: 2px solid var(--ivoire); outline-offset: 2px; }
+#soliflore { padding-top: 0; }
+@media (max-width: 900px) {
+  .soli-outils { flex-wrap: wrap; gap: 8px; padding: 8px var(--gouttiere); }
+  .soli-cherche { flex: 1 1 100%; }
+  .soli-outils .soli-menus { flex: 1 1 100%; margin-inline: calc(var(--gouttiere) * -1); padding: 0 var(--gouttiere); }
+}
+.soli-familles { display: flex; flex-wrap: wrap; gap: 4px; }
+.soli-familles button { min-height: 36px; padding: 0 12px; border: 1px solid var(--ligne); border-radius: 999px; background: none; color: var(--ivoire-2); font: 600 14px/1 var(--texte); cursor: pointer; }
+.soli-familles button[aria-checked='true'] { background: var(--ivoire); border-color: var(--ivoire); color: var(--nuit); }
+.soli-compte { margin: 0 0 14px; font-size: 14px; color: var(--ivoire-2); }
+.soli-grille { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.soli { display: grid; justify-items: start; gap: 4px; padding: 14px; border: 1px solid var(--ligne); border-radius: 8px; background: var(--nuit-2); }
+.soli-dessin { justify-self: stretch; height: 240px; margin: 4px 0; }
+.soli-dessin img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; }
+.soli b { font: 400 21px/1.15 var(--calli); letter-spacing: 0; }
+.soli .latin { color: var(--ivoire-2); }
+.soli-sens { font-size: 14px; font-style: italic; color: var(--ivoire-1); min-height: 1.2em; }
+.soli-coloris { display: flex; gap: 4px; margin-top: 4px; }
+.soli-coloris i { width: 12px; height: 12px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgb(var(--fg-rgb) / 0.25); }
+.soli-mois { font-size: 14px; color: var(--ivoire-2); }
+.soli-prendre { margin-top: 8px; min-height: 40px; padding: 0 16px; font-size: 14px; }
+.soli-prendre:disabled { background: none; border-color: var(--ligne); color: var(--ivoire-2); cursor: default; }
+.hors-saison .soli-dessin { opacity: 0.55; }
+.soli-plus { margin: 18px 0 0; }
+.pour-repondre { margin: 0 0 16px; padding: 12px 16px; border-left: 2px solid var(--or); color: var(--ivoire); }
+@media (max-width: 900px) { .soli-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .soli { padding: 12px; } .soli b { font-size: 18px; } .soli-dessin { height: 200px; } }
+.saison-plus { display: inline-flex; align-items: center; min-height: 44px; margin-top: 10px; color: var(--ivoire); }
+
+/* ---------- the hook on a phone (owner, 2026-10-31): the bouquet on top, whole and unveiled, its many colours in full,
+   then the words under it, the first screen ending on « À offrir ou à garder »; the mark, the prices and the doors follow */
+@media (max-width: 900px) {
+  .accroche { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding-top: 0; background: var(--nuit); }
+  .accroche-texte { display: contents; }
+  .accroche-texte::before { content: none; }
+  .accroche-texte > * { order: 3; position: relative; z-index: 2; }
+  .accroche-texte > .sur-titre, .accroche-texte > .accroche-titre, .accroche-texte > .accroche-sous { order: 1; }
+  .accroche-texte > .fourchette { order: 4; }
+  .accroche-texte > .portes { order: 5; }
+  .accroche-texte > .sur-titre { margin-top: 0; }
+  .accroche-sous { margin-bottom: 28px; }
+  /* the bouquet fades out at the middle of the title's first line (owner, 2026-11-01): the window runs 72 px into the
+     title, its fade ends 44 px above its foot (about the middle of a 46 px line), and the bouquet stands there (closeUp) */
+  .accroche-bouquet { order: 0; position: relative; inset: auto; flex: none; height: calc(var(--bq-h) + 110px); margin: 0 calc(var(--gouttiere) * -1) -72px;
+    background: radial-gradient(ellipse 70% 55% at 50% 45%, var(--halo) 0%, var(--nuit) 75%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 150px), transparent calc(100% - 44px));
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 150px), transparent calc(100% - 44px)); }
+  .accroche { --bq-h: calc(100svh - 96px - 215px); }
+  .poincon { margin: 0 0 18px; }
+}
+@media (max-width: 900px) and (max-height: 700px) { .accroche { --bq-h: calc(100svh - 86px - 200px); } }
+/* the script's tall loops need air between lines, and the gold stroke under « vivent » sits under its letters */
+.accroche-titre, .enveloppe-titre, .nom, .titre { line-height: 1.12; }
+.surligne { background-position: 0 86%; }
+
+/* ---------- the hook's title on two lines, « Des fleurs qui vivent / sur l'écran. » (owner, 2026-10-31): each line held
+   whole, the size taken from the width (the first line is about 8.4 em long in Italianno) */
+.accroche-titre { max-width: none; }
+.accroche-titre .ligne { display: block; white-space: nowrap; }
+.accroche .sur-titre { margin-bottom: 30px; }
+@media (min-width: 901px) { .accroche-titre { font-size: clamp(40px, 4.9vw, 72px); } }
+@media (max-width: 900px) { .accroche-titre { font-size: min(calc((100vw - 2 * var(--gouttiere)) / 8.8), 64px); }
+  .accroche .sur-titre { margin-bottom: 22px; } }
+/* the doors: the mark in black, beside the title */
+.porte { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 12px; }
+.porte-signe { grid-column: 2; grid-row: 1; }
+.porte-titre { grid-column: 1; grid-row: 1; }
+.porte-texte, .porte-suite { grid-column: 1 / -1; }
+.porte-signe svg { margin: 0; stroke: var(--blanc); }
+/* « À offrir ou à garder. » on a line of its own (owner, 2026-10-31) */
+.accroche-sous .ligne { display: block; }
+
+/* ---------- contrast everywhere (owner, 2026-10-31): the quiet steps stay dark enough to read on white */
+.tuile-info, .tuile-info b, .etat-scene, .prix-sous, .compo, .usage-texte, .poincon, .fourchette { color: var(--ivoire-1); }
+.tuile-info b { font-weight: 700; }
+.sur-titre { font-size: 14px; }
+.btn-prix { border-left-color: rgb(255 255 255 / 0.4); }
+/* each product of the catalogue in a fine frame */
+.grille:not(.grille-soli) > li > button { box-sizing: border-box; padding: 10px 10px 12px; border: 1px solid rgb(var(--fg-rgb) / 0.16); border-radius: 6px; transition: border-color 0.2s; }
+.grille:not(.grille-soli) > li > button:hover { border-color: rgb(var(--fg-rgb) / 0.4); }
+.grille li[aria-current='true'] > button { border-color: var(--ivoire); }
+.grille li[aria-current='true'] .tuile-scene { box-shadow: none; }
+/* the composer shows colours, not light: no cast shadow on the flowers nor under the vase (owner, 2026-10-31) */
+.compose #bouquet svg [filter^="url(#cs"] { filter: none; }
+.compose #bouquet .sol { display: none; }
+
+/* ---------- the composer, a page of its own (owner, 2026-10-31): the bouquet on two thirds, the composition on the right
+   third, edge to edge, white, no shadow; the rest of the shop steps out while one composes */
+.compose-retour { display: none; }
+.note { background: var(--nuit); color: var(--ivoire); box-shadow: none; border: 1px solid var(--ligne); border-radius: 6px; --papier: var(--nuit); --encre: var(--ivoire); }
+body.compose .retour, body.compose .accroche, body.compose #collection, body.compose main > section:not(#vitrine), body.compose .pied,
+body.compose .barre, body.compose .fiche { display: none !important; }
+body.compose .compose-retour { all: unset; display: inline-flex; align-items: center; min-height: 40px; margin-bottom: 10px; cursor: pointer;
+  font: 700 15px/1.2 var(--texte); color: var(--ivoire); text-decoration: underline; text-underline-offset: 3px; }
+body.compose .compose-retour:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; }
+@media (min-width: 901px) {
+  body.compose .vitrine { grid-template-columns: minmax(0, 2fr) minmax(360px, 1fr); border-top: 0; }
+  body.compose .vitrine-scene { height: calc(100svh - 56px); }
+  body.compose .vitrine-cote { position: sticky; top: 56px; height: calc(100svh - 56px); overflow-y: auto; padding: 0; gap: 0;
+    background: var(--nuit); border-left: 1px solid var(--ligne); }
+  body.compose .note { max-width: none; min-height: 100%; padding: 24px 28px 28px; border: 0; border-radius: 0; }
+}
+@media (max-width: 900px) {
+  body.compose .note { padding: 16px 16px 24px; border: 0; border-radius: 0; }
+  body.compose .vitrine-cote { padding: 0; }
+}
+/* the magnifier: three quiet buttons in the scene's corner; zoomed, the window clips the drawing and a hand drags it */
+.vitrine-scene { overflow: hidden; }
+#bouquet { transform-origin: 50% 50%; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+.vitrine-scene.zoome { cursor: grab; touch-action: none; }
+.vitrine-scene.zoome:active { cursor: grabbing; }
+.vitrine-scene.zoome #bouquet { transition: none; }
+.loupe { position: absolute; right: 16px; bottom: 16px; z-index: 3; display: flex; border: 1px solid var(--ligne); border-radius: 999px; background: var(--nuit); }
+.loupe button { all: unset; display: grid; place-items: center; min-width: 40px; height: 40px; padding: 0 6px; cursor: pointer;
+  font: 700 17px/1 var(--texte); color: var(--ivoire); }
+.loupe button:disabled { color: rgb(var(--fg-rgb) / 0.3); cursor: default; }
+.loupe button:focus-visible { outline: 2px solid var(--or); outline-offset: -2px; border-radius: 999px; }
+#loupe-taux { min-width: 46px; font-size: 15px; border-inline: 1px solid var(--ligne); }
+@media (max-width: 900px) { .loupe { right: 10px; bottom: 10px; } .loupe button { min-width: 36px; height: 36px; } }
+.harmonies-titre { flex-basis: 100%; margin: 0 0 2px; font: 700 14px/1.3 var(--texte); letter-spacing: 0.12em; text-transform: uppercase; color: var(--or); }
+.harmonies button, .atelier-outils .outil { background: var(--nuit); color: var(--ivoire); border: 1px solid rgb(var(--fg-rgb) / 0.3); }
+.harmonies button[aria-pressed='true'] { background: var(--ivoire); color: var(--nuit); border-color: var(--ivoire); }
+#n-lignes tr[data-orig] { cursor: pointer; }
+.compose #n-lignes tr[data-orig]:hover > td { background: rgb(var(--fg-rgb) / 0.04); }
+.suivante { color: var(--ivoire-1); }
+/* four proposals now: they wrap on a phone too, under their title */
+@media (max-width: 900px) { .compose .harmonies { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; } }
+
+/* ---------- reading comfort (owner, 2026-10-31): the text one size up everywhere (the face is scaled, so every size
+   follows), nothing to select, no text cursor: the page is looked at and touched, not edited */
+body { -webkit-user-select: none; user-select: none; cursor: default; }
+input, textarea, select, [contenteditable] { -webkit-user-select: text; user-select: text; cursor: text; }
+select { cursor: pointer; }
+/* the line being changed: a neutral light grey from edge to edge of the panel */
+:root { --surligne: #f1f1f1; }
+.note { --note-pad: 26px; }
+body.compose .note { --note-pad: 28px; }
+@media (max-width: 900px) { body.compose .note { --note-pad: 16px; } }
+.ligne-palette > td { background: none; }
+
+/* ---------- one page per use (owner, 2026-10-31): the landing, the collection, a product, the composer, the soliflore,
+   the know-how. What each page adds is here. */
+/* the product and the composer open on the bouquet, right under the header's own line */
+.page-produit .vitrine, .page-atelier .vitrine { border-top: 0; }
+/* the bill's title and the try-on's are second-level headings now (the page's first is the bouquet's name) */
+.note-tete h2 { margin: 0 0 4px; font: 900 14px/1.4 var(--titre); letter-spacing: 0.16em; text-transform: uppercase; }
+.note.repliee .note-tete h2 { margin: 0; }
+.essai-encart { max-width: 520px; }
+/* the composition's column never grows past a phone's screen: the name field's default size (20 letters of the script
+   face) made the column 15 to 25 px wider than the screen; it now takes the column's width */
+.vitrine-cote > *, .nom-compo input { min-width: 0; }
+.nom-compo input { width: 100%; }
+/* on a phone a meaning's citation may break inside the bill: kept on one line, the longest pushed the table 8 px out */
+@media (max-width: 900px) { .note-table .sens-source { white-space: normal; } }
+.essai-encart h2 { margin: 0 0 6px; font: 400 24px/1.2 var(--calli); letter-spacing: 0; }
+
+/* the collection's tiles are links (each opens its product page), dressed as the buttons were */
+.grille a.tuile { display: block; width: 100%; box-sizing: border-box; padding: 10px 10px 12px; border: 1px solid rgb(var(--fg-rgb) / 0.16);
+  border-radius: 6px; color: inherit; text-decoration: none; cursor: pointer; transition: border-color 0.2s; }
+.grille a.tuile:hover { border-color: rgb(var(--fg-rgb) / 0.4); }
+.grille a.tuile:hover .tuile-bq { transform: scale(1.035); }
+.grille a.tuile:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; }
+
+/* the landing's life block stands over the hook's fading bouquet foot, as the collection did */
+.accroche + section { position: relative; z-index: 1; }
+
+/* « Ce que vous recevez »: six cards, a line mark each in the doors' hand, a title and one sentence (owner, 2026-10-31:
+   the plain list was too austere); framed like the collection's tiles, white, no shadow */
+.recevez { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 20px); }
+.recevez li { display: flex; flex-direction: column; gap: 6px; padding: 22px 22px 24px; border: 1px solid rgb(var(--fg-rgb) / 0.16); border-radius: 6px; background: var(--nuit); }
+.recevez svg { width: 28px; height: 28px; margin-bottom: 10px; fill: none; stroke: var(--blanc); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.recevez h3 { margin: 0; font: 400 26px/1.15 var(--calli); letter-spacing: 0; color: var(--blanc); }
+.recevez p { margin: 0; color: var(--ivoire-1); font-size: 16px; }
+@media (max-width: 900px) { .recevez { grid-template-columns: repeat(2, minmax(0, 1fr)); } .recevez li { padding: 18px 16px 20px; } .recevez h3 { font-size: 22px; } }
+/* one column on a narrow phone, each card on one line: the mark beside its words */
+@media (max-width: 560px) {
+  .recevez { grid-template-columns: minmax(0, 1fr); }
+  .recevez li { display: grid; grid-template-columns: 26px minmax(0, 1fr); column-gap: 14px; row-gap: 2px; padding: 16px 16px 18px; }
+  .recevez svg { grid-row: span 2; width: 26px; height: 26px; margin: 2px 0 0; }
+}
+
+/* the know-how: the film as a large 16:9 card, its words under it; three facts in a row */
+.film-grand { grid-template-columns: minmax(0, 1fr); gap: 18px; max-width: 1080px; margin: 0 0 clamp(44px, 6vw, 72px); }
+.film-grand .film-texte { gap: 8px; }
+.film-grand .film-texte b { font-size: clamp(30px, 3.4vw, 46px); }
+.film-grand .film-lecture { width: 84px; height: 84px; }
+.film-grand .film-lecture svg { width: 34px; height: 34px; }
+.chiffres-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 3vw, 40px); max-width: 1080px; }
+@media (max-width: 600px) {
+  .chiffres-3 { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .chiffres-3 li { flex-direction: row; align-items: baseline; gap: 14px; padding: 12px 0; }
+}
+/* the atelier's highlight: a white veil over the living bouquet, the flower one points at copied above it */
+.atelier-voile { position: absolute; inset: 0; background: rgb(var(--bg-rgb) / 0.72); pointer-events: none; }
+/* the chosen line, its colour from edge to edge of the panel: the table runs into the panel's padding, its outer cells
+   padded back (a cell's shadow is not painted in a collapsed table) */
+body.compose .note-table { width: calc(100% + 2 * var(--note-pad)); margin-inline: calc(var(--note-pad) * -1); }
+body.compose .note-table :is(th, td):first-child { padding-left: var(--note-pad); }
+body.compose .note-table :is(th, td):last-child { padding-right: var(--note-pad); }
+.note-table tr.change td, .note-table tr.change th { background: none; }
+#n-lignes tr.vise > td { background: var(--surligne); }
+/* ---------- the life block (owner, 2026-11-01): no rule above it, no frame round the bouquet; the cycle's canvas lies over
+   the bouquet's own box; three states under it */
+#vivant { border-top: 0; }
+.vivant-scene { padding: 0; background: none; border-radius: 0; }
+.cycle-boite { display: grid; justify-items: center; align-items: end; width: 100%; }
+.cycle-boite > * { grid-area: 1 / 1; }
+.cycle-etats { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.cycle-etats [aria-pressed='true'] { background: var(--ivoire); color: var(--nuit); border-color: var(--ivoire); }
+/* ---------- the product on a phone (owner, 2026-11-01): the first screen holds the bouquet, its name in the top left
+   corner, the size buttons in the top right, « Retouche » small on the right, then the gift setting and the purchase.
+   The bouquet sits over the words, under the buttons. */
+.scene-titre { display: none; }
+@media (max-width: 900px) {
+  body:not(.compose) .vitrine-scene { position: relative; height: calc(100svh - 56px - 270px); min-height: 300px; padding: 0; justify-content: flex-end; overflow: hidden; }
+  body:not(.compose) .scene-titre { display: block; position: absolute; left: var(--gouttiere); top: 12px; right: 140px; z-index: 1; pointer-events: none; }
+  .scene-nom { margin: 0; font: 400 34px/1.05 var(--calli); color: var(--blanc); }
+  .scene-compo { margin: 4px 0 0; font-size: 14px; line-height: 1.3; color: var(--ivoire-1); }
+  body:not(.compose) #bouquet { z-index: 2; }
+  body:not(.compose) .loupe { top: 10px; right: 10px; bottom: auto; z-index: 3; }
+  body:not(.compose) .composer-scene { position: absolute; right: 10px; bottom: 10px; z-index: 3; margin: 0; min-height: 34px; padding: 0 12px; gap: 6px; font-size: 14px; }
+  body:not(.compose) .composer-scene svg { width: 16px; height: 16px; }
+  body:not(.compose) .etat-scene { display: none; }
+  /* the card under it: no name (it is in the corner), the gift setting and the purchase first */
+  body:not(.compose) .vitrine-cote { padding-top: 12px; gap: 24px; }
+  .fiche .nom, .fiche .compo { display: none; }
+  .fiche { display: flex; flex-direction: column; }
+  .fiche > * { order: 5; }
+  .fiche > .prix-sous { order: 1; margin: 0 0 8px; font-size: 14px; }
+  .fiche > .usage { order: 2; margin: 0 0 10px; }
+  .fiche > .actions { order: 3; }
+  .fiche > .usage-texte { order: 4; margin-top: 12px; }
+}
+/* ---------- the gift's own settings, opened by « Pour offrir » (owner, 2026-11-01) */
+.cadeau { display: grid; gap: 10px; margin: 0 0 18px; padding: 16px 0; border-top: 1px solid var(--ligne); border-bottom: 1px solid var(--ligne); }
+.cadeau[hidden] { display: none; }
+.cadeau-mot, .cadeau-titre { margin: 0; font: 700 14px/1.3 var(--texte); letter-spacing: 0.1em; text-transform: uppercase; color: var(--or); }
+.cadeau textarea { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid rgb(var(--fg-rgb) / 0.25); border-radius: 6px; background: var(--nuit);
+  color: var(--ivoire); font: 500 17px/1.4 var(--texte); resize: vertical; }
+.cadeau textarea:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+.bientot-mot { margin-left: 6px; padding: 1px 7px; border: 1px solid rgb(var(--fg-rgb) / 0.3); border-radius: 999px; font-size: 14px; letter-spacing: 0.06em; color: var(--ivoire-1); }
+.papiers { display: flex; gap: 8px; margin-top: 8px; }
+.papiers i { width: 44px; height: 44px; border: 1px dashed rgb(var(--fg-rgb) / 0.3); border-radius: 6px; }
+.cadeau-note { margin: 4px 0 0; font-size: 14px; color: var(--ivoire-1); }
+.cadeau-page { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+/* the signature (optional), the music and the voice message (owner, 2026-11-02) */
+.cadeau-signe { margin: 8px 0 0; font: 700 14px/1.3 var(--texte); letter-spacing: 0.1em; text-transform: uppercase; color: var(--or); }
+.cadeau-champ { width: 100%; box-sizing: border-box; min-height: 46px; padding: 10px 12px; border: 1px solid rgb(var(--fg-rgb) / 0.45); border-radius: 6px;
+  background: var(--nuit); color: var(--ivoire); font: 500 17px/1.4 var(--texte); }
+.cadeau-champ:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+.cadeau-son { display: grid; gap: 14px; margin-top: 8px; }
+.cadeau-musique { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; min-height: 48px; font-size: 14px; color: var(--ivoire-2); }
+.cadeau-musique select { min-height: 40px; padding: 0 12px; border: 1px solid rgb(var(--fg-rgb) / 0.45); border-radius: 999px; background: var(--nuit); color: var(--ivoire); font: 400 16px/1 var(--texte); }
+.vocal-enr { display: grid; gap: 8px; }
+.vocal-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.vocal-actions audio { max-width: 100%; height: 40px; }
+/* the header's way back on the product page; no tab bar there: the room goes to the bouquet and the purchase */
+.retour-lien { font-size: 15px; color: var(--ivoire); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.page-produit .onglets { display: none !important; }
+@media (max-width: 900px) {
+  .page-produit .pied { padding-bottom: 32px; }
+  body.page-produit:not(.compose) .vitrine-scene { height: calc(100svh - 56px - 230px); }
+  .fiche > .cadeau { order: 3; }
+  .fiche > .actions { order: 4; }
+}
+/* ---------- the atelier on a phone (owner, 2026-11-01): the bouquet above, on 70 % of the screen, zoomed on its flowers
+   (atelier.mjs), the size buttons in its top right corner; the bill and its colours below, on the other 30 %, scrolling
+   by themselves */
+@media (max-width: 900px) {
+  body.page-atelier { overflow: hidden; }
+  body.page-atelier .vitrine-scene { position: fixed; left: 0; right: 0; top: 56px; bottom: auto; z-index: 6; height: calc(70svh - 56px); padding: 0;
+    justify-content: center; background: var(--nuit); border-bottom: 1px solid var(--ligne); overflow: hidden; }
+  body.page-atelier .vitrine-cote { position: fixed; left: 0; right: 0; bottom: 0; height: 30svh; overflow-y: auto; overscroll-behavior: contain;
+    padding: 0; background: var(--nuit); }
+  body.page-atelier .loupe { top: 8px; right: 8px; bottom: auto; }
+  body.page-atelier .loupe button { min-width: 32px; height: 32px; font-size: 15px; }
+  body.page-atelier #loupe-taux { min-width: 40px; font-size: 14px; }
+}
+/* hold to compare in the bouquet's lower left corner, a little smaller than the bill's tools */
+.comparer-scene { position: absolute; left: 12px; bottom: 12px; z-index: 3; min-height: 30px; padding: 0 12px; font-size: 14px; background: var(--nuit); }
+.comparer-scene[hidden] { display: none; }
+/* the way back to the card in the bouquet's top left corner */
+body.compose .retour-scene { position: absolute; left: 12px; top: 10px; z-index: 3; margin: 0; min-height: 32px; font-size: 14px; }
+
+/* ---------- 2026-11-01 (owner): three ways to buy, the basket, the ways to pay in black, unwrapping, targets */
+/* gift, for me, for several: three equal parts, as wide as the purchase under it */
+.fiche .usage { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; max-width: 460px; }
+.fiche .usage button { min-height: 44px; padding: 0 8px; font-size: 15px; white-space: nowrap; }
+.fiche .actions .btn-achat { width: 100%; max-width: 460px; justify-content: center; }
+/* the ways to pay: small black marks under the purchase, quiet */
+.moyens { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 10px 0 0; color: var(--ivoire); opacity: 0.78; }
+.marque-paiement { width: 26px; height: 18px; fill: currentColor; }
+.marque-paiement.m-visa, .marque-paiement.m-americanexpress, .marque-paiement.m-paypal { width: 30px; }
+.marque-mot { font: 700 12px/1 var(--texte); letter-spacing: 0.04em; font-style: normal; }
+/* how many, and for whom */
+.plusieurs { display: grid; gap: 12px; margin: 14px 0 18px; padding: 16px 0; border-top: 1px solid var(--ligne); border-bottom: 1px solid var(--ligne); max-width: 460px; }
+.plusieurs[hidden] { display: none; }
+.quantite { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.pas { display: inline-flex; align-items: center; border: 1px solid var(--ligne); border-radius: 999px; }
+.pas button { min-width: 44px; min-height: 44px; border: 0; background: transparent; font: 500 22px/1 var(--texte); color: var(--ivoire); cursor: pointer; }
+.pas button:disabled { opacity: 0.3; cursor: default; }
+.pas output { min-width: 32px; text-align: center; font: 700 18px/1 var(--texte); }
+.destinataires { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.destinataires li { display: grid; gap: 8px; padding: 12px; border: 1px solid var(--ligne); border-radius: 8px; }
+.dest-titre { margin: 0; font: 700 15px/1.2 var(--texte); }
+.destinataires label { display: grid; gap: 4px; font-size: 14px; color: var(--ivoire-2); }
+.destinataires input, .destinataires textarea, .destinataires select { width: 100%; box-sizing: border-box; min-height: 44px; padding: 8px 10px;
+  border: 1px solid rgb(var(--fg-rgb) / 0.25); border-radius: 6px; background: var(--nuit); color: var(--ivoire); font: 500 17px/1.35 var(--texte); }
+/* the gift paper by its way of unwrapping */
+.deballages { display: grid; gap: 8px; margin-top: 8px; }
+.deballages button { display: grid; grid-template-columns: 44px 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; min-height: 56px;
+  padding: 8px 12px 8px 8px; border: 1px solid var(--ligne); border-radius: 8px; background: var(--nuit); text-align: left; cursor: pointer; color: var(--ivoire); }
+.deballages button i { grid-row: span 2; width: 44px; height: 44px; border: 1px dashed rgb(var(--fg-rgb) / 0.3); border-radius: 6px; }
+.deballages button b { font: 700 16px/1.2 var(--texte); }
+.deballages button span { font-size: 14px; color: var(--ivoire-2); }
+.deballages button[aria-checked='true'] { border-color: var(--ivoire); box-shadow: inset 0 0 0 1px var(--ivoire); }
+.cadeau-mot, .cadeau-titre { color: var(--ivoire); }
+/* the basket: its button in the header, its window */
+.panier-btn { position: relative; display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; padding: 0; border: 0; background: transparent; color: var(--ivoire-2); cursor: pointer; }
+.panier-btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linejoin: round; }
+.panier-btn:hover { color: var(--ivoire); }
+.panier-compte { position: absolute; top: 4px; right: 2px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 999px; background: var(--ivoire); color: var(--nuit);
+  font: 700 12px/18px var(--texte); font-style: normal; text-align: center; }
+.panier-compte[hidden] { display: none; }
+dialog.panier { width: min(520px, calc(100vw - 32px)); max-height: calc(100svh - 48px); margin: auto; padding: 0; border: 0; border-radius: 12px; background: var(--nuit); color: var(--ivoire); }
+dialog.panier::backdrop { background: rgb(var(--fg-rgb) / 0.35); }
+.panier-tete { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 6px 20px; }
+.panier-tete h2 { margin: 0; font: 400 40px/1 var(--calli); }
+.panier-fermer { min-width: 44px; min-height: 44px; border: 0; background: transparent; font: 400 28px/1 var(--texte); color: var(--ivoire); cursor: pointer; }
+.panier-liste { margin: 0; padding: 0 20px; list-style: none; }
+.panier-liste li { display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--ligne); }
+.panier-quoi b { display: block; font: 700 17px/1.25 var(--texte); }
+.panier-quoi span { font-size: 14px; color: var(--ivoire-2); }
+.panier-prix { justify-self: end; font: 700 16px/1 var(--texte); }
+.panier-retirer { justify-self: start; min-height: 44px; padding: 0; border: 0; background: transparent; color: var(--ivoire-2); font-size: 14px; text-decoration: underline; cursor: pointer; }
+.panier-vide { margin: 8px 20px 24px; color: var(--ivoire-2); }
+.panier-pied { padding: 16px 20px 20px; }
+.panier-pied[hidden], .panier-vide[hidden] { display: none; }
+.panier-total { display: flex; justify-content: space-between; margin: 0 0 12px; font: 700 18px/1 var(--texte); }
+.panier-pied .btn-achat { width: 100%; justify-content: center; }
+/* touch targets of at least 44 px (n7: header icons 32 px wide, the meaning chips and the atelier's pastille 32 px high,
+   the footers' links 22 px, the radios 13 px) */
+@media (max-width: 900px) {
+  .langues summary { min-width: 44px; }
+  .compte-lien { min-width: 44px; justify-content: center; }
+  .pays button { min-height: 44px; }
+  .tete .marque { padding: 9px 0; } /* 26 px of logotype in a 44 px target (a min-height would widen it by its ratio) */
+}
+.pied a, .recu a, .compte a { min-height: 44px; display: inline-flex; align-items: center; }
+input[type='radio'], input[type='checkbox'] { width: 22px; height: 22px; margin: 11px; accent-color: var(--ivoire); }
+/* the phone's section bar eases in three seconds after the page opens, wherever one is (owner, 2026-11-01) */
+@media (max-width: 900px) {
+  body:not(.onglets-prets) .onglets { transform: translateY(100%); visibility: hidden; }
+  body.accueil.onglets-prets .onglets { transform: none; visibility: visible; }
+  .onglets { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.6s; }
+}
+@media (max-width: 900px) {
+  .fiche .usage button { padding: 0 4px; font-size: 14px; }
+  .fiche .btn-achat { gap: 12px; padding: 0 20px; letter-spacing: 0.08em; }
+  .fiche .btn-achat > span:first-child { white-space: nowrap; }
+}
+@media (max-width: 900px) {
+  .fiche > .plusieurs { order: 3; }
+}
+/* a page in another language stays hidden the moment its phrase book takes (traduction.mjs, at most 2.5 s) */
+html.traduction body { visibility: hidden; }
+/* a phone's header holds the logotype, « J'ai reçu un bouquet », the basket, the account and the globe: the link stays on
+   one line (owner, 2026-11-01), its size following the screen's width */
+@media (max-width: 420px) {
+  .tete-droite { gap: 0; }
+  .tete-droite .recu-lien { white-space: nowrap; font-size: clamp(12px, 3.3vw, 14px); margin-right: 4px; }
+}
+/* the business invoice in the basket (owner, 2026-11-01) */
+.case { display: flex; align-items: center; gap: 4px; min-height: 44px; font-size: 15px; color: var(--ivoire); cursor: pointer; }
+.case input { margin: 11px 8px 11px 0; }
+.pro { display: grid; gap: 10px; margin: 4px 0 14px; padding: 12px; border: 1px solid var(--ligne); border-radius: 8px; }
+.pro[hidden] { display: none; }
+.pro label:not(.case) { display: grid; gap: 4px; font-size: 14px; color: var(--ivoire-2); }
+.pro input[type='text'], .pro textarea { width: 100%; box-sizing: border-box; min-height: 44px; padding: 8px 10px; border: 1px solid rgb(var(--fg-rgb) / 0.25);
+  border-radius: 6px; background: var(--nuit); color: var(--ivoire); font: 500 17px/1.35 var(--texte); }
+.pro .case { font-size: 14px; line-height: 1.3; }
+.pro-note { margin: 0; font-size: 14px; color: var(--ivoire-2); }
+/* the price per day of bloom, and who sells (n7) */
+.prix-jour { margin: -4px 0 10px; font-size: 14px; color: var(--ivoire-2); }
+.vendeur { margin: 14px 0 0; max-width: 460px; font-size: 14px; line-height: 1.45; color: var(--ivoire-2); }
+.vendeur a { color: var(--ivoire); text-underline-offset: 3px; }
+@media (max-width: 900px) {
+  .fiche > .prix-jour, .fiche > .prix-offert { order: 1; }
+  .fiche > .vendeur { order: 4; }
+}
+/* ---------- the life block (owner, 2026-11-01): a large bouquet, its title, a pager over four bouquets and two states.
+   On a computer the bouquet holds the left and the words the right; on a phone the title comes first, above the vase. */
+.vivant { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); grid-template-areas: 'scene titre' 'scene commandes'; row-gap: 28px; }
+.vivant-titre { grid-area: titre; align-self: end; margin: 0; }
+.vivant-scene { grid-area: scene; }
+.vivant-commandes { grid-area: commandes; align-self: start; display: grid; gap: 22px; justify-items: start; }
+.cycle-pager { display: flex; align-items: center; gap: 4px; }
+.cycle-fleche { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: none; color: var(--ivoire); cursor: pointer; }
+.cycle-fleche svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.cycle-pager-milieu { display: grid; justify-items: center; min-width: 190px; }
+.cycle-nom { margin: 0; font: italic 600 21px/1.2 var(--texte); color: var(--ivoire); }
+.cycle-points { display: flex; }
+.cycle-points button { display: grid; place-items: center; width: 44px; height: 32px; padding: 0; border: 0; background: none; cursor: pointer; }
+.cycle-points button::before { content: ''; width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--ivoire-2); }
+.cycle-points button[aria-current]::before { background: var(--ivoire); border-color: var(--ivoire); }
+.cycle-etats .btn { min-height: 44px; min-width: 132px; }
+@media (max-width: 900px) {
+  .vivant { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'titre' 'scene' 'commandes'; row-gap: 18px; }
+  .vivant-titre { text-align: center; }
+  .vivant-commandes { justify-items: center; }
+}
+
+/* ---------- Belai's Launcher (owner, 2026-11-01): one link per system, of equal weight, the visitor's own first and
+   marked; the marks in the doors' hand */
+.launcher { text-align: center; }
+.launcher .titre { margin: 0 auto 8px; }
+.launcher-sous { margin: 0 auto 32px; max-width: 30em; color: var(--ivoire-2); }
+.launcher-liens { display: grid; grid-template-columns: repeat(5, minmax(0, 132px)); justify-content: center; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.launcher-liens a { display: grid; justify-items: center; gap: 10px; padding: 20px 8px 16px; border: 1px solid rgb(var(--fg-rgb) / 0.18); border-radius: 4px;
+  color: var(--ivoire); text-decoration: none; font-weight: 600; }
+.launcher-liens a:hover, .launcher-liens a:focus-visible { border-color: var(--ivoire); }
+.launcher-liens a.le-votre { border-color: var(--ivoire); box-shadow: inset 0 0 0 1px var(--ivoire); }
+.launcher-liens svg { width: 30px; height: 30px; fill: none; stroke: var(--ivoire); stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
+.launcher-liens svg.plein { fill: var(--ivoire); stroke: none; }
+@media (max-width: 900px) {
+  .launcher-liens { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+/* the reply time, said wherever one can write (owner, 2026-11-01) */
+.delai { margin: 2px 0 0; font-size: 14px; color: var(--ivoire-2); }
+.vendeur .delai { display: block; margin-top: 4px; }
+.pied .delai { max-width: 15em; line-height: 1.35; }
+.possede dd + dd { margin-top: 4px; }
+/* the owner's word on real flowers (savoir-faire) */
+.mot-atelier { margin: clamp(32px, 5vw, 56px) 0 0; max-width: 34em; padding-left: 18px; border-left: 1px solid rgb(var(--fg-rgb) / 0.25); }
+.mot-atelier p { margin: 0; font-size: 18px; line-height: 1.5; color: var(--ivoire); }
+.mot-atelier footer { margin-top: 8px; font-size: 14px; color: var(--ivoire-2); }
+.mot-atelier + .signature { margin-top: 28px; }
+/* ---------- lot C (owner, 2026-11-01): the soliflore given per 100 €, paying in instalments, the quick add, the list */
+.prix-offert { margin: -4px 0 10px; font-size: 14px; font-weight: 600; color: var(--ivoire); }
+.plusieurs-fois { margin: 6px 0 0; font-size: 14px; color: var(--ivoire-2); }
+.panier-offert { margin: 0 0 10px; font-size: 14px; color: var(--ivoire-2); }
+.panier-offert.acquis { color: var(--ivoire); font-weight: 600; }
+#grille li { position: relative; }
+.grille:not(.grille-soli) > li > button.ajout-rapide { position: absolute; top: 16px; right: 16px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  border: 1px solid rgb(var(--fg-rgb) / 0.18); border-radius: 50%; background: var(--nuit); color: var(--ivoire); cursor: pointer; }
+.grille:not(.grille-soli) > li > button.ajout-rapide:hover, .grille:not(.grille-soli) > li > button.ajout-rapide:focus-visible { border-color: var(--ivoire); }
+.ajout-rapide svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.grille:not(.grille-soli) > li > button.ajout-rapide.ajoute { background: var(--ivoire); color: var(--nuit); border-color: var(--ivoire); }
+.pas input { width: 64px; min-height: 44px; border: 0; background: transparent; text-align: center; font: 700 18px/1 var(--texte); color: var(--ivoire); -moz-appearance: textfield; }
+.pas input::-webkit-inner-spin-button, .pas input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.liste-coller summary { display: inline-flex; align-items: center; min-height: 44px; cursor: pointer; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+.liste-coller { display: grid; gap: 8px; }
+.liste-coller[open] { display: grid; }
+.liste-coller textarea { width: 100%; box-sizing: border-box; font: 14px/1.4 ui-monospace, monospace; }
+/* Korean: the hook's lines may wrap (a Korean line is longer than its French one; words stay whole, keep-all) */
+:lang(ko) .accroche-titre .ligne { white-space: normal; }
+/* ---------- the sun and the moon (owner, 2026-11-01): one button; in the header, and on a
+   narrow phone in the footer (the header has no room left there) */
+.theme-btn { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: none; color: var(--ivoire); cursor: pointer; }
+.theme-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+/* in light, the moon (to go dark); in the dark, the sun (to come back) */
+.theme-btn .soleil, :root[data-theme='dark'] .theme-btn .lune { display: none; }
+:root[data-theme='dark'] .theme-btn .soleil { display: block; }
+.pied .theme-btn { display: none; }
+@media (max-width: 420px) {
+  .tete .theme-btn { display: none; }
+  .pied .theme-btn { display: grid; margin-top: 8px; }
+}
+/* the purchase's words stay white on its blue, in both themes */
+:root[data-theme='dark'] .btn-achat { color: #fff; }
+.launcher-obs { margin: 28px auto 0; font-size: 14px; color: var(--ivoire-2); }
+.launcher-obs a { color: var(--ivoire); text-underline-offset: 3px; }
+/* the minimum age at the checkout (owner, 2026-11-01) */
+.age-case { margin: 4px 0 2px; }
+.age-note { margin: 0 0 8px; font-size: 14px; color: var(--ivoire); font-weight: 600; }
+/* the phone's bar: each word takes its own width, on one line (owner, 2026-11-01: « un seul mot qui tient sur la ligne »);
+   five equal cells cut the longer words of some languages in two */
+@media (max-width: 900px) {
+  /* the same space between the words as between the words and the screen's edges (owner, 2026-11-01) */
+  .onglets { grid-template-columns: repeat(4, auto); justify-content: space-evenly; padding-inline: 0; }
+  .onglets a { white-space: nowrap; padding-inline: 2px; }
+}
+/* between 360 and 380 px the logotype gives back a few pixels so « J'ai reçu un bouquet » keeps its one line */
+@media (max-width: 380px) { .marque, :lang(zh-Hans) .marque, :lang(ja) .marque, :lang(ko) .marque { height: 20px; } .tete .marque { padding: 12px 0; } }
+/* the label « Bouquets numériques » in the hook's top left corner on a phone (owner, 2026-11-01), over the bouquet */
+@media (max-width: 900px) {
+  .accroche-texte > .sur-titre { position: absolute; top: 14px; left: var(--gouttiere); z-index: 3; margin: 0; }
+}
+/* the sun and the moon in the hook's top right corner on a phone, facing « Bouquets numériques » (owner, 2026-11-01);
+   the header's and the footer's are not shown there */
+.theme-coin { display: none; }
+@media (max-width: 900px) {
+  .accroche > .theme-btn.theme-coin { display: grid; position: absolute; top: 1px; right: calc(var(--gouttiere) - 12px); z-index: 3; }
+  body:has(#accroche) .tete .theme-btn, body:has(#accroche) .pied .theme-btn { display: none; }
+}
+/* ---------- day to night without a jump (owner, 2026-11-01): the whole page fades from one theme to the other (a view
+   transition, the old page over the new one); where the browser has none, every colour eases instead */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.7s; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+html.theme-passe *, html.theme-passe *::before, html.theme-passe *::after {
+  transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease, fill 0.6s ease, stroke 0.6s ease, box-shadow 0.6s ease !important; }
+/* ---------- the soliflores (owner, 2026-11-01): a card opens the soliflore's own page; a quiet add to the basket in its
+   corner, the price in words, no big button */
+.soli { position: relative; padding: 0; }
+.soli-lien { display: grid; justify-items: start; gap: 4px; width: 100%; padding: 14px; color: inherit; text-decoration: none; border-radius: 8px; }
+.soli-lien:hover { background: rgb(var(--fg-rgb) / 0.03); }
+.soli-lien:focus-visible { outline: 2px solid var(--ivoire); outline-offset: 2px; }
+.soli-prix { margin-top: 6px; font-weight: 700; font-size: 15px; color: var(--ivoire); font-variant-numeric: tabular-nums; }
+.hors-saison .soli-prix { font-weight: 600; color: var(--ivoire-2); }
+.soli-grille > li > button.ajout-rapide { position: absolute; top: 10px; right: 10px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  border: 1px solid rgb(var(--fg-rgb) / 0.18); border-radius: 50%; background: var(--nuit); color: var(--ivoire); cursor: pointer; }
+.soli-grille > li > button.ajout-rapide:hover, .soli-grille > li > button.ajout-rapide:focus-visible { border-color: var(--ivoire); }
+.soli-grille > li > button.ajout-rapide.ajoute { background: var(--ivoire); color: var(--nuit); border-color: var(--ivoire); }
+/* one soliflore's own page: the flower on the left (a placeholder until drawn), its card on the right */
+.fleur-scene { display: grid; place-items: center; gap: 12px; min-height: min(70svh, 640px); }
+.fleur-dessin { width: min(420px, 80vw); height: min(72vh, 640px); }
+.fleur-dessin img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; }
+.fleur-retour { margin: 0 0 6px; font-size: 14px; }
+.fleur-retour a { color: var(--ivoire-2); text-underline-offset: 3px; }
+.fleur-sens { display: block; margin: 4px 0 12px; font-size: 16px; }
+.fleur-coloris { display: flex; flex-wrap: wrap; gap: 2px; margin: 10px 0 4px; }
+.fleur-coloris button { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; }
+.fleur-coloris i { width: 24px; height: 24px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgb(var(--fg-rgb) / 0.25); }
+.fleur-coloris button[aria-checked='true'] i { box-shadow: 0 0 0 2px var(--nuit), 0 0 0 3.5px var(--ivoire); }
+.fleur-usage { grid-template-columns: repeat(2, 1fr) !important; margin-top: 14px; }
+.page-fleur .actions .btn-achat[disabled] { background: none; color: var(--ivoire-2); border-color: var(--ligne); cursor: default; }
+/* the soliflore's page keeps its card whole on a phone: the flower, then its name, its colours and the purchase, in order
+   (the bouquet card's phone layout hides the name and reorders for the bouquet) */
+.fleur-scene .bientot { margin: 0; max-width: 30em; text-align: center; font: italic 400 14px/1.4 var(--texte); letter-spacing: 0; text-transform: none; color: var(--ivoire-2); }
+@media (max-width: 900px) {
+  .page-fleur .vitrine-scene { position: relative; height: auto; min-height: 0; padding: 20px var(--gouttiere) 0; overflow: visible; justify-content: center; }
+  .page-fleur .fleur-dessin { width: 100%; height: 52vh; }
+  .page-fleur .fiche .nom, .page-fleur .fiche .compo { display: block; }
+  .page-fleur .fiche > * { order: 0; }
+}
+/* the hook's verb being typed: a thin caret after its last letter (owner, 2026-11-01) */
+.surligne.tape::after { content: ''; display: inline-block; width: 1.5px; height: 0.72em; margin-left: 0.06em; background: currentColor; vertical-align: -0.04em; }
+/* on a phone the title's second line, « sur votre écran. », is centred for the balance (owner, 2026-11-01) */
+@media (max-width: 900px) { .accroche-titre .ligne + .ligne { text-align: center; } }
+/* the hook (owner, 2026-11-01): the prices right under the promise, the maker's mark under the doors */
+@media (min-width: 901px) {
+  .accroche-texte > .fourchette { margin: 0 0 30px; }
+  .accroche-texte > .poincon { margin: 14px 0 0; }
+}
+@media (max-width: 900px) {
+  .accroche-texte > .fourchette { margin: 0 0 14px; }
+  .accroche-texte > .poincon { order: 6; margin: 12px 0 18px; }
+}
+/* ---------- the soliflores' menus (owner, 2026-11-01): sort by price, colour, meaning; a pill that says the menu and its
+   choice, a list that opens under it on the page's own ground */
+.soli-menus { display: flex; flex-wrap: wrap; gap: 8px; flex-basis: 100%; }
+.menu { position: relative; }
+.menu-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 12px 0 16px; border: 1px solid var(--ligne);
+  border-radius: 999px; background: var(--nuit-2); color: var(--ivoire); font: 400 15px/1 var(--texte); cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s; }
+.menu-btn:hover, .menu-btn[aria-expanded='true'] { border-color: rgb(var(--fg-rgb) / 0.4); }
+.menu-btn:focus-visible { outline: 2px solid var(--ivoire); outline-offset: 2px; }
+.menu-nom { font: 600 12px/1 var(--texte); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ivoire-2); }
+.menu-val { font-style: italic; max-width: 22ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.menu-btn.menu-actif { border-color: var(--ivoire); }
+.menu-fleche { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform 0.2s; }
+.menu-btn[aria-expanded='true'] .menu-fleche { transform: rotate(180deg); }
+.menu-liste { position: absolute; z-index: 30; top: calc(100% + 6px); left: 0; min-width: 100%; width: max-content; max-width: min(340px, calc(100vw - 32px));
+  max-height: min(380px, 60vh); overflow-y: auto; overscroll-behavior: contain; margin: 0; padding: 6px; list-style: none;
+  border: 1px solid var(--ligne); border-radius: 14px; background: var(--nuit-2);
+  box-shadow: 0 18px 40px -14px rgb(var(--fg-rgb) / 0.28), 0 2px 6px rgb(var(--fg-rgb) / 0.06);
+  animation: menu-ouvre 0.16s cubic-bezier(0.16, 1, 0.3, 1); }
+.menu-liste.menu-droite { left: auto; right: 0; }
+@keyframes menu-ouvre { from { opacity: 0; transform: translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) { .menu-liste { animation: none; } }
+.menu-liste li { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 6px 12px; border-radius: 9px; color: var(--ivoire);
+  font: 400 15px/1.25 var(--texte); cursor: pointer; }
+.menu-liste li:hover, .menu-liste li:focus { background: rgb(var(--fg-rgb) / 0.06); outline: none; }
+.menu-liste li:focus-visible { box-shadow: inset 0 0 0 1px rgb(var(--fg-rgb) / 0.35); }
+.menu-liste li[aria-selected='true'] { font-weight: 600; }
+.menu-liste li[aria-selected='true']::after { content: ''; width: 10px; height: 6px; margin-left: 4px; border: solid currentColor; border-width: 0 0 1.6px 1.6px;
+  transform: translateY(-2px) rotate(-45deg); flex: none; }
+.menu-liste li[aria-disabled='true'] { color: var(--ivoire-2); opacity: 0.5; cursor: default; }
+.menu-liste li[aria-disabled='true']:hover { background: none; }
+.menu-texte { flex: 1; }
+.menu-n { font-size: 13px; color: var(--ivoire-2); font-variant-numeric: tabular-nums; }
+.menu-pastille { width: 16px; height: 16px; flex: none; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgb(var(--fg-rgb) / 0.18); }
+@media (max-width: 600px) {
+  .soli-menus { flex-wrap: nowrap; overflow-x: auto; margin-inline: calc(var(--gouttiere) * -1); padding: 2px var(--gouttiere); scrollbar-width: none; }
+  .soli-menus::-webkit-scrollbar { display: none; }
+  /* the row scrolls sideways; its lists are fixed under their button (soliflore.mjs), the bar stays held */
+  .menu { flex: none; }
+  .menu-val { max-width: 14ch; }
+}
+/* ---------- the product page (owner, 2026-11-01): « Retouche » above the zoomed bouquet; a hairline between the bouquet
+   and the card, like the header's edge; the composition folded among the details, opening on a framed list that scrolls */
+.composer-scene { position: relative; z-index: 4; }
+@media (min-width: 901px) { .page-produit .vitrine-cote { border-left: 1px solid var(--ligne); } }
+.composition summary { display: inline-flex; align-items: center; min-height: 40px; cursor: pointer; color: var(--ivoire); text-decoration: underline;
+  text-underline-offset: 3px; text-decoration-thickness: 1px; list-style: none; }
+.composition summary::-webkit-details-marker { display: none; }
+.composition summary::after { content: ' ↓'; white-space: pre; }
+.composition[open] summary::after { content: ' ↑'; }
+.compo-aide { margin: 4px 0 10px; max-width: 34em; }
+.composition .pays { margin: 0 0 10px; }
+.compo-boite { max-height: min(380px, 55svh); overflow-y: auto; overscroll-behavior: contain; padding: 0 14px; border: 1px solid var(--ligne); border-radius: 10px;
+  background: var(--nuit-2); --encre: var(--ivoire); }
+.compo-boite .note-table { font-size: 14px; }
+.compo-boite thead th { position: sticky; top: 0; z-index: 1; padding-top: 12px; background: var(--nuit-2); }
+.compo-boite .note-total > * { position: sticky; bottom: 0; background: var(--nuit-2); font-size: 18px; padding-bottom: 12px; }
+.compo-boite tbody tr { cursor: pointer; }
+.compo-boite tbody tr:hover > td { background: rgb(var(--fg-rgb) / 0.04); }
+.compo-boite .fleur { all: unset; display: flex; align-items: center; gap: 10px; width: 100%; cursor: pointer; text-align: left; }
+.compo-boite .fleur:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; border-radius: 4px; }
+.compo-boite .pastille { cursor: inherit; }
+.compo-boite tbody td:first-child { padding-left: 6px; }
+.compo-retouche { display: inline-flex; align-items: center; min-height: 40px; margin-top: 4px; color: var(--ivoire); text-underline-offset: 3px; }
+/* the list fits its frame at any width: small heads, the flower's column takes what is left, nothing scrolls sideways */
+.compo-boite { padding: 0 10px; overflow-x: hidden; }
+.compo-boite thead th { font-size: 12px; letter-spacing: 0.08em; }
+.compo-boite .note-table td:not(:first-child), .compo-boite .note-table th:not(:first-child) { white-space: nowrap; padding-left: 8px; }
+.compo-boite .fleur > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+.compo-boite .sens-source { white-space: normal; }
+/* ---------- the product card on a computer (owner, 2026-11-01): the name higher, then the composition to unfold, the
+   basket and the try-on, then for whom and the purchase, all on one column width; what it is and its price per day are
+   said on the phone only */
+@media (min-width: 901px) {
+  .page-produit .vitrine-cote { padding-top: clamp(20px, 2.4vw, 36px); }
+  .page-produit .fiche { max-width: 460px; }
+  .page-produit .fiche > :is(.compo, .prix-sous, .prix-jour) { display: none; }
+  .page-produit .fiche .nom { margin: 0 0 20px; }
+  .page-produit .fiche > .composition { margin: 0 0 16px; padding: 2px 0; border-top: 1px solid var(--ligne); border-bottom: 1px solid var(--ligne); font-size: 15px; color: var(--ivoire-2); }
+  .page-produit .fiche > .composition[open] { padding-bottom: 14px; }
+  .page-produit .fiche > .actions-2 { display: grid; gap: 8px; margin: 0 0 28px; }
+  .page-produit .fiche > .actions-2 .btn { justify-content: center; width: 100%; min-height: 46px; padding-inline: 16px; }
+  .page-produit .fiche > .usage { margin: 0 0 14px; }
+}
+/* on a phone the basket and the try-on stay under the purchase, who sells under them, the composition before the details */
+@media (max-width: 900px) {
+  .fiche > * { order: 7; }
+  .fiche > .actions-2 { order: 5; margin-top: 10px; }
+  .fiche > .vendeur { order: 6; }
+}
+@media (min-width: 901px) {
+  /* the composition's line reads as a row to unfold: its name in the card's small capitals, a chevron at the far end */
+  .page-produit .fiche > .composition > summary { display: flex; justify-content: space-between; align-items: center; width: 100%; min-height: 48px;
+    text-decoration: none; font: 700 14px/1.3 var(--texte); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ivoire); }
+  .page-produit .fiche > .composition > summary::after { content: ''; width: 8px; height: 8px; margin-right: 6px; border: solid currentColor;
+    border-width: 0 1.5px 1.5px 0; transform: translateY(-3px) rotate(45deg); transition: transform 0.2s; }
+  .page-produit .fiche > .composition[open] > summary::after { content: ''; transform: translateY(2px) rotate(-135deg); }
+  .page-produit .fiche > .composition > summary:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+}
+/* ---------- « Nous écrire » (owner, 2026-11-01): the site's own window, the message, then e-mail or phone to be answered at */
+.ecrire { position: relative; width: min(500px, calc(100vw - 32px)); max-height: calc(100svh - 32px); margin: auto; padding: 28px 28px 22px;
+  border: 1px solid var(--ligne); border-radius: 12px; background: var(--nuit-2); color: var(--ivoire); }
+.ecrire::backdrop { background: rgb(0 0 0 / 0.55); }
+.ecrire-form { display: grid; gap: 14px; }
+.ecrire h2 { margin: 0; font: 400 30px/1.1 var(--calli); letter-spacing: 0; }
+.ecrire-delai { margin: -6px 0 2px; font-size: 14px; color: var(--ivoire-2); }
+.ecrire-champ { display: grid; gap: 6px; font-size: 14px; color: var(--ivoire-2); }
+.ecrire-champ :is(input, textarea) { box-sizing: border-box; width: 100%; padding: 10px 14px; border: 1px solid rgb(var(--fg-rgb) / 0.45); border-radius: 8px;
+  background: var(--nuit); color: var(--ivoire); font: 400 17px/1.4 var(--texte); }
+.ecrire-champ input { min-height: 48px; }
+.ecrire-champ textarea { resize: vertical; min-height: 120px; }
+.ecrire-champ :is(input, textarea):focus-visible { outline: 2px solid var(--or); outline-offset: 1px; }
+.ecrire-par { display: grid; gap: 10px; margin: 0; padding: 0; border: 0; }
+.ecrire-par legend { margin-bottom: 8px; padding: 0; font: 700 14px/1.3 var(--texte); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ivoire); }
+.ecrire-choix { display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border: 1px solid var(--ligne); border-radius: 999px; }
+.ecrire-choix button { min-height: 40px; border: 0; border-radius: 999px; background: none; color: var(--ivoire-2); font: italic 400 16px/1 var(--texte); cursor: pointer; }
+.ecrire-choix button[aria-checked='true'] { background: var(--ivoire); color: var(--nuit); }
+.ecrire-choix button:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+.ecrire-pot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.ecrire-envoyer { width: 100%; justify-content: center; }
+.ecrire-envoyer:disabled { opacity: 0.6; cursor: progress; }
+.ecrire-etat { min-height: 1.4em; margin: 0; font-size: 15px; color: var(--ivoire); }
+.ecrire-etat:empty { min-height: 0; }
+.ecrire-etat a, .ecrire-note a { color: var(--ivoire); text-underline-offset: 3px; }
+.ecrire-note { margin: 0; font-size: 13px; color: var(--ivoire-2); }
+.ecrire-fermer { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: none;
+  color: var(--ivoire-2); font: 300 28px/1 var(--texte); cursor: pointer; }
+.ecrire-fermer:hover { color: var(--ivoire); background: rgb(var(--fg-rgb) / 0.06); }
+.ecrire > form[method='dialog'] { margin: 0; }
+@media (max-width: 600px) { .ecrire { padding: 22px 18px 18px; } .ecrire h2 { font-size: 26px; } }
+/* ---------- the hook's grid, after the owner's marked-up screen (2026-11-01) */
+@media (min-width: 901px) {
+  /* the welcome-back band breathes above and below its line */
+  .retour { padding: 14px var(--gouttiere); line-height: 1.4; }
+  /* the header: one rhythm between the section links, one between the right-hand items, all on the same middle line in
+     the same voice */
+  .nav { gap: 32px; }
+  .nav a { display: inline-flex; align-items: center; min-height: 48px; }
+  .tete-droite { gap: 20px; }
+  .tete-droite > * { display: inline-flex; align-items: center; min-height: 44px; }
+  .tete-droite :is(.recu-lien, .compte-lien, .langues summary, .retour-lien) { font: 400 15px/1 var(--texte); color: var(--ivoire-2); }
+  .tete-droite .recu-lien { color: var(--ivoire); }
+  .tete-droite .langues summary { min-height: 44px; }
+}
+/* the verb's gold line sits just under the letters (the font's box runs far below them: at 86 % it touched the next line) */
+.accroche-titre .surligne { background-position: 0 71%; }
+@media (min-width: 901px) {
+  /* one left edge for the mark, the label, the title, the sentence, the doors and the maker's mark: the title's N has no
+     side bearing to make up for */
+  .accroche-titre { margin-left: 0; font-size: clamp(40px, 4.1vw, 62px); }
+  /* the doors: the same two boxes, more room inside */
+  .portes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 600px; }
+  .porte { padding: 20px 22px 18px; }
+  /* the whole hook holds in the first screen, with air under its last line (the band, when shown, is taken off it) */
+  .accroche { min-height: calc(100svh - 57px); padding-bottom: clamp(40px, 6vh, 72px); }
+  body:has(#retour:not([hidden])) .accroche { min-height: calc(100svh - 57px - 47px); }
+}
+/* a low screen (a laptop with its browser's bars): the hook tightens so its last line keeps its air above the edge */
+@media (min-width: 901px) and (max-height: 820px) {
+  .accroche { padding-top: 20px; }
+  .accroche .sur-titre { margin-bottom: 8px; }
+  .accroche-titre { font-size: clamp(38px, 3.6vw, 54px); margin-bottom: 14px; }
+  .accroche-sous { font-size: 19px; margin-bottom: 10px; }
+  .accroche-texte > .fourchette { margin-bottom: 18px; }
+  .porte { padding: 14px 18px 14px; }
+  .porte-signe svg { width: 24px; height: 24px; margin-bottom: 6px; }
+  .porte-texte { display: none; }
+}
+/* the launcher follows the hook with no rule between them: the bouquet's foot runs on into it (owner, 2026-11-01) */
+main > #launcher { border-top: 0; }
+/* ---------- the hook, recomposed (owner, 2026-11-01): the bouquet in the middle and larger, the label in the top left
+   corner, the sentence with the film, the prices and two plain doors on the left, the title on one line at the bottom,
+   centred; no gold line under the verb */
+.accroche-titre .surligne { background: none; }
+.porte { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 22px; border: 1px solid var(--ligne);
+  border-radius: 10px; background: var(--nuit-2); }
+.porte:hover { border-color: rgb(var(--fg-rgb) / 0.45); background: var(--nuit-2); }
+.porte-titre { font: 400 24px/1.15 var(--calli); color: var(--ivoire); }
+.porte-fleche { font-size: 18px; color: var(--ivoire-2); transition: transform 0.2s; }
+.porte:hover .porte-fleche { transform: translateX(3px); }
+.accroche-film { color: var(--ivoire); text-underline-offset: 3px; white-space: nowrap; }
+@media (max-width: 900px) { .porte { padding: 14px 14px; } .porte-titre { font-size: 19px; } }
+@media (min-width: 901px) {
+  .accroche { display: block; padding: 0; }
+  .accroche-bouquet { left: 0; right: 0; }
+  .accroche-texte { display: grid; grid-template-columns: minmax(0, 500px) 1fr; grid-template-rows: auto 1fr auto auto auto 1fr auto;
+    min-height: inherit; box-sizing: border-box; padding: 22px var(--gouttiere) clamp(28px, 5vh, 56px); pointer-events: none; }
+  .accroche-texte > * { grid-column: 1; pointer-events: auto; }
+  .accroche-texte > .sur-titre { grid-row: 1; grid-column: 1 / -1; justify-self: start; margin: 0; }
+  .accroche-texte > .accroche-sous { grid-row: 3; margin: 0 0 14px; font-size: 20px; }
+  .accroche-texte > .fourchette { grid-row: 4; margin: 0 0 22px; }
+  .accroche-texte > .portes { grid-row: 5; grid-template-columns: 1fr; gap: 10px; max-width: 360px; }
+  .accroche-texte > .accroche-titre { grid-row: 7; grid-column: 1 / -1; justify-self: center; max-width: 100%; margin: 0; text-align: center; white-space: nowrap; }
+  .accroche-titre .ligne { display: inline; }
+  /* the doors hold « J'ai reçu un bouquet » on the landing: the header leaves it to them */
+  body:has(#accroche) .tete .recu-lien { display: none; }
+}
+@media (min-width: 901px) and (max-height: 820px) { .accroche { padding-top: 0; } .accroche-texte { padding-top: 16px; } }
+@media (min-width: 901px) {
+  .accroche .porte { display: flex; }
+  .accroche-texte > .portes { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
+  /* the title reads over the vase: a halo of the page's own ground under its letters */
+  .accroche-texte > .accroche-titre { text-shadow: 0 0 22px var(--nuit), 0 0 10px var(--nuit), 0 0 3px var(--nuit); }
+}
+@media (min-width: 901px) { .accroche-texte > .portes { max-width: 580px; } .accroche .porte-titre { font-size: 23px; white-space: nowrap; } }
+@media (min-width: 901px) {
+  /* the bouquet's foot melts into the page just above the title, so the title always reads on the ground, whatever hangs
+     from the vase (owner, 2026-11-01: the title at the bottom, centred) */
+  .accroche-bouquet { bottom: 0;
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 300px), rgba(0, 0, 0, 0.45) calc(100% - 200px), transparent calc(100% - 120px));
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 300px), rgba(0, 0, 0, 0.45) calc(100% - 200px), transparent calc(100% - 120px)); }
+}
+@media (min-width: 901px) {
+  /* the left column never runs under the flowers: narrower on a middle screen, its doors one under the other there */
+  .accroche-texte { grid-template-columns: minmax(0, min(500px, 30vw)) 1fr; }
+  .accroche-texte > .portes { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .accroche-texte > :is(.accroche-sous, .fourchette) { text-shadow: 0 0 14px var(--nuit), 0 0 4px var(--nuit); }
+}
+/* ---------- the hook, second pass (owner, 2026-11-01): no label, the prices small in the giving door, the bouquet whole in
+   its frame on the right with no fade, the title « Nos fleurs fleurissent sur votre écran. » much larger and heavier */
+.porte-mots { display: grid; gap: 4px; }
+.porte .fourchette { margin: 0; font-size: 12px; letter-spacing: 0.08em; color: var(--ivoire-2); text-shadow: none; }
+.accroche-titre { -webkit-text-stroke: 0.035em currentColor; paint-order: stroke fill; }
+@media (min-width: 901px) {
+  .accroche-bouquet { -webkit-mask-image: none; mask-image: none; }
+  .accroche-texte { grid-template-rows: 1fr auto auto 1fr auto; }
+  .accroche-texte > .accroche-sous { grid-row: 2; margin: 0 0 18px; }
+  .accroche-texte > .portes { grid-row: 3; }
+  .accroche-texte > .accroche-titre { grid-row: 5; font-size: clamp(52px, 5.4vw, 112px); line-height: 1.15; text-shadow: none; }
+}
+@media (min-width: 901px) and (max-height: 820px) { .accroche-texte > .accroche-titre { font-size: clamp(48px, 4.8vw, 92px); } }
+/* the title at the hook's foot is gone on a computer (owner, 2026-11-01): it stays for screen readers and the page's outline */
+@media (min-width: 901px) {
+  .accroche-texte > .accroche-titre { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .accroche-texte { grid-template-rows: 1fr auto auto 1fr; }
+}
+/* the hook's aura (halo.mjs): a canvas under everything in the hook, in the bouquet's colours, light and dark */
+.accroche-halo { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none; }
+.accroche-bouquet { background: none; }
+/* the landing is the collection: the bouquets right under the header */
+.collection-accueil { padding-top: clamp(20px, 2.4vw, 32px); }
+.soli { position: relative; }
+.soli > .soli-lien { position: relative; z-index: 1; }
+.soli > .ajout-rapide { z-index: 2; }
+/* « J'ai reçu un bouquet », a framed button in every header (owner, 2026-11-01) */
+.recu-bouton { display: inline-flex; align-items: center; min-height: 38px; padding: 0 16px; border: 1px solid rgb(var(--fg-rgb) / 0.55); border-radius: 999px;
+  color: var(--ivoire); font: 400 15px/1 var(--texte); text-decoration: none; white-space: nowrap; transition: background-color 0.2s, border-color 0.2s; }
+.recu-bouton:hover { border-color: var(--ivoire); background: rgb(var(--fg-rgb) / 0.05); }
+.recu-bouton:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+@media (max-width: 900px) { .recu-bouton { min-height: 34px; padding: 0 12px; font-size: 14px; } }
+@media (max-width: 400px) { .recu-bouton { padding: 0 10px; font-size: 13px; } }
+@media (max-width: 359px) { .recu-bouton .long { display: none; } }
+/* (a flex box drops the space that opens « un bouquet »: the button is a plain inline block, its height its line) */
+.tete .tete-droite > .recu-bouton { display: inline-block; min-height: 0; line-height: 36px; }
+@media (max-width: 900px) { .tete .tete-droite > .recu-bouton { line-height: 32px; } }
+/* ---------- the cards, after the owner's phone screen (2026-11-01): the name above the bouquet, the aura of its colours over
+   the whole card to its edges, the price at the foot beside a framed « Ajouter au panier » */
+.grille:not(.grille-soli) > li { position: relative; overflow: hidden; border: 1px solid rgb(var(--fg-rgb) / 0.16); border-radius: 8px; background: var(--nuit);
+  transition: border-color 0.2s; }
+.grille:not(.grille-soli) > li:hover { border-color: rgb(var(--fg-rgb) / 0.4); }
+.grille a.tuile { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; padding: 14px; border: 0; border-radius: 8px; background: none; }
+.grille a.tuile:hover { border: 0; }
+.grille .tuile-nom { margin: 0 0 8px; }
+.grille .tuile-scene { background: none; }
+.grille .tuile-info { align-items: center; min-height: 38px; margin-top: 10px; flex-direction: row; }
+.grille .tuile-info b { font: 600 16px/1.2 var(--texte); color: var(--ivoire); letter-spacing: 0.02em; }
+.ajout-rapide.ajout-texte { display: inline-flex; align-items: center; justify-content: center; width: auto; height: 38px; padding: 0 14px;
+  border: 1px solid rgb(var(--fg-rgb) / 0.55); border-radius: 999px; background: var(--nuit); color: var(--ivoire);
+  font: 600 12px/1 var(--texte); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; cursor: pointer; transition: background-color 0.2s, border-color 0.2s; }
+.grille:not(.grille-soli) > li > button.ajout-rapide.ajout-texte, .soli-grille > li > button.ajout-rapide.ajout-texte {
+  position: absolute; z-index: 2; top: auto; right: 14px; bottom: 14px; width: auto; height: 38px; padding: 0 14px; border-radius: 999px; }
+.ajout-rapide.ajout-texte:hover, .ajout-rapide.ajout-texte:focus-visible { border-color: var(--ivoire); }
+.grille:not(.grille-soli) > li > button.ajout-rapide.ajout-texte.ajoute, .soli-grille > li > button.ajout-rapide.ajout-texte.ajoute { background: var(--ivoire); color: var(--nuit); border-color: var(--ivoire); }
+/* the soliflores' cards speak the same way */
+.soli { overflow: hidden; padding-bottom: 14px; }
+.soli-grille .soli-prix { display: flex; align-items: center; min-height: 38px; margin-top: 6px; font: 600 16px/1.2 var(--texte); color: var(--ivoire); }
+.soli-grille > li > button.ajout-rapide.ajout-texte { height: 34px; padding: 0 11px; font-size: 11px; letter-spacing: 0.06em; right: 12px; bottom: 16px; }
+@media (max-width: 600px) {
+  .grille a.tuile { padding: 10px; }
+  .grille:not(.grille-soli) > li > button.ajout-rapide.ajout-texte { right: 10px; bottom: 10px; height: 32px; padding: 0 10px; font-size: 10.5px; letter-spacing: 0.04em; }
+  .grille .tuile-info { min-height: 32px; }
+  .grille .tuile-info b { font-size: 14px; }
+}
+@media (max-width: 600px) {
+  /* a phone's narrow card: the button takes the whole width under the price */
+  .grille:not(.grille-soli) > li { padding-bottom: 50px; }
+  .grille:not(.grille-soli) > li > button.ajout-rapide.ajout-texte { left: 10px; right: 10px; bottom: 10px; }
+  .soli { padding-bottom: 54px; }
+  .soli-grille > li > button.ajout-rapide.ajout-texte { left: 12px; right: 12px; bottom: 12px; }
+}
+/* ---------- bouquets or soliflores, one switch under the header (owner, 2026-11-01) */
+.bascule { display: flex; gap: 4px; width: max-content; margin: clamp(16px, 2vw, 24px) auto 0; padding: 4px; border: 1px solid var(--ligne); border-radius: 999px; }
+.bascule a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 24px; border-radius: 999px; color: var(--ivoire-2);
+  font: italic 400 17px/1 var(--texte); text-decoration: none; transition: background-color 0.2s, color 0.2s; }
+.bascule a:hover { color: var(--ivoire); }
+.bascule a[aria-current='page'] { background: var(--ivoire); color: var(--nuit); }
+.bascule a:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+.collection-accueil { padding-top: clamp(16px, 2vw, 24px); }
+/* a soliflore's card is narrow at every width: its button takes the whole width under the price */
+.soli { padding-bottom: 56px; }
+.soli-grille > li > button.ajout-rapide.ajout-texte { left: 14px; right: 14px; bottom: 14px; height: 34px; }
+/* the price and the button side by side while the card is wide enough; a narrow card puts the button under the price,
+   the whole width (the card's own width decides, not the screen's) */
+.grille:not(.grille-soli) > li { container-type: inline-size; }
+.grille:not(.grille-soli) > li > button.ajout-rapide.ajout-texte { height: 36px; padding: 0 12px; font-size: 11px; letter-spacing: 0.06em; }
+@container (max-width: 270px) {
+  .grille:not(.grille-soli) > li > a.tuile { padding-bottom: 54px; }
+  .grille:not(.grille-soli) > li > button.ajout-rapide.ajout-texte { left: 12px; right: 12px; bottom: 12px; }
+}
+@media (max-width: 600px) { .grille:not(.grille-soli) > li { padding-bottom: 0; } }
+/* the price row sits at the card's foot, beside its button, even in the large first card */
+.grille .tuile-info { margin-top: auto; padding-top: 10px; }
+/* ---------- the cards, third pass (owner, 2026-11-01): a white ground, the name above, the bouquets standing still with their
+   feet on one line (each card's scene runs down to the same foot), the flowers brought close and swaying under a pointer;
+   one pill at the foot: the price and a « + » in a circle */
+.grille:not(.grille-soli) > li { aspect-ratio: 3 / 4; padding-bottom: 0; background: var(--nuit); }
+@media (min-width: 901px) { .grille:not(.grille-soli) > li:first-child { aspect-ratio: auto; } }
+@media (max-width: 600px) { .grille:not(.grille-soli) > li { aspect-ratio: 3 / 4.5; } }
+.grille:not(.grille-soli) > li > a.tuile { display: flex; flex-direction: column; height: 100%; box-sizing: border-box; padding: 14px 14px 66px; }
+.grille:not(.grille-soli) .tuile-scene { flex: 1 1 0; min-height: 0; aspect-ratio: auto; padding: 4% 4% 0; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+.grille:not(.grille-soli) .tuile-bq { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.grille a.tuile:hover .tuile-bq { transform: none; }
+.grille:not(.grille-soli) > li.proche .tuile-bq { transform: scale(1.7); }
+@media (prefers-reduced-motion: reduce) { .grille:not(.grille-soli) .tuile-bq { transition: none; } }
+/* the pill: the price, then a « + » in a circle */
+:is(.grille, .soli-grille) > li > .ajout-prix { position: absolute; z-index: 2; left: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 5px 0 16px;
+  border: 1px solid rgb(var(--fg-rgb) / 0.5); border-radius: 999px; background: var(--nuit); color: var(--ivoire); cursor: pointer;
+  font: 600 15px/1 var(--texte); letter-spacing: 0.02em; font-variant-numeric: tabular-nums; transition: border-color 0.2s, background-color 0.2s, color 0.2s; }
+:is(.grille, .soli-grille) > li > .ajout-prix:hover, :is(.grille, .soli-grille) > li > .ajout-prix:focus-visible { border-color: var(--ivoire); }
+:is(.grille, .soli-grille) > li > .ajout-prix:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+.ajout-prix-plus { position: relative; width: 30px; height: 30px; border-radius: 50%; background: var(--ivoire); flex: none; transition: transform 0.25s; }
+.ajout-prix-plus::before, .ajout-prix-plus::after { content: ''; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.6px; border-radius: 1px; background: var(--nuit);
+  transform: translate(-50%, -50%); }
+.ajout-prix-plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+:is(.grille, .soli-grille) > li > .ajout-prix:hover .ajout-prix-plus { transform: rotate(90deg); }
+:is(.grille, .soli-grille) > li > .ajout-prix.ajoute { background: var(--ivoire); color: var(--nuit); border-color: var(--ivoire); }
+:is(.grille, .soli-grille) > li > .ajout-prix.ajoute .ajout-prix-plus { background: var(--nuit); }
+:is(.grille, .soli-grille) > li > .ajout-prix.ajoute .ajout-prix-plus::before, :is(.grille, .soli-grille) > li > .ajout-prix.ajoute .ajout-prix-plus::after { background: var(--ivoire); }
+@media (max-width: 600px) { :is(.grille, .soli-grille) > li > .ajout-prix { left: 10px; bottom: 10px; height: 36px; padding-left: 12px; gap: 8px; font-size: 14px; } .ajout-prix-plus { width: 28px; height: 28px; }
+  .grille:not(.grille-soli) > li > a.tuile { padding: 10px 10px 56px; } }
+/* the soliflores' cards: white, the same pill */
+.soli { padding-bottom: 66px; background: var(--nuit); }
+.soli-grille .soli-prix:empty { display: none; }
+@media (max-width: 600px) { .soli { padding-bottom: 58px; } }
+/* ---------- bouquets or soliflores: a bar under the header, held there while the page scrolls (owner, 2026-11-01) */
+.bascule { position: sticky; top: 57px; z-index: 15; display: flex; justify-content: center; gap: 8px; width: auto; margin: 0; padding: 0 var(--gouttiere);
+  border: 0; border-bottom: 1px solid var(--ligne); border-radius: 0; background: rgb(var(--bg-rgb) / 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.bascule a { min-height: 46px; padding: 0 20px; border-radius: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; background: none; }
+.bascule a[aria-current='page'] { background: none; color: var(--ivoire); border-bottom-color: var(--ivoire); }
+@media (max-width: 900px) and (max-height: 500px) { .bascule { top: 0; } }
+:is(.grille, .soli-grille) > li > .ajout-prix { width: auto; box-sizing: border-box; }
+/* the languages' menu (owner, 2026-11-01): a gap under the globe and room inside, no shadow, a hairline edge */
+.langues ul { top: calc(100% + 10px); padding: 10px 8px; box-shadow: none; border: 1px solid var(--ligne); }
+/* a narrow phone: « J'ai reçu » alone, so the header (and the languages' menu under its globe) stays within the screen */
+@media (max-width: 389px) { .recu-bouton .long { display: none; } }
+/* ---------- (owner, 2026-11-01) the « + »: a black ring and a black cross on white; the pill at the card's foot, on the right;
+   the close-up fills the whole card, past its scene (the card clips it, not the scene) */
+:is(.grille, .soli-grille) > li > .ajout-prix { left: auto; right: 14px; }
+@media (max-width: 600px) { :is(.grille, .soli-grille) > li > .ajout-prix { left: auto; right: 10px; } }
+.ajout-prix-plus { box-sizing: border-box; background: var(--nuit); border: 1.5px solid var(--ivoire); }
+.ajout-prix-plus::before, .ajout-prix-plus::after { background: var(--ivoire); }
+:is(.grille, .soli-grille) > li > .ajout-prix.ajoute .ajout-prix-plus { background: var(--nuit); border-color: var(--nuit); }
+:is(.grille, .soli-grille) > li > .ajout-prix.ajoute .ajout-prix-plus::before, :is(.grille, .soli-grille) > li > .ajout-prix.ajoute .ajout-prix-plus::after { background: var(--ivoire); }
+.grille:not(.grille-soli) .tuile-scene { overflow: visible; }
+.grille:not(.grille-soli) > li { overflow: hidden; }
+.grille:not(.grille-soli) .tuile-nom { position: relative; z-index: 2; }
+/* the month's collection, named on the bar's left; the switch stays in the middle */
+.bascule { position: sticky; }
+.bascule-titre { position: absolute; left: var(--gouttiere); top: 50%; transform: translateY(-50%); font: 700 13px/1.2 var(--texte); letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ivoire); white-space: nowrap; }
+@media (max-width: 760px) {
+  .bascule { justify-content: flex-end; gap: 0; }
+  .bascule-titre { font-size: 11px; letter-spacing: 0.08em; }
+  .bascule a { padding: 0 12px; font-size: 16px; }
+}
+@media (max-width: 760px) {
+  .bascule { align-items: center; }
+  .bascule-titre { position: static; transform: none; margin-right: auto; padding-right: 8px; white-space: normal; max-width: 8.5em; line-height: 1.25; }
+}
+@media (max-width: 760px) { .bascule-titre { max-width: 11em; overflow-wrap: normal; word-break: keep-all; hyphens: none; } }
+/* ---------- the « + » smaller (owner, 2026-11-01), as far from the pill's edge as the price is from the other */
+:is(.grille, .soli-grille) > li > .ajout-prix { height: 36px; padding: 0 12px; gap: 10px; font-size: 14px; }
+:is(.grille, .soli-grille) > li > .ajout-prix .ajout-prix-plus { width: 20px; height: 20px; border-width: 1.3px; }
+.ajout-prix-plus::before, .ajout-prix-plus::after { width: 9px; height: 1.3px; }
+@media (max-width: 600px) {
+  :is(.grille, .soli-grille) > li > .ajout-prix { height: 32px; padding: 0 10px; gap: 8px; font-size: 13px; }
+  :is(.grille, .soli-grille) > li > .ajout-prix .ajout-prix-plus { width: 18px; height: 18px; }
+}
+/* (measured on an iPhone 14, a Pixel 7 and a Galaxy S21: below 430 px « J'ai reçu un bouquet » pushes the globe off the
+   screen; « J'ai reçu » alone fits them all) */
+@media (max-width: 430px) { .recu-bouton .long { display: none; } }
+/* ---------- the framed buttons (owner, 2026-11-01): « Essayer » in the header, « J'ai reçu un bouquet » at the foot */
+:is(.essayer-bouton, .recu-bouton) { display: inline-block; box-sizing: border-box; padding: 0 16px; border: 1px solid rgb(var(--fg-rgb) / 0.55); border-radius: 999px;
+  color: var(--ivoire); font: 400 15px/36px var(--texte); text-decoration: none; white-space: nowrap; transition: background-color 0.2s, border-color 0.2s; }
+:is(.essayer-bouton, .recu-bouton):hover { border-color: var(--ivoire); background: rgb(var(--fg-rgb) / 0.05); }
+:is(.essayer-bouton, .recu-bouton):focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+.tete .tete-droite > .essayer-bouton { display: inline-block; min-height: 0; line-height: 36px; }
+@media (max-width: 900px) { .tete .tete-droite > .essayer-bouton { line-height: 32px; padding: 0 14px; font-size: 14px; } }
+/* in the phone's bar, the last place, framed */
+.onglets { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: auto; align-items: center; }
+.onglets > .recu-bouton { display: inline-block; justify-self: center; min-height: 0; padding: 0 12px; font-size: 14px; line-height: 32px; }
+/* in the footer, under the atelier's words */
+.pied .recu-bouton { display: inline-block; min-height: 0; margin-top: 16px; line-height: 38px; }
+/* ---------- the header's two buttons in the cards' own hand (owner, 2026-11-01: « ils ne vibent pas avec le reste »): the
+   same pill as the price's, a hairline ring, the count of the basket inside it, beside its bag, not over it */
+.tete .tete-droite > .essayer-bouton, .tete .tete-droite > .panier-btn { display: inline-flex; align-items: center; gap: 8px; box-sizing: border-box; height: 36px;
+  min-height: 0; min-width: 0; padding: 0 14px; border: 1px solid rgb(var(--fg-rgb) / 0.5); border-radius: 999px; background: var(--nuit); color: var(--ivoire);
+  font: 600 14px/1 var(--texte); letter-spacing: 0.02em; text-decoration: none; line-height: 1; }
+.tete .tete-droite > :is(.essayer-bouton, .panier-btn):hover { border-color: var(--ivoire); background: var(--nuit); }
+.tete .tete-droite > .panier-btn { padding: 0 12px; }
+.tete .tete-droite > .panier-btn svg { width: 18px; height: 18px; stroke-width: 1.5; }
+.tete .tete-droite > .panier-btn .panier-compte { position: static; min-width: 0; height: auto; padding: 0; border-radius: 0; background: none; color: var(--ivoire);
+  font: 600 14px/1 var(--texte); font-variant-numeric: tabular-nums; }
+@media (max-width: 900px) {
+  .tete .tete-droite > :is(.essayer-bouton, .panier-btn) { height: 32px; padding: 0 12px; font-size: 13px; }
+  .tete .tete-droite > .panier-btn { padding: 0 10px; gap: 6px; }
+  .tete .tete-droite > .panier-btn .panier-compte { font-size: 13px; }
+}
+/* ---------- « Mes fleurs » is a profile mark on every screen (owner, 2026-11-02); its name stays for screen readers (aria-label) */
+.tete .compte-lien { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 44px; color: var(--ivoire); }
+.tete .compte-lien span { display: none; }
+.tete .compte-lien svg { display: block; width: 22px; height: 22px; }
+/* the basket's count sits in the pill's middle: lining figures (the text face draws old-style figures, low on the line) */
+.tete .tete-droite > .panier-btn .panier-compte { font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'lnum' 1, 'tnum' 1; line-height: 1; }
+/* ---------- the bee's talk (owner, 2026-11-02; abeille.mjs): a small window in the corner, the bee sitting on its edge */
+.abeille-chat { position: fixed; z-index: 45; right: 20px; bottom: 20px; display: flex; flex-direction: column; width: min(360px, calc(100vw - 32px));
+  height: min(480px, calc(100svh - 120px)); border: 1px solid rgb(var(--fg-rgb) / 0.2); border-radius: 16px; background: var(--nuit); color: var(--ivoire); }
+.abeille-chat[hidden] { display: none; }
+.abeille-tete { display: flex; align-items: center; justify-content: space-between; padding: 12px 10px 10px 18px; border-bottom: 1px solid var(--ligne); }
+.abeille-nom { font: 400 22px/1.1 var(--calli); }
+.abeille-fermer { display: grid; place-items: center; flex: none; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--ivoire-2); cursor: pointer; }
+/* a drawn cross, centred (the calligraphic « × » sat off its circle, owner 2026-11-02) */
+.abeille-fermer svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+.abeille-fermer:focus-visible { outline: 2px solid var(--ivoire); outline-offset: 2px; }
+.abeille-fermer:hover { background: rgb(var(--fg-rgb) / 0.06); color: var(--ivoire); }
+.abeille-fil { flex: 1; overflow-y: auto; overscroll-behavior: contain; margin: 0; padding: 14px 14px 6px; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.abeille-msg { max-width: 86%; padding: 9px 13px; border-radius: 14px; font: 400 15px/1.4 var(--texte); overflow-wrap: anywhere; }
+.abeille-msg.de-abeille { align-self: flex-start; border: 1px solid var(--ligne); border-bottom-left-radius: 4px; }
+.abeille-msg.de-atelier { align-self: flex-start; border: 1px solid rgb(var(--fg-rgb) / 0.45); border-bottom-left-radius: 4px; }
+.abeille-msg.de-atelier b { font: 700 11px/1.4 var(--texte); letter-spacing: 0.1em; text-transform: uppercase; }
+/* the conversation model thinking: three dots */
+.abeille-pense { display: inline-flex; gap: 5px; padding: 12px 14px; }
+.abeille-pense span { width: 6px; height: 6px; border-radius: 50%; background: var(--ivoire-2); animation: abeille-pense 1.2s infinite ease-in-out; }
+.abeille-pense span:nth-child(2) { animation-delay: 0.15s; }
+.abeille-pense span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes abeille-pense { 0%, 80%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .abeille-pense span { animation: none; } }
+/* (owner, 2026-11-02) said plainly, under the talk */
+.abeille-mention { margin: 0; padding: 6px 16px 0; font: italic 400 12px/1.3 var(--texte); color: var(--ivoire-2); text-align: center; }
+.abeille-liens { display: grid; gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; }
+.abeille-liens a { display: block; padding: 8px 12px; border: 1px solid rgb(var(--fg-rgb) / 0.3); border-radius: 12px; color: inherit; font: 500 14px/1.3 var(--texte); text-decoration: none; }
+.abeille-liens a:hover, .abeille-liens a:focus-visible { border-color: currentColor; background: rgb(var(--fg-rgb) / 0.05); }
+.abeille-choix { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 8px; }
+.abeille-choix button { padding: 6px 12px; border: 1px solid rgb(var(--fg-rgb) / 0.45); border-radius: 999px; background: none; color: inherit; font: 500 14px/1.3 var(--texte); text-align: left; cursor: pointer; }
+.abeille-choix button:hover, .abeille-choix button:focus-visible { border-color: currentColor; background: rgb(var(--fg-rgb) / 0.06); }
+.abeille-choix .abeille-choix-humain { border-style: dashed; }
+.abeille-msg.de-visiteur { align-self: flex-end; background: var(--ivoire); color: var(--nuit); border-bottom-right-radius: 4px; }
+.abeille-ecrire { margin-top: 6px; padding: 0 12px; height: 30px; border: 1px solid rgb(var(--fg-rgb) / 0.55); border-radius: 999px; background: var(--nuit);
+  color: var(--ivoire); font: 600 13px/1 var(--texte); cursor: pointer; }
+.abeille-form { display: flex; gap: 8px; padding: 10px 12px 12px; border-top: 1px solid var(--ligne); }
+.abeille-form input { flex: 1; min-width: 0; height: 40px; padding: 0 14px; border: 1px solid rgb(var(--fg-rgb) / 0.35); border-radius: 999px; background: var(--nuit);
+  color: var(--ivoire); font: 400 16px/1 var(--texte); }
+.abeille-form input:focus-visible { outline: 2px solid var(--or); outline-offset: 1px; }
+.abeille-form button { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--ivoire); color: var(--nuit); cursor: pointer; }
+.abeille-form button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+/* its words beside it: the welcome, a new answer from the atelier */
+.abeille-bulle { position: fixed; z-index: 46; left: 0; top: 0; max-width: min(320px, calc(100vw - 24px)); padding: 12px 16px; border: 1px solid rgb(var(--fg-rgb) / 0.25);
+  border-radius: 16px; background: var(--nuit); color: var(--ivoire); font: 400 16px/1.4 var(--texte); cursor: pointer; will-change: transform; }
+.abeille-bulle[hidden] { display: none; }
+/* the collection's waiting cards (index.html), replaced by the bouquets (owner, 2026-11-03: no shape for the bouquet, the
+   price pill drawn, « plus premium »): the name and the pill where the card has them, one soft light crossing every card
+   at once (the gradient is fixed to the screen) */
+.grille > li.tuile-attente { pointer-events: none; }
+.ta-nom, .ta-montant { position: absolute; display: block; border-radius: 999px; }
+.ta-nom { left: 14px; top: 18px; width: min(56%, 220px); height: 14px; }
+@media (min-width: 901px) { .grille > li.tuile-attente:first-child .ta-nom { top: 20px; width: min(44%, 300px); height: 18px; } }
+.ta-prix { position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 10px; height: 36px; padding: 0 12px;
+  box-sizing: border-box; border: 1px solid rgb(var(--fg-rgb) / 0.12); border-radius: 999px; }
+.ta-prix .ta-montant { position: static; width: 54px; height: 10px; }
+.ta-plus { width: 20px; height: 20px; box-sizing: border-box; border: 1.3px solid rgb(var(--fg-rgb) / 0.14); border-radius: 50%; }
+.ta-nom, .ta-montant { background: linear-gradient(100deg, rgb(var(--fg-rgb) / 0.055) 42%, rgb(var(--fg-rgb) / 0.13) 50%, rgb(var(--fg-rgb) / 0.055) 58%) fixed;
+  background-size: 300vw 100%; background-position: -170vw 0; }
+@media (prefers-reduced-motion: no-preference) { .ta-nom, .ta-montant { animation: reflet 1.9s cubic-bezier(0.4, 0, 0.2, 1) infinite; } }
+@keyframes reflet { from { background-position: -170vw 0; } to { background-position: -30vw 0; } }
+@media (max-width: 600px) {
+  .ta-nom { left: 10px; top: 14px; height: 12px; }
+  .ta-prix { right: 10px; bottom: 10px; height: 32px; padding: 0 10px; gap: 8px; }
+  .ta-prix .ta-montant { width: 46px; }
+  .ta-plus { width: 18px; height: 18px; }
+}
+/* the welcome (owner, 2026-11-03): a larger card under Bzzou, room around the words, a title in the shop's hand */
+.abeille-bulle.accueil { max-width: min(480px, calc(100vw - 32px)); padding: 22px 28px 20px; border-radius: 22px; font: 400 17px/1.5 var(--texte); }
+.abeille-bulle p { margin: 0 0 10px; }
+.abeille-bulle-titre { font: 400 38px/1.05 var(--titre); }
+/* its globe in the card's upper right corner, the title kept clear of it */
+.abeille-langues { position: absolute; top: 6px; right: 10px; }
+.abeille-langues summary { min-height: 40px; color: var(--ivoire); }
+.abeille-langues summary span { display: inline !important; }
+.abeille-bulle.accueil .abeille-bulle-titre { padding-right: 56px; }
+.abeille-bulle-fin { margin-bottom: 0 !important; font-weight: 700; }
+@media (max-width: 600px) { .abeille-bulle.accueil { padding: 18px 20px 16px; font-size: 16px; } .abeille-bulle-titre { font-size: 32px; } }
+/* the still bee: where the bee does not fly (reduced motion); for the keyboard it shows only when reached */
+.abeille-bouton { position: fixed; z-index: 44; right: 20px; bottom: 20px; display: grid; place-items: center; width: 52px; height: 52px; padding: 0;
+  border: 1px solid rgb(var(--fg-rgb) / 0.3); border-radius: 50%; background: var(--nuit); color: var(--ivoire); cursor: pointer; }
+.abeille-bouton svg { width: 30px; height: 30px; fill: #f2c94c; stroke: #1f1a16; stroke-width: 1.2; }
+.abeille-bouton svg .aile { fill: #fff; opacity: 0.9; }
+.abeille-bouton-cache:not(:focus-visible) { position: fixed; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); border: 0; }
+.sur-abeille, .sur-abeille * { cursor: pointer !important; }
+/* the header's switch: Bzzou drawn in a black outline, crossed out while she sleeps */
+.bzzou-bascule { display: inline-grid; place-items: center; min-width: 40px; min-height: 44px; padding: 0; border: 0; background: none; color: var(--ivoire); cursor: pointer; }
+.bzzou-bascule svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.bzzou-bascule .bzzou-barre { display: none; }
+.bzzou-bascule.eteinte { color: var(--ivoire-2); }
+.bzzou-bascule.eteinte .bzzou-barre { display: inline; }
+@media (max-width: 900px) {
+  /* above the phone's bar */
+  .abeille-chat { right: 8px; left: 8px; bottom: 64px; width: auto; height: min(70svh, 520px); }
+  .abeille-bouton { right: 12px; bottom: 70px; }
+}
+/* ---------- the audience-measurement cookies, asked first (owner, 2026-11-02; consentement.mjs): a band at the foot of the
+   screen, the page still usable around it; « Refuser » and « Accepter » side by side, the same weight */
+.consentement { position: fixed; z-index: 48; left: 20px; bottom: 20px; width: min(520px, calc(100vw - 32px)); box-sizing: border-box; padding: 18px 20px;
+  border: 1px solid rgb(var(--fg-rgb) / 0.3); border-radius: 10px; background: var(--nuit); color: var(--ivoire); box-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.45); }
+.consentement[hidden] { display: none; }
+.consentement h2 { margin: 0 0 6px; font: 700 15px/1.3 var(--texte); letter-spacing: 0; }
+.consentement p { margin: 0 0 14px; font-size: 14px; line-height: 1.45; color: var(--ivoire-2); }
+.consentement a { color: var(--ivoire); text-decoration: underline; text-underline-offset: 3px; }
+.consentement-choix { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.consentement-choix .btn { min-height: 44px; }
+@media (max-width: 600px) { .consentement { left: 16px; right: 16px; bottom: 16px; width: auto; } }
+/* « Cookies » at the foot of every page, beside « Confidentialité »: a button that looks like its neighbours */
+.cookies-lien { min-height: 44px; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: inherit; cursor: pointer; }
+.cookies-lien:hover { text-decoration: underline; }
+/* ---------- the gift card of a free amount (owner, 2026-11-02; carte-cadeau.html) */
+.montants { display: flex; flex-wrap: wrap; gap: 10px; }
+.montants .btn[aria-pressed='true'] { background: var(--ivoire); color: var(--nuit); border-color: var(--ivoire); }
+.page-carte .ap-etapes { margin: 0; padding-left: 1.4em; display: grid; gap: 6px; color: var(--ivoire-1); font-size: 15px; }
+
+/* the legal page (legal.html): one column to read, on the white ground */
+.legal { max-width: 46em; margin: 0 auto; padding: 32px var(--gouttiere) 72px; color: var(--ivoire-1); line-height: 1.55; }
+.legal h1 { margin: 0 0 4px; }
+.legal h2 { margin: 48px 0 8px; padding-top: 24px; border-top: 1px solid var(--ligne); font-size: 1.6em; font-weight: 600; scroll-margin-top: 24px; }
+.legal h3 { margin: 20px 0 4px; font-size: 1.05em; font-weight: 600; scroll-margin-top: 24px; }
+.legal p, .legal ul { margin: 0 0 10px; }
+.legal ul { padding-left: 20px; }
+.legal li { margin-bottom: 6px; }
+.legal a { color: inherit; text-underline-offset: 3px; }
+.legal code { font-size: 0.85em; font-style: normal; }
+.legal .maj { color: var(--ivoire-2); font-size: 0.95em; }
+.legal .sommaire { columns: 2 200px; margin-top: 18px; }
+/* what the owner still has to decide before the sales open (docs/LEGAL-A-TRANCHER.md) */
+.legal .a-remplir { padding: 0 3px; border-radius: 4px; background: rgb(255 214 102 / 0.45); }

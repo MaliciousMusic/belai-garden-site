@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Guichet | Belai’s Garden</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="squelette.css">
+  <!-- guichet.html: the atelier's panel (owner, 2026-11-02: « le CM reçoit les tickets en direct sur son panel admin »). The
+       talks the bee handed over, the newest first, looked at again every three seconds; one opened, its messages and a box
+       to answer. It signs with the counter's secret (GUICHET_JETON on the server), typed once and kept in this browser.
+       Not a page of the shop: nothing links to it. -->
+  <style>
+    body.guichet { min-height: 100vh; }
+    .g-tete { display: flex; align-items: center; gap: 16px; padding: 14px 24px; border-bottom: 1px solid var(--ligne); }
+    .g-tete h1 { margin: 0; font: 400 28px/1 var(--calli); }
+    .g-tete .g-etat { margin-left: auto; font-size: 14px; color: var(--ivoire-2); }
+    .g-tete button, .g-connexion button, .g-repondre button, .g-actions button { height: 36px; padding: 0 16px; border: 1px solid rgb(var(--fg-rgb) / 0.55); border-radius: 999px;
+      background: var(--nuit); color: var(--ivoire); font: 600 14px/1 var(--texte); cursor: pointer; }
+    .g-connexion { display: grid; gap: 12px; max-width: 380px; margin: 80px auto; }
+    .g-connexion input, .g-repondre textarea { padding: 10px 14px; border: 1px solid rgb(var(--fg-rgb) / 0.35); border-radius: 10px; background: var(--nuit); color: var(--ivoire); font: 400 16px/1.4 var(--texte); }
+    .g-corps { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; height: calc(100vh - 66px); }
+    .g-liste { margin: 0; padding: 0; list-style: none; overflow-y: auto; border-right: 1px solid var(--ligne); }
+    .g-liste button { all: unset; box-sizing: border-box; display: grid; gap: 4px; width: 100%; padding: 12px 18px; border-bottom: 1px solid var(--ligne); cursor: pointer; }
+    .g-liste button:hover, .g-liste button[aria-current='true'] { background: rgb(var(--fg-rgb) / 0.05); }
+    .g-liste .g-l1 { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--ivoire-2); }
+    .g-liste .g-l2 { font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .g-liste .g-nouveaux { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--ivoire); color: var(--nuit); font: 700 12px/20px var(--texte); text-align: center; font-variant-numeric: lining-nums; }
+    .g-liste .clos { opacity: 0.55; }
+    .g-conv { display: flex; flex-direction: column; min-width: 0; }
+    .g-info { padding: 12px 24px; border-bottom: 1px solid var(--ligne); font-size: 14px; color: var(--ivoire-2); display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .g-actions { margin-left: auto; display: flex; gap: 8px; }
+    .g-messages { flex: 1; overflow-y: auto; margin: 0; padding: 18px 24px; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .g-repondre { display: flex; gap: 10px; padding: 12px 24px 18px; border-top: 1px solid var(--ligne); }
+    .g-repondre textarea { flex: 1; resize: vertical; min-height: 48px; }
+    .g-vide { margin: auto; color: var(--ivoire-2); }
+  </style>
+</head>
+<body class="guichet">
+  <header class="g-tete">
+    <h1>Guichet</h1>
+    <span class="g-etat" id="g-etat"></span>
+    <button type="button" id="g-notifs" hidden>Activer les notifications</button>
+    <button type="button" id="g-sortir" hidden>Se déconnecter</button>
+  </header>
+  <form class="g-connexion" id="g-connexion" hidden>
+    <label for="g-jeton">Le secret du guichet</label>
+    <input id="g-jeton" type="password" autocomplete="current-password" required>
+    <button>Entrer</button>
+    <p class="g-erreur" id="g-erreur" role="alert"></p>
+  </form>
+  <div class="g-corps" id="g-corps" hidden>
+    <ul class="g-liste" id="g-liste" aria-label="Conversations"></ul>
+    <section class="g-conv" aria-live="polite">
+      <div class="g-info" id="g-info" hidden><span id="g-quoi"></span><div class="g-actions"><button type="button" id="g-clore">Clore</button></div></div>
+      <ol class="g-messages abeille-fil" id="g-messages"><li class="g-vide">Choisissez une conversation.</li></ol>
+      <form class="g-repondre" id="g-repondre" hidden><textarea id="g-texte" rows="2" placeholder="Votre réponse…" required></textarea><button>Envoyer</button></form>
+    </section>
+  </div>
+  <script type="module" src="guichet.mjs"></script>
+</body>
+</html>

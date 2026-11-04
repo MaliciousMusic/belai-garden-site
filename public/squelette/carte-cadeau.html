@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <!-- « Nous écrire » opens the site's own window, the message goes to the server (owner, 2026-11-01) -->
+  <script type="module" src="ecrire.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Une carte cadeau | Belai’s Garden</title>
+  <meta name="description" content="Un montant que vous choisissez, à dépenser sur la boutique : la personne choisit elle-même ses fleurs.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="squelette.css">
+</head>
+<body class="page-carte">
+  <!-- The gift card of a free amount (owner, 2026-11-02: « carte_cadeau : oui », a function to build). Prepared here, not
+       plugged into the payment: its purchase asks for the account (connexion.mjs), then says the payment is not open. It is
+       sent as a bouquet is: a link, and apart a code. How it is spent, its limits and how long it lasts are the owner's
+       questions (RAPPORT-DECISIONS-2NOV.md): this page promises none of it. -->
+  <header class="tete tete-simple">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <nav class="nav-compte" aria-label="Retour"><a href="index.html">La collection</a><a href="groupe.html">Offrir à plusieurs</a></nav>
+  </header>
+
+  <main class="bloc formulaire">
+    <p class="sur-titre">Offrir</p>
+    <h1 class="titre">Une carte cadeau</h1>
+    <p class="chapo">Un montant que vous choisissez, à dépenser sur la boutique : la personne choisit elle-même ses fleurs, bouquets ou
+      soliflores.</p>
+
+    <form id="carte" novalidate>
+      <fieldset>
+        <legend>Le montant</legend>
+        <div class="montants" role="group" aria-label="Montants proposés">
+          <button type="button" class="btn btn-trait btn-petit" data-montant="25">25 €</button>
+          <button type="button" class="btn btn-trait btn-petit" data-montant="50">50 €</button>
+          <button type="button" class="btn btn-trait btn-petit" data-montant="100">100 €</button>
+        </div>
+        <label class="champ">Ou le montant de votre choix, en euros<input type="number" id="c-montant" min="10" max="500" step="1" inputmode="numeric" value="50"></label>
+        <p class="cadeau-note">Le prix se paie dans votre monnaie ; aucun frais de l’atelier.</p>
+      </fieldset>
+      <fieldset>
+        <legend>Ce qui l’accompagne</legend>
+        <label class="champ">Votre mot<textarea id="c-mot" rows="3" maxlength="280" placeholder="Pour des fleurs de ton choix, quand tu voudras."></textarea></label>
+        <label class="champ">Signé, si vous le voulez<input id="c-signe" maxlength="30" autocomplete="off" placeholder="Votre prénom, un surnom, ou rien"></label>
+        <label class="champ">Sa page en
+          <select id="c-langue">
+            <option value="fr">Français</option><option value="en">English</option><option value="es">Español</option>
+            <option value="it">Italiano</option><option value="de">Deutsch</option><option value="ja">日本語</option>
+            <option value="zh">中文</option><option value="fil">Filipino</option>
+            <option value="pt">Português</option><option value="ko">한국어</option>
+          </select></label>
+      </fieldset>
+      <ol class="ap-etapes">
+        <li>Vous choisissez le montant, vous écrivez le mot, signé ou non, vous payez.</li>
+        <li>Vous recevez un lien et un code, à lui transmettre séparément, quand et comme vous voulez.</li>
+        <li>La personne ouvre le lien, entre le code, et choisit ses fleurs sur la boutique.</li>
+      </ol>
+      <button type="submit" class="btn btn-achat" id="c-acheter">Offrir cette carte · <span id="c-prix">50 €</span></button>
+      <p class="merci-etat" id="c-etat" role="status"></p>
+    </form>
+  </main>
+
+  <dialog class="bouchon" id="bouchon" aria-labelledby="bouchon-texte">
+    <p id="bouchon-texte"></p>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
+  <footer class="pied-court">
+    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
+    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
+  </footer>
+
+  <script type="module" src="carte-cadeau.mjs"></script>
+</body>
+</html>

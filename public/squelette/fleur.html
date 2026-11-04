@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <!-- « Nous écrire » opens the site's own window, the message goes to the server (owner, 2026-11-01) -->
+  <script type="module" src="ecrire.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Soliflore | Belai’s Garden</title>
+  <meta name="description" content="Une seule fleur de saison dans son vase, au prix de sa tige chez un fleuriste, dessinée d’après de vraies fleurs. Elle fane doucement sur trente jours.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Soliflore | Belai’s Garden">
+  <meta property="og:description" content="Une fleur de saison, pour dire une chose précise, au prix de sa tige.">
+  <meta property="og:image" content="partage.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-extralight.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-black.woff2">
+  <link rel="stylesheet" href="squelette.css">
+  <!-- the choreography's waiting state is set before the first paint (no flash); only on a first visit of this page (a
+       returning visitor wants the bouquets at once, n2 army), never with reduced motion or without JS -->
+  <script>(() => { let seen = false; try { seen = localStorage.getItem('scene-vue-soliflore') === '1'; localStorage.setItem('scene-vue-soliflore', '1'); } catch (_) {}
+    if (!seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('scene');
+    // failsafe (jury n2): if the choreography never starts, nothing stays invisible
+    setTimeout(() => { if (!window.SCENE) document.documentElement.classList.remove('scene'); }, 4000); })();</script>
+</head>
+<body class="page-fleur">
+  <a class="evitement" href="#contenu">Aller au soliflore</a>
+  <!-- Skeleton of the shop (ch/squelette), one page per use (owner, 2026-10-31). Choices and reasons in SQUELETTE.md. -->
+  <header class="tete">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="savoir-faire.html">L’atelier</a>
+    </nav>
+    <div class="tete-droite">
+      <a href="compte.html" class="discret compte-lien" aria-label="Mes fleurs"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.7 3.7-5.6 7.2-5.6s6.3 1.9 7.2 5.6"/></svg><span>Mes fleurs</span></a>
+      <details class="langues">
+        <summary aria-label="Langue : français"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.8 2.6 14.2 0 17M12 3.5c-2.6 2.8-2.6 14.2 0 17"/></svg><span>FR</span></summary>
+        <ul>
+          <li><a href="#" aria-current="true" lang="fr">Français</a></li>
+          <li><a href="#" data-bouchon="langue" lang="en">English</a></li>
+          <li><a href="#" data-bouchon="langue" lang="zh-Hans">中文</a></li>
+          <li><a href="#" data-bouchon="langue" lang="de">Deutsch</a></li>
+          <li><a href="#" data-bouchon="langue" lang="es">Español</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- One soliflore's own page (owner, 2026-11-01: the purchase lives here, the soliflores' grid only adds to the basket): one
+         flower of the season in its vase, at the price of its stem at a florist, the vase offered; it fades over thirty days
+         like a bouquet. The drawing is the soliflore itself, baked from the engine (soliflores/<sid>/<k>.webp). -->
+    <section class="vitrine fleur-vitrine" aria-labelledby="f-nom">
+      <div class="vitrine-scene fleur-scene">
+        <div class="fleur-dessin" id="f-dessin" role="img" aria-label=""></div>
+      </div>
+      <div class="vitrine-cote">
+        <div class="fiche">
+          <p class="fleur-retour"><a href="soliflore.html" id="f-retour">← Les soliflores</a></p>
+          <h1 id="f-nom" class="nom"></h1>
+          <p class="compo"><em class="latin" id="f-latin"></em></p>
+          <p class="soli-sens fleur-sens" id="f-sens"></p>
+          <p class="prix-sous">Le prix de sa tige chez un fleuriste, vase offert.</p>
+          <p class="prix-sous" id="f-vase"></p>
+          <p class="prix-jour" id="f-jour"></p>
+          <div class="fleur-coloris" role="radiogroup" aria-label="Coloris" id="f-coloris"></div>
+          <p class="soli-mois" id="f-mois"></p>
+          <p class="pour-repondre" id="pour-repondre" hidden></p>
+          <!-- « Pour moi » first and chosen by default, as on a bouquet's page (owner, 2026-11-01) -->
+          <div class="usage fleur-usage" role="radiogroup" aria-label="Pour qui">
+            <button type="button" role="radio" aria-checked="true" data-usage="moi">Pour moi</button>
+            <button type="button" role="radio" aria-checked="false" data-usage="offrir">Pour offrir</button>
+          </div>
+          <div class="cadeau" id="cadeau">
+            <label class="cadeau-mot" for="mot">Votre mot</label>
+            <textarea id="mot" rows="3" maxlength="280" placeholder="Une pivoine, parce que tu m’as fait rire."></textarea>
+          </div>
+          <div class="actions">
+            <button type="button" class="btn btn-achat" id="f-acheter" data-bouchon="achat"><span id="f-acheter-mot">Offrir ce soliflore</span><span class="btn-prix" id="f-prix"></span></button>
+            <div class="actions-2">
+              <button type="button" class="btn btn-trait btn-moyen" id="f-panier">Ajouter au panier</button>
+            </div>
+          </div>
+          <ul class="faits">
+            <li>Remis aussitôt, avec votre mot.</li>
+            <li>Il fane doucement sur trente jours, à partir du jour où on l’ouvre.</li>
+            <li class="confiance">Échange une fois sous 24 h, tant que son code n’a pas servi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="pied-marque">
+      <p class="pied-nom"><span class="marque"><span class="visuellement-cache">Belai’s Garden</span></span></p>
+      <p>Bouquets dessinés et animés tige à tige. Belai’s Garden est l’atelier d’Hadrien Lonjaret, entrepreneur individuel à Clermont-Ferrand.</p>
+    </div>
+    <nav aria-label="Informations légales">
+      <a href="legal.html">Mentions légales</a>
+      <a href="legal.html#terms">Conditions de vente et échange</a>
+      <a href="legal.html#privacy">Confidentialité</a>
+    </nav>
+    <nav aria-label="Nous joindre">
+      <a href="mailto:lonjaret.hadrien@proton.me">Nous écrire</a>
+      <p class="delai">Réponse en 30 minutes environ, de 10 h à 23 h (heure de Paris), 7 jours sur 7.</p>
+      <a href="sur-mesure.html">Une demande sur mesure</a>
+      <a href="groupe.html">Offrir à plusieurs</a>
+    </nav>
+  </footer>
+
+  <!-- on a phone the pages live in a bar at the bottom, in the thumb's reach -->
+  <nav class="onglets" aria-label="Sections">
+    <a href="index.html">Collection</a>
+    <a href="savoir-faire.html">L’atelier</a>
+  </nav>
+
+  <dialog class="recu-boite" id="recu-boite" aria-labelledby="rb-titre">
+    <h2 id="rb-titre">J’ai reçu un bouquet</h2>
+    <form id="recu-form">
+      <label>Le lien reçu<input id="rb-lien" type="text" inputmode="url" autocomplete="off" spellcheck="false" required></label>
+      <button class="btn btn-plein" type="submit">Ouvrir la page du cadeau</button>
+      <p class="rb-etat" id="rb-etat" role="status"></p>
+    </form>
+    <ol class="rb-etapes">
+      <li>La personne qui vous l’offre vous a transmis un lien et, à part, un code.</li>
+      <li>Le lien ouvre la page du cadeau, qui vous demande le code : ni mot de passe, ni numéro.</li>
+      <li>Le bouquet éclôt avec son mot, sur l’appareil où vous l’ouvrez. Vous pouvez le poser sur votre bureau ou votre écran d’accueil.</li>
+    </ol>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <dialog class="bouchon" id="bouchon" aria-labelledby="bouchon-texte">
+    <p id="bouchon-texte"></p>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <script src="mise-en-scene.js"></script>
+  <script type="module" src="fleur.mjs"></script>
+  <script type="module" src="vie.mjs"></script>
+  <!-- the bee's talk: the shop's answers, and someone of the atelier on the line (owner, 2026-11-02) -->
+  <script type="module" src="abeille.mjs"></script>
+</body>
+</html>

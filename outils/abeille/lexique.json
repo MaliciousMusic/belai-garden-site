@@ -1,0 +1,2911 @@
+{
+ "bouquet_numerique": {
+  "fr": [
+   "bouquet numérique",
+   "bouquet virtuel",
+   "fleurs numériques",
+   "fleurs sur écran"
+  ],
+  "en": [
+   "digital bouquet",
+   "virtual bouquet",
+   "digital flowers"
+  ],
+  "es": [
+   "ramo digital",
+   "ramo virtual",
+   "flores digitales",
+   "flores en pantalla"
+  ],
+  "it": [
+   "bouquet digitale",
+   "mazzo digitale",
+   "fiori digitali",
+   "fiori sullo schermo"
+  ],
+  "de": [
+   "digitaler strauß",
+   "digitaler blumenstrauß",
+   "digitale blumen"
+  ],
+  "pt": [
+   "buquê digital",
+   "buquê virtual",
+   "flores digitais",
+   "flores na tela"
+  ],
+  "ja": [
+   "デジタルブーケ",
+   "デジタルの花",
+   "画面に咲く花",
+   "バーチャルブーケ"
+  ],
+  "zh": [
+   "数字花束",
+   "电子花束",
+   "虚拟花束",
+   "屏幕上的花"
+  ],
+  "ko": [
+   "디지털 부케",
+   "디지털 꽃다발",
+   "가상 부케",
+   "화면 속 꽃"
+  ],
+  "fil": [
+   "digital na bouquet",
+   "digital bouquet",
+   "virtual na bouquet",
+   "bulaklak sa screen"
+  ]
+ },
+ "vrai_cadeau": {
+  "fr": [
+   "vrai cadeau",
+   "cadeau radin",
+   "cadeau au rabais",
+   "idée cadeau valable",
+   "vraies fleurs alors"
+  ],
+  "en": [
+   "real gift",
+   "legit gift",
+   "cheap gift",
+   "weird gift",
+   "real flowers instead"
+  ],
+  "es": [
+   "regalo de verdad",
+   "regalo barato",
+   "regalo raro",
+   "flores de verdad"
+  ],
+  "it": [
+   "regalo vero",
+   "regalo scadente",
+   "regalo strano",
+   "fiori veri"
+  ],
+  "de": [
+   "echtes geschenk",
+   "billiges geschenk",
+   "seltsames geschenk",
+   "echte blumen statt"
+  ],
+  "pt": [
+   "presente de verdade",
+   "presente barato",
+   "presente estranho",
+   "flores de verdade"
+  ],
+  "ja": [
+   "本当のプレゼント",
+   "安っぽいプレゼント",
+   "変なプレゼント",
+   "本物の花の代わり"
+  ],
+  "zh": [
+   "算真正的礼物吗",
+   "礼物太寒酸",
+   "奇怪的礼物",
+   "真花代替"
+  ],
+  "ko": [
+   "진짜 선물",
+   "성의 없는 선물",
+   "이상한 선물",
+   "생화 대신"
+  ],
+  "fil": [
+   "totoong regalo",
+   "cheap na regalo",
+   "kakaibang regalo",
+   "totoong bulaklak sana"
+  ]
+ },
+ "offrir": {
+  "fr": [
+   "offrir",
+   "envoyer à ma",
+   "je l'offre",
+   "faire un cadeau",
+   "offrir à ma",
+   "lien cadeau"
+  ],
+  "en": [
+   "gift it",
+   "send to my",
+   "how to gift",
+   "give it to",
+   "gift link"
+  ],
+  "es": [
+   "regalar",
+   "enviar a mi",
+   "cómo regalo",
+   "hacer un regalo",
+   "link regalo"
+  ],
+  "it": [
+   "regalare",
+   "mandare a mia",
+   "come regalo",
+   "fare un regalo",
+   "link regalo"
+  ],
+  "de": [
+   "verschenken",
+   "schenken",
+   "geschenklink"
+  ],
+  "pt": [
+   "presentear",
+   "enviar para minha",
+   "como presenteio",
+   "link de presente"
+  ],
+  "ja": [
+   "贈る",
+   "プレゼントする",
+   "友達に送る",
+   "ギフトリンク"
+  ],
+  "zh": [
+   "送人",
+   "送给朋友",
+   "怎么送礼",
+   "礼物链接"
+  ],
+  "ko": [
+   "선물하기",
+   "선물하는 법",
+   "친구에게 보내기",
+   "선물 링크"
+  ],
+  "fil": [
+   "iregalo",
+   "paano magregalo",
+   "ipadala sa kaibigan",
+   "gift link"
+  ]
+ },
+ "trente_jours_cadeau": {
+  "fr": [
+   "30 jours démarrent",
+   "trente jours commencent",
+   "compte à rebours",
+   "offrir à l'avance",
+   "programmer un cadeau"
+  ],
+  "en": [
+   "30 days start",
+   "countdown starts",
+   "buy ahead",
+   "schedule a gift"
+  ],
+  "es": [
+   "cuenta atrás",
+   "regalar con antelación",
+   "30 días empiezan",
+   "regalo programado"
+  ],
+  "it": [
+   "conto alla rovescia",
+   "regalare in anticipo",
+   "30 giorni iniziano",
+   "regalo programmato"
+  ],
+  "de": [
+   "30 tage beginnen",
+   "countdown startet",
+   "im voraus verschenken"
+  ],
+  "pt": [
+   "contagem regressiva",
+   "presentear antecipado",
+   "30 dias começam",
+   "presente programado"
+  ],
+  "ja": [
+   "30日はいつから",
+   "30日の開始",
+   "カウントダウン開始",
+   "事前に贈る"
+  ],
+  "zh": [
+   "30天从什么时候开始",
+   "何时开始计算30天",
+   "倒计时开始",
+   "提前送礼"
+  ],
+  "ko": [
+   "30일 시작",
+   "30일은 언제부터",
+   "카운트다운 시작",
+   "미리 선물"
+  ],
+  "fil": [
+   "countdown",
+   "iregalo nang maaga",
+   "simula ng 30",
+   "naka-schedule na regalo"
+  ]
+ },
+ "appareils": {
+  "fr": [
+   "iphone",
+   "android",
+   "ipad",
+   "windows",
+   "linux",
+   "compatible",
+   "sur mac",
+   "chromebook"
+  ],
+  "en": [
+   "iphone",
+   "android",
+   "ipad",
+   "windows",
+   "linux",
+   "compatible",
+   "chromebook",
+   "on mac"
+  ],
+  "es": [
+   "iphone",
+   "android",
+   "ipad",
+   "windows",
+   "linux",
+   "compatible",
+   "chromebook"
+  ],
+  "it": [
+   "iphone",
+   "android",
+   "ipad",
+   "windows",
+   "linux",
+   "compatibile",
+   "chromebook"
+  ],
+  "de": [
+   "iphone",
+   "android",
+   "ipad",
+   "windows",
+   "linux",
+   "kompatibel",
+   "chromebook"
+  ],
+  "pt": [
+   "iphone",
+   "android",
+   "ipad",
+   "windows",
+   "linux",
+   "compatível",
+   "chromebook"
+  ],
+  "ja": [
+   "iphone",
+   "android",
+   "ipad",
+   "windows",
+   "linux",
+   "対応機種"
+  ],
+  "zh": [
+   "iphone",
+   "安卓",
+   "ipad",
+   "windows",
+   "linux",
+   "兼容"
+  ],
+  "ko": [
+   "아이폰",
+   "안드로이드",
+   "아이패드",
+   "windows",
+   "linux",
+   "호환"
+  ],
+  "fil": [
+   "iphone",
+   "android",
+   "ipad",
+   "windows",
+   "linux",
+   "compatible"
+  ]
+ },
+ "deuil": {
+  "fr": [
+   "deuil",
+   "enterrement",
+   "obsèques",
+   "condoléances",
+   "funérailles",
+   "décès",
+   "décédé"
+  ],
+  "en": [
+   "funeral",
+   "condolences",
+   "passed away",
+   "bereavement",
+   "sympathy",
+   "mourning",
+   "died"
+  ],
+  "es": [
+   "funeral",
+   "condolencias",
+   "fallecido",
+   "duelo",
+   "entierro",
+   "falleció"
+  ],
+  "it": [
+   "funerale",
+   "condoglianze",
+   "defunto",
+   "lutto",
+   "sepoltura",
+   "è morto"
+  ],
+  "de": [
+   "beerdigung",
+   "beileid",
+   "trauerfall",
+   "verstorben",
+   "trauer",
+   "gestorben"
+  ],
+  "pt": [
+   "funeral",
+   "condolências",
+   "falecido",
+   "luto",
+   "enterro",
+   "faleceu"
+  ],
+  "ja": [
+   "葬儀",
+   "お悔やみ",
+   "訃報",
+   "喪",
+   "お葬式",
+   "亡くなった"
+  ],
+  "zh": [
+   "葬礼",
+   "吊唁",
+   "去世",
+   "哀悼",
+   "丧事",
+   "逝世"
+  ],
+  "ko": [
+   "장례식",
+   "조문",
+   "애도",
+   "상을 당",
+   "부고",
+   "돌아가셨"
+  ],
+  "fil": [
+   "burol",
+   "libing",
+   "nakikiramay",
+   "pumanaw",
+   "pagluluksa",
+   "namatay"
+  ]
+ },
+ "editions": {
+  "fr": [
+   "fête des mères",
+   "saint-valentin",
+   "fête des pères",
+   "édition spéciale",
+   "noël",
+   "pâques",
+   "14 février"
+  ],
+  "en": [
+   "mothers day",
+   "valentines day",
+   "fathers day",
+   "special edition",
+   "christmas",
+   "easter",
+   "feb 14"
+  ],
+  "es": [
+   "san valentín",
+   "día del padre",
+   "edición especial",
+   "navidad",
+   "pascua"
+  ],
+  "it": [
+   "festa della mamma",
+   "san valentino",
+   "festa del papà",
+   "edizione speciale",
+   "natale",
+   "pasqua"
+  ],
+  "de": [
+   "muttertag",
+   "valentinstag",
+   "vatertag",
+   "sonderedition",
+   "weihnachten",
+   "ostern"
+  ],
+  "pt": [
+   "dia das mães",
+   "dia dos namorados",
+   "dia dos pais",
+   "edição especial",
+   "natal",
+   "páscoa"
+  ],
+  "ja": [
+   "母の日",
+   "バレンタイン",
+   "父の日",
+   "特別版",
+   "クリスマス",
+   "イースター"
+  ],
+  "zh": [
+   "母亲节",
+   "情人节",
+   "父亲节",
+   "限定版",
+   "圣诞节",
+   "复活节"
+  ],
+  "ko": [
+   "어버이날",
+   "발렌타인데이",
+   "아버지의 날",
+   "스페셜 에디션",
+   "크리스마스",
+   "부활절"
+  ],
+  "fil": [
+   "mothers day",
+   "valentines",
+   "fathers day",
+   "special edition",
+   "pasko",
+   "pista"
+  ]
+ },
+ "prix_fixe": {
+  "fr": [
+   "prix fleuriste",
+   "calcul du prix",
+   "pourquoi ce prix",
+   "prix des tiges",
+   "vase offert"
+  ],
+  "en": [
+   "florist price",
+   "why this price",
+   "vase included"
+  ],
+  "es": [
+   "precio de floristería",
+   "jarrón incluido",
+   "cómo calculáis precio"
+  ],
+  "it": [
+   "prezzo del fiorista",
+   "perché questo prezzo",
+   "prezzo degli steli",
+   "vaso incluso"
+  ],
+  "de": [
+   "floristenpreis",
+   "warum dieser preis",
+   "preis der stiele",
+   "vase inklusive"
+  ],
+  "pt": [
+   "preço de floricultura",
+   "preço dos caules",
+   "vaso incluso"
+  ],
+  "ja": [
+   "花屋の価格",
+   "価格の決め方",
+   "なぜこの値段",
+   "茎の価格の合計",
+   "花瓶込み"
+  ],
+  "zh": [
+   "花店价格",
+   "价格怎么定",
+   "为什么这个价",
+   "花枝价格总和",
+   "含花瓶"
+  ],
+  "ko": [
+   "꽃집 가격",
+   "가격은 어떻게 정해",
+   "왜 이 가격",
+   "줄기 가격 합",
+   "화병 포함"
+  ],
+  "fil": [
+   "presyo ng florist",
+   "bakit ganitong presyo",
+   "presyo ng tangkay",
+   "kasama ang vase"
+  ]
+ },
+ "payer": {
+  "fr": [
+   "paypal",
+   "carte bleue",
+   "cb",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "moyens de paiement"
+  ],
+  "en": [
+   "paypal",
+   "credit card",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "payment methods",
+   "debit card"
+  ],
+  "es": [
+   "paypal",
+   "tarjeta de crédito",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "métodos de pago"
+  ],
+  "it": [
+   "paypal",
+   "carta di credito",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "metodi di pagamento"
+  ],
+  "de": [
+   "paypal",
+   "kreditkarte",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "zahlungsmethoden"
+  ],
+  "pt": [
+   "paypal",
+   "cartão de crédito",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "formas de pagamento"
+  ],
+  "ja": [
+   "paypal",
+   "クレジットカード",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "支払い方法"
+  ],
+  "zh": [
+   "paypal",
+   "信用卡",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "支付方式"
+  ],
+  "ko": [
+   "paypal",
+   "신용카드",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "결제 수단"
+  ],
+  "fil": [
+   "paypal",
+   "credit card",
+   "visa",
+   "mastercard",
+   "apple pay",
+   "google pay",
+   "paraan ng pagbabayad"
+  ]
+ },
+ "plusieurs": {
+  "fr": [
+   "plusieurs personnes",
+   "plusieurs destinataires",
+   "commande groupée",
+   "toute l'équipe",
+   "pour mes collègues",
+   "liste de destinataires"
+  ],
+  "en": [
+   "multiple recipients",
+   "several people",
+   "bulk order",
+   "whole team",
+   "for my coworkers",
+   "list of recipients"
+  ],
+  "es": [
+   "varios destinatarios",
+   "varias personas",
+   "pedido grupal",
+   "todo el equipo",
+   "mis compañeros",
+   "lista de destinatarios"
+  ],
+  "it": [
+   "più destinatari",
+   "più persone",
+   "ordine di gruppo",
+   "tutta la squadra",
+   "miei colleghi",
+   "elenco destinatari"
+  ],
+  "de": [
+   "mehrere empfänger",
+   "mehrere personen",
+   "sammelbestellung",
+   "ganzes team",
+   "meine kollegen",
+   "empfängerliste"
+  ],
+  "pt": [
+   "vários destinatários",
+   "várias pessoas",
+   "pedido em grupo",
+   "toda a equipe",
+   "meus colegas",
+   "lista de destinatários"
+  ],
+  "ja": [
+   "複数の人に",
+   "複数の宛先",
+   "まとめて注文",
+   "チーム全員",
+   "同僚たちに",
+   "宛先リスト"
+  ],
+  "zh": [
+   "多个收件人",
+   "送给很多人",
+   "批量订购",
+   "整个团队",
+   "送同事",
+   "收件人名单"
+  ],
+  "ko": [
+   "여러 명에게",
+   "여러 수신자",
+   "단체 주문",
+   "팀 전체",
+   "동료들에게",
+   "수신자 목록"
+  ],
+  "fil": [
+   "maraming tatanggap",
+   "maraming tao",
+   "bulk order",
+   "buong team",
+   "mga katrabaho",
+   "listahan ng tatanggap"
+  ]
+ },
+ "soliflore_offert": {
+  "fr": [
+   "soliflore offert",
+   "soliflore gratuit",
+   "fleur offerte",
+   "tranche de 100",
+   "une fleur gratuite",
+   "soliflore gratos"
+  ],
+  "en": [
+   "free soliflore",
+   "free single flower",
+   "free flower",
+   "100 euros",
+   "freebie",
+   "free stem"
+  ],
+  "es": [
+   "soliflor gratis",
+   "flor gratis",
+   "flor de regalo",
+   "100 euros",
+   "soliflor regalado"
+  ],
+  "it": [
+   "soliflore gratis",
+   "fiore gratis",
+   "fiore in regalo",
+   "100 euro",
+   "soliflore omaggio"
+  ],
+  "de": [
+   "gratis solifleur",
+   "gratis blume",
+   "geschenkte blume",
+   "100 euro",
+   "einzelblume gratis"
+  ],
+  "pt": [
+   "soliflore grátis",
+   "flor grátis",
+   "flor de brinde",
+   "100 euros",
+   "soliflore de brinde"
+  ],
+  "ja": [
+   "ソリフルール無料",
+   "無料の花",
+   "おまけの花",
+   "100ユーロ",
+   "一輪プレゼント"
+  ],
+  "zh": [
+   "免费单枝花",
+   "赠送一枝花",
+   "免费花",
+   "100欧元",
+   "送一朵花"
+  ],
+  "ko": [
+   "솔리플로르 무료",
+   "무료 꽃",
+   "증정 꽃",
+   "100유로",
+   "한 송이 증정"
+  ],
+  "fil": [
+   "libreng soliflore",
+   "libreng bulaklak",
+   "bonus na bulaklak",
+   "100 euro",
+   "libreng tangkay"
+  ]
+ },
+ "plusieurs_fois": {
+  "fr": [
+   "en 3x",
+   "en 3 fois",
+   "en 4 fois",
+   "klarna",
+   "alma",
+   "paiement fractionné",
+   "mensualités"
+  ],
+  "en": [
+   "installments",
+   "klarna",
+   "afterpay",
+   "pay in 3",
+   "split the payment",
+   "pay later",
+   "monthly payments"
+  ],
+  "es": [
+   "pagar a plazos",
+   "klarna",
+   "pago fraccionado",
+   "pagar en 3",
+   "en cuotas",
+   "pagar después"
+  ],
+  "it": [
+   "pagare a rate",
+   "klarna",
+   "pagamento frazionato",
+   "in 3 rate",
+   "rate mensili",
+   "paga dopo"
+  ],
+  "de": [
+   "ratenzahlung",
+   "klarna",
+   "in raten",
+   "in 3 raten",
+   "teilzahlung",
+   "später bezahlen"
+  ],
+  "pt": [
+   "pagar parcelado",
+   "klarna",
+   "pagamento parcelado",
+   "em 3 vezes",
+   "parcelas",
+   "pagar depois"
+  ],
+  "ja": [
+   "分割払い",
+   "klarna",
+   "3回払い",
+   "後払い",
+   "分割で支払い",
+   "月払い"
+  ],
+  "zh": [
+   "分期付款",
+   "klarna",
+   "分3期",
+   "先买后付",
+   "分期支付",
+   "每月付款"
+  ],
+  "ko": [
+   "할부",
+   "klarna",
+   "3회 분할",
+   "나중에 결제",
+   "분할 결제",
+   "월 할부"
+  ],
+  "fil": [
+   "hulugan",
+   "klarna",
+   "bayad later",
+   "hatiin ang bayad",
+   "buwanang bayad"
+  ]
+ },
+ "soliflore": {
+  "fr": [
+   "soliflore",
+   "une seule fleur",
+   "une seule tige",
+   "fleur à l'unité",
+   "prix d'une tige"
+  ],
+  "en": [
+   "soliflore",
+   "single flower",
+   "single stem",
+   "one flower only"
+  ],
+  "es": [
+   "soliflor",
+   "una sola flor",
+   "un solo tallo",
+   "flor suelta"
+  ],
+  "it": [
+   "soliflore",
+   "un solo fiore",
+   "un solo stelo",
+   "fiore singolo"
+  ],
+  "de": [
+   "solifleur",
+   "einzelne blume",
+   "einzelner stiel",
+   "einzelblume",
+   "preis eines stiels"
+  ],
+  "pt": [
+   "soliflore",
+   "uma única flor",
+   "um único caule",
+   "flor avulsa"
+  ],
+  "ja": [
+   "ソリフルール",
+   "一輪の花",
+   "一本だけ",
+   "一輪挿し",
+   "茎一本の値段"
+  ],
+  "zh": [
+   "单枝花",
+   "只要一朵花",
+   "一枝花",
+   "单支花瓶",
+   "一枝的价格"
+  ],
+  "ko": [
+   "솔리플로르",
+   "한 송이",
+   "꽃 한 송이만",
+   "한 송이 화병",
+   "줄기 하나 가격"
+  ],
+  "fil": [
+   "soliflore",
+   "isang bulaklak lang",
+   "isang tangkay"
+  ]
+ },
+ "possession": {
+  "fr": [
+   "que possède-je",
+   "je garde",
+   "fichier source",
+   "revendre",
+   "propriétaire"
+  ],
+  "en": [
+   "mine forever",
+   "source file",
+   "resell"
+  ],
+  "es": [
+   "qué poseo",
+   "me lo quedo",
+   "mío para siempre",
+   "archivo fuente",
+   "revender",
+   "derechos del ramo",
+   "propietario"
+  ],
+  "it": [
+   "cosa possiedo",
+   "lo tengo",
+   "mio per sempre",
+   "file sorgente",
+   "rivendere",
+   "diritti sul bouquet",
+   "proprietario"
+  ],
+  "de": [
+   "was besitze ich",
+   "behalte ich",
+   "für immer meins",
+   "quelldatei",
+   "weiterverkaufen",
+   "rechte am strauß",
+   "eigentümer"
+  ],
+  "pt": [
+   "fico com ele",
+   "meu para sempre",
+   "arquivo fonte",
+   "revender",
+   "direitos do buquê",
+   "proprietário"
+  ],
+  "ja": [
+   "何を所有",
+   "ずっと自分のもの",
+   "ソースファイル",
+   "転売",
+   "ブーケの権利",
+   "所有者"
+  ],
+  "zh": [
+   "我拥有什么",
+   "永远属于我",
+   "源文件",
+   "转售",
+   "花束的权利",
+   "所有权"
+  ],
+  "ko": [
+   "무엇을 소유",
+   "영원히 내 것",
+   "원본 파일",
+   "재판매",
+   "부케 권리",
+   "소유자"
+  ],
+  "fil": [
+   "akin habambuhay",
+   "source file",
+   "ibenta ulit",
+   "karapatan sa bouquet",
+   "may-ari"
+  ]
+ },
+ "numerotes": {
+  "fr": [
+   "nft",
+   "blockchain",
+   "certificat",
+   "numéroté",
+   "édition limitée",
+   "crypto",
+   "série limitée",
+   "numéro de série"
+  ],
+  "en": [
+   "nft",
+   "blockchain",
+   "certificate",
+   "numbered",
+   "limited edition",
+   "crypto",
+   "serial number",
+   "how many copies"
+  ],
+  "es": [
+   "nft",
+   "blockchain",
+   "certificado",
+   "numerado",
+   "edición limitada",
+   "cripto",
+   "número de serie",
+   "cuántas copias"
+  ],
+  "it": [
+   "nft",
+   "blockchain",
+   "certificato",
+   "numerato",
+   "edizione limitata",
+   "cripto",
+   "numero di serie",
+   "quante copie"
+  ],
+  "de": [
+   "nft",
+   "blockchain",
+   "zertifikat",
+   "nummeriert",
+   "limitierte auflage",
+   "krypto",
+   "seriennummer",
+   "wie viele exemplare"
+  ],
+  "pt": [
+   "nft",
+   "blockchain",
+   "certificado",
+   "numerado",
+   "edição limitada",
+   "cripto",
+   "número de série",
+   "quantas cópias"
+  ],
+  "ja": [
+   "nft",
+   "ブロックチェーン",
+   "証明書",
+   "シリアルナンバー",
+   "限定版",
+   "暗号資産",
+   "何部"
+  ],
+  "zh": [
+   "nft",
+   "区块链",
+   "证书",
+   "编号",
+   "限量版",
+   "加密货币",
+   "序列号"
+  ],
+  "ko": [
+   "nft",
+   "블록체인",
+   "인증서",
+   "넘버링",
+   "한정판",
+   "암호화폐",
+   "일련번호"
+  ],
+  "fil": [
+   "nft",
+   "blockchain",
+   "sertipiko",
+   "may numero",
+   "limited edition",
+   "crypto",
+   "serial number"
+  ]
+ },
+ "vendeur": {
+  "fr": [
+   "qui vend",
+   "qui est derrière",
+   "siret",
+   "mentions légales",
+   "arnaque",
+   "société ou particulier",
+   "site sérieux"
+  ],
+  "en": [
+   "who sells",
+   "whos behind",
+   "company address",
+   "scam",
+   "is it legit",
+   "real company"
+  ],
+  "es": [
+   "quién vende",
+   "quién está detrás",
+   "estafa",
+   "es legítimo",
+   "empresa real"
+  ],
+  "it": [
+   "chi vende",
+   "chi c'è dietro",
+   "indirizzo dell'azienda",
+   "truffa",
+   "è affidabile",
+   "azienda vera"
+  ],
+  "de": [
+   "wer verkauft",
+   "wer steckt dahinter",
+   "firmenadresse",
+   "betrug",
+   "ist das seriös",
+   "echte firma"
+  ],
+  "pt": [
+   "quem vende",
+   "endereço da empresa",
+   "golpe",
+   "é confiável",
+   "empresa de verdade"
+  ],
+  "ja": [
+   "誰が売っている",
+   "運営会社",
+   "会社の住所",
+   "詐欺",
+   "信頼できる",
+   "特定商取引"
+  ],
+  "zh": [
+   "谁在卖",
+   "幕后是谁",
+   "公司地址",
+   "骗局",
+   "靠谱吗",
+   "真实公司"
+  ],
+  "ko": [
+   "누가 파는",
+   "운영사",
+   "회사 주소",
+   "사기",
+   "믿을 수 있",
+   "실제 회사"
+  ],
+  "fil": [
+   "sino ang nagbebenta",
+   "address ng kumpanya",
+   "scam",
+   "mapagkakatiwalaan",
+   "totoong kumpanya"
+  ]
+ },
+ "delai_reception": {
+  "fr": [
+   "délai de livraison",
+   "c'est immédiat",
+   "instantané",
+   "elle reçoit quand"
+  ],
+  "en": [
+   "delivery time",
+   "how fast",
+   "is it instant",
+   "same day"
+  ],
+  "es": [
+   "plazo de entrega",
+   "qué tan rápido",
+   "es instantáneo",
+   "el mismo día",
+   "cuánto tarda",
+   "cuándo lo recibe"
+  ],
+  "it": [
+   "tempi di consegna",
+   "quanto è veloce",
+   "è istantaneo",
+   "in giornata",
+   "quanto ci vuole",
+   "quando lo riceve"
+  ],
+  "de": [
+   "lieferzeit",
+   "wie schnell",
+   "ist das sofort",
+   "am selben tag",
+   "wie lange dauert"
+  ],
+  "pt": [
+   "prazo de entrega",
+   "quão rápido",
+   "é instantâneo",
+   "no mesmo dia",
+   "quanto tempo demora",
+   "quando ela recebe"
+  ],
+  "ja": [
+   "お届けまでの時間",
+   "どれくらい早い",
+   "すぐ届く",
+   "即日",
+   "届くのはいつ"
+  ],
+  "zh": [
+   "送达时间",
+   "多快能到",
+   "是即时的吗",
+   "当天送达",
+   "什么时候收到"
+  ],
+  "ko": [
+   "배송 시간",
+   "얼마나 빨리",
+   "바로 받나요",
+   "당일",
+   "언제 받나요"
+  ],
+  "fil": [
+   "gaano katagal darating",
+   "gaano kabilis",
+   "instant ba",
+   "same day",
+   "kailan niya matatanggap"
+  ]
+ },
+ "code": {
+  "fr": [
+   "taper le code",
+   "code invalide",
+   "perdu mon code",
+   "entrer le code"
+  ],
+  "en": [
+   "enter the code",
+   "invalid code",
+   "code doesnt work",
+   "lost my code"
+  ],
+  "es": [
+   "introducir el código",
+   "código inválido",
+   "perdí mi código",
+   "recibí un ramo"
+  ],
+  "it": [
+   "inserire il codice",
+   "codice non valido",
+   "codice errato",
+   "inserisci codice"
+  ],
+  "de": [
+   "code eingeben",
+   "ungültiger code",
+   "code funktioniert nicht",
+   "code verloren"
+  ],
+  "pt": [
+   "digitar o código",
+   "código inválido",
+   "perdi meu código",
+   "recebi um buquê"
+  ],
+  "ja": [
+   "コードはどこに入力",
+   "コードを入力",
+   "コードが無効",
+   "コードが使えない",
+   "コードをなくした",
+   "ブーケを受け取った"
+  ],
+  "zh": [
+   "验证码在哪输入",
+   "输入代码",
+   "代码无效",
+   "代码不能用",
+   "弄丢了代码",
+   "我收到了花束"
+  ],
+  "ko": [
+   "코드는 어디에",
+   "코드 입력",
+   "유효하지 않은 코드",
+   "코드가 안 돼",
+   "코드를 잃어버렸",
+   "부케를 받았"
+  ],
+  "fil": [
+   "ilagay ang code",
+   "invalid na code",
+   "nawala ang code"
+  ]
+ },
+ "age": {
+  "fr": [
+   "âge minimum",
+   "je suis mineur",
+   "16 ans",
+   "autorisation parentale",
+   "majeur"
+  ],
+  "en": [
+   "minimum age",
+   "im a minor",
+   "16 years old",
+   "parental permission",
+   "adult only"
+  ],
+  "es": [
+   "edad mínima",
+   "desde qué edad",
+   "soy menor",
+   "16 años",
+   "mayor de edad"
+  ],
+  "it": [
+   "età minima",
+   "da che età",
+   "sono minorenne",
+   "16 anni",
+   "permesso dei genitori",
+   "maggiorenne"
+  ],
+  "de": [
+   "mindestalter",
+   "ab welchem alter",
+   "ich bin minderjährig",
+   "16 jahre",
+   "erlaubnis der eltern",
+   "volljährig"
+  ],
+  "pt": [
+   "idade mínima",
+   "sou menor",
+   "16 anos",
+   "autorização dos pais",
+   "maior de idade"
+  ],
+  "ja": [
+   "最低年齢",
+   "何歳から",
+   "未成年",
+   "16歳",
+   "保護者の許可",
+   "成人のみ"
+  ],
+  "zh": [
+   "最低年龄",
+   "多大才能买",
+   "我未成年",
+   "16岁",
+   "家长同意",
+   "成年人"
+  ],
+  "ko": [
+   "최소 연령",
+   "몇 살부터",
+   "미성년자",
+   "16세",
+   "부모님 허락",
+   "성인만"
+  ],
+  "fil": [
+   "minimum na edad",
+   "ilang taon",
+   "menor de edad",
+   "16 taong gulang",
+   "pahintulot ng magulang",
+   "nasa hustong gulang"
+  ]
+ },
+ "retractation": {
+  "fr": [
+   "rembourser",
+   "remboursement",
+   "annuler ma commande",
+   "droit de rétractation",
+   "changé d'avis",
+   "satisfait ou remboursé",
+   "échange possible"
+  ],
+  "en": [
+   "refund",
+   "money back",
+   "cancel my order",
+   "right of withdrawal",
+   "changed my mind",
+   "exchange possible",
+   "return policy"
+  ],
+  "es": [
+   "reembolso",
+   "devolución del dinero",
+   "cancelar mi pedido",
+   "derecho de desistimiento",
+   "cambié de opinión",
+   "cambio posible"
+  ],
+  "it": [
+   "rimborso",
+   "restituzione dei soldi",
+   "diritto di recesso",
+   "ho cambiato idea",
+   "cambio possibile"
+  ],
+  "de": [
+   "rückerstattung",
+   "geld zurück",
+   "bestellung stornieren",
+   "widerrufsrecht",
+   "meinung geändert",
+   "umtausch möglich"
+  ],
+  "pt": [
+   "reembolso",
+   "devolução do dinheiro",
+   "cancelar meu pedido",
+   "direito de arrependimento",
+   "mudei de ideia",
+   "troca possível"
+  ],
+  "ja": [
+   "返金",
+   "キャンセルしたい",
+   "注文のキャンセル",
+   "クーリングオフ",
+   "気が変わった",
+   "交換できますか"
+  ],
+  "zh": [
+   "退款",
+   "取消订单",
+   "撤销权",
+   "改变主意",
+   "能换吗",
+   "退货"
+  ],
+  "ko": [
+   "환불",
+   "주문 취소",
+   "청약 철회",
+   "마음이 바뀌",
+   "교환 가능",
+   "반품"
+  ],
+  "fil": [
+   "refund",
+   "ibalik ang pera",
+   "kanselahin ang order",
+   "karapatang umatras",
+   "nagbago ang isip",
+   "pwede bang palitan"
+  ]
+ },
+ "facture_pro": {
+  "fr": [
+   "facture",
+   "facture entreprise",
+   "facture pro",
+   "tva",
+   "numéro de siret",
+   "cadeaux professionnels",
+   "justificatif d'achat"
+  ],
+  "en": [
+   "invoice",
+   "company invoice",
+   "business invoice",
+   "vat",
+   "vat number",
+   "business gifts",
+   "proof of purchase"
+  ],
+  "es": [
+   "factura",
+   "factura de empresa",
+   "factura profesional",
+   "iva",
+   "número de cif",
+   "regalos de empresa",
+   "justificante de compra"
+  ],
+  "it": [
+   "fattura",
+   "fattura aziendale",
+   "fattura professionale",
+   "iva",
+   "partita iva",
+   "regali aziendali",
+   "prova d'acquisto"
+  ],
+  "de": [
+   "rechnung",
+   "firmenrechnung",
+   "geschäftsrechnung",
+   "mehrwertsteuer",
+   "umsatzsteuer-id",
+   "geschäftsgeschenke",
+   "kaufbeleg"
+  ],
+  "pt": [
+   "fatura",
+   "nota fiscal",
+   "fatura empresarial",
+   "iva",
+   "cnpj",
+   "presentes corporativos",
+   "comprovante de compra"
+  ],
+  "ja": [
+   "請求書",
+   "会社の請求書",
+   "領収書",
+   "消費税",
+   "法人ギフト",
+   "購入証明"
+  ],
+  "zh": [
+   "发票",
+   "公司发票",
+   "企业发票",
+   "增值税",
+   "商务礼品",
+   "购买凭证"
+  ],
+  "ko": [
+   "청구서",
+   "회사 청구서",
+   "영수증",
+   "부가세",
+   "기업 선물",
+   "구매 증빙"
+  ],
+  "fil": [
+   "invoice",
+   "invoice ng kumpanya",
+   "resibo",
+   "vat",
+   "corporate na regalo",
+   "patunay ng pagbili"
+  ]
+ },
+ "energie": {
+  "fr": [
+   "batterie",
+   "consomme beaucoup",
+   "ralentit mon pc",
+   "consommation électrique",
+   "ça rame",
+   "ça chauffe"
+  ],
+  "en": [
+   "battery",
+   "drain battery",
+   "slow my pc",
+   "power usage",
+   "laggy",
+   "uses ram",
+   "heats my phone"
+  ],
+  "es": [
+   "batería",
+   "consume mucho",
+   "ralentiza mi pc",
+   "consumo eléctrico",
+   "va lento",
+   "consume ram",
+   "calienta el móvil"
+  ],
+  "it": [
+   "batteria",
+   "consuma molto",
+   "rallenta il pc",
+   "consumo elettrico",
+   "va a scatti",
+   "usa ram",
+   "scalda il telefono"
+  ],
+  "de": [
+   "akku",
+   "verbraucht viel",
+   "verlangsamt meinen pc",
+   "stromverbrauch",
+   "ruckelt",
+   "braucht ram",
+   "erhitzt das handy"
+  ],
+  "pt": [
+   "bateria",
+   "consome muito",
+   "consumo de energia",
+   "usa ram",
+   "esquenta o celular"
+  ],
+  "ja": [
+   "バッテリー",
+   "消費電力",
+   "パソコンが重くなる",
+   "動作が重い",
+   "メモリ消費",
+   "スマホが熱くなる"
+  ],
+  "zh": [
+   "电池",
+   "耗电",
+   "会拖慢电脑吗",
+   "耗电量",
+   "卡顿",
+   "占内存",
+   "手机发烫"
+  ],
+  "ko": [
+   "배터리",
+   "전력 소모",
+   "컴퓨터가 느려",
+   "전기 사용량",
+   "버벅",
+   "메모리 사용",
+   "폰이 뜨거워"
+  ],
+  "fil": [
+   "baterya",
+   "konsumo ng kuryente",
+   "lag",
+   "gumagamit ng ram",
+   "umiinit ang phone"
+  ]
+ },
+ "obs": {
+  "fr": [
+   "obs",
+   "stream",
+   "streamer",
+   "twitch",
+   "source navigateur",
+   "overlay",
+   "streamlabs",
+   "obs studio"
+  ],
+  "en": [
+   "obs",
+   "stream",
+   "streamer",
+   "twitch",
+   "browser source",
+   "overlay",
+   "streamlabs",
+   "go live"
+  ],
+  "es": [
+   "obs",
+   "stream",
+   "streamer",
+   "twitch",
+   "fuente de navegador",
+   "overlay",
+   "streamlabs",
+   "en directo"
+  ],
+  "it": [
+   "obs",
+   "stream",
+   "streamer",
+   "twitch",
+   "sorgente browser",
+   "overlay",
+   "streamlabs",
+   "in diretta"
+  ],
+  "de": [
+   "obs",
+   "stream",
+   "streamer",
+   "twitch",
+   "browserquelle",
+   "overlay",
+   "streamlabs",
+   "live zeigen"
+  ],
+  "pt": [
+   "obs",
+   "stream",
+   "streamer",
+   "twitch",
+   "fonte de navegador",
+   "overlay",
+   "streamlabs",
+   "ao vivo"
+  ],
+  "ja": [
+   "obs",
+   "配信",
+   "配信者",
+   "twitch",
+   "ブラウザソース",
+   "オーバーレイ",
+   "ストリームラボ",
+   "ライブ配信"
+  ],
+  "zh": [
+   "obs",
+   "直播",
+   "主播",
+   "twitch",
+   "浏览器源",
+   "叠加层",
+   "streamlabs",
+   "实时展示"
+  ],
+  "ko": [
+   "obs",
+   "방송",
+   "스트리머",
+   "twitch",
+   "브라우저 소스",
+   "오버레이",
+   "streamlabs",
+   "실시간"
+  ],
+  "fil": [
+   "obs",
+   "stream",
+   "streamer",
+   "twitch",
+   "browser source",
+   "overlay",
+   "streamlabs",
+   "live"
+  ]
+ },
+ "fin_trente_jours": {
+  "fr": [
+   "après 30 jours",
+   "fin du bouquet",
+   "durée de vie",
+   "ça expire"
+  ],
+  "en": [
+   "after 30 days",
+   "after the month",
+   "does it expire",
+   "lifespan"
+  ],
+  "es": [
+   "fin del ramo",
+   "cuánto dura",
+   "caduca"
+  ],
+  "it": [
+   "dopo 30 giorni",
+   "dopo un mese",
+   "fine del bouquet",
+   "quanto dura",
+   "scade"
+  ],
+  "de": [
+   "nach 30 tagen",
+   "nach einem monat",
+   "ende des straußes",
+   "wie lange hält",
+   "läuft ab"
+  ],
+  "pt": [
+   "após um mês",
+   "fim do buquê",
+   "quanto tempo dura",
+   "expira"
+  ],
+  "ja": [
+   "30日後",
+   "1か月後",
+   "ブーケの終わり",
+   "どのくらい持つ",
+   "期限切れ",
+   "その後どうなる"
+  ],
+  "zh": [
+   "30天后",
+   "一个月后",
+   "花束结束",
+   "能持续多久",
+   "会过期吗",
+   "之后会怎样"
+  ],
+  "ko": [
+   "30일 후",
+   "한 달 후",
+   "부케의 끝",
+   "얼마나 가나요",
+   "만료되나요",
+   "그 후 어떻게 돼요"
+  ],
+  "fil": [
+   "katapusan ng bouquet",
+   "gaano katagal tatagal",
+   "mag-eexpire ba"
+  ]
+ },
+ "sur_mesure": {
+  "fr": [
+   "sur mesure",
+   "bouquet personnalisé",
+   "commande spéciale",
+   "choisir mes fleurs",
+   "devis",
+   "demande particulière",
+   "création sur demande"
+  ],
+  "en": [
+   "custom bouquet",
+   "made to order",
+   "special request",
+   "pick my flowers",
+   "quote",
+   "bespoke",
+   "personalised bouquet"
+  ],
+  "es": [
+   "a medida",
+   "ramo personalizado",
+   "pedido especial",
+   "elegir mis flores",
+   "presupuesto",
+   "petición especial"
+  ],
+  "it": [
+   "su misura",
+   "bouquet personalizzato",
+   "ordine speciale",
+   "preventivo",
+   "richiesta speciale"
+  ],
+  "de": [
+   "maßanfertigung",
+   "individueller strauß",
+   "sonderwunsch",
+   "blumen selbst wählen",
+   "angebot",
+   "auf bestellung"
+  ],
+  "pt": [
+   "sob medida",
+   "buquê personalizado",
+   "pedido especial",
+   "escolher minhas flores",
+   "orçamento",
+   "pedido sob encomenda"
+  ],
+  "ja": [
+   "オーダーメイド",
+   "特別注文",
+   "花を選びたい",
+   "見積もり",
+   "カスタムブーケ",
+   "特別なリクエスト"
+  ],
+  "zh": [
+   "定制",
+   "定制花束",
+   "特殊订单",
+   "自选花材",
+   "报价",
+   "特别要求"
+  ],
+  "ko": [
+   "맞춤 제작",
+   "맞춤 부케",
+   "특별 주문",
+   "꽃 직접 고르기",
+   "견적",
+   "특별 요청"
+  ],
+  "fil": [
+   "custom na bouquet",
+   "ayon sa order",
+   "espesyal na kahilingan",
+   "pumili ng bulaklak",
+   "quotation",
+   "personalized na bouquet"
+  ]
+ },
+ "panne": {
+  "fr": [
+   "ne s'affiche pas",
+   "écran noir",
+   "ça bug",
+   "page blanche",
+   "ça plante",
+   "bouquet figé",
+   "affichage cassé"
+  ],
+  "en": [
+   "doesnt show",
+   "black screen",
+   "its buggy",
+   "blank page",
+   "crashes",
+   "frozen",
+   "wont load"
+  ],
+  "es": [
+   "no se muestra",
+   "pantalla negra",
+   "tiene un error",
+   "página en blanco",
+   "se bloquea",
+   "congelado",
+   "no carga"
+  ],
+  "it": [
+   "non si vede",
+   "schermo nero",
+   "c'è un bug",
+   "pagina bianca",
+   "si blocca",
+   "congelato",
+   "non carica"
+  ],
+  "de": [
+   "wird nicht angezeigt",
+   "schwarzer bildschirm",
+   "fehler",
+   "leere seite",
+   "stürzt ab",
+   "eingefroren",
+   "lädt nicht"
+  ],
+  "pt": [
+   "não aparece",
+   "tela preta",
+   "está com bug",
+   "página em branco",
+   "trava",
+   "congelado",
+   "não carrega"
+  ],
+  "ja": [
+   "表示されない",
+   "画面が真っ黒",
+   "不具合",
+   "真っ白",
+   "フリーズ",
+   "読み込まない"
+  ],
+  "zh": [
+   "不显示",
+   "黑屏",
+   "有bug",
+   "白屏",
+   "崩溃",
+   "卡住了",
+   "加载不出来"
+  ],
+  "ko": [
+   "표시가 안 돼",
+   "검은 화면",
+   "버그",
+   "흰 화면",
+   "멈춰요",
+   "로딩이 안 돼"
+  ],
+  "fil": [
+   "hindi lumalabas",
+   "itim na screen",
+   "may bug",
+   "blangkong page",
+   "nagca-crash",
+   "naka-freeze",
+   "hindi nagloload"
+  ]
+ },
+ "abeille": {
+  "fr": [
+   "qui es-tu",
+   "t'es qui",
+   "tu t'appelles comment",
+   "ton rôle",
+   "pourquoi une abeille"
+  ],
+  "en": [
+   "who are you",
+   "who r u",
+   "whats your name",
+   "why a bee",
+   "your role",
+   "are u human"
+  ],
+  "es": [
+   "quién eres",
+   "eres un robot",
+   "cómo te llamas",
+   "tu función",
+   "eres humano"
+  ],
+  "it": [
+   "chi sei",
+   "sei un robot",
+   "come ti chiami",
+   "perché un'ape",
+   "il tuo ruolo",
+   "sei umano"
+  ],
+  "de": [
+   "wer bist du",
+   "wie heißt du",
+   "warum eine biene",
+   "deine aufgabe"
+  ],
+  "pt": [
+   "quem é você",
+   "seu papel",
+   "você é humano"
+  ],
+  "ja": [
+   "あなたは誰",
+   "ロボットですか",
+   "名前は",
+   "なぜ蜂",
+   "あなたの役割",
+   "人間ですか"
+  ],
+  "zh": [
+   "你是谁",
+   "你是机器人吗",
+   "你叫什么",
+   "为什么是蜜蜂",
+   "你的作用",
+   "你是真人吗"
+  ],
+  "ko": [
+   "당신은 누구",
+   "로봇이에요",
+   "이름이 뭐예요",
+   "왜 벌이에요",
+   "당신의 역할",
+   "사람이에요"
+  ],
+  "fil": [
+   "sino ka",
+   "robot ka ba",
+   "ano pangalan mo",
+   "bakit bubuyog",
+   "tao ka ba"
+  ]
+ },
+ "essayer": {
+  "fr": [
+   "essayer",
+   "tester",
+   "essai gratuit",
+   "démo",
+   "essayer sans acheter",
+   "aperçu"
+  ],
+  "en": [
+   "try it",
+   "free trial",
+   "demo",
+   "try without buying",
+   "preview",
+   "test it"
+  ],
+  "es": [
+   "probar",
+   "prueba gratuita",
+   "demo",
+   "probar sin comprar",
+   "vista previa"
+  ],
+  "it": [
+   "provare",
+   "prova gratuita",
+   "demo",
+   "provare senza comprare",
+   "anteprima"
+  ],
+  "de": [
+   "ausprobieren",
+   "kostenlos testen",
+   "demo",
+   "ohne kauf testen",
+   "vorschau"
+  ],
+  "pt": [
+   "experimentar",
+   "teste grátis",
+   "demo",
+   "testar sem comprar",
+   "pré-visualização"
+  ],
+  "ja": [
+   "試してみる",
+   "無料体験",
+   "デモ",
+   "画面で見る",
+   "買わずに試す",
+   "プレビュー"
+  ],
+  "zh": [
+   "试用",
+   "免费试用",
+   "演示",
+   "在我的屏幕上看",
+   "不买先试",
+   "预览"
+  ],
+  "ko": [
+   "체험해보기",
+   "무료 체험",
+   "데모",
+   "내 화면에서 보기",
+   "사기 전에 써보기",
+   "미리보기"
+  ],
+  "fil": [
+   "subukan",
+   "libreng trial",
+   "demo",
+   "preview"
+  ]
+ },
+ "launcher": {
+  "fr": [
+   "launcher",
+   "belai's launcher",
+   "télécharger l'appli",
+   "installer l'application",
+   "on installe",
+   "app store",
+   "play store",
+   "faut installer"
+  ],
+  "en": [
+   "launcher",
+   "belai's launcher",
+   "download the app",
+   "install the app",
+   "app store",
+   "play store"
+  ],
+  "es": [
+   "launcher",
+   "belai's launcher",
+   "descargar la app",
+   "instalar la aplicación",
+   "cómo instalo",
+   "app store",
+   "play store"
+  ],
+  "it": [
+   "launcher",
+   "belai's launcher",
+   "scaricare l'app",
+   "installare l'applicazione",
+   "come installo",
+   "app store",
+   "play store"
+  ],
+  "de": [
+   "launcher",
+   "belai's launcher",
+   "app herunterladen",
+   "app installieren",
+   "wie installiere ich",
+   "app store",
+   "play store"
+  ],
+  "pt": [
+   "launcher",
+   "belai's launcher",
+   "baixar o app",
+   "instalar o aplicativo",
+   "como instalo",
+   "app store",
+   "play store"
+  ],
+  "ja": [
+   "ランチャー",
+   "belai's launcher",
+   "アプリをダウンロード",
+   "アプリのインストール",
+   "インストール方法",
+   "app store",
+   "play store"
+  ],
+  "zh": [
+   "启动器",
+   "belai's launcher",
+   "下载应用",
+   "安装应用",
+   "怎么安装",
+   "app store",
+   "play store"
+  ],
+  "ko": [
+   "런처",
+   "belai's launcher",
+   "앱 다운로드",
+   "앱 설치",
+   "설치 방법",
+   "app store",
+   "play store"
+  ],
+  "fil": [
+   "launcher",
+   "belai's launcher",
+   "i-download ang app",
+   "i-install ang app",
+   "paano mag-install",
+   "app store",
+   "play store"
+  ]
+ },
+ "prix": {
+  "fr": [
+   "tarif",
+   "tarifs",
+   "c combien",
+   "combien coûte",
+   "combien ça coûte",
+   "prix d'un bouquet",
+   "le moins cher",
+   "budget minimum"
+  ],
+  "en": [
+   "how much",
+   "cheapest",
+   "minimum budget",
+   "starting price"
+  ],
+  "es": [
+   "cuánto cuesta",
+   "cuánto vale",
+   "tarifa",
+   "el más barato",
+   "presupuesto mínimo"
+  ],
+  "it": [
+   "quanto costa",
+   "quanto viene",
+   "tariffa",
+   "il più economico",
+   "budget minimo"
+  ],
+  "de": [
+   "was kostet",
+   "wie viel kostet",
+   "preis eines straußes",
+   "preisliste",
+   "der günstigste",
+   "mindestbudget"
+  ],
+  "pt": [
+   "quanto custa",
+   "quanto é",
+   "tarifa",
+   "o mais barato",
+   "orçamento mínimo"
+  ],
+  "ja": [
+   "いくらですか",
+   "値段はいくら",
+   "ブーケの値段",
+   "料金",
+   "一番安い",
+   "最低予算"
+  ],
+  "zh": [
+   "多少钱",
+   "价格是多少",
+   "花束的价格",
+   "收费",
+   "最便宜的",
+   "最低预算"
+  ],
+  "ko": [
+   "얼마예요",
+   "가격이 얼마",
+   "부케 가격",
+   "요금",
+   "가장 저렴한",
+   "최소 예산"
+  ],
+  "fil": [
+   "magkano",
+   "magkano ang bouquet",
+   "presyo ng bouquet",
+   "singil",
+   "pinakamura",
+   "minimum na budget"
+  ]
+ },
+ "contact": {
+  "fr": [
+   "contacter",
+   "nous écrire",
+   "adresse mail",
+   "e-mail",
+   "numéro de téléphone",
+   "formulaire de contact",
+   "support"
+  ],
+  "en": [
+   "contact you",
+   "contact form",
+   "email address",
+   "phone number",
+   "support email",
+   "leave a message",
+   "write to you"
+  ],
+  "es": [
+   "contactar",
+   "formulario de contacto",
+   "correo electrónico",
+   "número de teléfono",
+   "dejar un mensaje",
+   "escribiros"
+  ],
+  "it": [
+   "contattarvi",
+   "modulo di contatto",
+   "indirizzo email",
+   "numero di telefono",
+   "lasciare un messaggio",
+   "scrivervi"
+  ],
+  "de": [
+   "kontakt aufnehmen",
+   "kontaktformular",
+   "e-mail-adresse",
+   "telefonnummer",
+   "nachricht hinterlassen",
+   "euch schreiben"
+  ],
+  "pt": [
+   "entrar em contato",
+   "formulário de contato",
+   "endereço de e-mail",
+   "número de telefone",
+   "deixar uma mensagem",
+   "escrever para vocês"
+  ],
+  "ja": [
+   "連絡先",
+   "お問い合わせフォーム",
+   "メールアドレス",
+   "電話番号",
+   "メッセージを残す",
+   "問い合わせ"
+  ],
+  "zh": [
+   "联系你们",
+   "联系表单",
+   "电子邮件地址",
+   "电话号码",
+   "留言",
+   "联系方式"
+  ],
+  "ko": [
+   "연락처",
+   "문의 양식",
+   "이메일 주소",
+   "전화번호",
+   "메시지 남기기",
+   "문의하기"
+  ],
+  "fil": [
+   "makipag-ugnayan",
+   "contact form",
+   "email address",
+   "numero ng telepono",
+   "mag-iwan ng mensahe",
+   "sumulat sa inyo"
+  ]
+ },
+ "humain": {
+  "fr": [
+   "un humain",
+   "vraie personne",
+   "conseiller",
+   "service client",
+   "parler à quelqu'un",
+   "pas un robot",
+   "agent"
+  ],
+  "en": [
+   "a human",
+   "real person",
+   "customer service",
+   "speak to someone",
+   "not a bot",
+   "human agent"
+  ],
+  "es": [
+   "un humano",
+   "persona real",
+   "servicio de atención",
+   "hablar con alguien",
+   "no un robot",
+   "agente humano"
+  ],
+  "it": [
+   "un umano",
+   "persona vera",
+   "assistenza clienti",
+   "parlare con qualcuno",
+   "non un robot",
+   "operatore umano"
+  ],
+  "de": [
+   "ein mensch",
+   "echte person",
+   "kundendienst",
+   "mit jemandem sprechen",
+   "kein roboter",
+   "menschlicher mitarbeiter"
+  ],
+  "pt": [
+   "um humano",
+   "pessoa de verdade",
+   "atendimento ao cliente",
+   "falar com alguém",
+   "não um robô",
+   "atendente humano"
+  ],
+  "ja": [
+   "人間と話したい",
+   "本物の人",
+   "カスタマーサービス",
+   "担当者と話す",
+   "ロボットじゃない",
+   "オペレーター"
+  ],
+  "zh": [
+   "真人",
+   "真人客服",
+   "客服",
+   "找人工",
+   "不是机器人",
+   "人工服务"
+  ],
+  "ko": [
+   "사람과 얘기",
+   "진짜 사람",
+   "고객센터",
+   "상담원",
+   "로봇 말고",
+   "담당자"
+  ],
+  "fil": [
+   "tao",
+   "totoong tao",
+   "customer service",
+   "makausap ng tao",
+   "hindi bot",
+   "ahente"
+  ]
+ },
+ "fanaison": {
+  "fr": [
+   "fanent",
+   "flétrit",
+   "fané",
+   "se fane",
+   "meurt",
+   "dépérit",
+   "fanaison",
+   "perd ses pétales"
+  ],
+  "en": [
+   "wilt",
+   "wilts",
+   "wither",
+   "fade away",
+   "do they die",
+   "perishable",
+   "petals fall"
+  ],
+  "es": [
+   "se marchita",
+   "marchitan",
+   "marchitarse",
+   "se muere",
+   "mustio"
+  ],
+  "it": [
+   "appassisce",
+   "appassiscono",
+   "appassire",
+   "muore",
+   "marciscono",
+   "cadono i petali"
+  ],
+  "de": [
+   "welken",
+   "verwelkt",
+   "vertrocknen",
+   "verblüht",
+   "stirbt"
+  ],
+  "pt": [
+   "murcha",
+   "murcham",
+   "murchar",
+   "morre",
+   "apodrece",
+   "as pétalas caem"
+  ],
+  "ja": [
+   "枯れる",
+   "しおれる",
+   "萎れる",
+   "色あせる",
+   "花びらが落ちる",
+   "しぼむ"
+  ],
+  "zh": [
+   "枯萎",
+   "凋谢",
+   "会谢",
+   "枯了",
+   "花瓣会掉",
+   "蔫"
+  ],
+  "ko": [
+   "시들",
+   "시드나요",
+   "시들어요",
+   "죽어요",
+   "꽃잎이 떨어",
+   "색이 바래"
+  ],
+  "fil": [
+   "nalalanta",
+   "lanta",
+   "namamatay",
+   "nalalagas",
+   "nalalaos",
+   "kumukupas"
+  ]
+ },
+ "anime": {
+  "fr": [
+   "animé",
+   "animation",
+   "image fixe",
+   "ça bouge",
+   "ça pousse",
+   "ça éclôt",
+   "un gif",
+   "statique"
+  ],
+  "en": [
+   "animated",
+   "animation",
+   "still image",
+   "does it move",
+   "does it grow",
+   "does it bloom",
+   "a gif",
+   "static"
+  ],
+  "es": [
+   "animado",
+   "animación",
+   "imagen fija",
+   "se mueve",
+   "crece de verdad",
+   "florece",
+   "un gif",
+   "estático"
+  ],
+  "it": [
+   "animato",
+   "animazione",
+   "immagine fissa",
+   "si muove",
+   "cresce davvero",
+   "sboccia",
+   "una gif",
+   "statico"
+  ],
+  "de": [
+   "animiert",
+   "animation",
+   "standbild",
+   "bewegt sich",
+   "wächst wirklich",
+   "blüht auf",
+   "ein gif",
+   "statisch"
+  ],
+  "pt": [
+   "animado",
+   "animação",
+   "imagem parada",
+   "mexe",
+   "cresce de verdade",
+   "desabrocha",
+   "um gif",
+   "estático"
+  ],
+  "ja": [
+   "アニメーション",
+   "静止画",
+   "動きますか",
+   "本当に育つ",
+   "咲きますか",
+   "gif",
+   "動くの"
+  ],
+  "zh": [
+   "动画",
+   "静态图",
+   "会动吗",
+   "真的会生长",
+   "会绽放",
+   "gif",
+   "动态效果"
+  ],
+  "ko": [
+   "애니메이션",
+   "정지 이미지",
+   "움직이나요",
+   "진짜 자라요",
+   "피나요",
+   "gif",
+   "움직임"
+  ],
+  "fil": [
+   "animated",
+   "animation",
+   "larawan lang",
+   "gumagalaw",
+   "tumutubo",
+   "namumukadkad",
+   "gif",
+   "nakatigil"
+  ]
+ },
+ "fleurs": {
+  "fr": [
+   "quelles fleurs",
+   "des roses",
+   "des tulipes",
+   "des pivoines",
+   "fleurs de saison",
+   "quelle composition",
+   "des orchidées",
+   "des tournesols"
+  ],
+  "en": [
+   "what flowers",
+   "any roses",
+   "tulips",
+   "peonies",
+   "seasonal flowers",
+   "quelle composition",
+   "orchids",
+   "sunflowers"
+  ],
+  "es": [
+   "qué flores",
+   "rosas",
+   "tulipanes",
+   "peonías",
+   "flores de temporada",
+   "composición",
+   "orquídeas",
+   "girasoles"
+  ],
+  "it": [
+   "che fiori",
+   "rose",
+   "tulipani",
+   "peonie",
+   "fiori di stagione",
+   "composizione",
+   "orchidee",
+   "girasoli"
+  ],
+  "de": [
+   "welche blumen",
+   "rosen",
+   "tulpen",
+   "pfingstrosen",
+   "blumen der saison",
+   "zusammenstellung",
+   "orchideen",
+   "sonnenblumen"
+  ],
+  "pt": [
+   "que flores",
+   "rosas",
+   "tulipas",
+   "peônias",
+   "flores da estação",
+   "composição",
+   "orquídeas",
+   "girassóis"
+  ],
+  "ja": [
+   "どんな花",
+   "バラ",
+   "チューリップ",
+   "牡丹",
+   "季節の花",
+   "花の組み合わせ",
+   "蘭",
+   "ひまわり"
+  ],
+  "zh": [
+   "什么花",
+   "玫瑰",
+   "郁金香",
+   "牡丹",
+   "时令花",
+   "花的搭配",
+   "兰花",
+   "向日葵"
+  ],
+  "ko": [
+   "어떤 꽃",
+   "장미",
+   "튤립",
+   "작약",
+   "제철 꽃",
+   "꽃 구성",
+   "난초",
+   "해바라기"
+  ],
+  "fil": [
+   "anong bulaklak",
+   "rosas",
+   "tulips",
+   "peonies",
+   "laman ng bouquet",
+   "orchid",
+   "sunflower"
+  ]
+ },
+ "pays": {
+  "fr": [
+   "livrez-vous",
+   "à l'étranger",
+   "livraison internationale",
+   "quels pays",
+   "dans mon pays",
+   "hors france",
+   "international"
+  ],
+  "en": [
+   "do you ship",
+   "abroad",
+   "international delivery",
+   "which countries",
+   "in my country",
+   "outside france",
+   "worldwide"
+  ],
+  "es": [
+   "entregáis",
+   "en el extranjero",
+   "envío internacional",
+   "qué países",
+   "en mi país",
+   "fuera de francia",
+   "todo el mundo"
+  ],
+  "it": [
+   "consegnate",
+   "all'estero",
+   "spedizione internazionale",
+   "quali paesi",
+   "nel mio paese",
+   "fuori dalla francia"
+  ],
+  "de": [
+   "liefert ihr",
+   "im ausland",
+   "internationaler versand",
+   "welche länder",
+   "in meinem land",
+   "außerhalb frankreichs",
+   "weltweit"
+  ],
+  "pt": [
+   "vocês entregam",
+   "no exterior",
+   "envio internacional",
+   "quais países",
+   "no meu país",
+   "fora da frança",
+   "mundo todo"
+  ],
+  "ja": [
+   "配送していますか",
+   "海外",
+   "国際配送",
+   "どの国",
+   "私の国",
+   "フランス以外",
+   "世界中"
+  ],
+  "zh": [
+   "配送到",
+   "国外",
+   "国际配送",
+   "哪些国家",
+   "我所在的国家",
+   "法国以外",
+   "全世界"
+  ],
+  "ko": [
+   "배송하나요",
+   "해외",
+   "해외 배송",
+   "어느 나라",
+   "우리나라",
+   "프랑스 밖",
+   "전 세계"
+  ],
+  "fil": [
+   "nagde-deliver ba kayo",
+   "sa ibang bansa",
+   "international na padala",
+   "anong mga bansa",
+   "sa bansa ko",
+   "labas ng france",
+   "buong mundo"
+  ]
+ }
+}

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Retouche | Belai’s Garden</title>
+  <meta name="description" content="Composez les coloris d’un bouquet numérique : chaque fleur dans un autre de ses coloris, la note suit au centime.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Retouche | Belai’s Garden">
+  <meta property="og:description" content="Chaque fleur du bouquet dans un autre de ses coloris, choisis par ce qu’ils signifient.">
+  <meta property="og:image" content="partage.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-extralight.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../scene/polices/nunito-black.woff2">
+  <!-- the bouquet of the address (?b=) is fetched with the page, not after its scripts -->
+  <script>(() => { const b = new URLSearchParams(location.search).get('b');
+    const l = document.createElement('link');
+    Object.assign(l, { rel: 'preload', as: 'fetch', crossOrigin: 'anonymous', href: `../scene/bouquets/${/^[a-z0-9-]{1,60}$/.test(b || '') ? b : 'printemps-a-la-carpe'}/atelier.json`, fetchPriority: 'high' });
+    document.head.append(l); })();</script>
+  <link rel="stylesheet" href="squelette.css">
+</head>
+<body class="compose page-atelier">
+  <a class="evitement" href="#contenu">Aller à la composition</a>
+  <!-- Skeleton of the shop (ch/squelette), one page per use (owner, 2026-10-31). Choices and reasons in SQUELETTE.md. -->
+  <header class="tete">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="savoir-faire.html">L’atelier</a>
+    </nav>
+    <div class="tete-droite">
+      <a href="compte.html" class="discret compte-lien" aria-label="Mes fleurs"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.7 3.7-5.6 7.2-5.6s6.3 1.9 7.2 5.6"/></svg><span>Mes fleurs</span></a>
+      <details class="langues">
+        <summary aria-label="Langue : français"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.8 2.6 14.2 0 17M12 3.5c-2.6 2.8-2.6 14.2 0 17"/></svg><span>FR</span></summary>
+        <ul>
+          <li><a href="#" aria-current="true" lang="fr">Français</a></li>
+          <li><a href="#" data-bouchon="langue" lang="en">English</a></li>
+          <li><a href="#" data-bouchon="langue" lang="zh-Hans">中文</a></li>
+          <li><a href="#" data-bouchon="langue" lang="de">Deutsch</a></li>
+          <li><a href="#" data-bouchon="langue" lang="es">Español</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- The composer, a page of its own (owner, 2026-10-31): the bouquet on two thirds, the composition on the right third,
+         edge to edge, white, no shadow (phone: the bouquet held at the top); it opens composing -->
+    <section id="vitrine" class="vitrine" aria-labelledby="a-titre">
+      <div class="vitrine-scene">
+        <div class="bouquet" id="bouquet" role="img" aria-label=""></div>
+        <!-- the way back to the card in the bouquet's top left corner, hold to compare in its lower left (owner, 2026-11-01) -->
+        <a class="compose-retour retour-scene" id="compose-retour" href="produit.html">← Retour à la fiche</a>
+        <button type="button" class="outil comparer-scene" id="comparer" hidden>Maintenir pour comparer</button>
+        <!-- the magnifier (owner, 2026-10-31): zoom in on the drawing, drag to look around, double click to zoom where one points -->
+        <div class="loupe" role="group" aria-label="Zoom sur le bouquet">
+          <button type="button" id="loupe-moins" aria-label="Dézoomer" disabled>−</button>
+          <button type="button" id="loupe-taux" aria-label="Revenir à la taille entière">1×</button>
+          <button type="button" id="loupe-plus" aria-label="Zoomer">+</button>
+        </div>
+        <!-- while the florist recomposes, the old bouquet stays, softened, under a calm veil: never a blank -->
+        <div class="attente" id="attente"><span class="attente-petales" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>Le fleuriste recompose…</span></div>
+        <p class="etat-scene" id="v-etat" aria-live="polite">La retouche se prépare…</p>
+      </div>
+      <div class="vitrine-cote">
+        <h1 id="a-titre" class="visuellement-cache">Retouche</h1>
+        <!-- the florist's bill is where the colours are chosen -->
+        <div class="note" id="note">
+          <table class="note-table" id="note-table">
+            <thead><tr><th scope="col">Fleur</th><th scope="col">Tiges</th><th scope="col">Total</th></tr></thead>
+            <tbody id="n-lignes"></tbody>
+            <tfoot>
+              <tr><th scope="row" colspan="2">Vase</th><td>offert</td></tr>
+              <tr class="note-total"><th scope="row" colspan="2">Le bouquet</th><td id="n-total"></td></tr>
+            </tfoot>
+          </table>
+          <div class="note-pied">
+            <button type="button" class="btn btn-plein-papier btn-petit" id="composer" hidden>Retouche</button>
+            <button type="button" class="btn btn-lien btn-petit" id="origine" hidden>Revenir au bouquet d’origine</button>
+          </div>
+          <!-- while composing, the purchase stays under the bill, with what the colours changed in the price -->
+          <div class="note-achat" id="note-achat" hidden>
+            <span class="n-ecart" id="n-ecart"></span>
+            <button type="button" class="btn btn-achat" data-bouchon="achat"><span id="n-acheter-mot">Offrir cette composition</span><span class="btn-prix" id="n-prix"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="recu-boite" id="recu-boite" aria-labelledby="rb-titre">
+    <h2 id="rb-titre">J’ai reçu un bouquet</h2>
+    <form id="recu-form">
+      <label>Le lien reçu<input id="rb-lien" type="text" inputmode="url" autocomplete="off" spellcheck="false" required></label>
+      <button class="btn btn-plein" type="submit">Ouvrir la page du cadeau</button>
+      <p class="rb-etat" id="rb-etat" role="status"></p>
+    </form>
+    <ol class="rb-etapes">
+      <li>La personne qui vous l’offre vous a transmis un lien et, à part, un code.</li>
+      <li>Le lien ouvre la page du cadeau, qui vous demande le code : ni mot de passe, ni numéro.</li>
+      <li>Le bouquet éclôt avec son mot, sur l’appareil où vous l’ouvrez. Vous pouvez le poser sur votre bureau ou votre écran d’accueil.</li>
+    </ol>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <dialog class="bouchon" id="bouchon" aria-labelledby="bouchon-texte">
+    <p id="bouchon-texte"></p>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <script src="../scene/eclosion.js"></script>
+  <script type="module" src="atelier.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# the account server's local secrets and state (api/, wrangler dev)
+api/.dev.vars
+api/.wrangler/
+node_modules/
+
+# screenshots of the tools (outils/ecrans.mjs, outils/regard.py)
+audit/
+
+__pycache__/
+*.pyc

@@ -1,0 +1,60 @@
+# _headers: how long browsers and Cloudflare keep the shop's files (Cloudflare Pages, this file at the root of public/,
+# which serves /squelette/, /scene/ and /insectes/ as outils/servir.py does locally).
+# - pages, modules and styles: always checked again (a 304 most of the time), so a page never runs with the modules of
+#   another publication (an old noyau.mjs under a new page leaves it empty);
+# - data (boutique.json, sens.json...): five minutes, then checked again in the background for a day;
+# - bouquets: a month, a collection's life; they are fixed once published (a redrawn bouquet needs a new sw.js VERSION
+#   and waits for this month at worst in the browser's own cache: purge Cloudflare's cache when one is redrawn);
+# - fonts and versioned libraries: a year, immutable (a new font or library gets a new name);
+# - the service worker itself: always checked again (the browser looks for a new one at every visit anyway).
+
+/squelette/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/squelette/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/squelette/*.mjs
+  Cache-Control: public, max-age=0, must-revalidate
+
+/squelette/*.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/squelette/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/squelette/*.json
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/scene/*.mjs
+  Cache-Control: public, max-age=0, must-revalidate
+
+/scene/*.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/scene/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/scene/boutique.json
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/scene/bouquets/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/scene/polices/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/insectes/runtime/*.mjs
+  Cache-Control: public, max-age=0, must-revalidate
+
+/insectes/runtime/vendor/*
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/insectes/*/atlas/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# last, so they win over the rules above that match them too (rules add up; "!" takes off what an earlier one set)
+/squelette/sw.js
+  ! Cache-Control
+  Cache-Control: no-cache

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Essai de polices calligraphiques</title>
+  <!-- A specimen sheet for the owner's choice only (2026-10-31): it asks Google Fonts for the candidates; the chosen ones will
+       be served by the shop itself. Not part of the shop. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Parisienne&family=Great+Vibes&family=Italianno&family=Allura&family=Alex+Brush&family=Corinthia:wght@400;700&family=Monsieur+La+Doulaise&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=EB+Garamond:ital@1&family=Cormorant+Upright:wght@400;500&family=Dancing+Script:wght@400;500&family=Petit+Formal+Script&family=Playfair+Display:ital@1&display=swap">
+  <style>
+    body { margin: 0; background: #fff; color: #0c1e38; font: 16px/1.5 system-ui, sans-serif; }
+    main { max-width: 1180px; margin: 0 auto; padding: 32px 16px 80px; }
+    h1 { font-weight: 300; font-size: 26px; margin: 0 0 4px; }
+    .note { color: #4b5e78; margin: 0 0 28px; }
+    h2 { font: 600 13px/1 system-ui; letter-spacing: 0.1em; text-transform: uppercase; color: #8a6a2e; margin: 48px 0 16px; }
+    .grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+    .carte { border: 1px solid #e3e6ea; border-radius: 8px; padding: 18px 20px 20px; }
+    .nom { font: 600 12px/1 system-ui; letter-spacing: 0.06em; color: #4b5e78; margin-bottom: 12px; }
+    .nom em { font-style: normal; color: #8a6a2e; font-weight: 400; }
+    .t1 { font-size: 54px; line-height: 1.05; margin: 0 0 6px; }
+    .t2 { font-size: 34px; line-height: 1.1; margin: 0; }
+    .p { font-size: 19px; line-height: 1.5; margin: 0 0 10px; }
+    .prix { font-size: 20px; margin: 0 0 12px; }
+    .btn { display: inline-block; padding: 10px 18px; border-radius: 6px; background: #0c1e38; color: #fff; font-size: 19px; }
+    .mix { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; border: 1px solid #e3e6ea; border-radius: 10px; padding: 28px; }
+    .mix img { width: 100%; max-height: 460px; object-fit: contain; }
+    .choix { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; }
+    select { font: 15px system-ui; padding: 6px 8px; }
+    @media (max-width: 700px) { .mix { grid-template-columns: 1fr; } .t1 { font-size: 44px; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Polices calligraphiques : les options</h1>
+  <p class="note">Toutes sous licence libre (OFL), servies ensuite par le site lui-même. Choisis une police de titre et une de texte, puis essaie la paire en bas.</p>
+
+  <h2>Pour les titres</h2>
+  <div class="grille" id="titres"></div>
+
+  <h2>Pour le texte courant</h2>
+  <div class="grille" id="textes"></div>
+
+  <h2>Essayer une paire</h2>
+  <div class="choix">
+    <label>Titre <select id="sel-t"></select></label>
+    <label>Texte <select id="sel-p"></select></label>
+  </div>
+  <div class="mix">
+    <div>
+      <p class="t1" id="m-t">Des fleurs qui vivent sur l’écran.</p>
+      <p class="p" id="m-p">Dessinées et animées tige à tige, d’après de vraies fleurs. À offrir ou à garder.</p>
+      <p class="prix" id="m-prix">Soliflore 25 € · Bouquets dès 82 €</p>
+      <span class="btn" id="m-btn">Offrir ce bouquet · 300,70 €</span>
+    </div>
+    <img src="../../scene/bouquets/printemps-a-la-carpe/vignette.svg" alt="">
+  </div>
+</main>
+<script>
+  const TITRES = [
+    ['Pinyon Script', 'la main du logotype, anglaise gravée'],
+    ['Parisienne', 'anglaise ronde, plus lisible'],
+    ['Great Vibes', 'grands déliés, effet faire-part'],
+    ['Italianno', 'chancelière fine et serrée'],
+    ['Allura', 'anglaise souple, moderne'],
+    ['Alex Brush', 'pinceau, contrasté'],
+    ['Corinthia', 'anglaise légère, très fine'],
+    ['Monsieur La Doulaise', 'ornée, très calligraphiée'],
+  ];
+  const TEXTES = [
+    ['Cormorant Garamond', 'italique chancelière, haute couture', 'italic', 500],
+    ['EB Garamond', 'italique de livre, très lisible', 'italic', 400],
+    ['Cormorant Upright', 'calligraphie droite, rare et lisible', 'normal', 500],
+    ['Playfair Display', 'italique contrastée, éditoriale', 'italic', 400],
+    ['Dancing Script', 'écriture liée à la plume, décontractée', 'normal', 500],
+    ['Petit Formal Script', 'anglaise formelle en petit corps', 'normal', 400],
+  ];
+  const ff = (n) => `'${n}', cursive`;
+  const card = (html) => Object.assign(document.createElement('div'), { className: 'carte', innerHTML: html });
+  for (const [n, d] of TITRES) {
+    const c = card(`<div class="nom">${n} <em>· ${d}</em></div><p class="t1">Des fleurs qui vivent sur l’écran.</p><p class="t2">La collection d’octobre</p>`);
+    c.querySelectorAll('.t1, .t2').forEach((e) => (e.style.fontFamily = ff(n)));
+    document.getElementById('titres').append(c);
+  }
+  for (const [n, d, st, w] of TEXTES) {
+    const c = card(`<div class="nom">${n} <em>· ${d}</em></div><p class="p">Dessinées et animées tige à tige, d’après de vraies fleurs. Il fane doucement sur trente jours, à partir du jour où on l’ouvre.</p><p class="prix">Soliflore 25 € · Bouquets dès 82 €</p><span class="btn">Offrir ce bouquet · 300,70 €</span>`);
+    c.querySelectorAll('.p, .prix, .btn').forEach((e) => Object.assign(e.style, { fontFamily: ff(n), fontStyle: st, fontWeight: w }));
+    document.getElementById('textes').append(c);
+  }
+  const st = document.getElementById('sel-t');
+  const sp = document.getElementById('sel-p');
+  TITRES.forEach(([n]) => st.add(new Option(n, n)));
+  TEXTES.forEach(([n], i) => sp.add(new Option(n, i)));
+  const mix = () => {
+    document.getElementById('m-t').style.fontFamily = ff(st.value);
+    const [n, , s, w] = TEXTES[sp.value];
+    for (const id of ['m-p', 'm-prix', 'm-btn']) Object.assign(document.getElementById(id).style, { fontFamily: ff(n), fontStyle: s, fontWeight: w });
+  };
+  st.onchange = sp.onchange = mix;
+  mix();
+</script>
+</body>
+</html>

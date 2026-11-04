@@ -1,0 +1,399 @@
+/* essai.css: "Try on your desktop" (essai.mjs). Over the page at first (the bee and its bubble only, the page under them still
+   seen), then full screen: the visitor's desktop's picture, the bouquet in its frame, the bee. The bubble is the site's
+   glass (entete.css), its words white on it. */
+
+.essai {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* back from the desktop: a click anywhere brings it full screen */
+.essai.essai-attente {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* full screen (or the whole window on a phone without it): the desktop's picture fills it, pixel for pixel */
+.essai.essai-plein {
+  pointer-events: auto;
+  background: #000;
+}
+
+.essai-bureau {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* a phone's picture: its screen's shape, the whole of it seen */
+@media (pointer: coarse) and (max-width: 899px) {
+  .essai-bureau {
+    object-fit: cover;
+  }
+}
+
+.essai-abeille {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+/* the bouquet and its frame, as Belai Bureau places it: a thin dashed edge, four corners, ✓ */
+.essai-pose {
+  position: absolute;
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+}
+
+.essai-pose:active {
+  cursor: grabbing;
+}
+
+/* set: no frame, no moving; a long press frees it again (as in Belai Bureau) */
+.essai-pose.essai-posee {
+  cursor: default;
+}
+
+/* the ✓ over the top left corner when the right one would leave the screen, under the frame when the top would */
+.essai-pose.essai-ok-gauche .essai-ok {
+  right: auto;
+  left: -18px;
+}
+
+.essai-pose.essai-ok-bas .essai-ok {
+  top: auto;
+  bottom: -46px;
+}
+
+.essai-ok[hidden] {
+  display: none;
+}
+
+/* the small white rings inviting the click (the shop's bouquet's, boutique.css .bq-invite), on what the bee asks to touch */
+.essai-invite {
+  position: absolute;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+
+.essai-invite[hidden] {
+  display: none;
+}
+
+.essai-invite::before,
+.essai-invite::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgb(255 255 255 / 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgb(10 30 60 / 0.25), inset 0 0 6px rgb(255 255 255 / 0.2);
+  opacity: 0;
+  transform: scale(0.5);
+  animation: essai-invite 2.4s cubic-bezier(0.2, 0.7, 0.3, 1) infinite;
+}
+
+.essai-invite::after {
+  border-color: rgb(255 255 255 / 0.55);
+  animation-delay: 0.4s;
+}
+
+@keyframes essai-invite {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  60%,
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .essai-invite::before {
+    animation: none;
+    opacity: 0.8;
+    transform: none;
+  }
+
+  .essai-invite::after {
+    display: none;
+  }
+}
+
+/* the long press's ring, under the pointer (Belai Bureau's) */
+.essai-anneau {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+
+.essai-anneau[hidden] {
+  display: none;
+}
+
+.essai-anneau svg {
+  width: 100%;
+  height: 100%;
+  rotate: -90deg;
+}
+
+.essai-anneau circle {
+  fill: none;
+  stroke-width: 3.5;
+}
+
+.essai-anneau .fond {
+  stroke: rgb(255 255 255 / 0.35);
+}
+
+.essai-anneau .plein {
+  stroke: #fff;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+}
+
+.essai-bouquet {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.essai-cadre {
+  position: absolute;
+  inset: -6px;
+  border: 1.5px dashed rgb(255 255 255 / 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgb(20 50 90 / 0.25);
+}
+
+.essai-cadre[hidden] {
+  display: none;
+}
+
+.essai-coin {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgb(10 30 60 / 0.4);
+}
+
+.essai-coin[data-coin='nw'] {
+  left: -8px;
+  top: -8px;
+  cursor: nwse-resize;
+}
+
+.essai-coin[data-coin='ne'] {
+  right: -8px;
+  top: -8px;
+  cursor: nesw-resize;
+}
+
+.essai-coin[data-coin='sw'] {
+  left: -8px;
+  bottom: -8px;
+  cursor: nesw-resize;
+}
+
+.essai-coin[data-coin='se'] {
+  right: -8px;
+  bottom: -8px;
+  cursor: nwse-resize;
+}
+
+@media (pointer: coarse) {
+  .essai-coin {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.essai-ok {
+  position: absolute;
+  right: -18px;
+  top: -46px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #1477e6, #0a6cdb 40%, #0863cb);
+  color: #fff;
+  font: 700 17px/34px system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 2px 8px rgb(8 36 84 / 0.35);
+  cursor: pointer;
+}
+
+/* the arrows on the frame's sides (the skeleton's « Essayer », owner 2026-10-31): small white discs, half out of the
+   dashed frame, that go through the collection's bouquets */
+.essai-fleche {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgb(10 30 60 / 0.4);
+  cursor: pointer;
+}
+
+.essai-fleche svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  fill: none;
+  stroke: #1b1714;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.essai-prec {
+  left: -15px;
+}
+
+.essai-suiv {
+  right: -15px;
+}
+
+/* the bee's bubble: on glass, beside the bee (essai.mjs moves it), each new step popping in */
+.essai-bulle {
+  position: absolute;
+  left: 50%;
+  top: max(20px, env(safe-area-inset-top, 0px));
+  translate: -50% 0;
+  max-width: min(340px, calc(100vw - 24px));
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid var(--glass-bord);
+  border-radius: 16px;
+  background: var(--glass-texte);
+  -webkit-backdrop-filter: var(--glass-flou);
+  backdrop-filter: var(--glass-flou);
+  box-shadow: var(--glass-ombre);
+  color: #fff;
+  font: 500 14.5px/1.4 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  text-shadow: 0 1px 2px rgb(8 36 84 / 0.35);
+  pointer-events: auto;
+}
+
+.essai-bulle-neuve {
+  animation: essai-bulle 0.32s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+
+@keyframes essai-bulle {
+  from {
+    scale: 0.86;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .essai-bulle-neuve {
+    animation: none;
+  }
+}
+
+.essai-texte {
+  margin: 0;
+}
+
+.essai-texte kbd {
+  display: inline-block;
+  min-width: 1.4em;
+  padding: 1px 6px;
+  border: 1px solid rgb(255 255 255 / 0.55);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  background: rgb(255 255 255 / 0.16);
+  font: 700 0.92em/1.3 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  text-align: center;
+  text-shadow: none;
+}
+
+.essai-texte small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.essai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.essai-actions:empty {
+  display: none;
+}
+
+.essai-bouton {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 14px;
+  border: 1px solid var(--glass-bord);
+  border-radius: 999px;
+  background: var(--glass);
+  color: #fff;
+  font: 600 13px/1 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.essai-bouton-1 {
+  border-color: transparent;
+  background: linear-gradient(to bottom, #1477e6, #0a6cdb 40%, #0863cb);
+}
+
+.essai-bouton:focus-visible,
+.essai-ok:focus-visible,
+.essai-fermer:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.essai-fermer {
+  position: absolute;
+  right: max(14px, env(safe-area-inset-right, 0px));
+  top: max(14px, env(safe-area-inset-top, 0px));
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--glass-bord);
+  border-radius: 50%;
+  background: var(--glass);
+  -webkit-backdrop-filter: var(--glass-flou);
+  backdrop-filter: var(--glass-flou);
+  color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+}

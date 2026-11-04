@@ -1,0 +1,3113 @@
+{
+ "rose-standard": {
+  "nom": "Rose",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Beauté",
+    "fr": "Beauté",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 208 (« Rose. Beauté ») ; renvoi p. 45",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": "blanc",
+    "sens": "Silence",
+    "fr": "Silence (rose blanche : le dieu du Silence tient une rose blanche, mythe rapporté par La Tour)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 208 ; Dictionnaire du langage, « Silence, Rose blanche »",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": "blanc",
+    "sens": "Cœur qui ignore l'amour (bouton de rose blanche)",
+    "fr": "Bouton de rose blanche : cœur qui ignore l'amour",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 201 ; Dictionnaire du langage",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": "jaune",
+    "sens": "Infidélité",
+    "fr": "Infidélité (« le jaune est la couleur des infidèles »)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 208 ; Dictionnaire du langage, « Infidélité, Rose jaune »",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Amour, Volupté (rose mousseuse)",
+    "fr": "Rose mousseuse : amour, volupté",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 208",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Love",
+    "fr": "Amour",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Rose »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rouge",
+    "sens": "Pure and lovely (Rosebud, Red)",
+    "fr": "Bouton de rose rouge : pur et charmant",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Rosebud, Red »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rouge",
+    "sens": "Bashful shame (Rose, Deep Red)",
+    "fr": "Rose rouge foncé : pudeur honteuse",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Rose, Deep Red »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "blanc",
+    "sens": "I am worthy of you (Rose, White)",
+    "fr": "Rose blanche : je suis digne de vous",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Rose, White »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "sens": "Decrease of love. Jealousy (Rose, Yellow)",
+    "fr": "Rose jaune : déclin de l'amour, jalousie",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Rose, Yellow »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "blanc",
+    "sens": "Unity (White and Red Rose together)",
+    "fr": "Rose blanche et rouge ensemble : union",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Rose, White and Red together »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "rouge",
+    "sens": "Rose (rothe), Centifolie : Ich kenne nichts Herrlicheres, als deinen Besitz.",
+    "fr": "Rose rouge (centifolia) : je ne connais rien de plus splendide que ta possession",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=88",
+    "page": "p. 70 (vue 88)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "jaune",
+    "sens": "Rose (gelbe) : Wenn du noch keinen Anbeter hast, so sei nicht neidisch auf die glücklicheren. (Index par sens : Neid)",
+    "fr": "Rose jaune : si tu n'as pas encore d'admirateur, ne sois pas envieuse des plus heureuses (index par sens : envie)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=88",
+    "page": "p. 70 (vue 88) ; index par sens p. 79 (vue 97)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "blanc",
+    "sens": "Rose (weiße) : Bald werde ich das Opfer meiner hoffnungslosen Liebe werden.",
+    "fr": "Rose blanche : bientôt je serai victime de mon amour sans espoir",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=89",
+    "page": "p. 71 (vue 89)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "rouge",
+    "sens": "Rosenknospe (rothe) : Bisher war Liebe meinem Herzen fremd, erst jetzt ahne ich ihr Glück.",
+    "fr": "Bouton de rose rouge : l'amour était étranger à mon cœur, j'en pressens seulement maintenant le bonheur",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=89",
+    "page": "p. 71 (vue 89)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "blanc",
+    "sens": "Rosenknospe (weiße) : Noch bist du rein, wache über deine Neigungen.",
+    "fr": "Bouton de rose blanche : tu es encore pur(e), veille sur tes penchants",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=89",
+    "page": "p. 71 (vue 89)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": "amarillo",
+    "sens": "Rosa amarilla : Infidelidad",
+    "fr": "Rose jaune : infidélité",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrée « Rosa amarilla »",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": "blanco",
+    "sens": "Rosa blanca : Sigilo",
+    "fr": "Rose blanche : silence, discrétion",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrée « Rosa blanca »",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Rosa de cien hojas : Gracias",
+    "fr": "Rose à cent feuilles : grâces",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrée « Rosa de cien hojas »",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": "rouge",
+    "sens": "Red: Love, I love you ; Pink: Happiness ; White: Innocence, Heavenly, I'm worthy of you",
+    "fr": "Rouge : amour ; rose : bonheur ; blanc : innocence (tableau d'usage surtout victorien, sans source primaire citée)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Rose »",
+    "niveau": "C"
+   },
+   {
+    "culture": "US",
+    "couleur": "jaune",
+    "sens": "yellow stands for friendship or devotion",
+    "fr": "Jaune : amitié ou dévouement (sens moderne, sans source citée)",
+    "source": "Wikipedia (EN), « Floriography »",
+    "url": "https://en.wikipedia.org/wiki/Floriography",
+    "page": "Section sur les couleurs de la rose",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": "jaune",
+    "fr": "Rose jaune = infidélité (La Tour, 1854) : à éviter pour une déclaration.",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 208"
+   },
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "fr": "Rose jaune = déclin de l'amour, jalousie (Greenaway, 1884).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "jaune",
+    "fr": "Rose jaune = envie (Braun, 1843).",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=88",
+    "niveau": "A",
+    "page": "p. 70 (vue 88)"
+   },
+   {
+    "culture": "ES",
+    "couleur": "amarillo",
+    "fr": "Rosa amarilla = infidelidad (Jazmín, 1882).",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "blanc",
+    "fr": "Rose blanche flétrie = « plutôt la mort que la perte de l'innocence » (Greenaway : White Rose, dried).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": "rouge foncé",
+    "fr": "Rose cramoisie / rouge très foncé = deuil dans le tableau de l'Almanac (usage victorien, sans source primaire).",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "niveau": "C"
+   }
+  ],
+  "propose": {
+   "sens": "Amour et beauté",
+   "couleur": {
+    "blanc": "Silence, « je suis digne de vous »",
+    "jaune": "Jalousie, infidélité (sens ancien)"
+   },
+   "base": "FR La Tour (Rose = Beauté), UK Greenaway (Rose = Love), niveau A. Couleurs : blanc FR+UK+ES, jaune FR+UK+DE+ES, niveau A.",
+   "niveau": "A",
+   "actuel_verdict": "« Amour et admiration » : amour = A ; « admiration » n'a pas de source. Rouge « amour passionné », rose « tendresse, gratitude », blanc « pureté, respect », jaune « amitié joyeuse » = niveau C (usage moderne) ; le jaune contredit toutes les sources anciennes.",
+   "note": "CONFLIT jaune : amitié (usage moderne, C) contre infidélité/jalousie/envie (FR, UK, DE, ES, niveau A). À trancher par le porteur. Pas de source trouvée pour la rose orange, corail, lavande. Chine/Japon : aucune source fiable trouvée pour la rose."
+  }
+ },
+ "rose-aspect-jardin": {
+  "nom": "Rose d'aspect jardin",
+  "traditions": [],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": "jaune",
+    "fr": "Hérite de la rose : jaune = infidélité / jalousie (voir rose-standard).",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 208"
+   }
+  ],
+  "propose": {
+   "sens": "Amour et beauté",
+   "couleur": {},
+   "base": "Hérite de rose-standard (cultivar du genre Rosa) ; aucune tradition ne distingue les roses « de jardin » des autres.",
+   "niveau": "A",
+   "actuel_verdict": "« Romantisme bohème et naturel » : descriptif de l'aspect, aucune source ; remplacer par le sens de la rose.",
+   "note": "Pour un type centifolia (rose à cent feuilles / rose chou) il existe des entrées propres : La Tour « Rose à cent feuilles : grâces » (A), Greenaway « Rose, Cabbage : ambassadrice de l'amour » (A), Phillips « Hundred-leaved Rose : grâce » (A). À n'utiliser que si le porteur décide de lier l'aspect à ce type."
+  }
+ },
+ "rose-de-jardin": {
+  "nom": "Rose de jardin",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Rose à cent feuilles : Grâces",
+    "fr": "Rose à cent feuilles : grâces",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 208",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Rose, Cabbage : Ambassador of love",
+    "fr": "Rose chou (centifolia) : ambassadrice de l'amour",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Rose, Cabbage »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Grace (Hundred-leaved Rose, Rosa centifolia)",
+    "fr": "Rose à cent feuilles : grâce",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 161",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Rose, Damask : Brilliant complexion",
+    "fr": "Rose de Damas : teint éclatant",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Rose, Damask »",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": "jaune",
+    "fr": "Hérite de la rose : jaune = infidélité / jalousie.",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 208"
+   }
+  ],
+  "propose": {
+   "sens": "Amour et beauté",
+   "couleur": {
+    "blanc": "Silence, « je suis digne de vous »",
+    "jaune": "Jalousie, infidélité (sens ancien)"
+   },
+   "base": "Hérite de rose-standard ; entrées centifolia/damas en plus (A).",
+   "niveau": "A",
+   "actuel_verdict": "« Amour généreux et épanoui » : aucune source ; colorations (passion profonde, amour pur et serein, gratitude chaleureuse, douceur romantique) = niveau C ou invention.",
+   "note": "Mêmes conflits que la rose-standard sur le jaune. « Gratitude » pour la rose pêche/rose : seulement C (usage fleuriste moderne)."
+  }
+ },
+ "tulipe-simple": {
+  "nom": "Tulipe",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Déclaration d'amour",
+    "fr": "Déclaration d'amour (La Tour précise : « sur les rives du Bosphore, la tulipe est l'emblème de l'inconstance ; mais elle est aussi celui du plus violent amour »)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Calendrier de Flore p. 10 ; Dictionnaire des plantes, p. 210",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Declaration of love",
+    "fr": "Déclaration d'amour",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 112",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rouge",
+    "sens": "Tulip, Red : Declaration of love",
+    "fr": "Tulipe rouge : déclaration d'amour",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Tulip, Red »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Tulip : Fame",
+    "fr": "Tulipe : renommée",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Tulip »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "panaché",
+    "sens": "Tulip, Variegated : Beautiful eyes",
+    "fr": "Tulipe panachée : beaux yeux",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Tulip, Variegated »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "sens": "Tulip, Yellow : Hopeless love",
+    "fr": "Tulipe jaune : amour sans espoir",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Tulip, Yellow »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Tulpe : Deines Wuchses reizende Formen entflammen die Wünsche der Männer. (Index par sens : Schönheit)",
+    "fr": "Tulipe : les formes charmantes de ta taille enflamment les désirs des hommes (index par sens : beauté)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=92",
+    "page": "p. 74 (vue 92) ; index p. 79 (vue 97)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Tulpe : Bild eines Weibes, dessen Wert allein in einer lieblichen Außenseite besteht",
+    "fr": "Tulipe : image d'une femme dont la valeur tient seulement à son apparence aimable (vanité de la beauté sans esprit)",
+    "source": "Johann Daniel Symanski, Selam oder die Sprache der Blumen, Vienne, Lechner, 1832",
+    "url": "https://archive.org/details/bub_gb_kuRYAAAAcAAJ",
+    "page": "Section « Tulpe » (OCR de Fraktur, lecture partielle)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Tulipán : Declaración de amor",
+    "fr": "Tulipe : déclaration d'amour",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, entrée « Tulipán » (et 1882, entrée « Tulipán »)",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": "jaune",
+    "sens": "Tulip: Red: Passion, Declaration of love ; Yellow: Sunshine in your smile",
+    "fr": "Rouge : passion, déclaration d'amour ; jaune : « un rayon de soleil dans ton sourire » (usage moderne)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Tulip »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "fr": "Tulipe jaune = amour sans espoir (Greenaway, 1884) ; contredit l'usage moderne « gaieté ».",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "fr": "La Tour : sur le Bosphore la tulipe est aussi l'emblème de l'inconstance.",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "Calendrier de Flore p. 10"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "fr": "Allemand 1832 et 1843 : la tulipe est la beauté purement extérieure, vaine.",
+    "source": "Johann Daniel Symanski, Selam oder die Sprache der Blumen, Vienne, Lechner, 1832",
+    "url": "https://archive.org/details/bub_gb_kuRYAAAAcAAJ",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Déclaration d'amour",
+   "couleur": {
+    "rouge": "Déclaration d'amour",
+    "jaune": "Amour sans espoir (sens ancien)"
+   },
+   "base": "FR La Tour, UK Phillips et Greenaway, ES Jazmín : quatre traditions concordantes (A). Rouge : Greenaway.",
+   "niveau": "A",
+   "actuel_verdict": "« Déclaration d'amour printanière » : « déclaration d'amour » = A ; « printanière » est descriptif. Rouge « déclaration ardente » = A (Greenaway). Jaune « gaieté et amitié » = C seulement et contredit Greenaway (amour sans espoir). Blanc « pardon sincère », rose « affection attentionnée », violet « admiration et noblesse » = aucune source trouvée (D).",
+   "note": "Aucune source trouvée pour le « pardon » de la tulipe blanche, souvent répété par les fleuristes. Pas de source fiable trouvée pour la Chine et le Japon. CONFLIT jaune (amour sans espoir A / soleil C)."
+  }
+ },
+ "tulipe-double": {
+  "nom": "Tulipe double",
+  "traditions": [],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "fr": "Hérite de la tulipe : jaune = amour sans espoir (Greenaway).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Déclaration d'amour",
+   "couleur": {},
+   "base": "Hérite de tulipe-simple : double, perroquet et frangée sont des groupes de cultivars du genre Tulipa ; aucun ouvrage ancien ne les distingue.",
+   "niveau": "A",
+   "actuel_verdict": "« Profusion heureuse » : inventé, aucune source (descriptif de la fleur double).",
+   "note": "Seule distinction ancienne : Greenaway « Tulip, Variegated : beaux yeux » (tulipe panachée, flammée). Elle pourrait viser la tulipe perroquet (flammée), mais ce rapprochement est une hypothèse, pas une source : à ne pas appliquer sans décision du porteur."
+  }
+ },
+ "tulipe-perroquet": {
+  "nom": "Tulipe perroquet",
+  "traditions": [],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "fr": "Hérite de la tulipe : jaune = amour sans espoir (Greenaway).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Déclaration d'amour",
+   "couleur": {},
+   "base": "Hérite de tulipe-simple : double, perroquet et frangée sont des groupes de cultivars du genre Tulipa ; aucun ouvrage ancien ne les distingue.",
+   "niveau": "A",
+   "actuel_verdict": "« Exubérance, fantaisie joyeuse » : inventé, aucune source.",
+   "note": "Seule distinction ancienne : Greenaway « Tulip, Variegated : beaux yeux » (tulipe panachée, flammée). Elle pourrait viser la tulipe perroquet (flammée), mais ce rapprochement est une hypothèse, pas une source : à ne pas appliquer sans décision du porteur."
+  }
+ },
+ "tulipe-frangee": {
+  "nom": "Tulipe frangée",
+  "traditions": [],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "fr": "Hérite de la tulipe : jaune = amour sans espoir (Greenaway).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Déclaration d'amour",
+   "couleur": {},
+   "base": "Hérite de tulipe-simple : double, perroquet et frangée sont des groupes de cultivars du genre Tulipa ; aucun ouvrage ancien ne les distingue.",
+   "niveau": "A",
+   "actuel_verdict": "« Raffinement ciselé comme une dentelle » : descriptif, aucune source.",
+   "note": "Seule distinction ancienne : Greenaway « Tulip, Variegated : beaux yeux » (tulipe panachée, flammée). Elle pourrait viser la tulipe perroquet (flammée), mais ce rapprochement est une hypothèse, pas une source : à ne pas appliquer sans décision du porteur."
+  }
+ },
+ "renoncule-classique": {
+  "nom": "Renoncule",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Vous êtes brillante d'attraits (Renoncule asiatique)",
+    "fr": "Vous êtes brillante d'attraits",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 208 ; Dictionnaire du langage, « Vous êtes brillante d'attraits »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Ranunculus : You are radiant with charms",
+    "fr": "Renoncule : vous êtes rayonnante de charmes",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Ranunculus »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Ranunculus, Garden : You are rich in attractions",
+    "fr": "Renoncule des jardins : vous êtes riche en attraits",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Ranunculus, Garden »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Ranunkel : Es scheint, du liebst Veränderung.",
+    "fr": "Renoncule : il semble que tu aimes le changement (index par sens : imprudence)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=88",
+    "page": "p. 70 (vue 88) ; index p. 80 (vue 98)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Ranunkel (Ranunculus asiaticus) : Sinnbild jener Eitlen, die nur durch die Mode die Augen der Männer fesseln wollen",
+    "fr": "Renoncule : image de ces vaniteuses qui n'attirent les regards que par la mode (parure)",
+    "source": "Johann Daniel Symanski, Selam oder die Sprache der Blumen, Vienne, Lechner, 1832",
+    "url": "https://archive.org/details/bub_gb_kuRYAAAAcAAJ",
+    "page": "Section « Ranunkel » (OCR de Fraktur)",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Renoncule sauvage (R. sceleratus) = ingratitude (La Tour, Greenaway) : autre plante que la renoncule de fleuriste.",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "fr": "Braun 1843 : « il semble que tu aimes le changement » (inconstance).",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=88",
+    "niveau": "A",
+    "page": "p. 70 (vue 88)"
+   }
+  ],
+  "propose": {
+   "sens": "Rayonnante de charme",
+   "couleur": {},
+   "base": "FR La Tour + UK Greenaway concordent sur le charme (A). L'allemand dit autre chose (changement, vanité).",
+   "niveau": "A",
+   "actuel_verdict": "« Ébloui par tant de charme » : fidèle à La Tour et Greenaway (A), à reformuler du point de vue de celui qui offre.",
+   "note": "Allemagne : sens plutôt défavorable (inconstance, vanité). Chine/Japon : rien trouvé."
+  }
+ },
+ "anemone-coronaria": {
+  "nom": "Anémone des fleuristes",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Abandon (Anémone)",
+    "fr": "Abandon (La Tour raconte le mythe de la nymphe Anémone délaissée par Zéphyre)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 200 ; Dictionnaire du langage, « Abandon, Anémone »",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Maladie (Anémone des prés)",
+    "fr": "Maladie (l'anémone des prés passait pour empoisonner l'air)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 200",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Anemone : Sickness",
+    "fr": "Anémone : maladie",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 278",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Anemone (Zephyr Flower) : Sickness. Expectation.",
+    "fr": "Anémone (fleur du Zéphyr) : maladie, attente",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Anemone (Zephyr Flower) »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Anemone (Garden) : Forsaken",
+    "fr": "Anémone des jardins : délaissée",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Anemone (Garden) »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Anemone (Windblume) : Schlag deine Trauer in den Wind. (Index par sens : Erheiterung)",
+    "fr": "Anémone (fleur du vent) : jette ta tristesse au vent (index par sens : réjouissance, encouragement)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=74",
+    "page": "p. 56 (vue 74) ; index p. 78 (vue 96)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Anémona : Abandono",
+    "fr": "Anémone : abandon",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrée « Anémona »",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "fr": "Anémone = abandon (La Tour) ; UK = maladie / délaissée : sens négatifs concordants.",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 200"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Anémone des jardins = délaissée (Greenaway).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Attente ; amour délaissé",
+   "couleur": {},
+   "base": "FR+ES (abandon), UK (délaissée, maladie, attente). Seule lueur positive : « attente » (Greenaway) et « jette ta tristesse au vent » (Braun).",
+   "niveau": "A",
+   "actuel_verdict": "« Espérance fragile, amour qui attend » : « attente » = A (Greenaway) ; « espérance » est une extrapolation. Le sens dominant est négatif (abandon).",
+   "note": "À trancher : afficher « Attente » seul, ou l'abandon. Japon/Chine : rien de fiable trouvé pour Anemone coronaria."
+  }
+ },
+ "pois-de-senteur": {
+  "nom": "Pois de senteur",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Sweet Pea : Delicate pleasures",
+    "fr": "Pois de senteur : plaisirs délicats",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Sweet Pea »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Pea, Sweet : Departure",
+    "fr": "Pois de senteur : départ",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Pea, Sweet »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Delicate Pleasure (Sweet-pea, Lathyrus odoratus)",
+    "fr": "Plaisir délicat",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 115",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Guisante de olor : Placeres delicados",
+    "fr": "Pois de senteur : plaisirs délicats",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, entrée « Guisante de olor »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Wicke, spanische, wohlriechende Platterbse : Liebe findet bei mir Anerkennung.",
+    "fr": "Pois de senteur : l'amour trouve chez moi sa reconnaissance",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=93",
+    "page": "p. 75 (vue 93)",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Blissful pleasures, Goodbye, Thank you for a lovely time",
+    "fr": "Plaisirs bienheureux, adieu, merci pour ce beau moment (glose moderne du « départ » victorien)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Sweet pea »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Le pois de senteur signifie aussi « départ » / adieu (Greenaway) : un bouquet d'adieu, pas de bienvenue.",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Plaisirs délicats",
+   "couleur": {},
+   "base": "UK Greenaway + Phillips, ES Jazmín : « plaisirs délicats » (A, trois sources). « Départ » (Greenaway) est le second sens.",
+   "niveau": "A",
+   "actuel_verdict": "« Merci pour ces doux moments » : glose moderne (C) qui prolonge « plaisirs délicats / départ » ; acceptable comme formulation pour offrir, mais c'est un sens d'usage récent, pas un sens ancien.",
+   "note": "La Tour (1854) n'a pas d'entrée pour le pois de senteur. Allemagne : « l'amour trouve chez moi sa reconnaissance » (Braun). À trancher : « Plaisirs délicats » (A) ou la version « merci » (C)."
+  }
+ },
+ "jacinthe": {
+  "nom": "Jacinthe",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Bienveillance (Jacinthe)",
+    "fr": "Bienveillance (« à cause de sa douce odeur et de son aspect agréable »)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 204 ; Dictionnaire du langage",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Jeu (Hyacinthe)",
+    "fr": "Jeu (le palet d'Apollon, mythe d'Hyacinthe)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 204",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Hyacinth : Sport. Game. Play.",
+    "fr": "Jacinthe : sport, jeu",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Hyacinth »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "blanc",
+    "sens": "Hyacinth, White : Unobtrusive loveliness",
+    "fr": "Jacinthe blanche : charme discret",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Hyacinth, White »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Play, or Games (Hyacinth)",
+    "fr": "Jeu",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 238",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "violet",
+    "sens": "Hyacinth, Purple : Sorrowful",
+    "fr": "Jacinthe pourpre : chagrin",
+    "source": "John H. Ingram, Flora Symbolica, Londres, Warne, 1869",
+    "url": "https://archive.org/details/florasymbolicaor00ingr",
+    "page": "Vocabulaire, entrée « Hyacinth, Purple » (alignement des colonnes de l'OCR)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "bleu",
+    "sens": "Hyazinthen, blaue : Du bleibst mir ewig eine schmerzliche Erinnerung.",
+    "fr": "Jacinthe bleue : tu restes pour moi à jamais un souvenir douloureux",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=81",
+    "page": "p. 63 (vue 81)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "rouge",
+    "sens": "Hyazinthen, rothe : Die Erinnerung an dich erfüllt mich mit Wonne.",
+    "fr": "Jacinthe rouge : ton souvenir me comble de joie",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=81",
+    "page": "p. 63 (vue 81)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": "azul",
+    "sens": "Jacinto azul : Constancia",
+    "fr": "Jacinthe bleue : constance",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, p. 109 environ (entrées « Jacinto azul / púrpura »)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": "morado",
+    "sens": "Jacinto púrpura : Pesares",
+    "fr": "Jacinthe pourpre : regrets, peines",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, p. 109 environ",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Blue: Constancy ; Purple: Sorrow ; Yellow: Jealousy ; White: Loveliness, Prayers for someone",
+    "fr": "Bleu : constance ; pourpre : chagrin ; jaune : jalousie ; blanc : charme, prières (tableau d'usage victorien)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Hyacinth »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": "violet",
+    "fr": "Jacinthe pourpre = chagrin (Ingram 1869) ; ES « pesares » : à ne pas offrir comme message de joie.",
+    "source": "John H. Ingram, Flora Symbolica, Londres, Warne, 1869",
+    "url": "https://archive.org/details/florasymbolicaor00ingr",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "bleu",
+    "fr": "Jacinthe bleue = souvenir douloureux (Braun 1843).",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=81",
+    "niveau": "A",
+    "page": "p. 63 (vue 81)"
+   }
+  ],
+  "propose": {
+   "sens": "Jeu et bienveillance",
+   "couleur": {
+    "bleu": "Constance",
+    "violet": "Chagrin, regrets",
+    "blanc": "Charme discret"
+   },
+   "base": "FR La Tour (bienveillance ; jeu), UK Greenaway/Phillips (jeu). Bleu = constance (ES Jazmín, A) ; violet = chagrin (UK Ingram, ES Jazmín, A) ; blanc = charme discret (Greenaway, A).",
+   "niveau": "A",
+   "actuel_verdict": "« Bienveillance et esprit de jeu » : fidèle à La Tour et Greenaway (A). Bleu « constance sincère » : A (ES), l'adjectif « sincère » est ajouté. Violet « regret, pardon demandé » : « regret » est A, « pardon demandé » n'est pas retrouvé. Blanc « beauté sans artifice » ≈ « charme discret » A.",
+   "note": "La Tour sépare la jacinthe (bienveillance) de l'hyacinthe (jeu). Le « pardon » du violet n'a pas de source primaire trouvée. Allemagne : la jacinthe bleue est un souvenir douloureux (conflit avec « constance »)."
+  }
+ },
+ "muscari": {
+  "nom": "Muscari (jacinthe à grappes)",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Grape hyacinth : « in many European cultures associated with remembrance ; Ancient Greeks regarded it as a flower of death »",
+    "fr": "Souvenir (« remembrance ») dans de nombreuses cultures européennes ; les Grecs anciens en faisaient une fleur de mort (assertion d'un site d'archives, sans source primaire)",
+    "source": "National Records of Scotland, « Archivist's garden: grape hyacinth »",
+    "url": "https://nrscotland.gov.uk/research/archivists-garden/index-by-plant-name/grape-hyacinth",
+    "page": "Fiche « Grape Hyacinth »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": null,
+   "couleur": {},
+   "base": "Aucun dictionnaire du langage des fleurs consulté (La Tour, Greenaway, Phillips, Ingram, Braun, Jazmín) n'a d'entrée pour le muscari / la jacinthe à grappes.",
+   "niveau": "D",
+   "actuel_verdict": "« Candeur et gaieté bleutée » : inventé, aucune source.",
+   "note": "NIVEAU D : ne pas afficher de sens, ou afficher seulement une mention neutre qui n'est pas un sens (saison, couleur). Le « Grape Hyacinth : Charity » de Greenaway concerne Wild Grape (la vigne), pas le muscari."
+  }
+ },
+ "narcisse-trompette": {
+  "nom": "Narcisse trompette / jonquille",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Égoïsme (Narcisse)",
+    "fr": "Égoïsme",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 206 ; renvoi p. 38",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Désir (Jonquille)",
+    "fr": "Désir (« chez les Turcs, l'emblème du désir »)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 205 ; Dictionnaire du langage, « Désir, Jonquille »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Narcissus : Egotism",
+    "fr": "Narcisse : égotisme",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Narcissus »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Daffodil : Regard",
+    "fr": "Narcisse trompette (daffodil) : estime, considération (« regard »)",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Daffodil »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Jonquil : I desire a return of affection",
+    "fr": "Jonquille : je désire un retour d'affection",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Jonquil »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Egotism and self-love (Narcissus) ; Desire (Jonquil) ; Deceitful hope (Daffodil)",
+    "fr": "Narcisse : égotisme, amour de soi ; jonquille : désir ; narcisse trompette (daffodil) : espoir trompeur",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 128 ; p. 115 ; p. 110",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Jonquille, Narzisse : Wirst du niemals meine Sehnsucht stillen? (Index par sens : Sehnsucht)",
+    "fr": "Jonquille, narcisse : n'apaiseras-tu jamais mon désir ardent ? (index par sens : nostalgie, désir)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=81",
+    "page": "p. 63 (vue 81) ; index p. 79 (vue 97)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Narciso de los poetas : Egoísmo",
+    "fr": "Narcisse des poètes : égoïsme",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, entrée « Narciso de los poetas »",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Junquillo : Tolerancia — Deseo",
+    "fr": "Jonquille : tolérance, désir",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, p. 109 environ",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Daffodil: Regard, Unequalled love",
+    "fr": "Narcisse trompette : estime, amour sans égal (reprise de Greenaway)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Daffodil »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "fr": "Narcisse = égoïsme (La Tour p. 206) ; UK, ES idem : si la fleur est présentée sous le nom « narcisse », le sens est défavorable.",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 206"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Phillips (1825) : narcisse trompette (daffodil) = espoir trompeur.",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "niveau": "A",
+    "page": "p. 110"
+   }
+  ],
+  "propose": {
+   "sens": "Désir ; tendre estime",
+   "couleur": {},
+   "base": "La boutique la nomme « Jonquille » : FR La Tour (Jonquille = désir), UK Greenaway (Jonquil = retour d'affection ; Daffodil = estime), DE Braun (désir), ES Jazmín (désir). Niveau A.",
+   "niveau": "A",
+   "actuel_verdict": "« Espoir et désir de vivre » : « désir » est A, mais « espoir » est contredit par Phillips (espoir trompeur) et le « désir de vivre » est inventé. À remplacer.",
+   "note": "SENS DÉPENDANT DU NOM : « narcisse » = égoïsme (FR, UK, ES, niveau A), « jonquille » = désir. Si la fleur s'appelle « jonquille » dans l'interface (comme dans soli.json), utiliser désir. Le « renouveau / nouveau départ » de la jonquille au Royaume-Uni (symbole de printemps, Pays de Galles) est d'usage moderne : non retenu faute de source lue. Japon : tableau de Wikipedia (Floriography) donne Orient = bonne fortune, Occident = égoïsme, niveau C."
+  }
+ },
+ "narcisse-bouquet": {
+  "nom": "Narcisse à bouquet (tazette)",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Désir (Jonquille) / Égoïsme (Narcisse)",
+    "fr": "Hérite des narcisses : désir / égoïsme selon le nom",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 205-206",
+    "niveau": "A"
+   },
+   {
+    "culture": "CN",
+    "couleur": null,
+    "sens": "水仙 (Narcissus tazetta) : symbol of good fortune and prosperity ; fleur du Nouvel An lunaire",
+    "fr": "Le narcisse tazette (shuixian, « fée des eaux ») est une fleur du Nouvel An chinois, symbole de bonne fortune et de prospérité",
+    "source": "Cornell Botanic Gardens, « Lucky plants for the Lunar New Year »",
+    "url": "https://cornellbotanicgardens.org/lucky-plants-for-the-lunar-new-year/",
+    "page": "Page « Lucky plants for the Lunar New Year »",
+    "niveau": "B"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "fr": "Narcisse = égoïsme (La Tour).",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 206"
+   }
+  ],
+  "propose": {
+   "sens": "Désir ; bonne fortune au Nouvel An chinois",
+   "couleur": {},
+   "base": "Hérite de narcisse-trompette (A). Chine : Cornell Botanic Gardens (B) pour Narcissus tazetta, qui est précisément la tazette (narcisse à bouquet).",
+   "niveau": "A",
+   "actuel_verdict": "« Inspiration au parfum envoûtant » : inventé (descriptif du parfum), aucune source.",
+   "note": "Chine : le 水仙 est bien Narcissus tazetta (« Chinese sacred lily »). Source muséale ou académique plus forte à chercher si le marché chinois est visé."
+  }
+ },
+ "lilas": {
+  "nom": "Lilas",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": "violet",
+    "sens": "Première émotion d'amour (Lilas)",
+    "fr": "Première émotion d'amour",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 205 ; renvoi p. 12",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": "blanc",
+    "sens": "Jeunesse (Lilas blanc)",
+    "fr": "Jeunesse (« symbole de la jeunesse, de ce bien rapide et charmant »)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 205 ; Dictionnaire du langage, « Jeunesse »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "violet",
+    "sens": "Lilac, Purple : First emotions of love",
+    "fr": "Lilas pourpre : premières émotions de l'amour",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Lilac, Purple »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "blanc",
+    "sens": "Lilac, White : Youthful innocence",
+    "fr": "Lilas blanc : innocence juvénile",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Lilac, White »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Lilac, Field : Humility",
+    "fr": "Lilas des champs : humilité",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Lilac, Field »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Forsaken (Lilac, Syringa)",
+    "fr": "Délaissé (« les nations orientales l'emploient comme emblème de l'abandonné : c'est la fleur que les amants offrent à leurs maîtresses quand ils les quittent »)",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 152 environ",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Flieder, spanischer, Syringa : Ich bitte um ein Rendezvous an dem bewußten Ort.",
+    "fr": "Lilas (« Flieder spanischer ») : je te demande un rendez-vous au lieu convenu",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=78",
+    "page": "p. 60 (vue 78)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Lila : Primera emoción de amor",
+    "fr": "Lilas : première émotion d'amour",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrée « Lila »",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Lilac: Joy of youth",
+    "fr": "Lilas : joie de la jeunesse (tableau moderne)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Lilac »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Phillips 1825 : le lilas est l'emblème du « délaissé » (usage oriental rapporté) : minoritaire face à FR, UK 1884, ES.",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "niveau": "A",
+    "page": "p. 152 environ"
+   }
+  ],
+  "propose": {
+   "sens": "Premiers émois amoureux",
+   "couleur": {
+    "violet": "Premiers émois amoureux",
+    "blanc": "Jeunesse, innocence"
+   },
+   "base": "FR La Tour + UK Greenaway + ES Jazmín (A) concordent. Blanc : La Tour (jeunesse), Greenaway (innocence juvénile).",
+   "niveau": "A",
+   "actuel_verdict": "« Premiers émois amoureux » : fidèle (A). Violet « désir naissant, premier amour » = A en grande partie ; blanc « innocence de la jeunesse » = A.",
+   "note": "Phillips (1825) donne l'inverse (« délaissé ») : à connaître, minoritaire. Chine : le lilas (丁香) évoque la tristesse dans la poésie chinoise (assertion non vérifiée dans une source lisible, niveau D) ; ne pas l'utiliser sans vérification."
+  }
+ },
+ "freesia": {
+  "nom": "Freesia",
+  "traditions": [
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Freesia meanings include friendship, trust, and innocence",
+    "fr": "Amitié, confiance, innocence ; blanc : pureté ; rose : amour maternel ; jaune : joie, renouveau ; rouge : passion (florist)",
+    "source": "FTD, « Freesia Meaning and Symbolism », 2016",
+    "url": "https://www.ftd.com/blog/freesia-meaning-and-symbolism",
+    "page": "Page entière",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Amitié, confiance, innocence",
+   "couleur": {},
+   "base": "Un seul fleuriste (FTD, niveau C). Aucun dictionnaire du XIXe siècle consulté n'a d'entrée pour le freesia ; FTD prétend « le freesia est la fleur de la confiance dans le langage victorien », sans citer de livre.",
+   "niveau": "C",
+   "actuel_verdict": "« Amitié confiante et complice » : proche de FTD (amitié, confiance), niveau C ; « complice » inventé.",
+   "note": "NIVEAU C : usage commercial moderne uniquement. Si le porteur veut une seule source forte, il n'y en a pas."
+  }
+ },
+ "viburnum-roseum": {
+  "nom": "Boule-de-neige (rose de Gueldre)",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Bonne nouvelle (Rose de Gueldre ou boule-de-neige)",
+    "fr": "Bonne nouvelle (La Tour rapporte une légende de Suisse allemande où la boule-de-neige annonce que l'âme d'une jeune fille est heureuse)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 209 ; Dictionnaire du langage, « Bonne nouvelle »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Guelder Rose : Winter. Age.",
+    "fr": "Rose de Gueldre : hiver, âge",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Guelder Rose »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Snowball : Bound",
+    "fr": "Boule-de-neige : liée",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Snowball »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Winter of age (Guelder-rose, Viburnum opulus)",
+    "fr": "Hiver de l'âge (fleur « froide » qui représente l'âge qui bannit la gaieté et le désir)",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 325",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Schneeball, Wasserholder : Wird die Kälte deines Herzens nie schmelzen? (Index par sens : Sprödigkeit)",
+    "fr": "Boule-de-neige : la froideur de ton cœur ne fondra-t-elle jamais ? (index par sens : réserve, froideur)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=90",
+    "page": "p. 72 (vue 90) ; index p. 79 (vue 97)",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Rose de Gueldre = hiver / âge (Greenaway, Phillips) ; allemand : froideur du cœur.",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Bonne nouvelle",
+   "couleur": {},
+   "base": "FR La Tour (A). UK et DE donnent un sens opposé (hiver, âge, froideur).",
+   "niveau": "A",
+   "actuel_verdict": "« Flocons de tendresse acidulée » : inventé, aucune source.",
+   "note": "CONFLIT par marché : FR = bonne nouvelle ; UK = hiver, âge ; DE = froideur. Ne pas confondre avec Viburnum tinus (laurier-tin) : « Je meurs si on me néglige » (La Tour, Phillips). Cultivar « roseum » de V. opulus (boule-de-neige) : on suit V. opulus."
+  }
+ },
+ "fritillaire-meleagris": {
+  "nom": "Fritillaire pintade",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Chequered Fritillary : Persecution",
+    "fr": "Fritillaire damier : persécution",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Chequered Fritillary »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Persecution (Chequered Fritillary, Fritillaria meleagris) : « whose chequered petals are too frequently emblematical of the events of life »",
+    "fr": "Persécution (« dont les pétales en damier sont trop souvent emblématiques des événements de la vie »)",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 236",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Fritillaire damier = persécution (Phillips, Greenaway) : seul sens ancien trouvé, négatif.",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "niveau": "A",
+    "page": "p. 236"
+   }
+  ],
+  "propose": {
+   "sens": "Persécution (sens ancien)",
+   "couleur": {},
+   "base": "UK Phillips 1825 et Greenaway 1884 (A). Aucune tradition française, allemande ou espagnole trouvée pour F. meleagris. La couronne impériale (F. imperialis) est une autre espèce (« majesté »).",
+   "niveau": "A",
+   "actuel_verdict": "« Singularité, beauté en damier » : descriptif, aucune source.",
+   "note": "À TRANCHER : le seul sens documenté est négatif. Option : ne pas afficher de sens (niveau D pour un sens positif). Ne pas utiliser « majesté » (Fritillaria imperialis)."
+  }
+ },
+ "iris-hollandais": {
+  "nom": "Iris hollandais",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Message (Iris)",
+    "fr": "Message (« la messagère des dieux », porteuse de bonnes nouvelles)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 204 ; Dictionnaire du langage, « Message, Iris »",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Flamme (Iris-flambe)",
+    "fr": "Flamme (iris d'Allemagne)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 204",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Iris : Message",
+    "fr": "Message",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Iris »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Message, or Messenger (Iris) ; Eloquence (Iris or Flag-flower)",
+    "fr": "Message ou messager ; éloquence",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 212 ; p. 132",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Iris, Schwertlilie : Der Schmerz, der mich durchbohrt, erlischt erst mit dem Tode. (Index par sens : Schmerz)",
+    "fr": "Iris : la douleur qui me transperce ne s'éteindra qu'avec la mort (index par sens : douleur)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=81",
+    "page": "p. 63 (vue 81) ; index p. 79 (vue 97)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Iris silvestre : Noticias placenteras ; Iris amarillo : Fuego de amor ; Iris azul : Confianza ; Iris blanco : Esperanza, Fidelidad",
+    "fr": "Iris sauvage : nouvelles agréables ; jaune : feu d'amour ; bleu : confiance ; blanc : espérance, fidélité",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, p. 109 environ ; 1882 : « Iris : noticias placenteras »",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Iris: Faith, trust, Wisdom, Hope, Valor",
+    "fr": "Foi, confiance, sagesse, espoir, vaillance (tableau moderne)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Iris »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "DE",
+    "couleur": null,
+    "fr": "Allemagne (Braun 1843) : l'iris = douleur de l'amour ; Symanski 1832 : douleur de l'amour dédaigné (iris d'Orient).",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=81",
+    "niveau": "A",
+    "page": "p. 63 (vue 81)"
+   }
+  ],
+  "propose": {
+   "sens": "Message, bonnes nouvelles",
+   "couleur": {
+    "jaune": "Feu d'amour",
+    "bleu": "Confiance",
+    "blanc": "Espérance, fidélité"
+   },
+   "base": "FR La Tour + UK Greenaway/Phillips + ES Jazmín (A). Couleurs : ES Jazmín 1889 seulement (A, une source ; alignement des colonnes de l'OCR contrôlé par deux entrées voisines).",
+   "niveau": "A",
+   "actuel_verdict": "« J'ai un message pour toi » : fidèle (A).",
+   "note": "Allemagne : sens douloureux (conflit). Japon/Chine : rien de fiable trouvé pour l'iris hollandais (Iris × hollandica)."
+  }
+ },
+ "nerine": {
+  "nom": "Nérine (lis de Guernesey)",
+  "traditions": [],
+  "tabous": [],
+  "propose": {
+   "sens": null,
+   "couleur": {},
+   "base": "Aucun ouvrage ancien consulté n'a d'entrée pour la nérine ; les recherches sur le sens du « lis de Guernesey » ne renvoient que des noms (nymphe Nérine, « lady nue »), une légende de fées de Guernesey (Folklore of Guernsey, MacCulloch) et des définitions de dictionnaire, aucun sens floral.",
+   "niveau": "D",
+   "actuel_verdict": "« Étincelle de l'arrière-saison » : inventé, descriptif.",
+   "note": "NIVEAU D. Les sens japonais souvent cités (« à bientôt de nouveau », etc.) n'ont pas été vérifiés : ja.wikipedia n'a aucune section 花言葉 pour ネリネ."
+  }
+ },
+ "dahlia-decoratif": {
+  "nom": "Dahlia",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Ma reconnaissance surpasse vos soins",
+    "fr": "Ma reconnaissance surpasse vos soins",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 202 ; Calendrier de Flore (« Un bouquet de dahlias »)",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Dahlia : Instability",
+    "fr": "Dahlia : instabilité",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Dahlia »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Instability (Dahlia) : lié aux deux introductions du dahlia en France, en 1789 puis en 1804",
+    "fr": "Instabilité (le dahlia, introduit en France l'année de la Révolution puis perdu, réintroduit l'année du sacre de Napoléon, en est devenu l'emblème)",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 190",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Dahlia : Instability. Pomp.",
+    "fr": "Dahlia : instabilité, faste",
+    "source": "John H. Ingram, Flora Symbolica, Londres, Warne, 1869",
+    "url": "https://archive.org/details/florasymbolicaor00ingr",
+    "page": "Vocabulaire, entrée « Dahlia »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Georgine, Dahlia : Deine Eigenschaften erregen Achtung und Bewunderung. (Index par sens : Achtung)",
+    "fr": "Dahlia : tes qualités excitent le respect et l'admiration (index par sens : estime)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=79",
+    "page": "p. 61 (vue 79) ; index p. 77 (vue 95)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Ramillete de dalia : Mi reconocimiento es superior á tu solicitud",
+    "fr": "Bouquet de dahlias : ma reconnaissance dépasse ta sollicitude",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrée « Ramillete de dalia »",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Dahlia: Good taste (single dahlias)",
+    "fr": "Bon goût (dahlias simples)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Dahlia »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Dahlia = instabilité (Phillips 1825, Greenaway 1884, Ingram 1869) : sens négatif dominant au Royaume-Uni.",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Reconnaissance et estime",
+   "couleur": {},
+   "base": "FR La Tour + ES Jazmín (reconnaissance), DE Braun (estime). UK : instabilité (conflit).",
+   "niveau": "A",
+   "actuel_verdict": "« Reconnaissance et prestance » : reconnaissance = A (FR, ES) ; « prestance » ≈ « faste » (Ingram) / « admiration » (Braun), plus ou moins fondé.",
+   "note": "CONFLIT par marché : FR/ES = reconnaissance ; DE = estime ; UK = instabilité. Japon (ダリア) : non trouvé dans une source lisible."
+  }
+ },
+ "scabieuse": {
+  "nom": "Scabieuse",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Scabious : Unfortunate love",
+    "fr": "Scabieuse : amour malheureux",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Scabious »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Scabious, Sweet : Widowhood",
+    "fr": "Scabieuse odorante : veuvage",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Scabious, Sweet »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Sweet Sultan, Honey-flower, or Sweet Scabious (Scabiosa atropurpurea) : « I have lost all » — « Fior della Vedova », « Fleur de Veuve »",
+    "fr": "Scabieuse (Scabiosa atropurpurea) : « j'ai tout perdu » ; les Italiens la nomment « fleur de la veuve » et les Français « fleur de veuve », à cause de sa teinte sombre",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 324 environ",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Scabiosa : Darf ich dich in deiner Einsamkeit zerstreuen?",
+    "fr": "Scabieuse : puis-je te distraire dans ta solitude ?",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=89",
+    "page": "p. 71 (vue 89)",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Scabieuse = amour malheureux, veuvage (Greenaway) ; Phillips : « fleur de veuve » en français et en italien.",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "niveau": "A",
+    "page": "p. 324 environ"
+   }
+  ],
+  "propose": {
+   "sens": "Amour malheureux ; veuvage",
+   "couleur": {},
+   "base": "UK Greenaway + Phillips (A) ; DE Braun (consolation de la solitude).",
+   "niveau": "A",
+   "actuel_verdict": "« Présence tendre dans l'épreuve » : inventé, mais voisin de la lecture allemande (distraire dans la solitude) ; les sources anglaises sont sombres.",
+   "note": "À TRANCHER : aucun sens positif ancien clair (hors DE « distraire dans ta solitude »). Option : « Consolation dans la solitude » (DE) comme seule lecture douce, à justifier par Braun."
+  }
+ },
+ "delphinium": {
+  "nom": "Delphinium (pied-d'alouette)",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Légèreté (Pied-d'alouette)",
+    "fr": "Légèreté",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 207 ; Dictionnaire du langage, « Légèreté, Pied-d'alouette »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Larkspur : Lightness. Levity.",
+    "fr": "Pied-d'alouette : légèreté, frivolité",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Larkspur »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rose",
+    "sens": "Larkspur, Pink : Fickleness",
+    "fr": "Pied-d'alouette rose : inconstance",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Larkspur, Pink »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "violet",
+    "sens": "Larkspur, Purple : Haughtiness",
+    "fr": "Pied-d'alouette pourpre : hauteur, arrogance",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Larkspur, Purple »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Lightness, Levity, Fickleness (Larkspur, Delphinium Ajacis)",
+    "fr": "Légèreté, frivolité, inconstance",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 200",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Rittersporn : Vertraue meinem männlichen Muthe, und meiner Treue und laß mich dein Ritter seyn. (Index par sens : Liebe)",
+    "fr": "Pied-d'alouette (« éperon de chevalier ») : fie-toi à mon courage viril et à ma fidélité, et laisse-moi être ton chevalier (index par sens : amour)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=88",
+    "page": "p. 70 (vue 88) ; index p. 78 (vue 96)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Espuela de galán : Guerra — Ligereza",
+    "fr": "Éperon de galant : guerre, légèreté",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrée « Espuela de galán »",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Larkspur: Open heart, Levity, Lightness, Fickleness",
+    "fr": "Cœur ouvert, légèreté, inconstance (tableau moderne)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Larkspur »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": "rose",
+    "fr": "Rose = inconstance ; pourpre = arrogance (Greenaway).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Légèreté",
+   "couleur": {
+    "rose": "Inconstance",
+    "violet": "Hauteur"
+   },
+   "base": "FR La Tour + UK Greenaway/Phillips + ES Jazmín (A). Couleurs : Greenaway seul (A, négatives). Allemagne : sens chevaleresque (courage, fidélité).",
+   "niveau": "A",
+   "actuel_verdict": "« Légèreté, souffle d'azur » : légèreté = A ; « souffle d'azur » descriptif.",
+   "note": "Le delphinium de la boutique (D. elatum, hybrides) est appelé « pied-d'alouette » par La Tour et « larkspur » dans les ouvrages anglais ; à l'époque, les deux noms recouvrent aussi Consolida. Les couleurs rose et violet ont un sens négatif : à afficher ou non."
+  }
+ },
+ "hortensia-boule": {
+  "nom": "Hortensia",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Vous êtes froide (Hortensia)",
+    "fr": "Vous êtes froide (« on se lasse vite de sa froide beauté, image d'une coquette qui, sans grâce et sans esprit, voudrait plaire uniquement par sa toilette »)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire du langage, p. 197-198 ; Dictionnaire des plantes, p. 204",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Hydrangea : A boaster. Heartlessness.",
+    "fr": "Hortensia : un vantard ; insensibilité",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Hydrangea »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Boaster (Hydrangea Hortensis) : « magnificent flowers never succeeded by fruit, thus resembling the vaunting words of a braggadocio »",
+    "fr": "Vantard (parce que ses fleurs magnifiques ne sont jamais suivies de fruits, comme les vantardises sans suite)",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 81",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Hortensia : You are cold. Hydrangea : A boaster.",
+    "fr": "Hortensia : vous êtes froide ; hydrangea : un vantard",
+    "source": "John H. Ingram, Flora Symbolica, Londres, Warne, 1869",
+    "url": "https://archive.org/details/florasymbolicaor00ingr",
+    "page": "Vocabulaire, entrées « Hortensia » et « Hydrangea » (alignement OCR contrôlé)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Hortensia : Schade, daß dein Charakter nicht fest ist. (Index par sens : Leichtsinn)",
+    "fr": "Hortensia : dommage que ton caractère ne soit pas ferme (index par sens : légèreté, étourderie)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=81",
+    "page": "p. 63 (vue 81) ; index p. 78 (vue 96)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Hortensia : Sois mui fría",
+    "fr": "Hortensia : vous êtes très froide",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, p. 109 environ",
+    "niveau": "A"
+   },
+   {
+    "culture": "JP",
+    "couleur": null,
+    "sens": "Hydrangeas are associated with fickleness and coldness, probably because the color of the flower changes.",
+    "fr": "Au Japon l'hortensia est associé à l'inconstance et à la froideur, sans doute à cause du changement de couleur de la fleur",
+    "source": "Japan Search (Musée national d'histoire japonaise), « Hydrangea (Ajisai) »",
+    "url": "https://jpsearch.go.jp/en/gallery/ndl-J13ZgwbQ9nB",
+    "page": "Notice Japan Search / Musée national d'histoire japonaise",
+    "niveau": "B"
+   },
+   {
+    "culture": "JP",
+    "couleur": null,
+    "sens": "Bright and cheerful women ; patience and strong love ; happy family",
+    "fr": "Femmes joyeuses (sens venu de France) ; patience et amour fort ; famille heureuse (page d'un jardinier japonais, sans source primaire)",
+    "source": "Real Japanese Gardens (A. Ogusu), « Hydrangea and its language », 2016",
+    "url": "https://japanesegardens.jp/hydrangea-and-its-language/",
+    "page": "Page entière",
+    "niveau": "C"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Hydrangea: Gratitude for being understood, Frigidity and heartlessness",
+    "fr": "Gratitude d'être compris(e) ; froideur et insensibilité (le tableau donne les deux)",
+    "source": "The Old Farmer's Almanac, « Flower Meanings: The Language of Flowers »",
+    "url": "https://www.almanac.com/flower-meanings-language-flowers",
+    "page": "Tableau « Hydrangea »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "fr": "Hortensia = « vous êtes froide » (La Tour) : message déplacé pour une déclaration.",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 197-198"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Hortensia = vantard, insensible (Phillips, Greenaway, Ingram).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "fr": "Hortensia = caractère inconstant, léger (Braun).",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=81",
+    "niveau": "A",
+    "page": "p. 63 (vue 81)"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "fr": "Hortensia = « vous êtes très froide » (Jazmín 1889).",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "niveau": "A"
+   },
+   {
+    "culture": "JP",
+    "couleur": null,
+    "fr": "Hortensia = inconstance, froideur (notice du Musée d'histoire japonaise).",
+    "source": "Japan Search (Musée national d'histoire japonaise), « Hydrangea (Ajisai) »",
+    "url": "https://jpsearch.go.jp/en/gallery/ndl-J13ZgwbQ9nB",
+    "niveau": "B"
+   },
+   {
+    "culture": "DE",
+    "couleur": "blanc",
+    "fr": "Hortensia blanc lié à la mort et à ne pas offrir à des personnes âgées ou très malades (page d'un jardinier, auteur non allemand, source non primaire).",
+    "source": "Real Japanese Gardens (A. Ogusu), « Hydrangea and its language », 2016",
+    "url": "https://japanesegardens.jp/hydrangea-and-its-language/",
+    "niveau": "C"
+   }
+  ],
+  "propose": {
+   "sens": "Froideur, vantardise (sens ancien)",
+   "couleur": {},
+   "base": "FR+ES (froide), UK (vantard), DE (inconstant), JP (inconstance, froideur) : cinq traditions, toutes négatives. Le sens « gratitude » n'apparaît que dans un tableau moderne (C) qui cite aussi « froideur et insensibilité ».",
+   "niveau": "A",
+   "actuel_verdict": "« Gratitude du fond du cœur » : INVENTÉ ou moderne (C) ; contredit toutes les sources anciennes (FR, UK, DE, ES, JP). À remplacer ou à justifier par le porteur.",
+   "note": "CONFLIT MAJEUR. Si le porteur veut garder « gratitude », c'est un choix de marque (niveau C) à assumer sur un sens que La Tour traduit par « vous êtes froide ». Niveau A pour le sens négatif. Chine : aucune source fiable (绣球 non vérifié)."
+  }
+ },
+ "gerbera": {
+  "nom": "Gerbera",
+  "traditions": [
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Cheerfulness, innocence",
+    "fr": "Gaieté, joie, innocence ; rouge : amour ; violet : royauté (florist)",
+    "source": "Bloom & Wild, « Gerbera flower meaning » (blog commercial ; extrait de recherche, page non relue)",
+    "url": "https://www.bloomandwild.com/the-blog/gerbera-flower-meaning",
+    "page": "Page entière (extrait de recherche)",
+    "niveau": "C"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Gerbera daisy meaning",
+    "fr": "Idem : joie, gaieté (florist)",
+    "source": "Thursd, « Gerbera flower meaning » (blog commercial ; extrait de recherche, page non relue)",
+    "url": "https://thursd.com/articles/gerbera-flower-meaning",
+    "page": "Page entière (extrait de recherche)",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Gaieté, joie, innocence",
+   "couleur": {},
+   "base": "Blogs de fleuristes (niveau C). Aucun dictionnaire ancien consulté n'a d'entrée pour le gerbera.",
+   "niveau": "C",
+   "actuel_verdict": "« Joie de vivre contagieuse » : proche du consensus moderne (gaieté, joie), niveau C.",
+   "note": "NIVEAU C : sens attaché à la famille des pâquerettes (innocence) et à la gaieté des couleurs ; aucune source forte."
+  }
+ },
+ "germini": {
+  "nom": "Germini (mini-gerbera)",
+  "traditions": [],
+  "tabous": [],
+  "propose": {
+   "sens": "Gaieté, joie, innocence",
+   "couleur": {},
+   "base": "Hérite de gerbera (même espèce, formes miniatures).",
+   "niveau": "C",
+   "actuel_verdict": "« Petits sourires à offrir » : formule d'ambiance, aucune source.",
+   "note": "NIVEAU C (hérité)."
+  }
+ },
+ "chrysantheme-disbud": {
+  "nom": "Chrysanthème",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Chinese Chrysanthemum : Cheerfulness under adversity",
+    "fr": "Chrysanthème de Chine : gaieté dans l'adversité",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Chinese Chrysanthemum »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Cheerfulness under adversity (Chrysanthemum Indicum)",
+    "fr": "Gaieté dans l'adversité (la fleur qui égaie le parterre quand les autres se retirent)",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 91",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rouge",
+    "sens": "Chrysanthemum, Red : I love",
+    "fr": "Chrysanthème rouge : j'aime",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Chrysanthemum, Red »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "blanc",
+    "sens": "Chrysanthemum, White : Truth",
+    "fr": "Chrysanthème blanc : vérité",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Chrysanthemum, White »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "sens": "Chrysanthemum, Yellow : Slighted love",
+    "fr": "Chrysanthème jaune : amour dédaigné",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Chrysanthemum, Yellow »",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Fleur des tombes de la Toussaint ; dès le milieu du XIXe siècle les chrysanthèmes remplacent les bougies sur les tombes",
+    "fr": "Fleur de la Toussaint et des cimetières (Kurtz, Fêtes et coutumes populaires, 2012, p. 108)",
+    "source": "Wikipédia (FR), « Chrysanthème » (renvoie à J.-P. Kurtz, Fêtes et coutumes populaires, 2012, p. 108)",
+    "url": "https://fr.wikipedia.org/wiki/Chrysanth%C3%A8me",
+    "page": "Section « Toussaint » (renvoi à Kurtz 2012)",
+    "niveau": "B"
+   },
+   {
+    "culture": "CN",
+    "couleur": null,
+    "sens": "It is a symbol of longevity because of its health-giving properties.",
+    "fr": "Symbole de longévité (British Museum, « Chinese Symbols », 2008, cité par Wikipedia)",
+    "source": "Wikipedia (EN), « Chrysanthemum » (renvoie à British Museum, « Chinese Symbols », 2008)",
+    "url": "https://en.wikipedia.org/wiki/Chrysanthemum",
+    "page": "Section « Culture » (renvoi note 32)",
+    "niveau": "B"
+   },
+   {
+    "culture": "CN",
+    "couleur": null,
+    "sens": "Four Gentlemen: each is said to embody a noble virtue of the ideal Confucian gentleman-scholar.",
+    "fr": "Un des « quatre gentilshommes » (prunier, orchidée, bambou, chrysanthème), chacun incarnant une vertu du lettré confucéen",
+    "source": "Harvard Art Museums, exposition « Cultivating Virtue: Botanical Motifs and Symbols in East Asian Art »",
+    "url": "https://harvardartmuseums.org/exhibitions/3274",
+    "page": "Page de l'exposition",
+    "niveau": "B"
+   },
+   {
+    "culture": "CN",
+    "couleur": "jaune",
+    "sens": "golden or yellow flowers symbolize wealth ; long life, often given to older family members",
+    "fr": "Jaune ou doré : richesse ; longue vie, offert aux aînés au Nouvel An (page d'un jardin botanique universitaire)",
+    "source": "Cornell Botanic Gardens, « Lucky plants for the Lunar New Year »",
+    "url": "https://cornellbotanicgardens.org/lucky-plants-for-the-lunar-new-year/",
+    "page": "Page « Lucky plants »",
+    "niveau": "B"
+   },
+   {
+    "culture": "JP",
+    "couleur": null,
+    "sens": "the chrysanthemum was first adopted as the imperial family crest (early Kamakura) ; White chrysanthemums are a standard floral offering",
+    "fr": "Emblème de la famille impériale ; les chrysanthèmes blancs sont une offrande florale ordinaire (bouddhique)",
+    "source": "nippon.com, « The Chrysanthemum: Japan's Fall Flower and Imperial Symbol », 24 oct. 2022",
+    "url": "https://www.nippon.com/en/japan-data/h01464/",
+    "page": "Article de nippon.com, 2022",
+    "niveau": "B"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "fr": "Le chrysanthème est LA fleur des morts en France (Toussaint, cimetières) : ne jamais l'offrir comme cadeau de joie.",
+    "source": "Wikipédia (FR), « Chrysanthème » (renvoie à J.-P. Kurtz, Fêtes et coutumes populaires, 2012, p. 108)",
+    "url": "https://fr.wikipedia.org/wiki/Chrysanth%C3%A8me",
+    "niveau": "B"
+   },
+   {
+    "culture": "CN",
+    "couleur": "blanc",
+    "fr": "Chrysanthème blanc (et jaune) = fleur des funérailles en Chine ; le gouvernement de Canton déconseille blanc et jaune en cadeau (extrait de recherche, page non relue).",
+    "source": "Gouvernement municipal de Canton, conseils aux visiteurs (extrait de recherche ; page non ouverte, erreur de certificat)",
+    "url": "https://gz.gov.cn/guangzhouinternational/visitors/traveltips/content/post_3012680.html",
+    "niveau": "C"
+   },
+   {
+    "culture": "JP",
+    "couleur": "blanc",
+    "fr": "Chrysanthème blanc = fleur funéraire ; « ne jamais l'offrir en cadeau » (site pédagogique).",
+    "source": "NIHON BUNKA LAB (haradaeigo.com), « Chrysanthemum », site pédagogique",
+    "url": "https://www.haradaeigo.com/nihonbunka/w/kiku.html",
+    "niveau": "C"
+   },
+   {
+    "culture": "JP",
+    "couleur": null,
+    "fr": "Emblème impérial du Japon : usage sensible.",
+    "source": "nippon.com, « The Chrysanthemum: Japan's Fall Flower and Imperial Symbol », 24 oct. 2022",
+    "url": "https://www.nippon.com/en/japan-data/h01464/",
+    "niveau": "B"
+   }
+  ],
+  "propose": {
+   "sens": "Longévité ; gaieté dans l'épreuve",
+   "couleur": {
+    "rouge": "J'aime",
+    "blanc": "Vérité (mais deuil en France, Chine, Japon)",
+    "jaune": "Amour dédaigné"
+   },
+   "base": "UK Greenaway + Phillips (gaieté dans l'adversité, A) ; CN longévité (B). Couleurs : Greenaway seul (A).",
+   "niveau": "A",
+   "actuel_verdict": "« Mémoire fidèle et longévité » : longévité = B (Chine) ; « mémoire fidèle » = un rapprochement avec la Toussaint (mémoire des morts) non sourcé comme sens floral.",
+   "note": "CONFLIT MAJEUR : joie (UK 1825/1884) et longévité (CN) contre fleur des morts (FR, IT, ES, PL ; blanc en CN, JP, KR). Pour le marché français et chinois, risque réel de contre-sens funéraire. À TRANCHER."
+  }
+ },
+ "oeillet-standard": {
+  "nom": "Œillet",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Amour vif et pur (Œillet)",
+    "fr": "Amour vif et pur",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 206 ; renvoi p. 60",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": "jaune",
+    "sens": "Dédain (Œillet jaune)",
+    "fr": "Dédain (« les personnes dédaigneuses sont pour la plupart exigeantes et peu aimables »)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 207",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Finesse (Œillet de poète)",
+    "fr": "Finesse",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 206",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rouge foncé",
+    "sens": "Carnation, Deep Red : Alas! for my poor heart",
+    "fr": "Œillet rouge foncé : hélas, mon pauvre cœur",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Carnation, Deep Red »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rayé",
+    "sens": "Carnation, Striped : Refusal",
+    "fr": "Œillet rayé : refus",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Carnation, Striped »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "sens": "Carnation, Yellow : Disdain",
+    "fr": "Œillet jaune : dédain",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Carnation, Yellow »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Pink, Carnation : Woman's love",
+    "fr": "Œillet (carnation) : amour de femme",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Pink, Carnation »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rouge",
+    "sens": "Pink, Red, Double : Pure and ardent love",
+    "fr": "Œillet rouge double : amour pur et ardent",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Pink, Red, Double »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "blanc",
+    "sens": "Pink, White : Ingenuousness. Talent.",
+    "fr": "Œillet blanc : ingénuité, talent",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Pink, White »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rouge",
+    "sens": "Lively and pure love (Red Pink)",
+    "fr": "Œillet rouge : amour vif et pur",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 201",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rayé",
+    "sens": "Refusal (Striped Pink or Carnation)",
+    "fr": "Refus",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 260",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Nelke (einfache) : Mein Herz ist nicht mehr frei, begnüge dich mit meiner Freundschaft.",
+    "fr": "Œillet simple : mon cœur n'est plus libre, contente-toi de mon amitié",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=86",
+    "page": "p. 68 (vue 86)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "rouge",
+    "sens": "Nelke (gefüllte rothe) : Es ist unmöglich, dich heftiger zu lieben als ich.",
+    "fr": "Œillet double rouge : il est impossible de t'aimer plus ardemment que moi",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=86",
+    "page": "p. 68 (vue 86)",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": "blanc",
+    "sens": "Nelke (doppelte weiße) : Du lässt mich lange in peinlicher Ungewissheit. Entscheide dich endlich.",
+    "fr": "Œillet double blanc : tu me laisses longtemps dans une pénible incertitude, décide-toi enfin",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=86",
+    "page": "p. 68 (vue 86)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Clavel común : Amor vivo y puro ; Clavel amarillo : Desdén",
+    "fr": "Œillet commun : amour vif et pur ; œillet jaune : dédain",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrées « Clavel común » et « Clavel amarillo »",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": "blanc",
+    "sens": "white carnation: pure love and good luck ; Mother's Day: red if mother alive, white if she has died",
+    "fr": "Œillet blanc : amour pur, chance ; fête des Mères américaine : rouge si la mère vit, blanc si elle est morte (Anna Jarvis, 1907)",
+    "source": "Wikipedia (EN), « Dianthus caryophyllus »",
+    "url": "https://en.wikipedia.org/wiki/Dianthus_caryophyllus",
+    "page": "Section Fête des Mères",
+    "niveau": "B"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": "jaune",
+    "fr": "Œillet jaune = dédain (La Tour, 1854) ; UK = dédain (Greenaway) ; ES = desdén : à éviter.",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 207"
+   },
+   {
+    "culture": "UK",
+    "couleur": "rayé",
+    "fr": "Œillet rayé = refus (Greenaway, Phillips).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": "violet",
+    "fr": "En France l'œillet (violet) est une fleur traditionnelle de condoléances (Mercatante 1976, cité par Wikipedia).",
+    "source": "Wikipedia (EN), « Dianthus caryophyllus »",
+    "url": "https://en.wikipedia.org/wiki/Dianthus_caryophyllus",
+    "niveau": "B"
+   }
+  ],
+  "propose": {
+   "sens": "Amour vif et pur",
+   "couleur": {
+    "rouge": "Amour vif et pur",
+    "blanc": "Amour pur, ingénuité",
+    "rose": "Amour de femme"
+   },
+   "base": "FR La Tour + ES Jazmín + UK Phillips : « amour vif et pur » (A, trois sources). Blanc : Greenaway. Rose : Greenaway « Pink, Carnation » = amour de femme.",
+   "niveau": "A",
+   "actuel_verdict": "« Fascination et amour ardent » : amour ardent ≈ A (Greenaway « pur et ardent ») ; « fascination » = tableau moderne (Wikipedia, C). Rouge « amour vif et profond » ≈ A. Blanc « affection pure, loyauté » ≈ A (pur) ; « loyauté » non trouvé. Rose « amour maternel » = C (Fête des mères) alors que Greenaway dit « amour de femme ».",
+   "note": "TABOUS à garder : jaune = dédain (FR, UK, ES), rayé = refus (UK). L'« amour maternel » du rose tient à la Fête des mères américaine (B, Anna Jarvis, œillet blanc/rouge), pas au langage des fleurs ancien."
+  }
+ },
+ "arum-calla": {
+  "nom": "Arum / calla",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Calla Aethiopica : Magnificent beauty",
+    "fr": "Calla d'Éthiopie : beauté magnifique",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Calla Aethiopica »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Arum (Wake Robin) : Ardour",
+    "fr": "Arum (gouet) : ardeur",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Arum »",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Ardeur (Gouet commun)",
+    "fr": "Ardeur (gouet commun, pas le calla)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 203",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Calla, äthiopische : Ich bewundere dich von fern, doch wag' ich's nicht, dir zu nahen. (Index par sens : Schüchternheit)",
+    "fr": "Calla : je t'admire de loin, mais n'ose t'approcher (index par sens : timidité)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=76",
+    "page": "p. 58 (vue 76) ; index p. 79 (vue 97)",
+    "niveau": "A"
+   },
+   {
+    "culture": "US",
+    "couleur": "blanc",
+    "sens": "Calla lilies: purity, resurrection and rebirth ; traditional funeral and sympathy choice",
+    "fr": "Pureté, résurrection, renaissance ; choix traditionnel pour les funérailles et les condoléances (blogs et HGTV, extrait de recherche)",
+    "source": "HGTV, « Calla Lily Meaning » (extrait de recherche, page non relue)",
+    "url": "https://www.hgtv.com/gardening/flowers-and-plants/calla-lily-meaning",
+    "page": "Page entière (extrait de recherche)",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "US",
+    "couleur": "blanc",
+    "fr": "Le calla blanc est aussi une fleur de funérailles et de Pâques (sources de florists, niveau C).",
+    "source": "HGTV, « Calla Lily Meaning » (extrait de recherche, page non relue)",
+    "url": "https://www.hgtv.com/gardening/flowers-and-plants/calla-lily-meaning",
+    "niveau": "C"
+   }
+  ],
+  "propose": {
+   "sens": "Beauté magnifique",
+   "couleur": {},
+   "base": "UK Greenaway (Calla Aethiopica, A). DE Braun : admiration timide.",
+   "niveau": "A",
+   "actuel_verdict": "« Magnificence et pureté » : magnificence = A (Greenaway) ; « pureté » = C (usage moderne, Pâques).",
+   "note": "Le Zantedeschia (calla) n'est pas l'Arum maculatum (gouet) : « ardeur » (La Tour, Greenaway) vise le gouet. Associations funéraires du calla blanc : niveau C seulement."
+  }
+ },
+ "phalaenopsis": {
+  "nom": "Orchidée phalaenopsis",
+  "traditions": [
+   {
+    "culture": "CN",
+    "couleur": null,
+    "sens": "In China, orchids are regarded as emblems of integrity, elegance and friendship.",
+    "fr": "En Chine l'orchidée est l'emblème de l'intégrité, de l'élégance et de l'amitié",
+    "source": "FTD, « Orchid Meaning and Symbolism », 2016",
+    "url": "https://www.ftd.com/blog/orchid-meaning-and-symbolism",
+    "page": "Page « Orchid Meaning »",
+    "niveau": "C"
+   },
+   {
+    "culture": "CN",
+    "couleur": null,
+    "sens": "Four Gentlemen: the orchid, with plum, bamboo and chrysanthemum, each embodying a noble virtue of the Confucian gentleman-scholar",
+    "fr": "L'orchidée fait partie des quatre gentilshommes de l'art chinois (vertu du lettré)",
+    "source": "Harvard Art Museums, exposition « Cultivating Virtue: Botanical Motifs and Symbols in East Asian Art »",
+    "url": "https://harvardartmuseums.org/exhibitions/3274",
+    "page": "Page de l'exposition",
+    "niveau": "B"
+   },
+   {
+    "culture": "US",
+    "couleur": "blanc",
+    "sens": "White: innocence and purity, elegance, reverence ; Pink: femininity, grace, and joy ; Purple: royalty and admiration",
+    "fr": "Blanc : innocence, pureté, élégance ; rose : féminité, grâce, joie ; pourpre : royauté, admiration",
+    "source": "FTD, « Orchid Meaning and Symbolism », 2016",
+    "url": "https://www.ftd.com/blog/orchid-meaning-and-symbolism",
+    "page": "Page « Orchid Meaning »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Élégance, raffinement",
+   "couleur": {},
+   "base": "Genre Orchidaceae en Chine (quatre gentilshommes : B) et florists (C). Le phalaenopsis lui-même n'a aucun sens ancien : genre décrit au XIXe siècle, absent des dictionnaires consultés.",
+   "niveau": "C",
+   "actuel_verdict": "« Amour raffiné, grâce de papillon » : « grâce de papillon » est une image du nom (moth orchid) ; « amour raffiné » non trouvé. Blanc « élégance pure », rose « grâce et tendresse », violet « admiration et dignité » ≈ C (FTD : élégance, grâce, admiration).",
+   "note": "NIVEAU C pour le phalaenopsis. Chine : l'orchidée « 蘭 » des quatre gentilshommes désigne les orchidées terrestres chinoises (Cymbidium, etc.), pas le phalaenopsis ; son transfert au phalaenopsis est une extrapolation moderne (niveau C)."
+  }
+ },
+ "cymbidium-grandes-fleurs": {
+  "nom": "Cymbidium",
+  "traditions": [
+   {
+    "culture": "CN",
+    "couleur": null,
+    "sens": "Four Gentlemen: each is said to embody a noble virtue of the ideal Confucian gentleman-scholar",
+    "fr": "L'orchidée (lan, Cymbidium chinois) est l'un des quatre gentilshommes : vertu du lettré confucéen (noblesse, intégrité, amitié)",
+    "source": "Harvard Art Museums, exposition « Cultivating Virtue: Botanical Motifs and Symbols in East Asian Art »",
+    "url": "https://harvardartmuseums.org/exhibitions/3274",
+    "page": "Page de l'exposition",
+    "niveau": "B"
+   },
+   {
+    "culture": "CN",
+    "couleur": null,
+    "sens": "uprightness, purity, humility, and perseverance despite harsh conditions (the four plants collectively); orchid = nobility, loyalty and fidelity (Korean tradition)",
+    "fr": "Les quatre plantes ensemble : droiture, pureté, humilité, persévérance ; l'orchidée : noblesse, loyauté, fidélité (peinture coréenne)",
+    "source": "Wikipedia (EN), « Four Gentlemen »",
+    "url": "https://en.wikipedia.org/wiki/Four_Gentlemen",
+    "page": "Résumé de l'article (renvoie à Smithsonian Gardens)",
+    "niveau": "B"
+   },
+   {
+    "culture": "CN",
+    "couleur": null,
+    "sens": "In China, orchids are regarded as emblems of integrity, elegance and friendship.",
+    "fr": "Intégrité, élégance, amitié",
+    "source": "FTD, « Orchid Meaning and Symbolism », 2016",
+    "url": "https://www.ftd.com/blog/orchid-meaning-and-symbolism",
+    "page": "Page « Orchid Meaning »",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Noblesse d'âme, intégrité (Chine)",
+   "couleur": {},
+   "base": "Chine, orchidée des quatre gentilshommes (B, Harvard Art Museums) ; l'identification de la « lan » au Cymbidium est classique dans la littérature mais n'est pas dite par la page du musée (point à confirmer).",
+   "niveau": "B",
+   "actuel_verdict": "« Noblesse d'âme et vertu » : cohérent avec la tradition chinoise (B). Aucune source occidentale ancienne.",
+   "note": "Les grandes fleurs de cymbidium hybrides sont des cultivars européens, pas les orchidées chinoises (Cymbidium goeringii, ensifolium) : transfert de sens par extension du genre. Pour France/UK/DE/ES : aucun sens documenté (D)."
+  }
+ },
+ "anthurium-andraeanum": {
+  "nom": "Anthurium",
+  "traditions": [
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "hospitality, happiness, abundance (love, friendship)",
+    "fr": "Hospitalité, bonheur, abondance ; parfois amour (fleur en forme de cœur)",
+    "source": "Windflower Florist, « Anthurium flower meaning » (blog commercial ; extrait de recherche, page non relue)",
+    "url": "https://windflowerflorist.com/blogs/news/anthurium-flower-meaning",
+    "page": "Page entière (extrait de recherche)",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Hospitalité, bonheur",
+   "couleur": {},
+   "base": "Blogs de fleuristes (C). Genre absent de tous les dictionnaires anciens (introduit en Europe dans la seconde moitié du XIXe siècle).",
+   "niveau": "C",
+   "actuel_verdict": "« Cœur ardent et généreux » : image de la spathe en cœur ; « hospitalité » est le consensus moderne (C).",
+   "note": "NIVEAU C."
+  }
+ },
+ "gloriosa": {
+  "nom": "Gloriosa (lis flamme)",
+  "traditions": [
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "Gloriosa : « full of glory » (Latin gloriosus) ; national flower of Zimbabwe",
+    "fr": "Le nom latin signifie « plein de gloire » ; fleur nationale du Zimbabwe (sources non primaires, extrait de recherche)",
+    "source": "Wikipedia (EN), « Gloriosa (plant) » (extrait de recherche, page non relue)",
+    "url": "https://en.wikipedia.org/wiki/Gloriosa_(plant)",
+    "page": "Article (extrait de recherche)",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "US",
+    "couleur": null,
+    "fr": "Plante TRÈS toxique (colchicine), tous organes : mise en garde pour le public, pas un sens.",
+    "source": "Wikipedia (EN), « Gloriosa (plant) » (extrait de recherche, page non relue)",
+    "url": "https://en.wikipedia.org/wiki/Gloriosa_(plant)",
+    "niveau": "C"
+   }
+  ],
+  "propose": {
+   "sens": "Gloire (du nom latin)",
+   "couleur": {},
+   "base": "Étymologie du nom (gloriosus) ; aucun dictionnaire ancien consulté n'a d'entrée. Emblème national du Zimbabwe.",
+   "niveau": "C",
+   "actuel_verdict": "« Gloire flamboyante » : tiré du nom latin ; non documenté comme sens floral.",
+   "note": "NIVEAU C/D : aucun sens floral documenté ; la « gloire » vient seulement du nom. Les sens japonais (栄光, 勇敢) souvent cités n'ont pas été vérifiés."
+  }
+ },
+ "alchemille": {
+  "nom": "Alchémille (manteau de Notre-Dame)",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Alchemilla mollis: name supposedly from the resemblance of its scalloped leaves to the Virgin Mary's cloak, although other explanations exist",
+    "fr": "Le nom anglais (« Lady's mantle ») viendrait de la ressemblance des feuilles festonnées avec le manteau de la Vierge ; autres explications possibles (ce n'est pas un sens floral)",
+    "source": "University of Wisconsin Extension, fiche « Alchemilla mollis »",
+    "url": "https://mastergardener.extension.wisc.edu/files/2015/12/Alchemilla_mollis.pdf",
+    "page": "Fiche d'extension",
+    "niveau": "B"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": null,
+   "couleur": {},
+   "base": "Aucune tradition du langage des fleurs trouvée. Seule documentation : l'origine du nom (manteau de la Vierge ; rosée recueillie par les alchimistes), qui n'est pas un sens.",
+   "niveau": "D",
+   "actuel_verdict": "« Bienveillance maternelle » : lecture libre du nom « manteau de Notre-Dame » ; aucune source de sens.",
+   "note": "NIVEAU D : ne pas afficher de sens, ou afficher le nom ancien « manteau de Notre-Dame » comme information, pas comme sens."
+  }
+ },
+ "amarante-retombante": {
+  "nom": "Amarante queue-de-renard (passe-velours)",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Immortalité (Amarante)",
+    "fr": "Immortalité (« qui ne se flétrit point »)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 200 ; Dictionnaire du langage, « Immortalité, Amarante »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Amaranth (Globe) : Immortality. Unfading love.",
+    "fr": "Amarante globe : immortalité, amour qui ne se fane pas",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Amaranth (Globe) »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Love lies bleeding : Hopeless, not heartless",
+    "fr": "Amarante queue-de-renard (love-lies-bleeding) : sans espoir, mais pas sans cœur",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Love lies Bleeding »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Immortality (Amaranth)",
+    "fr": "Immortalité",
+    "source": "Henry Phillips, Floral Emblems, Londres, Saunders and Otley, 1825",
+    "url": "https://archive.org/details/floralemblems00philrich",
+    "page": "p. 176",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Amaranth, s. Fuchsschwanz : Mit List und Klugheit werden viele Hindernisse überwunden.",
+    "fr": "Amarante / queue-de-renard : avec ruse et prudence on surmonte bien des obstacles (index par sens : ruse)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=77",
+    "page": "p. 59 (vue 77) (renvoi depuis p. 56) ; index p. 78",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Amarant: Sinnbild der Trauer, der Unsterblichkeit und nie erlöschender Treue (antiquité)",
+    "fr": "Amarante : emblème du deuil, de l'immortalité et de la fidélité qui ne s'éteint pas (antiquité grecque)",
+    "source": "Johann Daniel Symanski, Selam oder die Sprache der Blumen, Vienne, Lechner, 1832",
+    "url": "https://archive.org/details/bub_gb_kuRYAAAAcAAJ",
+    "page": "Section « Amarant » (OCR de Fraktur)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Amaranto : Inmortalidad",
+    "fr": "Amarante : immortalité",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Barcelone, M. Saurí, 1882",
+    "url": "https://archive.org/details/lenguajedelasfl00jazm",
+    "page": "Dictionnaire, entrée « Amaranto »",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "fr": "Amarante queue-de-renard (love-lies-bleeding) = « sans espoir mais pas sans cœur » (Greenaway) ; antiquité : fleur de deuil (Symanski).",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "niveau": "A"
+   }
+  ],
+  "propose": {
+   "sens": "Immortalité, amour qui ne se fane pas",
+   "couleur": {},
+   "base": "FR+UK+ES (immortalité) ; UK Greenaway pour « amour qui ne se fane pas » (amarante globe).",
+   "niveau": "A",
+   "actuel_verdict": "« Passion qui jamais ne se fane » : fidèle à « immortalité » et à « amour qui ne se fane pas » (A), sauf « passion » ajouté.",
+   "note": "L'amarante queue-de-renard a son entrée propre (love-lies-bleeding : sans espoir mais pas sans cœur) : à trancher si on veut le sens exact de la variété retombante."
+  }
+ },
+ "cerisier-du-japon-sato-zakura": {
+  "nom": "Cerisier du Japon (sato-zakura)",
+  "traditions": [
+   {
+    "culture": "JP",
+    "couleur": null,
+    "sens": "Cherry blossoms are considered an enduring metaphor for the ephemeral nature of life ; mono no aware",
+    "fr": "La fleur de cerisier est la métaphore durable de la nature éphémère de la vie (mono no aware)",
+    "source": "Wikipedia (EN), « Cherry blossom » (renvoie à Ohnuki-Tierney ; Choy Lee Khoon ; Slaymaker)",
+    "url": "https://en.wikipedia.org/wiki/Cherry_blossom",
+    "page": "Section Japon (renvoie à Choy Lee Khoon, Japan between Myth and Reality, p. 142 ; Slaymaker)",
+    "niveau": "B"
+   },
+   {
+    "culture": "JP",
+    "couleur": null,
+    "sens": "cherry blossoms were used as a symbol to motivate the Japanese people and stoke nationalism and militarism",
+    "fr": "La fleur de cerisier a été utilisée comme symbole pour stimuler le nationalisme et le militarisme japonais (Ohnuki-Tierney)",
+    "source": "Wikipedia (EN), « Cherry blossom » (renvoie à Ohnuki-Tierney ; Choy Lee Khoon ; Slaymaker)",
+    "url": "https://en.wikipedia.org/wiki/Cherry_blossom",
+    "page": "Section Japon (renvoie à Ohnuki-Tierney, pp. 9-10)",
+    "niveau": "B"
+   },
+   {
+    "culture": "JP",
+    "couleur": null,
+    "sens": "ソメイヨシノの花言葉 : 純潔、優れた美人",
+    "fr": "Hanakotoba du cerisier Somei-Yoshino : pureté, beauté éminente (article de presse populaire)",
+    "source": "Walkerplus (article sur la fleur de cerisier, 花言葉 ; extrait de recherche, page non relue)",
+    "url": "https://www.walkerplus.com/article/1072052",
+    "page": "Article (extrait de recherche)",
+    "niveau": "C"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Bonne éducation (Cerisier)",
+    "fr": "Bonne éducation (il s'agit du cerisier à fruits)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 201",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Cherry Tree : Good education ; Cherry Tree, White : Deception",
+    "fr": "Cerisier : bonne éducation ; cerisier blanc : tromperie (cerisier à fruits)",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrées « Cherry Tree » et « Cherry Tree, White »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Kirschenblüthe : Du erregst mir Hoffnung. (Index par sens : Hoffnung)",
+    "fr": "Fleur de cerisier : tu éveilles en moi l'espoir",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=82",
+    "page": "p. 64 (vue 82)",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "JP",
+    "couleur": null,
+    "fr": "Au Japon la fleur de cerisier a servi à glorifier le sacrifice militaire (kamikaze) : ne pas l'associer à un discours patriotique. Perception en Chine : rien de documenté trouvé.",
+    "source": "Wikipedia (EN), « Cherry blossom » (renvoie à Ohnuki-Tierney ; Choy Lee Khoon ; Slaymaker)",
+    "url": "https://en.wikipedia.org/wiki/Cherry_blossom",
+    "niveau": "B"
+   }
+  ],
+  "propose": {
+   "sens": "Beauté éphémère de la vie",
+   "couleur": {},
+   "base": "Japon : transience / mono no aware (B). Occident : les entrées « cerisier » concernent le cerisier à fruits (éducation) ; seule exception allemande « fleur de cerisier : espoir ».",
+   "niveau": "B",
+   "actuel_verdict": "« Beauté éphémère et émerveillement » : « beauté éphémère » = B (Japon) ; « émerveillement » = ajout.",
+   "note": "Les entrées de La Tour et Greenaway (« bonne éducation ») visent le cerisier à fruits : ne pas les appliquer. Chine : aucune source fiable (le cerisier ornemental japonais peut y porter des connotations historiques, non documentées ici)."
+  }
+ },
+ "cognassier-du-japon": {
+  "nom": "Cognassier du Japon",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Pyrus Japonica : Fairies' fire",
+    "fr": "Cognassier du Japon (Pyrus japonica, nom de l'époque pour Chaenomeles) : le feu des fées",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Pyrus Japonica »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Quince : Temptation",
+    "fr": "Coing : tentation (le fruit)",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Quince »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Quitte (Frucht) : Ich wünsche eine zahlreiche Nachkommenschaft. Quittenzweig : Ich wünsche mit dir verwandt zu werden.",
+    "fr": "Coing : je souhaite une descendance nombreuse ; rameau de cognassier : je voudrais être de ta famille (index par sens : mariage)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=88",
+    "page": "p. 70 (vue 88)",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Le feu des fées",
+   "couleur": {},
+   "base": "UK Greenaway (Pyrus Japonica = Fairies' fire, A). Les entrées sur le coing (fruit) ne s'appliquent pas à la fleur ornementale.",
+   "niveau": "A",
+   "actuel_verdict": "« Vivacité des premières fleurs » : descriptif, aucune source.",
+   "note": "Pas de tradition française trouvée dans La Tour. Japon/Chine (木瓜, 海棠, ボケ) : rien de fiable trouvé (D). Un seul ouvrage ancien : à valider."
+  }
+ },
+ "forsythia": {
+  "nom": "Forsythia",
+  "traditions": [
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "In the Victorian language of flowers, forsythia stood for anticipation",
+    "fr": "Anticipation (affirmé comme « victorien » par des blogs, sans citer de livre ancien)",
+    "source": "Windflower Florist, « Forsythia meaning » (blog commercial ; extrait de recherche, page non relue)",
+    "url": "https://windflowerflorist.com/blogs/news/forsythia-meaning",
+    "page": "Page entière (extrait de recherche)",
+    "niveau": "C"
+   },
+   {
+    "culture": "JP",
+    "couleur": null,
+    "sens": "The flower language of forsythia is hope, expectation and concentration",
+    "fr": "Au Japon : espoir, attente, concentration (magazine de fleuriste)",
+    "source": "Sikito (magazine d'un fleuriste japonais), « Rengyo / forsythia » (extrait de recherche, page non relue)",
+    "url": "https://sikito.com/en/blogs/magazine/rengyo",
+    "page": "Page entière (extrait de recherche)",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Anticipation, espoir",
+   "couleur": {},
+   "base": "Blogs de fleuristes (C). Aucun des dictionnaires du XIXe siècle consultés n'a d'entrée pour le forsythia (« Anticipation » existe chez Greenaway pour la groseille à maquereau, pas pour le forsythia).",
+   "niveau": "C",
+   "actuel_verdict": "« Élan impatient vers le printemps » : formule libre autour de « anticipation » (C).",
+   "note": "NIVEAU C. L'attribution « victorienne » repose sur des blogs, sans livre cité."
+  }
+ },
+ "glycine": {
+  "nom": "Glycine",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Votre amitié m'est douce et agréable (Glycine de la Chine)",
+    "fr": "Votre amitié m'est douce et agréable (« les Chinois en ont fait le symbole d'une amitié tendre et délicate », dit La Tour)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Calendrier de Flore p. 24 ; Dictionnaire des plantes, p. 203",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Wisteria : Welcome, fair stranger",
+    "fr": "Glycine : bienvenue, belle étrangère",
+    "source": "John H. Ingram, Flora Symbolica, Londres, Warne, 1869",
+    "url": "https://archive.org/details/florasymbolicaor00ingr",
+    "page": "Vocabulaire, entrée « Wisteria » (alignement OCR contrôlé sur la copie florasymbolicaor00ingr)",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Amitié tendre, bienvenue",
+   "couleur": {},
+   "base": "FR La Tour (amitié tendre et délicate) + UK Ingram (bienvenue). Niveau A, deux traditions.",
+   "niveau": "A",
+   "actuel_verdict": "« Tendre attachement, bienvenue » : fidèle à La Tour (amitié tendre) et Ingram (bienvenue). OK.",
+   "note": "La Tour attribue le symbole d'amitié aux Chinois : assertion non vérifiée dans une source chinoise. Greenaway n'a pas d'entrée glycine. Japon (藤) : rien de fiable trouvé."
+  }
+ },
+ "anemone-sauvage": {
+  "nom": "Anémone sauvage",
+  "traditions": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Maladie (Anémone des prés)",
+    "fr": "Maladie (anémone des prés)",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 200",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Abandon (Anémone)",
+    "fr": "Abandon",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 200",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Anemone (Zephyr Flower) : Sickness. Expectation.",
+    "fr": "Anémone (fleur du Zéphyr) : maladie, attente",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Anemone (Zephyr Flower) »",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Anemone (Windblume) : Schlag deine Trauer in den Wind.",
+    "fr": "Anémone (fleur du vent) : jette ta tristesse au vent",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=74",
+    "page": "p. 56 (vue 74)",
+    "niveau": "A"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "FR",
+    "couleur": null,
+    "fr": "Anémone des prés = maladie (La Tour).",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "niveau": "A",
+    "page": "p. 200"
+   }
+  ],
+  "propose": {
+   "sens": "Attente ; amour délaissé",
+   "couleur": {},
+   "base": "Hérite de l'anémone (même nom de genre) ; La Tour distingue l'anémone des prés (maladie), plus proche de l'anémone sauvage.",
+   "niveau": "A",
+   "actuel_verdict": "« Beauté libre qui revient chaque printemps » : aucune source (descriptif).",
+   "note": "« Anémone des prés » de La Tour désigne Pulsatilla/Anemone pratensis ; l'identification à l'anémone sauvage de la boutique (A. nemorosa ou A. sylvestris) est probable mais non prouvée."
+  }
+ },
+ "mimosa": {
+  "nom": "Mimosa",
+  "traditions": [
+   {
+    "culture": "UK",
+    "couleur": "jaune",
+    "sens": "Acacia, Yellow : Secret love ; Acacia : Friendship",
+    "fr": "Acacia jaune : amour secret ; acacia : amitié (le « mimosa » du fleuriste est Acacia dealbata)",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrées « Acacia », « Acacia, Yellow »",
+    "niveau": "A"
+   },
+   {
+    "culture": "UK",
+    "couleur": null,
+    "sens": "Mimosa (Sensitive Plant) : Sensitiveness",
+    "fr": "Mimosa (sensitive, Mimosa pudica) : sensibilité",
+    "source": "Kate Greenaway, Language of Flowers, Londres, Routledge, 1884",
+    "url": "https://www.gutenberg.org/ebooks/31591",
+    "page": "Vocabulaire, entrée « Mimosa »",
+    "niveau": "A"
+   },
+   {
+    "culture": "FR",
+    "couleur": null,
+    "sens": "Pudeur (Sensitive)",
+    "fr": "Pudeur (La Tour) : la plante qui se referme au toucher",
+    "source": "Charlotte de La Tour, Le Langage des fleurs, Paris, Garnier, éd. de 1854 (1re éd. 1819)",
+    "url": "https://archive.org/details/langagedesfleur00latob",
+    "page": "Dictionnaire des plantes, p. 209",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Mimosa, Sensitive, Sinnpflanze : Ich verehre deine jungfräuliche Schamhaftigkeit. (Index par sens : Schamhaftigkeit)",
+    "fr": "Mimosa (sensitive) : je révère ta pudeur virginale (index par sens : pudeur)",
+    "source": "Johann M. Braun, Taschenbuch der Blumensprache oder deutscher Selam, 1843 (BSB München, bsb10575820)",
+    "url": "https://www.digitale-sammlungen.de/de/view/bsb10575820?page=85",
+    "page": "p. 67 (vue 85) ; index p. 79 (vue 97)",
+    "niveau": "A"
+   },
+   {
+    "culture": "ES",
+    "couleur": null,
+    "sens": "Sensitiva : Pudor",
+    "fr": "Sensitive : pudeur",
+    "source": "Florencio Jazmín, El lenguaje de las flores y el de las frutas, Paris, Bouret, 1889 (Catálogo de flores y hojas)",
+    "url": "https://archive.org/details/mobot31753000635232",
+    "page": "Catálogo, p. 114 environ",
+    "niveau": "A"
+   },
+   {
+    "culture": "DE",
+    "couleur": null,
+    "sens": "Mimose, figurativ : sehr empfindsamer Mensch, oft abwertend",
+    "fr": "En allemand « eine Mimose » désigne une personne hypersensible, souvent de façon péjorative",
+    "source": "Duden, « Mimose »",
+    "url": "https://www.duden.de/rechtschreibung/Mimose",
+    "page": "Entrée « Mimose », sens 3",
+    "niveau": "B"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "the flowers are also frequently given to women on International Women's Day (Italy, Albania, Russia, Georgia)",
+    "fr": "Mimosa (A. dealbata) offert aux femmes le 8 mars en Italie et ailleurs (ANSA 2015, cité)",
+    "source": "Wikipedia (EN), « Acacia dealbata » (renvoie à ANSA, 2015)",
+    "url": "https://en.wikipedia.org/wiki/Acacia_dealbata",
+    "page": "Section « Cultural uses »",
+    "niveau": "B"
+   }
+  ],
+  "tabous": [
+   {
+    "culture": "DE",
+    "couleur": null,
+    "fr": "« Une Mimose » = personne hypersensible, parfois péjoratif en allemand.",
+    "source": "Duden, « Mimose »",
+    "url": "https://www.duden.de/rechtschreibung/Mimose",
+    "niveau": "B"
+   }
+  ],
+  "propose": {
+   "sens": "Amour secret, amitié",
+   "couleur": {},
+   "base": "Greenaway : Acacia jaune = amour secret ; Acacia = amitié. Identification : le « mimosa » du fleuriste est Acacia dealbata, compté dans les « acacias » des ouvrages anciens, alors que le « Mimosa » des ouvrages anciens est la sensitive (Mimosa pudica).",
+   "niveau": "A",
+   "actuel_verdict": "« Sécurité et lumière d'hiver » : INVENTÉ ; aucune source ancienne. « Lumière d'hiver » est descriptif, « sécurité » est une glose moderne de fleuriste français non sourcée.",
+   "note": "AMBIGUÏTÉ BOTANIQUE à connaître : si on cite « mimosa » dans les livres anciens, on obtient sensibilité/pudeur (sensitive), pas le mimosa jaune. Option : « Sensibilité, pudeur » (A pour la sensitive, mais mauvaise plante) ou « Amour secret, amitié » (acacia jaune, A). Marché italien : 8 mars (B)."
+  }
+ },
+ "cosmos": {
+  "nom": "Cosmos",
+  "traditions": [
+   {
+    "culture": "JP",
+    "couleur": null,
+    "sens": "コスモス: ギリシャ語の（調和）と名付けた (a Spanish priest in Mexico named it from the Greek for harmony)",
+    "fr": "Le nom vient d'un prêtre espagnol du Mexique qui, voyant les pétales disposés avec ordre et équilibre, le nomma d'après le mot grec pour « harmonie, ordre »",
+    "source": "Wikipédia (JA), « コスモス » (section étymologie)",
+    "url": "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%82%B9%E3%83%A2%E3%82%B9",
+    "page": "Section étymologie",
+    "niveau": "B"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "order, harmony, balance (from Greek kosmos) ; peace, tranquility, innocence, modesty, joy",
+    "fr": "Ordre, harmonie, équilibre ; paix, sérénité, innocence, modestie, joie (fleuristes)",
+    "source": "Floral Design Institute, fiche cosmos (extrait de recherche, page non relue)",
+    "url": "https://www.floraldesigninstitute.com/blogs/resources-flower-library/cosmos",
+    "page": "Fiche (extrait de recherche)",
+    "niveau": "C"
+   },
+   {
+    "culture": "US",
+    "couleur": null,
+    "sens": "The flowers have long symbolized order, harmony, and balance",
+    "fr": "Idem (Almanac)",
+    "source": "The Old Farmer's Almanac, « October birth flowers » (cosmos ; extrait de recherche, page non relue)",
+    "url": "https://www.almanac.com/content/october-birth-flowers",
+    "page": "Page (extrait de recherche)",
+    "niveau": "C"
+   }
+  ],
+  "tabous": [],
+  "propose": {
+   "sens": "Harmonie, ordre",
+   "couleur": {},
+   "base": "Étymologie du nom, documentée (B) ; consensus fleuriste (C). Aucun dictionnaire ancien consulté n'a d'entrée pour le cosmos.",
+   "niveau": "B",
+   "actuel_verdict": "« Harmonie paisible » : fidèle à l'étymologie (harmonie) ; « paisible » est un ajout de fleuriste (C).",
+   "note": "Le « sens » vient du nom grec ; ce n'est pas une tradition de langage des fleurs ancienne. Les sens japonais 乙女の真心 (« sincérité de jeune fille ») souvent cités n'ont pas été vérifiés (ja.wikipedia n'a pas de section 花言葉)."
+  }
+ }
+}

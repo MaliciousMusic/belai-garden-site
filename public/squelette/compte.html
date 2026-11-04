@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
+  <script type="module" src="traduction.mjs"></script>
+  <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
+  <script type="module" src="consentement.mjs"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mes fleurs | Belai’s Garden</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="squelette.css">
+</head>
+<body class="page-compte">
+  <!-- The monthly-return journey (AUDIT.md, level 2): the end of a bloom said with care, what one owns (endowment), the
+       next collection dated with a reminder one chooses, the flowers in season, and what one gave. Never a subscription. -->
+  <header class="tete tete-simple">
+    <a class="marque" href="index.html"><span class="visuellement-cache">Belai’s Garden</span></a>
+    <nav class="nav-compte" aria-label="Compte">
+      <a href="index.html">La collection</a>
+      <a href="#" data-bouchon="deconnexion">Me déconnecter</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. The bouquet that just finished its bloom, said with care -->
+    <section class="bloc fin-floraison" aria-labelledby="f-titre">
+      <div class="fin-texte">
+        <p class="sur-titre">Bonjour, <span id="prenom">Jonas</span></p>
+        <h1 id="f-titre" class="titre"><span id="f-nom"></span> a fleuri trente jours chez vous.</h1>
+        <p class="chapo">Du <span id="f-debut"></span> au <span id="f-fin"></span>. Il a fané doucement, jour après jour.</p>
+        <p class="fin-liens"><a href="recu.html?de=Claire" id="relire">Relire le mot</a><a href="#suivante" class="fin-suite">La collection <span data-de-mois></span> ouvre le 1<sup>er</sup> · Me prévenir</a></p>
+      </div>
+      <figure class="fin-image">
+        <div class="fin-bq" id="f-image" role="img"></div>
+        <figcaption>Aperçu : le dessin définitif du fané arrive bientôt.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 2. The next collection, dated; a reminder only if one asks for it -->
+    <section class="bloc bloc-2 suivante-bloc" id="suivante" aria-labelledby="n-titre">
+      <p class="sur-titre">Le 1<sup>er</sup> <span data-mois-suivant></span></p>
+      <h2 id="n-titre" class="titre">La collection <span data-de-mois></span> ouvre le 1<sup>er</sup> <span data-mois-suivant></span>.</h2>
+      <p class="chapo">De nouveaux bouquets, de nouveaux vases. Rien n’est renouvelé sans vous : vous choisissez, ou non.</p>
+      <form class="rappel" id="rappel">
+        <fieldset>
+          <legend>Me prévenir à l’ouverture : un seul message, le 1<sup>er</sup> du mois, que vous arrêtez en un clic</legend>
+          <label><input type="radio" name="canal" value="mail"> Par e-mail</label>
+          <label><input type="radio" name="canal" value="sms"> Par SMS</label>
+          <label><input type="radio" name="canal" value="rien"> Ne pas me prévenir</label>
+        </fieldset>
+        <button class="btn btn-trait" type="submit" id="rappel-ok" disabled>Enregistrer mon choix</button>
+        <a class="agenda" id="agenda" download="belais-garden-collection.ics">Ou l’ajouter à mon agenda, sans rien nous donner</a>
+        <p class="merci-etat" id="rappel-etat" role="status"></p>
+      </form>
+    </section>
+
+    <!-- 3. What one owns: every bouquet with its state, the soliflores that never fade -->
+    <section class="bloc" aria-labelledby="m-titre">
+      <h2 id="m-titre" class="titre">Mes fleurs</h2>
+      <ul class="grille mes" id="mes"></ul>
+    </section>
+
+    <!-- 4. In season this month: the soliflores to collect -->
+    <section class="bloc bloc-2" aria-labelledby="s-titre">
+      <p class="sur-titre">De saison en <span data-mois-suivant></span> · 25 €</p>
+      <h2 id="s-titre" class="titre">Les soliflores du mois</h2>
+      <ul class="saison" id="saison"></ul>
+    </section>
+
+    <!-- 5. What one gave: opened or not, thanked or not -->
+    <section class="bloc" aria-labelledby="o-titre">
+      <h2 id="o-titre" class="titre">Ce que vous avez offert</h2>
+      <ul class="offerts" id="offerts"></ul>
+    </section>
+  </main>
+
+  <dialog class="bouchon" id="bouchon" aria-labelledby="bouchon-texte">
+    <p id="bouchon-texte"></p>
+    <form method="dialog"><button class="btn btn-trait btn-petit">Fermer</button></form>
+  </dialog>
+
+  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
+  <footer class="pied-court">
+    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
+    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
+  </footer>
+
+  <script src="../scene/eclosion.js"></script>
+  <script type="module" src="compte.js"></script>
+</body>
+</html>

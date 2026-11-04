@@ -17,6 +17,14 @@ serveur des comptes et le relais de Bzzou. Les fleurs, les vases, le moteur de d
 | `outils/` | Contrôles du site, captures, entraînement de Bzzou, serveur local |
 | `docs/` | [D'où vient ce dépôt](docs/ORIGINE.md) et [comment il se publie](docs/PUBLIER.md) |
 
+## Cloner sous Windows
+
+Les noms des coloris sont longs. Clonez près de la racine du disque, ou activez `core.longpaths` :
+
+```bash
+git clone -c core.longpaths=true https://github.com/MaliciousMusic/belai-garden-site.git
+```
+
 ## Lancer le site en local
 
 ```bash

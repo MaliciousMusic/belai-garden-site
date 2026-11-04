@@ -265,17 +265,27 @@ function tape(liste) {
 // motion, or in a browser without highlights. Returns what stops it; fini is told in every case.
 const PAS = 5;
 export function tapeDedans(noeuds, fini = () => {}) {
-  const liste = noeuds.filter((n) => n?.nodeValue).map((n) => {
-    const r = new Range();
-    r.selectNodeContents(n);
-    return { n, r };
-  });
-  const total = liste.reduce((s, x) => s + x.n.length, 0);
+  const liste = noeuds.filter((n) => n?.nodeValue);
+  const total = liste.reduce((s, n) => s + n.length, 0);
   if (calme.matches || !total || !window.Highlight || !CSS.highlights) {
     fini();
     return () => {};
   }
-  const reste = new Highlight(...liste.map((x) => x.r));
+  // what is still to come, from the montre-th letter on: a new highlight each time, a browser repaints only when one is registered
+  const dessine = (montre) => {
+    const reste = new Highlight();
+    for (const n of liste) {
+      const de = Math.min(montre, n.length);
+      if (de < n.length) {
+        const r = new Range();
+        r.setStart(n, de);
+        r.setEnd(n, n.length);
+        reste.add(r);
+      }
+      montre -= de;
+    }
+    CSS.highlights.set('a-taper', reste);
+  };
   let id = 0;
   let parti = true;
   const fin = () => {
@@ -292,15 +302,13 @@ export function tapeDedans(noeuds, fini = () => {}) {
   const garde = setTimeout(fin, total * PAS + 1000);
   frappe?.fin();
   frappe = ici;
-  CSS.highlights.set('a-taper', reste);
+  dessine(0);
   const t0 = performance.now();
   const image = (now) => {
-    let montre = Math.floor((now - t0) / PAS);
+    // (the first frame's time can come before t0: it began before this was asked)
+    const montre = Math.max(0, Math.floor((now - t0) / PAS));
     if (montre >= total) return fin();
-    for (const x of liste) {
-      x.r.setStart(x.n, Math.min(montre, x.n.length));
-      montre = Math.max(0, montre - x.n.length);
-    }
+    dessine(montre);
     id = requestAnimationFrame(image);
   };
   id = requestAnimationFrame(image);

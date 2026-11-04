@@ -12,15 +12,12 @@
   <meta name="description" content="Un bouquet composé pour une personne, un cadeau d’exception : l’atelier vous répond.">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
-  <footer class="pied-court">
-    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
-    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
-  </footer>
 
+  <link rel="canonical" href="https://maliciousmusic.github.io/belai-garden-site/squelette/sur-mesure.html">
   <link rel="stylesheet" href="squelette.css">
 </head>
 <body class="page-mesure">
+  <a class="evitement" href="#contenu">Aller au contenu</a>
   <!-- Bespoke requests and exceptional gifts (owner, 2026-10-31: « un inquire », a human contact): the atelier answers by
        itself; nothing is priced or promised on this page. -->
   <header class="tete tete-simple">
@@ -28,7 +25,7 @@
     <nav class="nav-compte" aria-label="Retour"><a href="index.html">La collection</a><a href="groupe.html">Offrir à plusieurs</a></nav>
   </header>
 
-  <main class="bloc formulaire">
+  <main id="contenu" class="bloc formulaire">
     <p class="sur-titre">L’atelier</p>
     <h1 class="titre">Une demande sur mesure</h1>
     <p class="chapo">Un bouquet composé pour une personne, ses fleurs, ses couleurs, son vase ; un cadeau d’exception. Dites-nous, l’atelier
@@ -58,6 +55,11 @@
       <p class="merci-etat" id="d-etat" role="status"></p>
     </form>
   </main>
+  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
+  <footer class="pied-court">
+    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
+    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
+  </footer>
 
   <script>
     document.getElementById('demande').addEventListener('submit', (ev) => {

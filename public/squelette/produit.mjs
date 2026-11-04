@@ -186,9 +186,10 @@ async function poser(p) {
   vise = null;
   eclaire(null);
   // its sprites at once, its SVG (the atelier's pack) when it is in
-  const enAttente = paquet(p.id).then((donnees) => ({ url: `${SCENE}bouquets/${p.id}/atelier.json`, donnees }));
-  const b = await shopStage.show(p.id, enAttente, { sprites: true });
-  const pack = (await enAttente.catch((err) => (console.error('[squelette] atelier', p.id, err), null)))?.donnees;
+  let enAttente = null;
+  const charge = () => (enAttente = paquet(p.id).then((donnees) => ({ url: `${SCENE}bouquets/${p.id}/atelier.json`, donnees })));
+  const b = await shopStage.show(p.id, charge, { sprites: true });
+  const pack = (await enAttente?.catch((err) => (console.error('[squelette] atelier', p.id, err), null)))?.donnees;
   if (shown !== p || !b || !pack || b.sprites) return;
   live = b;
   byOrig = new Map();

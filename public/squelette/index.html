@@ -19,7 +19,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nos fleurs vivent sur votre écran | Belai’s Garden">
   <meta property="og:description" content="Un bouquet dessiné et animé tige à tige d’après de vraies fleurs, à offrir ou à garder. Il fane doucement sur trente jours, au prix de ses vraies tiges.">
-  <meta property="og:image" content="partage.jpg">
+  <meta property="og:image" content="https://maliciousmusic.github.io/belai-garden-site/squelette/partage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,6 +28,7 @@
   <!-- the first card's sprites (its SVG is never loaded on the collection) -->
   <link rel="preload" as="fetch" crossorigin="anonymous" fetchpriority="high" href="../scene/bouquets/printemps-a-la-carpe/sprites/sprites.json">
   <link rel="preload" as="image" fetchpriority="high" href="../scene/bouquets/printemps-a-la-carpe/sprites/proche-0.webp">
+  <link rel="canonical" href="https://maliciousmusic.github.io/belai-garden-site/squelette/">
   <link rel="stylesheet" href="squelette.css">
   <!-- the choreography's waiting state is set before the first paint (no flash); only on a first visit of this page (a
        returning visitor wants the bouquets at once, n2 army), never with reduced motion or without JS -->
@@ -35,6 +36,7 @@
     if (!seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('scene');
     // failsafe (jury n2): if the choreography never starts, nothing stays invisible
     setTimeout(() => { if (!window.SCENE) document.documentElement.classList.remove('scene'); }, 4000); })();</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "OnlineStore", "name": "Belai’s Garden", "url": "https://maliciousmusic.github.io/belai-garden-site/squelette/", "logo": "https://maliciousmusic.github.io/belai-garden-site/squelette/logotype.svg", "image": "https://maliciousmusic.github.io/belai-garden-site/squelette/partage.jpg", "description": "Bouquets numériques dessinés et animés tige à tige, à offrir ou à garder sur son écran.", "email": "lonjaret.hadrien@proton.me", "telephone": "+33618558122", "vatID": "FR69853801488", "address": {"@type": "PostalAddress", "streetAddress": "35 cours Sablon", "addressLocality": "Clermont-Ferrand", "postalCode": "63000", "addressCountry": "FR"}}</script>
 </head>
 <body class="page-catalogue">
   <a class="evitement" href="#contenu">Aller à la collection</a>

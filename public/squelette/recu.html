@@ -16,7 +16,7 @@
   <meta property="og:title" content="Un bouquet pour vous">
   <meta property="og:description" content="Des fleurs dessinées et animées tige à tige, qui éclosent sous vos yeux. Rien à installer, rien à payer.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="partage-cadeau.jpg">
+  <meta property="og:image" content="https://maliciousmusic.github.io/belai-garden-site/squelette/partage-cadeau.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="squelette.css">
 </head>
 <body class="page-recu">
+  <a class="evitement" href="#contenu">Aller au contenu</a>
   <!-- The gift-received journey (AUDIT.md, level 2): retention first. One gesture to open, the reveal as a peak, then one
        main way to keep it on a screen; thanking and coming back next; offering in return only at the end, never pushed. -->
   <header class="tete tete-simple">
@@ -35,7 +36,7 @@
   <p class="wechat" id="wechat" hidden data-t="wechat"></p>
 
   <!-- every visible word carries its key in recu-langues.mjs: the giver chooses the recipient's language (?lang=) -->
-  <main>
+  <main id="contenu">
     <!-- 1. The envelope: a gift waits, and the code opens it. The link alone opens nothing (owner, 2026-11-02: the link and
          the code are sent apart), so the envelope never says who offers it: that comes with the code, if the gift is signed -->
     <section class="enveloppe" id="enveloppe" aria-labelledby="e-titre">

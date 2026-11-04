@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Retouche | Belai’s Garden">
   <meta property="og:description" content="Chaque fleur du bouquet dans un autre de ses coloris, choisis par ce qu’ils signifient.">
-  <meta property="og:image" content="partage.jpg">
+  <meta property="og:image" content="https://maliciousmusic.github.io/belai-garden-site/squelette/partage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -64,7 +64,7 @@
         <!-- the magnifier (owner, 2026-10-31): zoom in on the drawing, drag to look around, double click to zoom where one points -->
         <div class="loupe" role="group" aria-label="Zoom sur le bouquet">
           <button type="button" id="loupe-moins" aria-label="Dézoomer" disabled>−</button>
-          <button type="button" id="loupe-taux" aria-label="Revenir à la taille entière">1×</button>
+          <button type="button" id="loupe-taux" title="Revenir à la taille entière">1×</button>
           <button type="button" id="loupe-plus" aria-label="Zoomer">+</button>
         </div>
         <!-- while the florist recomposes, the old bouquet stays, softened, under a calm veil: never a blank -->
@@ -96,6 +96,10 @@
       </div>
     </section>
   </main>
+  <footer class="pied-court">
+    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
+    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
+  </footer>
 
   <dialog class="recu-boite" id="recu-boite" aria-labelledby="rb-titre">
     <h2 id="rb-titre">J’ai reçu un bouquet</h2>

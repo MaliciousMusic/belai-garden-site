@@ -547,4 +547,5 @@ async function accueil() {
   addEventListener('scroll', parDefil, { passive: true });
   document.addEventListener('pointerdown', parTouche, true);
 }
-accueil();
+const posee = new Promise((res) => (document.readyState === 'complete' ? res() : addEventListener('load', res, { once: true })));
+posee.then(() => (window.requestIdleCallback ? requestIdleCallback(accueil, { timeout: 2000 }) : setTimeout(accueil, 800)));

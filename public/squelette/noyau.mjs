@@ -213,7 +213,9 @@ export function stage(box, maxH, place) {
         } catch (err) {
           console.error('[squelette] sprites', id, err);
         }
-        const pack = await Promise.resolve(src).catch(() => null);
+        // src may be a function: the pack is then fetched only now, once the sprites show and the page is idle
+        if (typeof src === 'function') await new Promise((go) => (window.requestIdleCallback ? requestIdleCallback(go, { timeout: 1500 }) : setTimeout(go, 300)));
+        const pack = await Promise.resolve(typeof src === 'function' ? src() : src).catch(() => null);
         if (my !== token) return;
         if (!pack) {
           if (!first) failed(box);
@@ -476,6 +478,7 @@ export const region = (() => {
 export function marquesPaiement() {
   const el = document.createElement('p');
   el.className = 'moyens';
+  el.setAttribute('role', 'img');
   const ways = ['visa', 'mastercard', 'americanexpress', 'applepay', 'googlepay', 'paypal', ...(LOCAL[region] || [])];
   const names = { americanexpress: 'American Express', applepay: 'Apple Pay', googlepay: 'Google Pay', paypal: 'PayPal', wechat: 'WeChat Pay', sepa: 'SEPA' };
   el.setAttribute('aria-label', `Paiement par ${ways.map((w) => names[w] || (MARQUES.has(w) ? cap(w) : w)).join(', ')}, chez Stripe`);

@@ -12,15 +12,12 @@
   <meta name="description" content="Un bouquet pour chacun, un mot pour chacun, le même jour : une équipe, un mariage, une classe.">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
-  <footer class="pied-court">
-    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
-    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
-  </footer>
 
+  <link rel="canonical" href="https://maliciousmusic.github.io/belai-garden-site/squelette/groupe.html">
   <link rel="stylesheet" href="squelette.css">
 </head>
 <body class="page-groupe">
+  <a class="evitement" href="#contenu">Aller au contenu</a>
   <!-- The group purchase (owner, 2026-10-31: « oui, page simple »): one bouquet for each person, a word for each, a date
        to send, an invoice. Several recipients only; the price is the bouquet's, nothing else is promised here. -->
   <header class="tete tete-simple">
@@ -28,7 +25,7 @@
     <nav class="nav-compte" aria-label="Retour"><a href="index.html">La collection</a><a href="sur-mesure.html">Une demande sur mesure</a></nav>
   </header>
 
-  <main class="bloc formulaire">
+  <main id="contenu" class="bloc formulaire">
     <p class="sur-titre">Équipes, mariages, classes</p>
     <h1 class="titre">Offrir à plusieurs</h1>
     <p class="chapo">Un bouquet pour chacun, un mot pour chacun, le même jour. Chacun reçoit son lien et son code.</p>
@@ -66,6 +63,11 @@
       <p class="merci-etat" id="g-etat" role="status"></p>
     </form>
   </main>
+  <!-- every page carries who publishes and how data is kept (trust ID-07, LCEN) -->
+  <footer class="pied-court">
+    <span>Belai’s Garden, atelier de bouquets numériques, Clermont-Ferrand</span>
+    <a href="legal.html">Mentions légales</a><a href="legal.html#privacy">Confidentialité</a>
+  </footer>
 
   <script type="module" src="groupe.js"></script>
 </body>

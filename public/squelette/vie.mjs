@@ -56,6 +56,7 @@ async function start() {
   // product's bouquet any more
   const front = document.createElement('canvas');
   front.className = 'vie vie-devant';
+  front.setAttribute('aria-hidden', 'true');
   document.body.append(front);
   const essaim = await Essaim.create({ layers: [front], zCuts: [] });
   // only its large level (152 px cells): the bee is always shown larger than the small one's 64 px, which made it blurry

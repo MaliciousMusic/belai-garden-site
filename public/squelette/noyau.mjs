@@ -475,6 +475,8 @@ export const region = (() => {
     return '';
   }
 })();
+// the sign of the price buttons: a bag with a +, in line art
+export const SAC_PLUS = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.6 8.5h12.8l1.1 11.3a1 1 0 01-1 1.2H5.5a1 1 0 01-1-1.2z"/><path d="M8.8 11V6.4a3.2 3.2 0 016.4 0V11"/><path d="M12 13.2v4.6M9.7 15.5h4.6"/></svg>';
 export function marquesPaiement() {
   const el = document.createElement('p');
   el.className = 'moyens';

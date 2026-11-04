@@ -4,7 +4,7 @@
 // flower reaches the giver through the gift (owner, 2026-10-31), never its code, which no link carries (owner, 2026-11-02).
 // Three menus sort and sift them (owner, 2026-11-01): by price either way, by colour, by meaning in alphabetical order.
 import './cache.mjs';
-import { $, chargeSens, chargeSoli, dessinSoli, lienFleur, MOIS, moisSoli, panier, plain, reading, said, SOLI } from './noyau.mjs';
+import { $, chargeSens, chargeSoli, dessinSoli, lienFleur, MOIS, moisSoli, panier, plain, reading, said, SOLI, SAC_PLUS } from './noyau.mjs';
 
 await Promise.all([chargeSoli(), chargeSens()]);
 
@@ -251,7 +251,7 @@ function render() {
         add.className = 'ajout-prix';
         const dit = (ok) => add.setAttribute('aria-label', `${ok ? 'Ajouté au panier' : 'Ajouter au panier'} : ${f.nom}, ${plain(f.prix)}`);
         dit(false);
-        add.innerHTML = `<span class="ajout-prix-montant">${plain(f.prix)}</span><span class="ajout-prix-plus" aria-hidden="true"></span>`;
+        add.innerHTML = `<span class="ajout-prix-montant">${plain(f.prix)}</span><span class="ajout-prix-plus">${SAC_PLUS}</span>`;
         add.addEventListener('click', () => {
           panier.ajoute({ id: `soli:${f.sid}:${k}`, soli: true, nom: `Soliflore · ${f.nom}`, coloris: f.coloris[k]?.[0] || '', centimes: f.prix, pour: use, qte: 1 });
           add.classList.add('ajoute');

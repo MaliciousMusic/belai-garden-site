@@ -7,7 +7,7 @@
 // tile is posed when it comes within a quarter screen of the view, one after the other, when the page is idle (its drawing
 // is read and painted on the main thread: a scroll or a touch come first).
 import { idle } from './cache.mjs';
-import { $, deMois, fit, lienProduit, meta, monthTxt, panier, pourChoisi, price, products, SCENE, surLargeur } from './noyau.mjs';
+import { $, deMois, fit, lienProduit, meta, monthTxt, panier, pourChoisi, price, products, SCENE, surLargeur, SAC_PLUS } from './noyau.mjs';
 
 $('c-titre').textContent = `La collection ${deMois(monthTxt)}`;
 
@@ -20,7 +20,7 @@ const plus = (p, li) => {
   add.className = 'ajout-prix';
   const dit = (ok) => add.setAttribute('aria-label', `${ok ? 'Ajouté au panier' : 'Ajouter au panier'} : ${p.nom}, ${price(p.prix.centimes)}`);
   dit(false);
-  add.innerHTML = `<span class="ajout-prix-montant">${price(p.prix.centimes)}</span><span class="ajout-prix-plus" aria-hidden="true"></span>`;
+  add.innerHTML = `<span class="ajout-prix-montant">${price(p.prix.centimes)}</span><span class="ajout-prix-plus">${SAC_PLUS}</span>`;
   add.addEventListener('click', () => {
     panier.ajoute({ id: p.id, nom: p.nom, centimes: p.prix.centimes, pour: pourChoisi === 'moi' ? 'moi' : 'offrir', qte: 1 });
     add.classList.add('ajoute');

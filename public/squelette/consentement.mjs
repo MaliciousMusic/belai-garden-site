@@ -1,6 +1,7 @@
 // consentement.mjs: the audience-measurement cookies, asked first (owner, 2026-11-02: « des cookies de mesure, assumés »;
-// in Europe the visitor chooses, GDPR and ePrivacy, CNIL guidelines). Every page loads it. A band at the foot of the
-// screen says what they are for, with « Refuser » and « Accepter » side by side, as easy as one another; nothing is
+// in Europe the visitor chooses, GDPR and ePrivacy, CNIL guidelines). Every page loads it. A card in the middle of the
+// screen (owner, 2026-11-04: the welcome's own place, the welcome comes once it is answered; a band at the foot on the gift's
+// page, over the flowers otherwise) says what they are for, with « Refuser » and « Accepter » side by side, as easy as one another; nothing is
 // measured and no measurement cookie is set before « Accepter ». The choice is kept six months in this browser (a
 // strictly necessary record, exempt from consent), then asked again; « Cookies » at the foot of every page reopens it, and
 // a refusal after an acceptance takes the measurement cookies away at once.
@@ -53,7 +54,9 @@ let bande = null;
 function construit() {
   bande = document.createElement('section');
   bande.className = 'consentement';
+  bande.setAttribute('role', 'dialog');
   bande.setAttribute('aria-labelledby', 'consentement-titre');
+  bande.tabIndex = -1;
   bande.innerHTML = `<h2 id="consentement-titre">Des cookies de mesure, si vous le voulez bien</h2>
     <p>Ils nous montrent comment le site est parcouru, pour le rendre plus simple, aux personnes âgées comme aux visiteurs de
       chaque pays. Rien n’est posé sans votre accord, et vous changez d’avis quand vous voulez : « Cookies », en bas de chaque page.
@@ -76,6 +79,8 @@ function ouvre() {
   retour = document.activeElement;
   bande.hidden = false;
   document.body.classList.add('avec-consentement');
+  // the keyboard starts here: the card comes first in what the page asks
+  bande.focus({ preventScroll: true });
 }
 function ferme() {
   bande.hidden = true;

@@ -12,7 +12,7 @@
 import { API, ouvreEcrire } from './ecrire.mjs';
 import { SAVOIR } from './abeille-savoir.mjs';
 import { conseille } from './abeille-conseil.mjs';
-import { choixLangue, langue } from './traduction.mjs';
+import { choixLangue, langue, tapeDedans } from './traduction.mjs';
 import { $, chargeSoli, plain, products, SOLI } from './noyau.mjs';
 
 const VOLE = !!window.VIE;
@@ -515,14 +515,41 @@ const ACCUEIL = {
   ],
   fin: 'Une question ? Touchez-moi : je suis Bzzou.',
 };
+// the welcome's words typed in, the card at its final size from the start. The phrase books write first, so the words typed
+// are the reader's; screen readers get the words whole, not letter by letter
+async function tapeAccueil() {
+  bulle.style.visibility = 'hidden';
+  bulle.setAttribute('aria-live', 'off');
+  await new Promise((res) => setTimeout(res));
+  const lignes = [...bulle.querySelectorAll(':scope > p')];
+  bulle.style.width = `${bulle.getBoundingClientRect().width}px`;
+  for (const p of lignes) p.style.minHeight = `${p.getBoundingClientRect().height}px`;
+  bulle.style.visibility = '';
+  tapeDedans(
+    lignes.map((p) => p.firstChild),
+    () => {
+      bulle.style.width = '';
+      for (const p of lignes) p.style.minHeight = '';
+      bulle.removeAttribute('aria-live');
+    },
+  );
+}
 async function accueil() {
   let vu = false;
   try {
     vu = sessionStorage.getItem(VUE) === '1';
-    sessionStorage.setItem(VUE, '1');
   } catch (_) {}
   if (vu || estEteinte()) return;
   const v = VOLE ? await window.VIE.ready : null;
+  // the cookies first, in the same card in the middle (owner, 2026-11-04): Bzzou sits on its rim, then the welcome takes its place
+  const question = document.querySelector('.consentement:not([hidden])');
+  if (question) {
+    v?.accueil(question);
+    await new Promise((res) => document.addEventListener('belai:consentement', res, { once: true }));
+  }
+  try {
+    sessionStorage.setItem(VUE, '1');
+  } catch (_) {}
   // the words first, then Bzzou comes and sits on their upper rim (owner, 2026-11-03: « posée sur le rebord de la bulle »)
   parle(ACCUEIL, Infinity, { sous: true, haut: v ? v.tailleAccueil() * 0.75 + 76 : 96 });
   // the language, in the card's upper right corner (owner, 2026-11-03); a choice rewrites the words in place
@@ -530,6 +557,7 @@ async function accueil() {
   globe.classList.add('abeille-langues');
   globe.addEventListener('click', (e) => e.stopPropagation());
   bulle.prepend(globe);
+  tapeAccueil();
   if (!v) return;
   v.accueil(bulle);
   let fini = false;

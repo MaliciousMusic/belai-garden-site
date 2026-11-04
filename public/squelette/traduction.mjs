@@ -258,6 +258,50 @@ function tape(liste) {
   id = requestAnimationFrame(image);
   frappe = { fin };
 }
+// words typed in from nothing, one node after the other, a letter every PAS ms (Bzzou's welcome, owner 2026-11-04: « une
+// animation de type in »); each node keeps its French, so a change of language still finds it. At once when the system asks
+// for less motion. Returns what stops it and writes the words whole; fini is told in every case.
+const PAS = 14;
+export function tapeDedans(noeuds, fini = () => {}) {
+  const liste = noeuds.map((n) => ({ n, a: n.nodeValue }));
+  const total = liste.reduce((s, x) => s + x.a.length, 0);
+  if (calme.matches || !total) {
+    fini();
+    return () => {};
+  }
+  let id = 0;
+  let parti = true;
+  const fin = () => {
+    if (!parti) return;
+    parti = false;
+    cancelAnimationFrame(id);
+    clearTimeout(garde);
+    for (const x of liste) if (fait.get(x.n) === x.n.nodeValue) ecrit(x.n, x.a);
+    if (frappe === ici) frappe = null;
+    fini();
+  };
+  const ici = { fin };
+  // a tab that draws no frames (in the background) still ends in the right words
+  const garde = setTimeout(fin, total * PAS + 1000);
+  frappe?.fin();
+  frappe = ici;
+  // never quite empty: each line keeps its height while its words come
+  for (const x of liste) ecrit(x.n, '\u200b');
+  const t0 = performance.now();
+  const image = (now) => {
+    let reste = Math.floor((now - t0) / PAS);
+    for (const x of liste) {
+      if (fait.get(x.n) !== x.n.nodeValue) continue; // the page wrote it meanwhile: its own words win
+      const v = reste >= x.a.length ? x.a : x.a.slice(0, reste) || '\u200b';
+      if (v !== x.n.nodeValue) ecrit(x.n, v);
+      reste = Math.max(0, reste - x.a.length);
+    }
+    if ((now - t0) / PAS >= total) fin();
+    else id = requestAnimationFrame(image);
+  };
+  id = requestAnimationFrame(image);
+  return fin;
+}
 export async function changeLangue(c) {
   if (!CODES.includes(c) || c === langue) return;
   try {

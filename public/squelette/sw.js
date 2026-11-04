@@ -64,7 +64,9 @@ async function staleWhileRevalidate(ev, req) {
 }
 async function networkFirst(req) {
   try {
-    const res = await fetch(req);
+    // asked again of the server (a 304 most of the time): GitHub Pages lets a browser keep a file ten minutes, and a page must not
+    // run with the modules of the publication before (a new page over an old abeille.mjs, seen on 2026-11-04)
+    const res = await fetch(req.mode === 'navigate' ? req.url : new Request(req, { cache: 'no-cache' }), req.mode === 'navigate' ? { cache: 'no-cache' } : undefined);
     keep(CODE, req, res);
     return res;
   } catch (err) {

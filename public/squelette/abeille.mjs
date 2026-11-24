@@ -9,7 +9,7 @@
 // manager answers from the atelier's panel (guichet.html), and the answers come into the same talk.
 // The talk follows the visitor from page to page (sessionStorage). With reduced motion the bee does not fly: a still bee
 // in the corner opens the talk.
-import { API, ouvreEcrire } from './ecrire.mjs';
+import { API, ici, ouvreEcrire } from './ecrire.mjs';
 import { jeton } from './antirobot.mjs';
 import { SAVOIR } from './abeille-savoir.mjs';
 import { conseille } from './abeille-conseil.mjs';
@@ -261,7 +261,7 @@ async function passe(question) {
     const r = await fetch(`${API}/guichet`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ antirobot: await jeton('guichet', chat), texte: question, langue, page: location.pathname + location.search, avant: fil.slice(-11, -2) }),
+      body: JSON.stringify({ antirobot: await jeton('guichet', chat), texte: question, langue, page: ici(), avant: fil.slice(-11, -2) }),
     });
     const j = await r.json();
     if (!r.ok || !j.id) throw new Error(j.erreur || r.status);

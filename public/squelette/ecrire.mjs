@@ -8,6 +8,12 @@ import { jeton } from './antirobot.mjs';
 // the server: the same domain once online (belai.garden/api), wrangler dev on the developer's machine
 const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
 export const API = LOCAL ? 'http://127.0.0.1:8790/api' : '/api';
+// the page one writes from, with the bouquet or the flower looked at; nothing else of its address (a gift's word, an order)
+export const ici = () => {
+  const q = new URLSearchParams(location.search);
+  const u = new URLSearchParams(['b', 'f'].filter((k) => q.has(k)).map((k) => [k, q.get(k).slice(0, 60)]));
+  return location.pathname + (u.size ? `?${u}` : '');
+};
 const ADRESSE = 'lonjaret.hadrien@proton.me';
 
 let boite = null;
@@ -64,7 +70,7 @@ function construit() {
       const r = await fetch(`${API}/message`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ antirobot: await jeton('message', form), texte, contact, page: location.pathname + location.search, langue, site: form.elements.site.value }),
+        body: JSON.stringify({ antirobot: await jeton('message', form), texte, contact, page: ici(), langue, site: form.elements.site.value }),
       });
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.ok) {

@@ -284,7 +284,7 @@ $('compose-retour').addEventListener('click', (ev) => {
   try {
     from = document.referrer ? new URL(document.referrer) : null;
   } catch (_) {}
-  if (from && from.origin === location.origin && from.pathname.endsWith('/produit.html') && history.length > 1) {
+  if (from && from.origin === location.origin && /\/produit(\.html)?$/.test(from.pathname) && history.length > 1) {
     ev.preventDefault();
     history.back();
   }

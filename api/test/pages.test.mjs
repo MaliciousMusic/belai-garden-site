@@ -29,3 +29,11 @@ test('security.txt : un contact, une échéance à venir de moins d’un an', ()
   assert.ok(fin > Date.now(), 'security.txt : échéance passée, à repousser');
   assert.ok(fin - Date.now() < 366 * 86400000);
 });
+
+test('ce qu’un message dit de sa page : le bouquet ou la fleur, jamais le mot d’un cadeau ni une commande', () => {
+  const src = lit('squelette/ecrire.mjs').match(/export const ici = (\(\) => \{[\s\S]*?\n\});/)[1];
+  const ici = (search) => new Function('location', `return (${src})()`)({ pathname: '/squelette/recu', search });
+  assert.equal(ici('?b=citrine&de=Léa&mot=secret&commande=abc&g=1'), '/squelette/recu?b=citrine');
+  assert.equal(ici(''), '/squelette/recu');
+  for (const f of ['ecrire', 'abeille']) assert.ok(!/page: location/.test(lit(`squelette/${f}.mjs`)));
+});

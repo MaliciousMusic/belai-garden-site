@@ -10,7 +10,7 @@ import { session as connecte } from './compte.js';
 import { produit as produitDe } from './catalogue.js';
 import { total } from './collection.js';
 import { ajouteBouquet } from './achat.js';
-import { emettre, libelle } from './factures.js';
+import { piece, libelle } from './factures.js';
 
 const DELAI = 24 * 60 * 60 * 1000;
 const J30 = 30 * 24 * 60 * 60 * 1000;
@@ -38,22 +38,26 @@ export async function echange(req, env, now = Date.now()) {
   if (p.id === b.produit && p.mois === b.mois) return erreur('meme_bouquet');
   if (p.centimes > f0.total) return erreur('trop_cher', 409);
 
-  // the bouquet given back first (once), then the new one while its series has a copy; if it has none, nothing changed
-  const r = await env.DB.prepare("UPDATE bouquets SET etat = 'rendu' WHERE id = ? AND etat = 'actif'").bind(b.id).run();
-  if (!r.meta || r.meta.changes !== 1) return erreur('introuvable', 404);
+  // all at once, or nothing: the new bouquet while its series has a copy and the old one is still there, the old one given
+  // back, the credit, and the papers (a credit note for the first invoice, saying what it went to, and an invoice)
   const tot = await total(env, p.id, p.mois, p.exemplaires);
-  const nb = await ajouteBouquet(env, { compte: s.compte.id, produit: p.id, mois: p.mois, origine: 'echange', echange_de: b.id, plafond: tot }, now);
-  if (!nb) {
-    await env.DB.prepare("UPDATE bouquets SET etat = 'actif' WHERE id = ?").bind(b.id).run();
-    return erreur('epuise', 409);
-  }
   const credit = f0.total - p.centimes;
-  if (credit > 0) await env.DB.prepare('UPDATE comptes SET cagnotte = cagnotte + ? WHERE id = ?').bind(credit, s.compte.id).run();
-
-  // the papers: a credit note for the first invoice (what it went to: the new bouquet, the credit), an invoice for the new one
   const f1 = await env.DB.prepare('SELECT libelle FROM factures WHERE numero = ?').bind(f0.numero).first();
-  await emettre(env, { type: 'avoir', compte: s.compte.id, bouquet: b.id, annule: f0.numero, libelle: f1.libelle, total: -f0.total, echange: p.centimes, cagnotte: credit }, now);
-  await emettre(env, { type: 'facture', compte: s.compte.id, bouquet: nb.id, libelle: libelle(p.nom, nb.numero, tot, p.mois), total: p.centimes, echange: p.centimes }, now);
+  const nb = await ajouteBouquet(
+    env,
+    { compte: s.compte.id, produit: p.id, mois: p.mois, origine: 'echange', echange_de: b.id, plafond: tot },
+    now,
+    async (id, numero) => [
+      env.DB.prepare("UPDATE bouquets SET etat = 'rendu' WHERE id = ?1 AND EXISTS (SELECT 1 FROM bouquets WHERE id = ?2)").bind(b.id, id),
+      env.DB.prepare('UPDATE comptes SET cagnotte = cagnotte + ?1 WHERE id = ?2 AND EXISTS (SELECT 1 FROM bouquets WHERE id = ?3)').bind(credit, s.compte.id, id),
+      await piece(env, { type: 'avoir', compte: s.compte.id, bouquet: b.id, annule: f0.numero, libelle: f1.libelle, total: -f0.total, echange: p.centimes, cagnotte: credit }, now, id),
+      await piece(env, { type: 'facture', compte: s.compte.id, bouquet: id, libelle: libelle(p.nom, numero, tot, p.mois), total: p.centimes, echange: p.centimes }, now, id),
+    ],
+  );
+  if (!nb) {
+    const reste = await env.DB.prepare("SELECT 1 FROM bouquets WHERE id = ? AND etat = 'actif'").bind(b.id).first();
+    return reste ? erreur('epuise', 409) : erreur('introuvable', 404);
+  }
 
   const c = await env.DB.prepare('SELECT cagnotte FROM comptes WHERE id = ?').bind(s.compte.id).first();
   return json({ bouquet: { id: nb.id, produit: p.id, mois: p.mois, numero: nb.numero, achat: now, fin: now + J30 }, cagnotte: c ? c.cagnotte : 0 });

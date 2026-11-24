@@ -19,28 +19,51 @@ function form(obj, pre = '', out = new URLSearchParams()) {
   return out;
 }
 
+async function appel(env, methode, chemin, { body, idempotence, accepte = [] } = {}) {
+  if (!env.STRIPE_SECRET) throw Object.assign(new Error('STRIPE_SECRET manquant'), { config: true });
+  const r = await fetch(`${API}${chemin}`, {
+    method: methode,
+    headers: {
+      authorization: `Bearer ${env.STRIPE_SECRET}`,
+      'content-type': 'application/x-www-form-urlencoded',
+      ...(idempotence ? { 'idempotency-key': idempotence } : {}),
+    },
+    body,
+    signal: AbortSignal.timeout(15000),
+  });
+  if (accepte.includes(r.status)) return null;
+  const j = await r.json();
+  if (!r.ok) throw new Error(`Stripe ${r.status} : ${j.error && j.error.message}`);
+  return j;
+}
+// a Checkout session as it is now
+export const lireSession = (env, id) => appel(env, 'GET', `/checkout/sessions/${encodeURIComponent(id)}`);
+// a Checkout session closed, so that nobody can pay it any more; null when it is no longer open (paid, or already expired)
+export const expireSession = (env, id) => appel(env, 'POST', `/checkout/sessions/${encodeURIComponent(id)}/expire`, { accepte: [400] });
+
 // a Checkout session for one bouquet: { id, url }
 export async function session(env, { commande, nom, centimes, expire, retour, langue }) {
-  if (!env.STRIPE_SECRET) throw Object.assign(new Error('STRIPE_SECRET manquant'), { config: true });
+  const vers = (etat) => {
+    const u = new URL(retour);
+    u.searchParams.set('commande', commande);
+    u.searchParams.set('paiement', etat);
+    return u.href;
+  };
   const body = form({
     mode: 'payment',
     client_reference_id: commande,
     metadata: { commande },
     payment_intent_data: { metadata: { commande } },
     line_items: { 0: { quantity: 1, price_data: { currency: 'eur', unit_amount: centimes, product_data: { name: nom } } } },
-    success_url: `${retour}${retour.includes('?') ? '&' : '?'}commande=${commande}&paiement=ok`,
-    cancel_url: `${retour}${retour.includes('?') ? '&' : '?'}commande=${commande}&paiement=annule`,
+    success_url: vers('ok'),
+    cancel_url: vers('annule'),
+    // the amount asked is the amount paid, in euros (no local currency added by Stripe): achat.js compares them
+    adaptive_pricing: { enabled: false },
     // Stripe holds a session 30 minutes at least: the copy is held as long (achat.js)
     expires_at: Math.ceil(expire / 1000),
     locale: ['fr', 'en', 'es', 'de', 'zh'].includes(langue) ? langue : 'auto',
   });
-  const r = await fetch(`${API}/checkout/sessions`, {
-    method: 'POST',
-    headers: { authorization: `Bearer ${env.STRIPE_SECRET}`, 'content-type': 'application/x-www-form-urlencoded', 'idempotency-key': `commande-${commande}` },
-    body,
-  });
-  const j = await r.json();
-  if (!r.ok) throw new Error(`Stripe ${r.status} : ${j.error && j.error.message}`);
+  const j = await appel(env, 'POST', '/checkout/sessions', { body, idempotence: `commande-${commande}` });
   return { id: j.id, url: j.url };
 }
 

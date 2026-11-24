@@ -15,10 +15,24 @@ export function d1() {
     bind: (...a) => stmt(sql, a),
     first: async () => db.prepare(sql).get(...args) ?? null,
     all: async () => ({ results: db.prepare(sql).all(...args) }),
-    run: async () => {
-      const r = db.prepare(sql).run(...args);
-      return { meta: { changes: r.changes } };
-    },
+    run: async () => lance(sql, args),
+    lance: () => lance(sql, args),
   });
-  return { prepare: (sql) => stmt(sql), raw: db };
+  const lance = (sql, args) => {
+    const r = db.prepare(sql).run(...args);
+    return { meta: { changes: Number(r.changes) } };
+  };
+  // all the statements or none, as D1's batch
+  const batch = async (l) => {
+    db.exec('BEGIN');
+    try {
+      const out = l.map((s) => s.lance());
+      db.exec('COMMIT');
+      return out;
+    } catch (err) {
+      db.exec('ROLLBACK');
+      throw err;
+    }
+  };
+  return { prepare: (sql) => stmt(sql), batch, raw: db };
 }

@@ -168,11 +168,11 @@ test('exemplaires restants d’une collection', async () => {
   const db = env.DB.raw;
   db.prepare("INSERT INTO collections (mois, exemplaires) VALUES ('2026-10', 100)").run();
   db.prepare("INSERT INTO exemplaires (produit, mois, nombre) VALUES ('citrine', '2026-10', 10)").run();
-  db.prepare("INSERT INTO comptes (id, empreinte, numero_chiffre, cree) VALUES ('c1', 'e1', 'x', 0)").run();
+  db.prepare("INSERT INTO comptes (id, empreinte, numero_chiffre, cree) VALUES ('c1', 'e1', 'x', 0), ('c2', 'e2', 'x', 0)").run();
   for (let i = 0; i < 3; i++) db.prepare(`INSERT INTO bouquets (id, compte, produit, mois, numero, achat, origine) VALUES ('b${i}', 'c1', 'citrine', '2026-10', ${i + 1}, 0, 'achat')`).run();
   // a payment page still open holds a copy; an expired one does not
   db.prepare(`INSERT INTO commandes (id, compte, produit, mois, centimes, etat, cree, expire) VALUES ('o1', 'c1', 'citrine', '2026-10', 9480, 'en_attente', 0, ${Date.now() + 60_000})`).run();
-  db.prepare(`INSERT INTO commandes (id, compte, produit, mois, centimes, etat, cree, expire) VALUES ('o2', 'c1', 'citrine', '2026-10', 9480, 'en_attente', 0, ${Date.now() - 1})`).run();
+  db.prepare(`INSERT INTO commandes (id, compte, produit, mois, centimes, etat, cree, expire) VALUES ('o2', 'c2', 'citrine', '2026-10', 9480, 'en_attente', 0, ${Date.now() - 1})`).run();
   const { j } = await call(env, 'GET', '/api/collection?mois=2026-10&produits=citrine,nuit-d-ambre');
   assert.deepEqual(j.restants.citrine, { total: 10, restants: 6 });
   assert.deepEqual(j.restants['nuit-d-ambre'], { total: 100, restants: 100 });

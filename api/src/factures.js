@@ -19,21 +19,23 @@ export function libelle(nom, numero, total, mois) {
   return `Bouquet « ${nom} », collection ${month}`;
 }
 
-// issued: f = { type, compte, bouquet?, commande?, annule?, libelle, total, carte?, cagnotte?, echange?, paiement? }, at now;
-// returns its number. The buyer's first name and number are read from the account now (the number decrypted, then masked)
-export async function emettre(env, f, now = Date.now()) {
+// the statement that issues a paper: f = { type, compte, bouquet?, commande?, annule?, libelle, total, carte?, cagnotte?,
+// echange?, paiement? }, at now; only if the bouquet si exists when it is given. The buyer's first name and number are read
+// from the account now (the number decrypted, then masked)
+export async function piece(env, f, now = Date.now(), si = null) {
   const c = await env.DB.prepare('SELECT prenom, numero_chiffre FROM comptes WHERE id = ?').bind(f.compte).first();
   let tel = null;
   try {
     if (c && c.numero_chiffre && env.CLE_NUMEROS) tel = masque(await dechiffre(env.CLE_NUMEROS, c.numero_chiffre));
   } catch (_) {}
-  const r = await env.DB.prepare(
+  return env.DB.prepare(
     `INSERT INTO factures (type, compte, emise, bouquet, commande, annule, prenom, numero_masque, libelle, total, carte, cagnotte, echange, paiement)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING numero`,
-  )
-    .bind(f.type, f.compte, now, f.bouquet || null, f.commande || null, f.annule || null, (c && c.prenom) || null, tel, f.libelle, f.total, f.carte || 0, f.cagnotte || 0, f.echange || 0, f.paiement || null)
-    .first();
-  return r.numero;
+     SELECT ?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14 WHERE ?15 IS NULL OR EXISTS (SELECT 1 FROM bouquets WHERE id = ?15) RETURNING numero`,
+  ).bind(f.type, f.compte, now, f.bouquet || null, f.commande || null, f.annule || null, (c && c.prenom) || null, tel, f.libelle, f.total, f.carte || 0, f.cagnotte || 0, f.echange || 0, f.paiement || null, si);
+}
+// issued: returns its number
+export async function emettre(env, f, now = Date.now()) {
+  return (await (await piece(env, f, now)).first()).numero;
 }
 
 export async function factures(req, env, now = Date.now()) {

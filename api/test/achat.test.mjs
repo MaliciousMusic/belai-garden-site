@@ -109,7 +109,7 @@ test('une réservation expirée rend l’exemplaire', async () => {
   const t = Date.now();
   await achat(req('POST', '/api/achat', { produit: 'rare', renonce: true, texte: TEXTE, retour: RETOUR }, { cookie: a }), env, t);
   const b = await cookie(env, '0612345687');
-  const r = await achat(req('POST', '/api/achat', { produit: 'rare', renonce: true, texte: TEXTE, retour: RETOUR }, { cookie: b }), env, t + 32 * 60_000);
+  const r = await achat(req('POST', '/api/achat', { produit: 'rare', renonce: true, texte: TEXTE, retour: RETOUR }, { cookie: b }), env, t + 37 * 60_000);
   assert.equal(r.status, 200);
 });
 
@@ -120,7 +120,7 @@ async function signe(body, t = Math.floor(Date.now() / 1000), secret = SECRET) {
   const mac = Buffer.from(await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`${t}.${body}`))).toString('hex');
   return `t=${t},v1=${mac}`;
 }
-const evt = (type, commande, extra = {}) => JSON.stringify({ id: 'evt_1', type, data: { object: { id: 'cs_test_1', client_reference_id: commande, metadata: { commande }, payment_status: 'paid', payment_intent: 'pi_test_1', ...extra } } });
+const evt = (type, commande, extra = {}) => JSON.stringify({ id: 'evt_1', type, data: { object: { id: 'cs_test_1', client_reference_id: commande, metadata: { commande }, payment_status: 'paid', payment_intent: 'pi_test_1', amount_total: 9480, currency: 'eur', ...extra } } });
 
 test('Stripe : un événement signé livre une fois, un faux est refusé, un vieux aussi', async () => {
   const env = envNeuf({ STRIPE_WEBHOOK_SECRET: SECRET });

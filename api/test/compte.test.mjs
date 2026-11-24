@@ -110,7 +110,7 @@ test('le site : un cookie de session, /api/moi, le prénom, la déconnexion', as
   const env = envNeuf();
   const { r } = await connecte(env, '0644444444');
   const set = r.headers.get('set-cookie');
-  assert.match(set, /belai_session=[\w-]{40,}; Path=\/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax/);
+  assert.match(set, /__Host-belai_session=[\w-]{40,}; Path=\/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax/);
   const c = cookieDe(r);
   let m = await call(env, 'GET', '/api/moi', null, { cookie: c });
   assert.equal(m.r.status, 200);

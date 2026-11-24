@@ -44,7 +44,7 @@ test('un code part par e-mail, le compte se crée, l’adresse est gardée chiff
   assert.equal(v.status, 200);
   assert.equal(jv.compte.prenom, 'Léa');
   assert.equal(jv.compte.nouveau, true);
-  assert.match(v.headers.get('set-cookie'), /^belai_session=/);
+  assert.match(v.headers.get('set-cookie'), /^__Host-belai_session=/);
   const row = env.DB.raw.prepare('SELECT * FROM comptes').get();
   assert.equal(row.canal, 'mail');
   assert.ok(!row.numero_chiffre.includes('exemple'));

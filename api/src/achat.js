@@ -14,6 +14,7 @@ import { compte1, session as connecte } from './compte.js';
 import { produit as produitDe } from './catalogue.js';
 import { total } from './collection.js';
 import { emettre, libelle } from './factures.js';
+import { trace } from './journal.js';
 
 const MIN = 60 * 1000;
 // Stripe keeps a Checkout session 30 minutes at least; a little more so it is always accepted. The copy is held a few minutes
@@ -49,6 +50,7 @@ export const RENONCIATION = {
 const ACHATS_HEURE = 10;
 
 export async function achat(req, env, now = Date.now()) {
+  if (env.PAIEMENT === 'ferme') return erreur('vente_fermee', 503);
   const mode = modePaiement(req, env);
   const s = await connecte(req, env, now);
   if (!s) return erreur('non_connecte', 401);
@@ -163,6 +165,7 @@ async function confirme(env, st, now) {
 // paid, but not as ordered: nothing is delivered, a person looks (README, Commandes à vérifier)
 async function aVerifier(env, id, reference, pourquoi, now) {
   console.error(`[achat] commande ${id} à vérifier : ${pourquoi}`);
+  await trace(env, 'serveur', 'commande_a_verifier', id, now);
   await env.DB.prepare("UPDATE commandes SET etat = 'a_verifier', paye = ?, paiement = ? WHERE id = ? AND etat <> 'payee'").bind(now, reference, id).run();
 }
 
@@ -188,6 +191,12 @@ export async function menageCommandes(env, now = Date.now()) {
       console.error(`[achat] rapprochement de ${c.id}`, err);
     }
   }
+  // what is paid must have its bouquet and its invoice: a delivery stopped half-way goes on, and what stays out of step is said
+  const ecart = "SELECT id, paiement FROM commandes c WHERE etat = 'payee' AND paye < ?1 AND (bouquet IS NULL OR NOT EXISTS (SELECT 1 FROM factures f WHERE f.commande = c.id)) LIMIT 50";
+  for (const c of (await env.DB.prepare(ecart).bind(now - 10 * MIN).all()).results || []) await livre(env, c.id, c.paiement, now).catch((err) => console.error(`[achat] livraison de ${c.id}`, err));
+  const restes = (await env.DB.prepare(ecart).bind(now - 10 * MIN).all()).results || [];
+  const verif = await env.DB.prepare("SELECT COUNT(*) AS n FROM commandes WHERE etat = 'a_verifier'").first();
+  if (restes.length || verif.n) console.error(`[achat] rapprochement : ${restes.length} commande(s) payée(s) sans bouquet ou facture, ${verif.n} à vérifier`);
 }
 
 // A bouquet put on an account with the smallest copy number free in its series (a copy given back in an exchange frees its
@@ -264,6 +273,7 @@ export async function livre(env, id, reference, now = Date.now()) {
     { type: 'facture', compte: c.compte, bouquet: b.id, commande: id, libelle: libelle(nom, b.numero, tot, c.mois), total: c.centimes, carte: c.centimes - c.cagnotte, cagnotte: c.cagnotte, paiement: reference === 'cagnotte' ? null : reference },
     now,
   );
+  await trace(env, c.compte, 'commande_payee', id, now);
   // a dispute that came before its payment was known here
   await applique(env, reference);
   return true;
@@ -278,6 +288,7 @@ async function litige(env, paiement, etat, now) {
   )
     .bind(paiement, etat, now)
     .run();
+  await trace(env, 'stripe', `litige_${etat}`, paiement, now);
   await applique(env, paiement);
 }
 async function applique(env, paiement) {
@@ -410,5 +421,5 @@ export async function fauxStripe(req, env, id, now = Date.now()) {
 <p class="n">Paiement simulé : en ligne, cette page sera celle de Stripe. Aucune carte n'est demandée ici.</p>
 <h1>${esc(c.produit)}</h1><p>${prix}${c.cagnotte ? ` (${fmt(c.centimes)} moins ${fmt(c.cagnotte)} de cagnotte)` : ''} · commande ${esc(id)}</p>
 <form method="post"><button class="p" name="action" value="payer">Payer ${prix}</button><button name="action" value="annuler">Annuler</button></form></html>`;
-  return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
+  return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', 'content-security-policy': "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'" } });
 }

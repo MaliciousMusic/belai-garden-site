@@ -3,14 +3,15 @@
 // with a bearer token. Lot C2: the account (by text message or by e-mail); lot C3: the purchase and the copies; lot C9: the invoices, the exchange within
 // 24 hours and the account's credit; « Nous écrire », the site's messages; the bee's counter (a person of the atelier on
 // the line). Lots C4, C5 add the gifts.
-import { demande, verifie, demandeCourriel, verifieCourriel, moi, deconnexion, menage } from './compte.js';
+import { demande, verifie, demandeCourriel, verifieCourriel, moi, exporte, deconnexion, menage } from './compte.js';
 import { collection } from './collection.js';
 import { achat, commande, webhook, fauxStripe, menageCommandes } from './achat.js';
 import { echange } from './echange.js';
 import { factures, facture } from './factures.js';
 import { message } from './message.js';
 import { ouvre, lit, message as messageGuichet, liste, tout, reponse, clos } from './guichet.js';
-import { erreur } from './outils.js';
+import { problemes } from './reglages.js';
+import { cleIp, local, erreur } from './outils.js';
 
 const ROUTES = {
   'POST /api/sms/demande': demande,
@@ -20,6 +21,7 @@ const ROUTES = {
   'GET /api/moi': moi,
   'POST /api/moi': moi,
   'DELETE /api/moi': moi,
+  'GET /api/moi/export': exporte,
   'POST /api/deconnexion': deconnexion,
   'GET /api/collection': collection,
   'POST /api/achat': achat,
@@ -64,7 +66,7 @@ function cors(req, env) {
         'access-control-max-age': '600',
         vary: 'origin',
       }
-    : {};
+    : { vary: 'origin' };
 }
 
 // Belai Bureau and the counter's panel sign with a bearer token; Stripe signs its events; the simulated payment page is a form
@@ -77,24 +79,60 @@ function horsSite(req, url, env) {
   return null;
 }
 
+// on every answer (Cloudflare Pages' _headers covers the pages only). A route that sends a page sets its own policy
+const ENTETES = {
+  'content-security-policy': "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+  'x-content-type-options': 'nosniff',
+  'referrer-policy': 'no-referrer',
+  'permissions-policy': 'camera=(), geolocation=(), microphone=(), payment=(), usb=()',
+  'cross-origin-resource-policy': 'same-site',
+  'x-robots-tag': 'noindex',
+};
+
+// a visitor's pace, counted by Cloudflare near the visitor (wrangler.toml, ratelimits): a first dam that spares the base. The strict
+// counts, for money and codes, are the base's own (compte1). Stripe's events are signed, and come in bursts
+const STRICTES = new Set(['/api/sms/demande', '/api/sms/verifie', '/api/mail/demande', '/api/mail/verifie', '/api/achat', '/api/echange', '/api/message', '/api/guichet']);
+async function debit(req, url, env) {
+  const ip = cleIp(req.headers.get('cf-connecting-ip'));
+  if (!ip || url.pathname === '/api/stripe/webhook') return null;
+  const compteur = req.method === 'POST' && STRICTES.has(url.pathname) ? env.DEBIT_STRICT : env.DEBIT;
+  if (!compteur) return null;
+  const { success } = await compteur.limit({ key: ip });
+  return success ? null : erreur('trop', 429, { attendre: 60 }, { 'retry-after': '60' });
+}
+
+// online, incomplete or simulated settings close every route (reglages.js): the names go to the logs, never to the visitor
+function pret(req, env) {
+  if (local(req)) return;
+  const p = problemes(env);
+  if (p.length) throw Object.assign(new Error(`réglages : ${p.join(' ; ')}`), { config: true });
+}
+
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
     const h = cors(req, env);
-    if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: h });
-    const fn = route(`${req.method} ${url.pathname}`);
     let res;
     try {
-      res = fn ? (horsSite(req, url, env) || (await fn(req, env))) : erreur('introuvable', 404);
+      if (req.method === 'OPTIONS') res = new Response(null, { status: 204 });
+      else {
+        pret(req, env);
+        const fn = route(`${req.method} ${url.pathname}`);
+        res = (await debit(req, url, env)) || (fn ? horsSite(req, url, env) || (await fn(req, env)) : erreur('introuvable', 404));
+      }
     } catch (err) {
       if (!err.statut) console.error('[api]', err);
       res = err.statut ? erreur(err.code, err.statut) : erreur(err.config ? 'configuration' : 'serveur', 500);
     }
-    for (const [k, v] of Object.entries(h)) res.headers.set(k, v);
+    // (a redirection's headers are locked: a copy)
+    res = new Response(res.body, res);
+    for (const [k, v] of Object.entries({ ...ENTETES, ...(local(req) ? {} : { 'strict-transport-security': 'max-age=31536000' }), ...h })) if (!res.headers.has(k) || k in h) res.headers.set(k, v);
     return res;
   },
+  // each task on its own: one that fails neither stops the other nor goes unseen
   async scheduled(_ev, env) {
-    await menage(env);
-    await menageCommandes(env);
+    const ratees = [];
+    for (const f of [menage, menageCommandes]) await f(env).catch((err) => ratees.push(err));
+    if (ratees.length) throw ratees.length > 1 ? new AggregateError(ratees) : ratees[0];
   },
 };

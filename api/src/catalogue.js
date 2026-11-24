@@ -20,6 +20,6 @@ export async function catalogue(env, now = Date.now()) {
 export async function produit(env, id, now = Date.now()) {
   const C = await catalogue(env, now);
   const p = (C.produits || []).find((x) => x.id === id);
-  if (!p || !p.prix || !(p.prix.centimes > 0) || !C.collection) return null;
+  if (!p || !p.prix || !Number.isSafeInteger(p.prix.centimes) || p.prix.centimes <= 0 || !C.collection) return null;
   return { id: p.id, nom: p.nom, centimes: p.prix.centimes, mois: C.collection.mois, exemplaires: p.exemplaires || C.collection.exemplaires || null, vie: (C.vie && C.vie.jours) || 30 };
 }

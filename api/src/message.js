@@ -8,6 +8,7 @@
 // contact is an e-mail address or a phone number; site is a field the page hides (a robot that fills it is thanked and
 // forgotten). Limits: three messages an hour and ten a day for an address, env.MESSAGES_JOUR a day for the whole shop.
 import { compte1 } from './compte.js';
+import { humain } from './antirobot.js';
 import { lireJson, plafond, adresse, chiffre, cleIp, empreinte, identifiant, numero, json, erreur } from './outils.js';
 
 const H = 60 * 60 * 1000;
@@ -39,6 +40,7 @@ export async function message(req, env, now = Date.now()) {
   if (texte.length < 2 || texte.length > 2000) return erreur('texte');
   const c = contact(b.contact, env.PAYS);
   if (!c) return erreur('contact');
+  if (!(await humain(env, req, b.antirobot, 'message'))) return erreur('antirobot', 403);
   const ip = req.headers.get('cf-connecting-ip') || '';
   if (ip) {
     const cle = await empreinte(env.POIVRE, `ip:${cleIp(ip)}`);

@@ -148,7 +148,7 @@ export function prenom(brut) {
 export function json(corps, statut = 200, entetes = {}) {
   return new Response(JSON.stringify(corps), { status: statut, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', ...entetes } });
 }
-export const erreur = (code, statut = 400, plus = {}) => json({ erreur: code, ...plus }, statut);
+export const erreur = (code, statut = 400, plus = {}, entetes = {}) => json({ erreur: code, ...plus }, statut, entetes);
 
 export function cookies(req) {
   const out = {};

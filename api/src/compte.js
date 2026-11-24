@@ -13,14 +13,17 @@
 //   POST   /api/moi           { prenom }                          -> { compte }
 //   POST   /api/deconnexion                                      -> { ok }
 //   DELETE /api/moi                                               -> { ok }                  erased 30 days later
-import { boiteDe, plafond, lireJson, cleIp, adresse, empreinte, chiffre, sha256, jeton, identifiant, codeChiffres, egal, numero, prenom, joignable, INDICATIFS_SMS, local, json, erreur, cookies } from './outils.js';
+import { boiteDe, plafond, lireJson, cleIp, adresse, empreinte, chiffre, sha256, jeton, identifiant, codeChiffres, egal, numero, prenom, joignable, INDICATIFS_SMS, local, dechiffre, json, erreur, cookies } from './outils.js';
+import { humain } from './antirobot.js';
+import { trace } from './journal.js';
 import { envoie } from './sms.js';
 import { envoieCourriel } from './courriel.js';
 
 const MIN = 60 * 1000;
 const H = 60 * MIN;
 const J = 24 * H;
-export const COOKIE = 'belai_session';
+// (__Host-: this very host's, over https, whole path; no other subdomain can set it)
+export const COOKIE = '__Host-belai_session';
 const CODE_VIE = 10 * MIN;
 const ESSAIS = 5;
 const SESSION = { site: 30 * J, bureau: 365 * J };
@@ -66,6 +69,7 @@ const CANAUX = {
     cle: (n) => n,
     // the simulated texts write the code to the logs: on the developer's machine only
     pret: (req, env) => env.SMS === 'ovh' || (env.SMS === 'faux' && local(req)),
+    ferme: (env) => env.SMS === 'ferme',
     reglage: (env) => `SMS « ${env.SMS} »`,
     desservi: (n, env) => joignable(n, env.INDICATIFS_SMS || INDICATIFS_SMS),
     plafond: (env) => plafond(env.SMS_JOUR, SMS_JOUR),
@@ -77,6 +81,7 @@ const CANAUX = {
     cle: (a) => `mail:${a}`,
     // the same for the simulated mails
     pret: (req, env) => env.COURRIEL_CODES === 'cloudflare' || (env.COURRIEL_CODES === 'faux' && local(req)),
+    ferme: (env) => env.COURRIEL_CODES === 'ferme',
     reglage: (env) => `Courriel « ${env.COURRIEL_CODES} »`,
     desservi: () => true,
     plafond: (env) => plafond(env.COURRIEL_JOUR, COURRIEL_JOUR),
@@ -123,11 +128,14 @@ export const verifieCourriel = (req, env, now) => verifieCode('mail', req, env, 
 async function demandeCode(canal, req, env, now = Date.now()) {
   secrets(env);
   const k = CANAUX[canal];
+  if (k.ferme(env)) return erreur('canal_ferme', 503);
   if (!k.pret(req, env)) throw Object.assign(new Error(`${k.reglage(env)} refusé ici`), { config: true });
   const corps = await lireJson(req);
   const n = k.lit(corps, env);
   if (!n) return erreur(k.invalide);
   if (!k.desservi(n, env)) return erreur('pays_non_desservi');
+  // before any count: a robot does not use up somebody's codes of the day
+  if (!(await humain(env, req, corps.antirobot, 'code'))) return erreur('antirobot', 403);
   const fp = await empreinte(env.POIVRE, k.cle(n));
   // the mailbox behind the address: lea+1@ and lea+2@ are one person to spare, and two accounts
   const boite = canal === 'mail' ? await empreinte(env.POIVRE, k.cle(boiteDe(n))) : fp;
@@ -155,7 +163,7 @@ async function demandeCode(canal, req, env, now = Date.now()) {
   const code = codeChiffres(6);
   const expire = now + CODE_VIE;
   await env.DB.prepare('INSERT INTO codes_sms (empreinte, code_hash, expire, essais) VALUES (?, ?, ?, 0) ON CONFLICT(empreinte) DO UPDATE SET code_hash = excluded.code_hash, expire = excluded.expire, essais = 0')
-    .bind(fp, await sha256(`${fp}:${code}`), expire)
+    .bind(fp, await empreinte(env.POIVRE, `code:${fp}:${code}`), expire)
     .run();
   await k.envoie(env, n, corps.langue, code, now);
   return json({ ok: true, expire });
@@ -181,7 +189,7 @@ async function verifieCode(canal, req, env, now = Date.now()) {
     return erreur('trop_d_essais', 429);
   }
   const code = String(corps.code || '').replace(/\D/g, '');
-  if (!egal(await sha256(`${fp}:${code}`), row.code_hash)) {
+  if (!egal(await empreinte(env.POIVRE, `code:${fp}:${code}`), row.code_hash)) {
     // the wrong codes of the day, all codes together: past them the code goes, and no other is sent until the day is over
     const fauxCle = `faux:${fp}:${await empreinte(env.POIVRE, `ip:${cleIp(req.headers.get('cf-connecting-ip'))}`)}`;
     const f = await compte1(env.DB, fauxCle, J, FAUX_JOUR, now);
@@ -212,11 +220,13 @@ async function verifieCode(canal, req, env, now = Date.now()) {
       .run();
   } else if (c.supprime) {
     await env.DB.prepare('UPDATE comptes SET supprime = NULL WHERE id = ?').bind(c.id).run();
+    await trace(env, c.id, 'suppression_annulee', null, now);
   }
 
   const t = jeton();
   const expire = now + SESSION[client];
   await env.DB.prepare('INSERT INTO sessions (jeton_hash, compte, client, cree, expire) VALUES (?, ?, ?, ?, ?)').bind(await sha256(t), c.id, client, now, expire).run();
+  await trace(env, c.id, nouveau ? 'compte_cree' : 'connexion', `${canal}/${client}`, now);
   const corpsOut = { compte: { ...vueCompte(c), nouveau } };
   if (client === 'bureau') return json({ ...corpsOut, jeton: t, expire });
   return json(corpsOut, 200, { 'set-cookie': cookie(t, SESSION.site / 1000) });
@@ -247,6 +257,7 @@ export async function moi(req, env, now = Date.now()) {
   }
   if (req.method === 'DELETE') {
     await env.DB.prepare('UPDATE comptes SET supprime = ? WHERE id = ?').bind(now, s.compte.id).run();
+    await trace(env, s.compte.id, 'suppression_demandee', null, now);
     await env.DB.prepare('DELETE FROM sessions WHERE compte = ?').bind(s.compte.id).run();
     return json({ ok: true }, 200, { 'set-cookie': cookie('', 0) });
   }
@@ -265,6 +276,32 @@ export async function moi(req, env, now = Date.now()) {
     echangeable: b.origine === 'achat' && !echange_de && !offert && now - b.achat < ECHANGE ? b.achat + ECHANGE : null,
   }));
   return json({ compte: vueCompte(s.compte), bouquets });
+}
+
+// the account's own data, in a file a machine reads (GDPR, articles 15 and 20): nothing of anyone else's
+export async function exporte(req, env, now = Date.now()) {
+  const s = await session(req, env, now);
+  if (!s) return erreur('non_connecte', 401);
+  const id = s.compte.id;
+  const tout = async (sql) => (await env.DB.prepare(sql).bind(id).all()).results || [];
+  let contact = null;
+  try {
+    contact = await dechiffre(env.CLE_NUMEROS, s.compte.numero_chiffre);
+  } catch (_) {}
+  await trace(env, id, 'export', null, now);
+  return json(
+    {
+      exporte: new Date(now).toISOString(),
+      compte: { prenom: s.compte.prenom, contact, canal: s.compte.canal, cree: s.compte.cree, cagnotte: s.compte.cagnotte },
+      bouquets: await tout('SELECT id, produit, mois, numero, achat, origine, etat, fin, echange_de FROM bouquets WHERE compte = ? ORDER BY achat'),
+      commandes: await tout('SELECT id, produit, mois, centimes, cagnotte, etat, cree, paye, paiement, langue, consentement, litige FROM commandes WHERE compte = ? ORDER BY cree'),
+      factures: await tout('SELECT numero, type, emise, libelle, total, carte, cagnotte, echange, prenom, numero_masque FROM factures WHERE compte = ? ORDER BY numero'),
+      sessions: await tout('SELECT client, cree, expire FROM sessions WHERE compte = ? ORDER BY cree'),
+      journal: await tout('SELECT cree, action, objet FROM journal WHERE acteur = ? ORDER BY n'),
+    },
+    200,
+    { 'content-disposition': 'attachment; filename="belais-garden-mes-donnees.json"' },
+  );
 }
 
 export async function deconnexion(req, env, now = Date.now()) {
@@ -287,4 +324,5 @@ export async function menage(env, now = Date.now()) {
   await env.DB.prepare("UPDATE comptes SET empreinte = 'efface:' || id, numero_chiffre = '', prenom = NULL WHERE supprime IS NOT NULL AND supprime <= ? AND empreinte NOT LIKE 'efface:%'")
     .bind(now - 30 * J)
     .run();
+  await env.DB.prepare('DELETE FROM journal WHERE cree <= ?').bind(now - 365 * J).run();
 }

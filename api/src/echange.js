@@ -10,6 +10,7 @@ import { session as connecte } from './compte.js';
 import { produit as produitDe } from './catalogue.js';
 import { total } from './collection.js';
 import { ajouteBouquet } from './achat.js';
+import { trace } from './journal.js';
 import { piece, libelle } from './factures.js';
 
 const DELAI = 24 * 60 * 60 * 1000;
@@ -59,6 +60,7 @@ export async function echange(req, env, now = Date.now()) {
     return reste ? erreur('epuise', 409) : erreur('introuvable', 404);
   }
 
+  await trace(env, s.compte.id, 'echange', nb.id, now);
   const c = await env.DB.prepare('SELECT cagnotte FROM comptes WHERE id = ?').bind(s.compte.id).first();
   return json({ bouquet: { id: nb.id, produit: p.id, mois: p.mois, numero: nb.numero, achat: now, fin: now + J30 }, cagnotte: c ? c.cagnotte : 0 });
 }

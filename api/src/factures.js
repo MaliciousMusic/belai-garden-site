@@ -5,7 +5,7 @@
 //
 //   GET /api/factures            -> { factures: [{ numero, ref, type, emise, libelle, total }] }   (signed in)
 //   GET /api/facture/<numero>    -> the invoice as a page to print or save (signed in, the account's own)
-import { json, erreur, dechiffre, masque } from './outils.js';
+import { json, erreur, dechiffre, jeton, masque } from './outils.js';
 import { session as connecte } from './compte.js';
 
 export const ref = (f) => `${f.type === 'avoir' ? 'A' : 'F'}-${String(f.numero).padStart(6, '0')}`;
@@ -45,7 +45,7 @@ export async function factures(req, env, now = Date.now()) {
   return json({ factures: (results || []).map((f) => ({ ...f, ref: ref(f) })) });
 }
 
-const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const eur = (c) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(c / 100);
 const jour = (t) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'Europe/Paris' }).format(t);
 
@@ -76,9 +76,12 @@ export async function facture(req, env, numero, now = Date.now()) {
         f.cagnotte ? ['Cagnotte du compte', f.cagnotte] : null,
         f.echange ? ['Échange d’un bouquet (voir l’avoir correspondant)', f.echange] : null,
       ];
+  // only this page's own style and script; framed by the shop alone
+  const nonce = jeton();
+  const csp = `default-src 'none'; style-src 'nonce-${nonce}'; script-src 'nonce-${nonce}'; base-uri 'none'; form-action 'none'; frame-ancestors 'self' ${(env.ORIGINES || '').split(',').map((s) => s.trim()).filter((s) => /^https?:\/\/[\w.:-]+$/.test(s)).join(' ')}`;
   const html = `<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(titre)}</title>
-<style>
+<style nonce="${nonce}">
 html{background:#eef2ef}body{font:14.5px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1d2420;margin:0;padding:24px 16px 32px}
 .f{box-sizing:border-box;max-width:680px;margin:0 auto;padding:34px 38px 30px;background:#fff;border:1px solid #dfe5e1;border-radius:14px;box-shadow:0 6px 24px rgb(20 40 30 / .08)}
 @media (max-width:560px){.f{padding:22px 18px}}.cadre button{display:none}
@@ -107,9 +110,10 @@ button{font:inherit;padding:8px 16px;border-radius:999px;border:1px solid #2f6b4
     .filter(Boolean)
     .map(([k, v]) => `<tr><td>${esc(k)}</td><td class="n">${eur(v)}</td></tr>`)
     .join('')}</table>
-<button onclick="print()">Imprimer ou enregistrer en PDF</button>
+<button id="imprimer">Imprimer ou enregistrer en PDF</button>
 </div>
-<script>if (window.top !== window) document.documentElement.classList.add('cadre')</script>
+<script nonce="${nonce}">if (window.top !== window) document.documentElement.classList.add('cadre');
+document.getElementById('imprimer').addEventListener('click', () => print());</script>
 </html>`;
-  return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
+  return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', 'content-security-policy': csp } });
 }

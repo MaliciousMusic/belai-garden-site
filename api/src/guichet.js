@@ -12,6 +12,8 @@
 //   POST /api/guichet/<id>/reponse     (atelier) { texte }                -> { ok, n }            the atelier answers
 //   POST /api/guichet/<id>/clos        (atelier)                          -> { ok }               the talk is closed
 import { compte1 } from './compte.js';
+import { humain } from './antirobot.js';
+import { trace } from './journal.js';
 import { lireJson, plafond, cleIp, empreinte, sha256, egal, identifiant, jeton, json, erreur } from './outils.js';
 
 const H = 60 * 60 * 1000;
@@ -26,10 +28,18 @@ const MESSAGES_H = 40;
 const GUICHET_JOUR = 300;
 const texteDe = (t, max = 1000) => (typeof t === 'string' ? t.normalize('NFC').trim().slice(0, max) : '');
 
-function atelier(req, env) {
+// the panel's secret; a wrong one is counted by address, past twenty an hour the door answers no more to it
+async function atelier(req, env, now = Date.now()) {
   if (!env.GUICHET_JETON) throw Object.assign(new Error('GUICHET_JETON manquant'), { config: true });
   const a = req.headers.get('authorization') || '';
-  return a.startsWith('Bearer ') && egal(a.slice(7), env.GUICHET_JETON);
+  if (a.startsWith('Bearer ') && egal(await sha256(a.slice(7)), await sha256(env.GUICHET_JETON))) return true;
+  if (a) {
+    const cle = `guichetfaux:${await empreinte(env.POIVRE || 'sans', `ip:${cleIp(req.headers.get('cf-connecting-ip'))}`)}`;
+    const r = await compte1(env.DB, cle, H, 20, now);
+    if (r.ok) await trace(env, 'inconnu', 'guichet_refuse', null, now);
+    else throw Object.assign(new Error('guichet'), { statut: 429, code: 'trop' });
+  }
+  return false;
 }
 async function visiteur(env, id, jt) {
   const c = await env.DB.prepare('SELECT * FROM guichet WHERE id = ?').bind(id).first();
@@ -47,6 +57,7 @@ export async function ouvre(req, env, now = Date.now()) {
   const b = await lireJson(req);
   const texte = texteDe(b.texte);
   if (texte.length < 1) return erreur('texte');
+  if (!(await humain(env, req, b.antirobot, 'guichet'))) return erreur('antirobot', 403);
   const ip = req.headers.get('cf-connecting-ip') || '';
   if (ip) {
     const cle = await empreinte(env.POIVRE, `ip:${cleIp(ip)}`);
@@ -95,7 +106,7 @@ export async function message(req, env, id, now = Date.now()) {
 
 // ---------- the atelier's panel
 export async function liste(req, env) {
-  if (!atelier(req, env)) return erreur('interdit', 401);
+  if (!(await atelier(req, env))) return erreur('interdit', 401);
   const { results } = await env.DB.prepare(
     `SELECT g.id, g.cree, g.maj, g.etat, g.langue, g.page,
             (SELECT COUNT(*) FROM guichet_messages m WHERE m.conv = g.id AND m.n > g.lu AND m.de = 'visiteur') AS nouveaux,
@@ -106,17 +117,18 @@ export async function liste(req, env) {
 }
 
 export async function tout(req, env, id) {
-  if (!atelier(req, env)) return erreur('interdit', 401);
+  if (!(await atelier(req, env))) return erreur('interdit', 401);
   const c = await env.DB.prepare('SELECT id, cree, maj, etat, langue, page FROM guichet WHERE id = ?').bind(id).first();
   if (!c) return erreur('introuvable', 404);
   const { results } = await env.DB.prepare('SELECT n, de, texte, cree FROM guichet_messages WHERE conv = ? ORDER BY n').bind(id).all();
   // read: the panel has seen everything up to the last message
+  await trace(env, 'atelier', 'guichet_lu', id);
   if (results.length) await env.DB.prepare('UPDATE guichet SET lu = ? WHERE id = ?').bind(results[results.length - 1].n, id).run();
   return json({ conv: c, messages: results });
 }
 
 export async function reponse(req, env, id, now = Date.now()) {
-  if (!atelier(req, env)) return erreur('interdit', 401);
+  if (!(await atelier(req, env))) return erreur('interdit', 401);
   const c = await env.DB.prepare('SELECT etat FROM guichet WHERE id = ?').bind(id).first();
   if (!c) return erreur('introuvable', 404);
   const b = await lireJson(req);
@@ -124,12 +136,14 @@ export async function reponse(req, env, id, now = Date.now()) {
   if (!texte) return erreur('texte');
   if (c.etat !== 'ouvert') await env.DB.prepare("UPDATE guichet SET etat = 'ouvert' WHERE id = ?").bind(id).run();
   const n = await ecrit(env, id, 'atelier', texte, now);
+  await trace(env, 'atelier', 'guichet_reponse', id, now);
   await env.DB.prepare('UPDATE guichet SET lu = ? WHERE id = ?').bind(n, id).run();
   return json({ ok: true, n });
 }
 
 export async function clos(req, env, id) {
-  if (!atelier(req, env)) return erreur('interdit', 401);
+  if (!(await atelier(req, env))) return erreur('interdit', 401);
   const r = await env.DB.prepare("UPDATE guichet SET etat = 'clos' WHERE id = ?").bind(id).run();
+  if (r.meta.changes) await trace(env, 'atelier', 'guichet_clos', id);
   return r.meta.changes ? json({ ok: true }) : erreur('introuvable', 404);
 }

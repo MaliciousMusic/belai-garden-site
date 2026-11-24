@@ -9,7 +9,7 @@ l'échange sous 24 heures, la cagnotte, les contestations). Les lots C4 et C5 y 
 | Route | Rôle |
 |---|---|
 | `POST /api/sms/demande` `{ numero, langue? }` | Envoie un code à 6 chiffres, valable 10 minutes. |
-| `POST /api/sms/verifie` `{ numero, code, prenom, client? }` | Connecte la personne et crée le compte s'il est nouveau. Un nouveau compte exige un prénom : sans lui, la réponse est `prenom_requis` et le code reste valable. Le site reçoit un cookie `belai_session` (30 jours). Belai Bureau (`client: "bureau"`) reçoit un jeton porteur valable un an. |
+| `POST /api/sms/verifie` `{ numero, code, prenom, client? }` | Connecte la personne et crée le compte s'il est nouveau. Un nouveau compte exige un prénom : sans lui, la réponse est `prenom_requis` et le code reste valable. Le site reçoit un cookie `__Host-belai_session` (30 jours). Belai Bureau (`client: "bureau"`) reçoit un jeton porteur valable un an. |
 | `POST /api/mail/demande` `{ adresse, langue? }` | La même chose par e-mail : un code à 6 chiffres, valable 10 minutes, envoyé à l'adresse. |
 | `POST /api/mail/verifie` `{ adresse, code, prenom, client? }` | Comme `/api/sms/verifie`. Une adresse et un numéro font deux comptes distincts. |
 | `GET /api/moi` | Le compte (prénom, cagnotte) et ses bouquets : leur fanaison, et jusqu'à quand chacun peut être échangé. |

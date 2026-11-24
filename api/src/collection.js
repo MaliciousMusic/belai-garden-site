@@ -25,21 +25,18 @@ export async function collection(req, env, now = Date.now()) {
   try {
     C = await catalogue(env, now);
   } catch (_) {}
+  // four questions whatever the number of bouquets asked for
+  const parProduit = async (sql, ...args) => new Map(((await env.DB.prepare(sql).bind(...args).all()).results || []).map((x) => [x.produit, x.n]));
+  const propres = await parProduit('SELECT produit, nombre AS n FROM exemplaires WHERE mois = ?', mois);
+  const col = await env.DB.prepare('SELECT exemplaires FROM collections WHERE mois = ?').bind(mois).first();
+  const vendus = await parProduit("SELECT produit, COUNT(*) AS n FROM bouquets WHERE mois = ? AND etat <> 'rendu' GROUP BY produit", mois);
+  const tenus = await parProduit("SELECT produit, COUNT(*) AS n FROM commandes WHERE mois = ? AND etat = 'en_attente' AND expire > ? GROUP BY produit", mois, now);
   const restants = {};
   for (const p of produits) {
     const fiche = C && (C.produits || []).find((x) => x.id === p);
-    if (C && !fiche) continue; // only what the shop sells: an invented name costs no query
-    const tot = await total(env, p, mois, (fiche && fiche.exemplaires) || (C && C.collection && C.collection.exemplaires) || null);
-    if (tot == null) {
-      restants[p] = { total: null, restants: null };
-      continue;
-    }
-    const pris = await env.DB.prepare(
-      "SELECT (SELECT COUNT(*) FROM bouquets WHERE produit = ?1 AND mois = ?2 AND etat <> 'rendu') + (SELECT COUNT(*) FROM commandes WHERE produit = ?1 AND mois = ?2 AND etat = 'en_attente' AND expire > ?3) AS n",
-    )
-      .bind(p, mois, now)
-      .first();
-    restants[p] = { total: tot, restants: Math.max(0, tot - (pris ? pris.n : 0)) };
+    if (C && !fiche) continue; // only what the shop sells
+    const tot = propres.get(p) ?? (col ? col.exemplaires : (fiche && fiche.exemplaires) || (C && C.collection && C.collection.exemplaires) || null);
+    restants[p] = tot == null ? { total: null, restants: null } : { total: tot, restants: Math.max(0, tot - (vendus.get(p) || 0) - (tenus.get(p) || 0)) };
   }
   return json({ mois, restants }, 200, { 'cache-control': 'public, max-age=30' });
 }

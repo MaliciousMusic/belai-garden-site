@@ -124,5 +124,6 @@ test('paiement simulé : refusé en ligne, et aucun réglage ne vaut « faux »'
   // the simulated page is not there online
   const env = envNeuf();
   const r = await worker.fetch(new Request('https://belai-api.example.workers.dev/api/faux-stripe/abcdefghij', { method: 'POST', body: new URLSearchParams({ action: 'payer' }) }), env);
-  assert.equal(r.status, 404);
+  // (nothing answers there: simulated settings close every route, reglages.js)
+  assert.equal(r.status, 500);
 });

@@ -16,6 +16,12 @@ export async function catalogue(env, now = Date.now()) {
   return cache;
 }
 
+// the month it is at the shop (Paris), whatever the server's or the visitor's own time: a collection is on sale that month only
+export function moisCourant(now = Date.now()) {
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit' }).formatToParts(now).map((x) => [x.type, x.value]));
+  return `${p.year}-${p.month}`;
+}
+
 // a product of the month's collection: { id, nom, centimes, mois, exemplaires (null: no cap) } or null
 export async function produit(env, id, now = Date.now()) {
   const C = await catalogue(env, now);

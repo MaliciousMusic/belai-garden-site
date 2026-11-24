@@ -5,14 +5,17 @@ import assert from 'node:assert/strict';
 import worker from '../src/index.js';
 import { demande, verifie } from '../src/compte.js';
 import { achat, livre, RENONCIATION } from '../src/achat.js';
+import { moisCourant } from '../src/catalogue.js';
 import { d1 } from './d1.mjs';
+
+const MOIS = moisCourant();
 
 const ORIGINE = 'http://localhost:8835';
 const RETOUR = `${ORIGINE}/scene/fr/?b=citrine`;
 const TEXTE = 'Je demande que mon bouquet me soit livré immédiatement, et je reconnais perdre ainsi mon droit de rétractation de 14 jours.';
 const CATALOGUE = {
   vie: { jours: 30 },
-  collection: { mois: '2026-10', exemplaires: 100 },
+  collection: { mois: MOIS, exemplaires: 100 },
   produits: [
     { id: 'citrine', nom: 'Citrine', prix: { centimes: 9480 } },
     { id: 'rare', nom: 'Rare', prix: { centimes: 5000 }, exemplaires: 1 },

@@ -7,7 +7,7 @@
 //   POST /api/echange   { bouquet, produit }   -> { bouquet: { id, produit, numero, achat, fin }, cagnotte }   (signed in)
 import { lireJson, json, erreur } from './outils.js';
 import { session as connecte } from './compte.js';
-import { produit as produitDe } from './catalogue.js';
+import { moisCourant, produit as produitDe } from './catalogue.js';
 import { total } from './collection.js';
 import { ajouteBouquet } from './achat.js';
 import { trace } from './journal.js';
@@ -36,6 +36,7 @@ export async function echange(req, env, now = Date.now()) {
 
   const p = await produitDe(env, String(corps.produit || ''), now);
   if (!p) return erreur('produit_inconnu', 404);
+  if (p.mois !== moisCourant(now)) return erreur('collection_close', 409, { mois: p.mois });
   if (p.id === b.produit && p.mois === b.mois) return erreur('meme_bouquet');
   if (p.centimes > f0.total) return erreur('trop_cher', 409);
 

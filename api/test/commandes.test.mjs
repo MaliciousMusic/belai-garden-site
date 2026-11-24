@@ -5,13 +5,16 @@ import assert from 'node:assert/strict';
 import worker from '../src/index.js';
 import { demande, verifie } from '../src/compte.js';
 import { livre, abandon, menageCommandes } from '../src/achat.js';
+import { moisCourant } from '../src/catalogue.js';
 import { d1 } from './d1.mjs';
+
+const MOIS = moisCourant();
 
 const ORIGINE = 'http://localhost:8851';
 const RETOUR = `${ORIGINE}/squelette/produit.html?b=citrine#haut`;
 const SECRET = 'whsec_test_local';
 const CATALOGUE = {
-  collection: { mois: '2026-11' },
+  collection: { mois: MOIS },
   produits: [
     { id: 'citrine', nom: 'Citrine', prix: { centimes: 9480 } },
     { id: 'douce', nom: 'Douce', prix: { centimes: 3000 } },

@@ -21,6 +21,8 @@ l'échange sous 24 heures, la cagnotte, les contestations). Les lots C4 et C5 y 
 | `POST /api/achat` `{ produit, renonce, texte, langue, retour }` | Lot C3. Réserve un exemplaire 36 minutes (la page de paiement en dure 31), garde le renoncement daté et renvoie l'adresse de paiement : Stripe Checkout, ou la page simulée. |
 | `GET /api/commande/<id>` | La commande de l'acheteur : son état, et une fois payée son bouquet avec son numéro dans la série et sa facture. |
 | `POST /api/echange` `{ bouquet, produit }` | Lot C9. L'échange sous 24 heures : une fois, pour un bouquet jamais offert, contre un bouquet du jour disponible et pas plus cher. La différence va dans la cagnotte. Un avoir et une facture sont émis. |
+| `POST /api/retractation` `{ commande, confirme }` | La rétractation en ligne : reçue, datée, accusée dans la réponse et par e-mail, une fois par commande. Rien n'est remboursé ni retiré tout seul. |
+| `GET /api/retractations` | Celles du compte. |
 | `GET /api/factures` | Les factures et avoirs du compte. |
 | `GET /api/facture/<numéro>` | Une facture ou un avoir, en page à imprimer ou à enregistrer en PDF. |
 | `POST /api/stripe/webhook` | Les événements de Stripe, signature vérifiée (`checkout.session.completed`, `async_payment_succeeded`, `async_payment_failed`, `expired`, `charge.dispute.created`, `charge.dispute.closed`). Un même événement rejoué ne livre qu'une fois. |
@@ -182,6 +184,16 @@ npx wrangler d1 execute belai --env production --remote --command "SELECT id, co
 ```
 
 Retrouver le paiement dans Stripe par sa référence (`paiement`), puis le rembourser depuis Stripe.
+
+## Les rétractations
+
+Le serveur reçoit toute déclaration et l'accuse ; ce à quoi elle donne droit est à l'atelier de le dire. Celles qui attendent :
+
+```bash
+npx wrangler d1 execute belai --env production --remote --command "SELECT r.id, r.commande, datetime(r.cree / 1000, 'unixepoch') AS recue, c.produit, c.centimes, c.paiement FROM retractations r JOIN commandes c ON c.id = r.commande WHERE r.etat = 'recue' ORDER BY r.cree"
+```
+
+Le serveur ne vend que la collection du mois en cours, à l'heure de Paris (`collection_close` sinon) : `boutique.json` doit changer de mois le 1er.
 
 ## Mise en ligne
 

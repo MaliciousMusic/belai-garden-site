@@ -16,6 +16,7 @@
 import { boiteDe, plafond, lireJson, cleIp, adresse, empreinte, chiffre, sha256, jeton, identifiant, codeChiffres, egal, numero, prenom, joignable, INDICATIFS_SMS, local, dechiffre, json, erreur, cookies } from './outils.js';
 import { humain } from './antirobot.js';
 import { trace } from './journal.js';
+import { ouvertes, ferme } from './achat.js';
 import { envoie } from './sms.js';
 import { envoieCourriel } from './courriel.js';
 
@@ -256,6 +257,8 @@ export async function moi(req, env, now = Date.now()) {
     return json({ compte: vueCompte({ ...s.compte, prenom: p }) });
   }
   if (req.method === 'DELETE') {
+    // no payment page stays open behind an account that goes (what cannot be closed now is by the day's cleaning)
+    for (const o of await ouvertes(env, s.compte.id)) await ferme(env, o, now);
     await env.DB.prepare('UPDATE comptes SET supprime = ? WHERE id = ?').bind(now, s.compte.id).run();
     await trace(env, s.compte.id, 'suppression_demandee', null, now);
     await env.DB.prepare('DELETE FROM sessions WHERE compte = ?').bind(s.compte.id).run();
@@ -296,6 +299,7 @@ export async function exporte(req, env, now = Date.now()) {
       bouquets: await tout('SELECT id, produit, mois, numero, achat, origine, etat, fin, echange_de FROM bouquets WHERE compte = ? ORDER BY achat'),
       commandes: await tout('SELECT id, produit, mois, centimes, cagnotte, etat, cree, paye, paiement, langue, consentement, litige FROM commandes WHERE compte = ? ORDER BY cree'),
       factures: await tout('SELECT numero, type, emise, libelle, total, carte, cagnotte, echange, prenom, numero_masque FROM factures WHERE compte = ? ORDER BY numero'),
+      retractations: await tout('SELECT id, commande, cree, etat FROM retractations WHERE compte = ? ORDER BY cree'),
       sessions: await tout('SELECT client, cree, expire FROM sessions WHERE compte = ? ORDER BY cree'),
       journal: await tout('SELECT cree, action, objet FROM journal WHERE acteur = ? ORDER BY n'),
     },

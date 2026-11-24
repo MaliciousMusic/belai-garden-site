@@ -8,6 +8,7 @@ import { collection } from './collection.js';
 import { achat, commande, webhook, fauxStripe, menageCommandes } from './achat.js';
 import { echange } from './echange.js';
 import { factures, facture } from './factures.js';
+import { retractation, retractations } from './retractation.js';
 import { message } from './message.js';
 import { ouvre, lit, message as messageGuichet, liste, tout, reponse, clos } from './guichet.js';
 import { problemes } from './reglages.js';
@@ -28,6 +29,8 @@ const ROUTES = {
   'POST /api/stripe/webhook': webhook,
   'POST /api/echange': echange,
   'GET /api/factures': factures,
+  'POST /api/retractation': retractation,
+  'GET /api/retractations': retractations,
   'POST /api/message': message,
   'POST /api/guichet': ouvre,
   'GET /api/guichet': liste,
@@ -91,7 +94,7 @@ const ENTETES = {
 
 // a visitor's pace, counted by Cloudflare near the visitor (wrangler.toml, ratelimits): a first dam that spares the base. The strict
 // counts, for money and codes, are the base's own (compte1). Stripe's events are signed, and come in bursts
-const STRICTES = new Set(['/api/sms/demande', '/api/sms/verifie', '/api/mail/demande', '/api/mail/verifie', '/api/achat', '/api/echange', '/api/message', '/api/guichet']);
+const STRICTES = new Set(['/api/sms/demande', '/api/sms/verifie', '/api/mail/demande', '/api/mail/verifie', '/api/achat', '/api/echange', '/api/retractation', '/api/message', '/api/guichet']);
 async function debit(req, url, env) {
   const ip = cleIp(req.headers.get('cf-connecting-ip'));
   if (!ip || url.pathname === '/api/stripe/webhook') return null;

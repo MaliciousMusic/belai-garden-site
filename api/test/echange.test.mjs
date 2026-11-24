@@ -7,14 +7,17 @@ import worker from '../src/index.js';
 import { demande, verifie } from '../src/compte.js';
 import { livre } from '../src/achat.js';
 import { echange } from '../src/echange.js';
+import { moisCourant } from '../src/catalogue.js';
 import { d1 } from './d1.mjs';
+
+const MOIS = moisCourant();
 
 const ORIGINE = 'http://localhost:8835';
 const RETOUR = `${ORIGINE}/scene/fr/`;
 const TEXTE = 'Je demande que mon bouquet me soit livré immédiatement, et je reconnais perdre ainsi mon droit de rétractation de 14 jours.';
 const CATALOGUE = {
   vie: { jours: 30 },
-  collection: { mois: '2026-10', exemplaires: 100 },
+  collection: { mois: MOIS, exemplaires: 100 },
   produits: [
     { id: 'citrine', nom: 'Citrine', prix: { centimes: 9480 } },
     { id: 'douce', nom: 'Douce', prix: { centimes: 3000 } },
@@ -48,7 +51,7 @@ async function achete(env, c, produit = 'citrine') {
   return j.commande;
 }
 const moi = async (env, c) => (await call(env, 'GET', '/api/moi', null, c)).j;
-const restants = async (env, p) => (await call(env, 'GET', `/api/collection?mois=2026-10&produits=${p}`)).j.restants[p].restants;
+const restants = async (env, p) => (await call(env, 'GET', `/api/collection?mois=${MOIS}&produits=${p}`)).j.restants[p].restants;
 
 test('une facture numérotée pour chaque achat, lisible par son seul compte', async () => {
   const env = envNeuf();
@@ -58,7 +61,7 @@ test('une facture numérotée pour chaque achat, lisible par son seul compte', a
   assert.equal(l.length, 1);
   assert.equal(l[0].ref, 'F-000001');
   assert.equal(l[0].total, 9480);
-  assert.match(l[0].libelle, /Bouquet « Citrine », collection d’octobre 2026/);
+  assert.match(l[0].libelle, /Bouquet « Citrine », collection (?:de |d’)\S+ \d{4}$/);
   const h = (await call(env, 'GET', '/api/facture/1', null, c)).j;
   assert.match(h, /Facture F-000001/);
   assert.match(h, /Zoé/);

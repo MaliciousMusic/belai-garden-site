@@ -6,10 +6,13 @@ import assert from 'node:assert/strict';
 import worker from '../src/index.js';
 import { demande, verifie } from '../src/compte.js';
 import { joignable } from '../src/outils.js';
+import { moisCourant } from '../src/catalogue.js';
 import { d1 } from './d1.mjs';
 
+const MOIS = moisCourant();
+
 const ORIGINE = 'http://localhost:8835';
-const CATALOGUE = { collection: { mois: '2026-10' }, produits: [{ id: 'neige-de-mars', nom: 'Neige de mars', prix: { centimes: 15000 } }] };
+const CATALOGUE = { collection: { mois: MOIS }, produits: [{ id: 'neige-de-mars', nom: 'Neige de mars', prix: { centimes: 15000 } }] };
 function envNeuf(extra = {}) {
   const cle = Buffer.from(crypto.getRandomValues(new Uint8Array(32))).toString('base64url');
   return { DB: d1(), POIVRE: 'p', CLE_NUMEROS: cle, SMS: 'faux', PAYS: 'FR', ORIGINES: ORIGINE, PAIEMENT: 'faux', __sms: [], __catalogue: CATALOGUE, ...extra };

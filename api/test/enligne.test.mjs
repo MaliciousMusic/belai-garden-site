@@ -6,10 +6,13 @@ import worker from '../src/index.js';
 import { problemes } from '../src/reglages.js';
 import { demande, verifie, menage } from '../src/compte.js';
 import { livre, menageCommandes } from '../src/achat.js';
+import { moisCourant } from '../src/catalogue.js';
 import { d1 } from './d1.mjs';
 
+const MOIS = moisCourant();
+
 const SITE = 'https://belaisgarden.com';
-const CATALOGUE = { collection: { mois: '2026-11' }, produits: [{ id: 'citrine', nom: 'Citrine', prix: { centimes: 9480 } }, { id: 'rare', nom: 'Rare', prix: { centimes: 5000 }, exemplaires: 3 }, { id: 'faux', nom: 'Faux', prix: { centimes: 12.5 } }] };
+const CATALOGUE = { collection: { mois: MOIS }, produits: [{ id: 'citrine', nom: 'Citrine', prix: { centimes: 9480 } }, { id: 'rare', nom: 'Rare', prix: { centimes: 5000 }, exemplaires: 3 }, { id: 'faux', nom: 'Faux', prix: { centimes: 12.5 } }] };
 const passe = { limit: async () => ({ success: true }) };
 // a production whose every door is open
 const ouvert = (extra = {}) => ({

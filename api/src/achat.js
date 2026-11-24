@@ -11,7 +11,7 @@
 import { identifiant, lireJson, local, json, erreur } from './outils.js';
 import { session as stripeSession, lireSession, expireSession, evenement } from './stripe.js';
 import { compte1, session as connecte } from './compte.js';
-import { produit as produitDe } from './catalogue.js';
+import { moisCourant, produit as produitDe } from './catalogue.js';
 import { total } from './collection.js';
 import { emettre, libelle } from './factures.js';
 import { trace } from './journal.js';
@@ -57,6 +57,7 @@ export async function achat(req, env, now = Date.now()) {
   const corps = await lireJson(req);
   const p = await produitDe(env, String(corps.produit || ''), now);
   if (!p) return erreur('produit_inconnu', 404);
+  if (p.mois !== moisCourant(now)) return erreur('collection_close', 409, { mois: p.mois });
   // the express request for immediate delivery and waiver of withdrawal (Code de la consommation L221-28, 13°)
   if (corps.renonce !== true) return erreur('renonciation_requise');
   // the page to come back to: one of the site's own
@@ -137,6 +138,9 @@ async function solde(env, o, now) {
   await abandon(env, o.id, 'expiree');
   return 'libre';
 }
+// an account's open orders, and one of them closed without fuss (compte.js, an account deleted)
+export const ouvertes = async (env, compte) => (await env.DB.prepare("SELECT * FROM commandes WHERE compte = ? AND etat = 'en_attente'").bind(compte).all()).results || [];
+export const ferme = (env, o, now) => solde(env, o, now).catch((err) => console.error(`[achat] fermeture de ${o.id}`, err));
 // an order held against what Stripe says of its page (closed on the way when fermer): delivered if it is paid, whatever
 // became of its event; abandoned if the page is expired
 async function rapproche(env, o, now, fermer = false) {

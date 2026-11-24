@@ -28,6 +28,8 @@ function ferme() {
       el.prepend(p);
     }
   }
+  // the ways to pay: none is open
+  for (const el of document.querySelectorAll('.moyens, .plusieurs-fois')) if (el.textContent.trim() && !el.querySelector('.bientot-mot')) el.append(pastille());
   // the price one reads, where one would buy
   for (const el of document.querySelectorAll('.actions')) {
     if (!el.querySelector('.btn-prix') || el.querySelector('.prix-indicatif')) continue;

@@ -11,8 +11,8 @@
 //   GET  /api/guichet/<id>/tout        (atelier)                          -> { conv, messages }   a talk, all of it
 //   POST /api/guichet/<id>/reponse     (atelier) { texte }                -> { ok, n }            the atelier answers
 //   POST /api/guichet/<id>/clos        (atelier)                          -> { ok }               the talk is closed
-import { compte1, lireJson } from './compte.js';
-import { cleIp, empreinte, sha256, egal, identifiant, jeton, json, erreur } from './outils.js';
+import { compte1 } from './compte.js';
+import { lireJson, plafond, cleIp, empreinte, sha256, egal, identifiant, jeton, json, erreur } from './outils.js';
 
 const H = 60 * 60 * 1000;
 const J = 24 * H;
@@ -55,7 +55,7 @@ export async function ouvre(req, env, now = Date.now()) {
       if (!r.ok) return erreur('trop', 429, { attendre: r.attendre });
     }
   }
-  const jour = await compte1(env.DB, `guichetjour:${new Date(now).toISOString().slice(0, 10)}`, J, Number(env.GUICHET_JOUR) || GUICHET_JOUR, now);
+  const jour = await compte1(env.DB, `guichetjour:${new Date(now).toISOString().slice(0, 10)}`, J, plafond(env.GUICHET_JOUR, GUICHET_JOUR), now);
   if (!jour.ok) return erreur('trop', 429, { attendre: jour.attendre });
   const id = identifiant();
   const jt = jeton();

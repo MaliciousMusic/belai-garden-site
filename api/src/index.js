@@ -87,8 +87,8 @@ export default {
     try {
       res = fn ? (horsSite(req, url, env) || (await fn(req, env))) : erreur('introuvable', 404);
     } catch (err) {
-      console.error('[api]', err);
-      res = erreur(err.config ? 'configuration' : 'serveur', 500);
+      if (!err.statut) console.error('[api]', err);
+      res = err.statut ? erreur(err.code, err.statut) : erreur(err.config ? 'configuration' : 'serveur', 500);
     }
     for (const [k, v] of Object.entries(h)) res.headers.set(k, v);
     return res;

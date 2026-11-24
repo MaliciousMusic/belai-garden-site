@@ -8,7 +8,7 @@
 //   GET  /api/commande/<id>                                                 -> the order, its bouquet once paid
 //   POST /api/stripe/webhook     Stripe's events (checkout.session.completed / expired, charge.dispute.created / closed)
 //   GET  /api/faux-stripe/<id>   the simulated payment page (env.PAIEMENT = "faux"); POST: pay or cancel
-import { identifiant, local, json, erreur } from './outils.js';
+import { identifiant, lireJson, local, json, erreur } from './outils.js';
 import { session as stripeSession, evenement } from './stripe.js';
 import { compte1, session as connecte } from './compte.js';
 import { produit as produitDe } from './catalogue.js';
@@ -19,13 +19,6 @@ const MIN = 60 * 1000;
 // Stripe keeps a Checkout session 30 minutes at least; a little more so it is always accepted
 const TENUE = 31 * MIN;
 
-const lireJson = async (req) => {
-  try {
-    return await req.json();
-  } catch (_) {
-    return {};
-  }
-};
 const origines = (env) => (env.ORIGINES || '').split(',').map((s) => s.trim()).filter(Boolean);
 const avec = (u, commande, etat) => {
   const x = new URL(u);

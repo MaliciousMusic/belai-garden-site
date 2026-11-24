@@ -7,8 +7,8 @@
 //
 // contact is an e-mail address or a phone number; site is a field the page hides (a robot that fills it is thanked and
 // forgotten). Limits: three messages an hour and ten a day for an address, env.MESSAGES_JOUR a day for the whole shop.
-import { compte1, lireJson } from './compte.js';
-import { adresse, chiffre, cleIp, empreinte, identifiant, numero, json, erreur } from './outils.js';
+import { compte1 } from './compte.js';
+import { lireJson, plafond, adresse, chiffre, cleIp, empreinte, identifiant, numero, json, erreur } from './outils.js';
 
 const H = 60 * 60 * 1000;
 const J = 24 * H;
@@ -47,7 +47,7 @@ export async function message(req, env, now = Date.now()) {
       if (!r.ok) return erreur('trop', 429, { attendre: r.attendre });
     }
   }
-  const jour = await compte1(env.DB, `msgjour:${new Date(now).toISOString().slice(0, 10)}`, J, Number(env.MESSAGES_JOUR) || MESSAGES_JOUR, now);
+  const jour = await compte1(env.DB, `msgjour:${new Date(now).toISOString().slice(0, 10)}`, J, plafond(env.MESSAGES_JOUR, MESSAGES_JOUR), now);
   if (!jour.ok) return erreur('trop', 429, { attendre: jour.attendre });
   const page = typeof b.page === 'string' ? b.page.slice(0, 200) : null;
   const langue = LANGUES.has(b.langue) ? b.langue : null;

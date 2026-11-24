@@ -75,6 +75,10 @@ export function numero(brut, pays = 'FR') {
     const p = PREFIXES[pays] || PREFIXES.FR;
     s = '+' + p + s.replace(/^0/, '');
   }
+  // the national 0 kept after the prefix (+33 06 12…): one phone, one number, so one account and one set of limits. Only
+  // Italy keeps it, on its landlines
+  const p = Object.values(PREFIXES).find((x) => x !== '39' && s.startsWith(`+${x}0`));
+  if (p) s = `+${p}${s.slice(p.length + 2)}`;
   return /^\+[1-9]\d{7,14}$/.test(s) ? s : null;
 }
 // the numbers a text message may go to (env.INDICATIFS_SMS, calling codes separated by commas): the shop's countries only,
@@ -82,6 +86,18 @@ export function numero(brut, pays = 'FR') {
 // and Canada: the Caribbean area codes share it and are the pumpers' favourite targets.
 export const INDICATIFS_SMS = '33,32,41,352,49,34,39,44,1';
 const CARAIBES = new Set('242 246 264 268 284 345 441 473 649 658 664 721 758 767 784 809 829 849 868 869 876'.split(' '));
+const MOBILES = {
+  33: /^[67]\d{8}$/,
+  32: /^4\d{8}$/,
+  41: /^7[5-9]\d{7}$/,
+  352: /^6\d{8}$/,
+  49: /^1[567]\d{8,9}$/,
+  34: /^[67]\d{8}$/,
+  39: /^3\d{8,9}$/,
+  // not 70 (personal numbers) nor 76 (pagers), but 7624 (Isle of Man)
+  44: /^7(?:[1-57-9]\d{8}|624\d{6})$/,
+  1: /^[2-9]\d{9}$/,
+};
 export function joignable(n, liste = INDICATIFS_SMS) {
   if (typeof n !== 'string') return false;
   const ok = String(liste)
@@ -89,6 +105,9 @@ export function joignable(n, liste = INDICATIFS_SMS) {
     .map((s) => s.trim())
     .filter((s) => /^\d{1,3}$/.test(s))
     .some((p) => n.startsWith('+' + p));
+  // a mobile's shape where it is known: no text goes to a landline or to a premium number
+  const forme = Object.entries(MOBILES).find(([p]) => n.startsWith(`+${p}`));
+  if (forme && !forme[1].test(n.slice(forme[0].length + 1))) return false;
   return ok && !(n.startsWith('+1') && CARAIBES.has(n.slice(2, 5)));
 }
 
@@ -110,12 +129,14 @@ export function masque(n) {
   return `+${p} ${paires.join(' ')}`;
 }
 // an e-mail address as people write it, at most 254 characters, in lower case; null otherwise
-const MAIL = /^[^\s@<>()",;:]{1,64}@[^\s@<>()",;:]+\.[^\s@<>()",;:.]{2,}$/;
+const MAIL = /^[^\s\p{C}@<>()",;:\\]{1,64}@[^\s\p{C}@<>()",;:\\]+\.[^\s\p{C}@<>()",;:.\\]{2,}$/u;
 export function adresse(brut) {
   if (typeof brut !== 'string') return null;
   const s = brut.trim().toLowerCase();
   return s.length <= 254 && MAIL.test(s) ? s : null;
 }
+// the mailbox an address reaches, as the limits count it: without its +tag (the account keeps the address as written)
+export const boiteDe = (a) => a.replace(/\+[^@]*@/, '@');
 // a first name as people write it: 1 to 40 letters, spaces, apostrophes and hyphens
 export function prenom(brut) {
   if (typeof brut !== 'string') return null;
@@ -133,7 +154,52 @@ export function cookies(req) {
   const out = {};
   for (const part of (req.headers.get('cookie') || '').split(';')) {
     const i = part.indexOf('=');
-    if (i > 0) out[part.slice(0, i).trim()] = decodeURIComponent(part.slice(i + 1).trim());
+    if (i <= 0) continue;
+    const v = part.slice(i + 1).trim();
+    try {
+      out[part.slice(0, i).trim()] = decodeURIComponent(v);
+    } catch (_) {
+      // a cookie of another script, badly written: it must not close the session
+      out[part.slice(0, i).trim()] = v;
+    }
   }
   return out;
 }
+
+// a request's body, at most max bytes (counted as they come: content-length is only what the sender says)
+export async function corpsTexte(req, max) {
+  const trop = () => Object.assign(new Error('corps trop grand'), { statut: 413, code: 'trop_grand' });
+  if (Number(req.headers.get('content-length')) > max) throw trop();
+  if (!req.body) return '';
+  const morceaux = [];
+  let n = 0;
+  for (const lecteur = req.body.getReader(); ; ) {
+    const { done, value } = await lecteur.read();
+    if (done) break;
+    n += value.byteLength;
+    if (n > max) {
+      await lecteur.cancel().catch(() => {});
+      throw trop();
+    }
+    morceaux.push(value);
+  }
+  const tout = new Uint8Array(n);
+  let i = 0;
+  for (const m of morceaux) {
+    tout.set(m, i);
+    i += m.byteLength;
+  }
+  return dec.decode(tout);
+}
+// its JSON object, {} for anything else
+export async function lireJson(req, max = 32 * 1024) {
+  const texte = await corpsTexte(req, max);
+  try {
+    const j = JSON.parse(texte);
+    return j && typeof j === 'object' && !Array.isArray(j) ? j : {};
+  } catch (_) {
+    return {};
+  }
+}
+// a daily ceiling as set in wrangler.toml: « 0 » closes, a missing or unreadable one is the default
+export const plafond = (v, defaut) => (/^\d+$/.test(String(v ?? '').trim()) ? Number(v) : defaut);

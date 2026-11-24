@@ -53,7 +53,7 @@ test('demandes de SMS envoyées toutes à la fois : la limite tient', async () =
 
 test('pays desservis : la liste du porteur, sans les Caraïbes de la zone +1', () => {
   assert.equal(joignable('+33612345678'), true);
-  assert.equal(joignable('+3524621123456'), true);
+  assert.equal(joignable('+352621123456'), true);
   assert.equal(joignable('+12125550123'), true); // New York
   assert.equal(joignable('+14165550123'), true); // Toronto
   assert.equal(joignable('+18765550123'), false); // Jamaica

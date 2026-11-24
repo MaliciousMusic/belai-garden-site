@@ -5,7 +5,7 @@
 // A credit note cancels the first invoice, an invoice paid by the exchange names the new bouquet.
 //
 //   POST /api/echange   { bouquet, produit }   -> { bouquet: { id, produit, numero, achat, fin }, cagnotte }   (signed in)
-import { json, erreur } from './outils.js';
+import { lireJson, json, erreur } from './outils.js';
 import { session as connecte } from './compte.js';
 import { produit as produitDe } from './catalogue.js';
 import { total } from './collection.js';
@@ -15,13 +15,6 @@ import { emettre, libelle } from './factures.js';
 const DELAI = 24 * 60 * 60 * 1000;
 const J30 = 30 * 24 * 60 * 60 * 1000;
 
-const lireJson = async (req) => {
-  try {
-    return await req.json();
-  } catch (_) {
-    return {};
-  }
-};
 
 export async function echange(req, env, now = Date.now()) {
   const s = await connecte(req, env, now);

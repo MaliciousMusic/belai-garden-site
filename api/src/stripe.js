@@ -4,6 +4,8 @@
 //   "stripe" Stripe Checkout: a session made with STRIPE_SECRET (sk_test_... first), its events signed with
 //            STRIPE_WEBHOOK_SECRET (whsec_...) and checked here.
 
+import { corpsTexte, egal } from './outils.js';
+
 const API = 'https://api.stripe.com/v1';
 
 // form encoding of nested values, as Stripe's API takes them: a[b][c]=v
@@ -46,7 +48,7 @@ export async function session(env, { commande, nom, centimes, expire, retour, la
 // old; null when it does not hold
 export async function evenement(env, req, now = Date.now()) {
   if (!env.STRIPE_WEBHOOK_SECRET) throw Object.assign(new Error('STRIPE_WEBHOOK_SECRET manquant'), { config: true });
-  const brut = await req.text();
+  const brut = await corpsTexte(req, 256 * 1024);
   const sig = req.headers.get('stripe-signature') || '';
   const parts = Object.fromEntries(sig.split(',').map((p) => p.split('=')).filter((p) => p.length === 2).map(([k, v]) => [k, v]));
   const t = Number(parts.t);
@@ -57,7 +59,6 @@ export async function evenement(env, req, now = Date.now()) {
   if (!t || !v1s.length || Math.abs(now / 1000 - t) > 300) return null;
   const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.STRIPE_WEBHOOK_SECRET), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
   const mac = [...new Uint8Array(await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`${t}.${brut}`)))].map((b) => b.toString(16).padStart(2, '0')).join('');
-  const { egal } = await import('./outils.js');
   if (!v1s.some((v) => egal(v, mac))) return null;
   try {
     return JSON.parse(brut);

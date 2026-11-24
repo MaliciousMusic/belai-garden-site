@@ -13,7 +13,7 @@
 //   POST   /api/moi           { prenom }                          -> { compte }
 //   POST   /api/deconnexion                                      -> { ok }
 //   DELETE /api/moi                                               -> { ok }                  erased 30 days later
-import { cleIp, adresse, empreinte, chiffre, sha256, jeton, identifiant, codeChiffres, egal, numero, prenom, joignable, INDICATIFS_SMS, local, json, erreur, cookies } from './outils.js';
+import { boiteDe, plafond, lireJson, cleIp, adresse, empreinte, chiffre, sha256, jeton, identifiant, codeChiffres, egal, numero, prenom, joignable, INDICATIFS_SMS, local, json, erreur, cookies } from './outils.js';
 import { envoie } from './sms.js';
 import { envoieCourriel } from './courriel.js';
 
@@ -68,7 +68,7 @@ const CANAUX = {
     pret: (req, env) => env.SMS === 'ovh' || (env.SMS === 'faux' && local(req)),
     reglage: (env) => `SMS « ${env.SMS} »`,
     desservi: (n, env) => joignable(n, env.INDICATIFS_SMS || INDICATIFS_SMS),
-    plafond: (env) => Number(env.SMS_JOUR) || SMS_JOUR,
+    plafond: (env) => plafond(env.SMS_JOUR, SMS_JOUR),
     envoie: (env, n, langue, code) => envoie(env, n, (MESSAGES[langue] || MESSAGES.fr)(code)),
   },
   mail: {
@@ -79,7 +79,7 @@ const CANAUX = {
     pret: (req, env) => env.COURRIEL_CODES === 'cloudflare' || (env.COURRIEL_CODES === 'faux' && local(req)),
     reglage: (env) => `Courriel « ${env.COURRIEL_CODES} »`,
     desservi: () => true,
-    plafond: (env) => Number(env.COURRIEL_JOUR) || COURRIEL_JOUR,
+    plafond: (env) => plafond(env.COURRIEL_JOUR, COURRIEL_JOUR),
     envoie: (env, a, langue, code, now) => envoieCourriel(env, a, (COURRIELS[langue] || COURRIELS.fr)(code), now),
   },
 };
@@ -111,13 +111,6 @@ async function depasse(db, cle, fenetre, max, now) {
   return { ok: false, attendre: Math.ceil((row.debut + fenetre - now) / 1000) };
 }
 
-export const lireJson = async (req) => {
-  try {
-    return await req.json();
-  } catch (_) {
-    return {};
-  }
-};
 const vueCompte = (c) => ({ prenom: c.prenom || null, depuis: c.cree, cagnotte: c.cagnotte || 0 });
 const J30 = 30 * 24 * 60 * 60 * 1000;
 const ECHANGE = 24 * 60 * 60 * 1000;
@@ -136,13 +129,15 @@ async function demandeCode(canal, req, env, now = Date.now()) {
   if (!n) return erreur(k.invalide);
   if (!k.desservi(n, env)) return erreur('pays_non_desservi');
   const fp = await empreinte(env.POIVRE, k.cle(n));
+  // the mailbox behind the address: lea+1@ and lea+2@ are one person to spare, and two accounts
+  const boite = canal === 'mail' ? await empreinte(env.POIVRE, k.cle(boiteDe(n))) : fp;
   const fauxCle = `faux:${fp}:${await empreinte(env.POIVRE, `ip:${cleIp(req.headers.get('cf-connecting-ip'))}`)}`;
   for (const [cle, max] of [[fauxCle, FAUX_JOUR], [`fauxtout:${fp}`, FAUX_TOUT]]) {
     const f = await depasse(env.DB, cle, J, max, now);
     if (!f.ok) return erreur('trop_de_demandes', 429, { attendre: f.attendre });
   }
   for (const [nom, fenetre, max] of LIMITES) {
-    const r = await compte1(env.DB, `${nom}:${fp}`, fenetre, max, now);
+    const r = await compte1(env.DB, `${nom}:${boite}`, fenetre, max, now);
     if (!r.ok) return erreur('trop_de_demandes', 429, { attendre: r.attendre });
   }
   const ip = req.headers.get('cf-connecting-ip') || '';

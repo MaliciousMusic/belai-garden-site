@@ -2310,5 +2310,19 @@
  "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "お支払いの確認後すぐにブーケを届けるよう求め、それにより{n1}日間の撤回権を失うことを了承します。",
  "Cochez cette case pour continuer.": "続行するにはこのボックスをオンにしてください。",
  "Commande avec obligation de paiement": "支払い義務を伴う注文",
- "Commande avec obligation de paiement · {p{n1}}": "支払い義務を伴う注文 · {p1}"
+ "Commande avec obligation de paiement · {p{n1}}": "支払い義務を伴う注文 · {p1}",
+ "indicatif": "参考",
+ "Mon compte": "アカウント",
+ "Bientôt : rien ne se vend et rien ne s’envoie encore depuis ce site.": "近日公開：このサイトでは、まだ販売も送信も行っていません。",
+ "Bientôt : ce formulaire n’envoie rien encore.": "近日公開：このフォームはまだ何も送信しません。",
+ "Prix indicatif, à venir.": "参考価格（近日公開）",
+ "Ouverture des ventes : bientôt.": "販売開始は近日中です。",
+ "Démonstration : les cadeaux ouvrent bientôt.": "デモンストレーション：ギフトは近日公開です。",
+ "Compte de démonstration : « Mes fleurs » ouvre bientôt.": "デモ用アカウント：「私の花」は近日公開です。",
+ "Ouverture bientôt : le site se visite, rien ne s’y vend encore. Les prix sont indicatifs.": "近日オープン：サイトはご覧いただけますが、まだ販売はしていません。価格は参考です。",
+ "La boutique ouvre bientôt : tout se visite, rien ne se vend encore.": "ショップは近日オープンです。すべてご覧いただけますが、まだ販売はしていません。",
+ "Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.": "アトリエの担当者とのサイト上での会話は近日公開です。それまではメールでお問い合わせください。",
+ "Renoncer au contrat ici": "ここで契約を撤回する",
+ "Télécharger mes données": "自分のデータをダウンロード",
+ "Supprimer mon compte": "アカウントを削除"
 }

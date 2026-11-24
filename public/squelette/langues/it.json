@@ -2310,5 +2310,19 @@
  "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "Chiedo che il mio bouquet mi sia consegnato subito, appena il pagamento è confermato, e riconosco di perdere così il mio diritto di recesso di {n1} giorni.",
  "Cochez cette case pour continuer.": "Spunta questa casella per continuare.",
  "Commande avec obligation de paiement": "Ordine con obbligo di pagamento",
- "Commande avec obligation de paiement · {p{n1}}": "Ordine con obbligo di pagamento · {p1}"
+ "Commande avec obligation de paiement · {p{n1}}": "Ordine con obbligo di pagamento · {p1}",
+ "indicatif": "indicativo",
+ "Mon compte": "Il mio account",
+ "Bientôt : rien ne se vend et rien ne s’envoie encore depuis ce site.": "A breve: da questo sito non si vende né si invia ancora nulla.",
+ "Bientôt : ce formulaire n’envoie rien encore.": "A breve: questo modulo non invia ancora nulla.",
+ "Prix indicatif, à venir.": "Prezzo indicativo, a breve.",
+ "Ouverture des ventes : bientôt.": "Le vendite aprono a breve.",
+ "Démonstration : les cadeaux ouvrent bientôt.": "Dimostrazione: i regali aprono a breve.",
+ "Compte de démonstration : « Mes fleurs » ouvre bientôt.": "Account dimostrativo: «I miei fiori» apre a breve.",
+ "Ouverture bientôt : le site se visite, rien ne s’y vend encore. Les prix sont indicatifs.": "Apertura a breve: il sito si visita, non si vende ancora nulla. I prezzi sono indicativi.",
+ "La boutique ouvre bientôt : tout se visite, rien ne se vend encore.": "La boutique apre a breve: tutto si può vedere, non si vende ancora nulla.",
+ "Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.": "Una persona dell’atelier, qui sul sito: a breve. Nel frattempo, scrivici via e-mail.",
+ "Renoncer au contrat ici": "Recedere dal contratto qui",
+ "Télécharger mes données": "Scaricare i miei dati",
+ "Supprimer mon compte": "Eliminare il mio account"
 }

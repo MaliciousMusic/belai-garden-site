@@ -4,6 +4,7 @@
 // the window says so and gives the address.
 import { langue } from './traduction.mjs';
 import { jeton } from './antirobot.mjs';
+import { VITRINE } from './reglages.mjs';
 
 // the server: the same domain once online (belai.garden/api), wrangler dev on the developer's machine
 const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
@@ -88,6 +89,8 @@ function construit() {
 
 // (texte: a message already written, the bee's question it could not answer)
 export function ouvreEcrire(texte = '') {
+  // (no server in a showcase: the visitor's own mail application)
+  if (VITRINE) return void (location.href = `mailto:${ADRESSE}${texte ? `?body=${encodeURIComponent(texte)}` : ''}`);
   if (!boite) construit();
   boite.querySelector('.ecrire-etat').textContent = '';
   if (texte) boite.querySelector('#ecrire-texte').value = texte;
@@ -97,7 +100,7 @@ export function ouvreEcrire(texte = '') {
 // the shop's address links, wherever they are (footers, the seller's line); the window's own fallback link stays a mailto
 document.addEventListener('click', (e) => {
   const a = e.target.closest?.(`a[href^="mailto:${ADRESSE}"]`);
-  if (!a || a.closest('.ecrire') || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (VITRINE || !a || a.closest('.ecrire') || e.ctrlKey || e.metaKey || e.shiftKey) return;
   e.preventDefault();
   ouvreEcrire();
 });

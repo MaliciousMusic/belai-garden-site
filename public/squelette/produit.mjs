@@ -2,6 +2,7 @@
 // price, gift or for me, the purchase, the gift's page), the bill folded, the try-on, what one receives, the questions.
 // The previous and next bouquets are shown in place, the address following (history.replaceState). Composing the colours
 // is a page of its own (retouche.html, owner 2026-10-31): the ways in on the scene and in the bill lead there.
+import { VITRINE } from './reglages.mjs';
 import { vocal } from './vocal.mjs';
 import {
   $, actions, botanical, chargeLatin, colourName, enPlusieursFois, essayer, chargeSens, flagship, lienAtelier, lienProduit, loupe, marquesPaiement, meta, narrow,
@@ -257,7 +258,7 @@ document.querySelector('[data-apercu]').addEventListener('click', async (ev) => 
   // one was written (in this preview the word and the signature ride in the link; online they come from the server)
   const signe = $('signe').value.trim();
   const mot = $('mot').value.trim();
-  const u = new URLSearchParams({ b: shown.id, lang: $('sa-langue').value, ...(signe ? { de: signe } : {}), ...(mot ? { mot } : {}) });
+  const u = new URLSearchParams({ b: shown.id, lang: $('sa-langue').value, ...(signe && !VITRINE ? { de: signe } : {}), ...(mot && !VITRINE ? { mot } : {}) });
   $('ap-ouvrir').href = `recu.html?${u}`;
   for (const el of document.querySelectorAll('#apercu .ap-mot')) el.textContent = `« ${mot || $('mot').placeholder} »`;
   for (const el of document.querySelectorAll('#apercu .ap-de')) {

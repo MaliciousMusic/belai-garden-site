@@ -11,10 +11,13 @@
 import { idle, prefetch } from './cache.mjs';
 import { T, LOCALES } from './recu-langues.mjs';
 import { langue } from './traduction.mjs';
+import { VITRINE } from './reglages.mjs';
 
 const SCENE = '../scene/';
 const $ = (id) => document.getElementById(id);
 const q = new URLSearchParams(location.search);
+// (a showcase shows its own words only, never those a link carries)
+if (VITRINE) for (const k of ['de', 'mot', 'voix-url', 'g']) q.delete(k);
 const shop = await fetch(`${SCENE}boutique.json`).then((r) => r.json());
 const p = shop.produits.find((x) => x.id === q.get('b')) || shop.produits.find((x) => x.id === 'printemps-a-la-carpe');
 // a code an older link still carried is taken out of the address at once: the code never stays in a link
@@ -83,11 +86,11 @@ idle(() =>
 
 // the code: in this preview any code of four signs or more is right; at integration, the server's answer (a wrong code
 // is counted there, five at most, then an hour's wait)
-const ouvre = async (code) => code.length >= 4;
+const ouvre = async (code) => VITRINE || code.length >= 4;
 $('code-form').addEventListener('submit', async (ev) => {
   ev.preventDefault();
   const code = $('code').value.replace(/\s+/g, '').toUpperCase();
-  if (!code) return void ($('code-etat').textContent = t.code_vide);
+  if (!code && !VITRINE) return void ($('code-etat').textContent = t.code_vide);
   $('ouvrir').disabled = true;
   const ok = await ouvre(code);
   $('ouvrir').disabled = false;

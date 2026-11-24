@@ -2310,5 +2310,19 @@
  "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "I ask for my bouquet to be delivered right away, as soon as payment is confirmed, and I acknowledge that I thereby lose my {n1}-day right of withdrawal.",
  "Cochez cette case pour continuer.": "Tick this box to continue.",
  "Commande avec obligation de paiement": "Order with obligation to pay",
- "Commande avec obligation de paiement · {p{n1}}": "Order with obligation to pay · {p1}"
+ "Commande avec obligation de paiement · {p{n1}}": "Order with obligation to pay · {p1}",
+ "indicatif": "indicative",
+ "Mon compte": "My account",
+ "Bientôt : rien ne se vend et rien ne s’envoie encore depuis ce site.": "Coming soon: nothing is sold or sent from this site yet.",
+ "Bientôt : ce formulaire n’envoie rien encore.": "Coming soon: this form does not send anything yet.",
+ "Prix indicatif, à venir.": "Indicative price, coming soon.",
+ "Ouverture des ventes : bientôt.": "Sales open soon.",
+ "Démonstration : les cadeaux ouvrent bientôt.": "Demonstration: gifts open soon.",
+ "Compte de démonstration : « Mes fleurs » ouvre bientôt.": "Demonstration account: “My flowers” opens soon.",
+ "Ouverture bientôt : le site se visite, rien ne s’y vend encore. Les prix sont indicatifs.": "Coming soon: have a look around, nothing is for sale yet. Prices are indicative.",
+ "La boutique ouvre bientôt : tout se visite, rien ne se vend encore.": "The shop opens soon: everything can be seen, nothing is for sale yet.",
+ "Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.": "Someone from the atelier, here on the site: coming soon. Until then, write to us by e-mail.",
+ "Renoncer au contrat ici": "Withdraw from the contract here",
+ "Télécharger mes données": "Download my data",
+ "Supprimer mon compte": "Delete my account"
 }

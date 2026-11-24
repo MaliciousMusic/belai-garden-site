@@ -8,3 +8,6 @@ audit/
 
 __pycache__/
 *.pyc
+
+# the showcase, built by outils/vitrine.mjs
+dist/

@@ -7,6 +7,7 @@
 // window says so and the purchase waits.
 import { API } from './ecrire.mjs';
 import { jeton } from './antirobot.mjs';
+import { VITRINE } from './reglages.mjs';
 import { langue } from './traduction.mjs';
 
 const $ = (id) => document.getElementById(id);
@@ -147,6 +148,7 @@ function construit() {
 
 // true once signed in; false if the window was closed without it
 export async function exigeCompte() {
+  if (VITRINE) return false;
   if (await connecte()) return true;
   if (!boite) construit();
   $('cx-verifie').hidden = true;

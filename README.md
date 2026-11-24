@@ -35,6 +35,14 @@ Puis ouvrir `http://localhost:8851/squelette/`.
 
 Pour le serveur des comptes, voir [api/README.md](api/README.md). Pour Bzzou, voir [bzzou/README.md](bzzou/README.md).
 
+## Construire la vitrine
+
+```bash
+node outils/vitrine.mjs
+```
+
+Le dossier à publier est `dist/` (voir [docs/PUBLIER.md](docs/PUBLIER.md)).
+
 ## Contrôler
 
 ```bash

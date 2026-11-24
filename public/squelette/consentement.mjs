@@ -8,6 +8,8 @@
 // The measurement tool itself is not chosen yet (RAPPORT-DECISIONS-2NOV.md): whatever it is, it starts through
 // quandMesure(), never before.
 
+import { VITRINE } from './reglages.mjs';
+
 const CLE = 'belai-consentement';
 const VIE = 182 * 24 * 60 * 60 * 1000; // six months
 const listeners = [];
@@ -104,7 +106,8 @@ function pose() {
     b.addEventListener('click', reouvre);
     conf.after(b);
   }
-  if (choix) return;
+  // (nothing to measure in a showcase: nothing to ask; « Cookies » stays at the foot)
+  if (choix || VITRINE) return;
   // the gift's page asks once the bouquet has bloomed: the band never stands between the envelope and its flowers
   if (document.body.classList.contains('page-recu')) document.addEventListener('cadeau:ouvert', ouvre, { once: true });
   else ouvre();

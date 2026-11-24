@@ -6,6 +6,7 @@
   <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
   <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
   <script type="module" src="traduction.mjs"></script>
+  <script type="module" src="vitrine.mjs"></script>
   <!-- the audience-measurement cookies, asked first: nothing is measured before « Accepter » (owner, 2026-11-02) -->
   <script type="module" src="consentement.mjs"></script>
   <script type="module" src="ecrire.mjs"></script>
@@ -32,8 +33,10 @@
   <!-- The new site's legal texts. A .a-remplir is still to be decided before the sales open. -->
   <main id="contenu" class="legal">
     <h1 class="titre">Mentions légales</h1>
-    <p class="maj">Dernière mise à jour : 4 novembre 2026</p>
-    <p class="brouillon">Les ventes ne sont pas encore ouvertes. Cette page est en préparation : un juriste doit encore la relire, et les passages surlignés restent à compléter.</p>
+    <p class="maj">Dernière mise à jour : 25 novembre 2026</p>
+    <p class="brouillon">Les ventes ne sont pas encore ouvertes. Cette page est en préparation : un juriste doit encore la relire, et les passages surlignés restent à compléter.
+      Aujourd’hui, le site est une vitrine : il ne demande, n’envoie et ne vend rien. Ni compte, ni commande, ni cookie, ni mesure d’audience ; Bzzou
+      répond dans votre navigateur, sans rien transmettre. Seul l’hébergeur garde ses journaux techniques. Ce qui suit décrit la boutique telle qu’elle ouvrira.</p>
 
     <nav aria-label="Sur cette page">
       <ul class="sommaire">
@@ -57,10 +60,11 @@
         SIREN 853 801 488 · RCS Clermont-Ferrand · TVA non applicable, art. 293 B du CGI
         <span class="a-remplir">[numéro de TVA intracommunautaire : à garder ou à retirer, à voir avec le comptable]</span></p>
       <h3>Hébergement</h3>
-      <p>Le site : GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis
+      <p>Le site (belaisgarden.com) : Cloudflare, Inc. (Cloudflare Pages), 101 Townsend Street, San Francisco, CA 94107, États-Unis
+        <span class="a-remplir">[téléphone de Cloudflare]</span>.<br>
+        La copie de préparation : GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis
         <span class="a-remplir">[téléphone de GitHub]</span>.<br>
-        Le serveur des comptes et des cadeaux : Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis
-        <span class="a-remplir">[téléphone de Cloudflare]</span>.</p>
+        Le serveur des comptes et des cadeaux, à venir : Cloudflare, Inc., à la même adresse.</p>
     </section>
 
     <section id="terms" aria-labelledby="t-terms">
@@ -230,7 +234,7 @@
         seulement la référence du paiement, son montant et son statut.</p>
 
       <h3>Destinataires et lieux de traitement</h3>
-      <p>GitHub, Inc. (hébergement du site, États-Unis), Cloudflare, Inc. (comptes, envoi des e-mails, États-Unis), Stripe (paiement, Irlande et États-Unis)
+      <p>Cloudflare, Inc. (hébergement du site, comptes, envoi des e-mails, États-Unis), GitHub, Inc. (copie de préparation, États-Unis), Stripe (paiement, Irlande et États-Unis)
         et, si vous les choisissez à la caisse, Alma ou Klarna, ainsi qu’OVHcloud (envoi des SMS, France). Les transferts vers les États-Unis reposent sur la
         décision d’adéquation du 10 juillet 2023 (cadre de protection des données UE–États-Unis) pour les prestataires certifiés, et à défaut sur les clauses
         contractuelles types de la Commission européenne. <span class="a-remplir">[certification de chaque prestataire à vérifier]</span></p>

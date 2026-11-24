@@ -2310,5 +2310,19 @@
  "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "我要求在付款确认后立即交付花束，并确认因此失去 {n1} 天的撤销权。",
  "Cochez cette case pour continuer.": "请勾选此框以继续。",
  "Commande avec obligation de paiement": "下单并承担付款义务",
- "Commande avec obligation de paiement · {p{n1}}": "下单并承担付款义务 · {p1}"
+ "Commande avec obligation de paiement · {p{n1}}": "下单并承担付款义务 · {p1}",
+ "indicatif": "参考",
+ "Mon compte": "我的账户",
+ "Bientôt : rien ne se vend et rien ne s’envoie encore depuis ce site.": "即将推出：本网站目前不出售任何商品，也不发送任何内容。",
+ "Bientôt : ce formulaire n’envoie rien encore.": "即将推出：此表单目前不会发送任何内容。",
+ "Prix indicatif, à venir.": "参考价格，即将公布。",
+ "Ouverture des ventes : bientôt.": "即将开售。",
+ "Démonstration : les cadeaux ouvrent bientôt.": "演示：赠礼功能即将推出。",
+ "Compte de démonstration : « Mes fleurs » ouvre bientôt.": "演示账户：“我的花”即将开放。",
+ "Ouverture bientôt : le site se visite, rien ne s’y vend encore. Les prix sont indicatifs.": "即将开业：欢迎浏览，目前尚未出售任何商品。价格仅供参考。",
+ "La boutique ouvre bientôt : tout se visite, rien ne se vend encore.": "商店即将开业：一切均可浏览，目前尚未出售。",
+ "Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.": "工作室人员在线服务即将推出。在此之前，请通过电子邮件联系我们。",
+ "Renoncer au contrat ici": "在此撤销合同",
+ "Télécharger mes données": "下载我的数据",
+ "Supprimer mon compte": "删除我的账户"
 }

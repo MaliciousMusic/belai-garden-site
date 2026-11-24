@@ -1,7 +1,7 @@
 # Publier le site
 
 Le site est en ligne sur `https://maliciousmusic.github.io/belai-garden-site/`, publié par GitHub Pages. Chaque poussée sur `main`
-lance les tests, puis publie `public/` (`.github/workflows/site.yml`).
+lance les tests, puis publie la vitrine (`.github/workflows/site.yml`).
 
 ## Limites de GitHub Pages
 
@@ -17,35 +17,41 @@ lance les tests, puis publie `public/` (`.github/workflows/site.yml`).
 - Belai Bureau 0.1.0 n'accepte que l'ancienne adresse et `belai.garden` (`SITES` dans `bureau/src-tauri/src/essai.rs`, dans l'atelier) :
   « L'essayer sur mon bureau » depuis cette adresse demande une nouvelle version de l'application.
 
-## Passer sur Cloudflare (belaisgarden.com)
+## La vitrine seule (belaisgarden.com)
 
-Les pages vont sur Cloudflare Pages, le serveur sur un Worker qui répond à `belaisgarden.com/api/*`, la base sur D1. Chaque commande se
-lance depuis la racine du dépôt, sauf indication. Le porteur tape lui-même ses identifiants, ses clés et ses codes.
+Tout se visite, rien ne se vend ni ne s'envoie (`VITRINE` dans `public/squelette/reglages.mjs`). Ce sont des fichiers, sans Worker, sans base, sans
+secret. La construction se vérifie elle-même et refuse ce qui ne doit pas partir (installateur, panneau du guichet, secret, ancienne adresse).
+
+```bash
+node outils/vitrine.mjs
+```
+
+Le dossier à publier est `dist/`. Une fois le compte Cloudflare ouvert et la session `wrangler` connectée par le porteur :
+
+```bash
+cd api && npm ci && npx wrangler pages project create belais-garden --production-branch main
+```
+
+```bash
+cd api && npx wrangler pages deploy ../dist --project-name belais-garden --branch main
+```
+
+Cloudflare Pages sert `produit.html` à l'adresse `/squelette/produit` : c'est normal. Essayer d'abord sur l'adresse `belais-garden.pages.dev` (les pages,
+la page 404, les en-têtes), puis ajouter `belaisgarden.com` dans Workers & Pages → belais-garden → Custom domains. Réglages du domaine : partie 6
+ci-dessous. Revenir en arrière : Deployments → « Rollback ».
+
+## Ouvrir la vente, plus tard
+
+Il reste à brancher les pages sur le serveur (panier, compte, cadeaux), puis à passer `VITRINE` à `false`, à remettre l'installateur signé, et à
+publier `public/` au lieu de `dist/`. Chaque commande se lance depuis la racine du dépôt. Le porteur tape lui-même ses identifiants, ses clés et ses codes.
 
 ### 1. Les pages
-
-```bash
-cd api && npm ci && npx wrangler login
-```
-
-```bash
-npx wrangler pages project create belais-garden --production-branch main
-```
-
-Remplacer l'ancienne adresse dans les balises `canonical` et `og:` :
-
-```bash
-grep -rl maliciousmusic.github.io/belai-garden-site public --include=*.html | xargs sed -i 's#https://maliciousmusic.github.io/belai-garden-site/#https://belaisgarden.com/#g'
-```
-
-Publier une copie allégée, sans toucher aux sources :
 
 ```bash
 rm -rf /tmp/belai-public && cp -r public /tmp/belai-public && sh outils/minifie.sh /tmp/belai-public && npx --prefix api wrangler pages deploy /tmp/belai-public --project-name belais-garden --branch main
 ```
 
-Cloudflare Pages sert `produit.html` à l'adresse `/squelette/produit` : c'est normal. Essayer d'abord sur l'adresse `belais-garden.pages.dev` (les pages, la page 404, les en-têtes), puis ajouter `belaisgarden.com` dans
-Workers & Pages → belais-garden → Custom domains.
+Les pages vont sur Cloudflare Pages, le serveur sur un Worker qui répond à `belaisgarden.com/api/*`, la base sur D1.
 
 ### 2. La base
 

@@ -1,4 +1,4 @@
-# Tests the server and the published folder, then publishes public/ on GitHub Pages, at every push on main.
+# Tests the server and the published folder, then publishes the showcase (outils/vitrine.mjs, dist/) on GitHub Pages, at every push on main.
 name: Site
 
 on:
@@ -29,6 +29,7 @@ jobs:
         run: |
           python3 -X utf8 outils/verifie.py --coloris
           python3 -X utf8 outils/entetes.py --verifie
+          node outils/vitrine.mjs
 
   deploy:
     needs: tests
@@ -48,11 +49,12 @@ jobs:
           node-version: '22'
       - name: Assemble the site
         run: |
-          rm -f public/_headers
-          touch public/.nojekyll
-          sh outils/minifie.sh
+          node outils/vitrine.mjs --site https://maliciousmusic.github.io/belai-garden-site/
+          rm -f dist/_headers dist/robots.txt
+          touch dist/.nojekyll
+          sh outils/minifie.sh dist
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
-          path: public
+          path: dist
       - id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

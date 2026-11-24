@@ -2310,5 +2310,19 @@
  "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "Peço que meu buquê seja entregue imediatamente, assim que o pagamento for confirmado, e reconheço que perco assim meu direito de arrependimento de {n1} dias.",
  "Cochez cette case pour continuer.": "Marque esta caixa para continuar.",
  "Commande avec obligation de paiement": "Pedido com obrigação de pagamento",
- "Commande avec obligation de paiement · {p{n1}}": "Pedido com obrigação de pagamento · {p1}"
+ "Commande avec obligation de paiement · {p{n1}}": "Pedido com obrigação de pagamento · {p1}",
+ "indicatif": "indicativo",
+ "Mon compte": "Minha conta",
+ "Bientôt : rien ne se vend et rien ne s’envoie encore depuis ce site.": "Em breve: nada é vendido nem enviado por este site ainda.",
+ "Bientôt : ce formulaire n’envoie rien encore.": "Em breve: este formulário ainda não envia nada.",
+ "Prix indicatif, à venir.": "Preço indicativo, em breve.",
+ "Ouverture des ventes : bientôt.": "As vendas abrem em breve.",
+ "Démonstration : les cadeaux ouvrent bientôt.": "Demonstração: os presentes abrem em breve.",
+ "Compte de démonstration : « Mes fleurs » ouvre bientôt.": "Conta de demonstração: “Minhas flores” abre em breve.",
+ "Ouverture bientôt : le site se visite, rien ne s’y vend encore. Les prix sont indicatifs.": "Em breve: o site pode ser visitado, nada está à venda ainda. Os preços são indicativos.",
+ "La boutique ouvre bientôt : tout se visite, rien ne se vend encore.": "A loja abre em breve: tudo pode ser visto, nada está à venda ainda.",
+ "Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.": "Alguém do ateliê, aqui no site: em breve. Até lá, escreva-nos por e-mail.",
+ "Renoncer au contrat ici": "Desistir do contrato aqui",
+ "Télécharger mes données": "Baixar meus dados",
+ "Supprimer mon compte": "Excluir minha conta"
 }

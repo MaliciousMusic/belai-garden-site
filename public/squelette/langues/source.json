@@ -2310,5 +2310,19 @@
  "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "noyau.mjs",
  "Cochez cette case pour continuer.": "noyau.mjs",
  "Commande avec obligation de paiement": "noyau.mjs",
- "Commande avec obligation de paiement · {p{n1}}": "noyau.mjs"
+ "Commande avec obligation de paiement · {p{n1}}": "noyau.mjs",
+ "indicatif": "vitrine.mjs",
+ "Mon compte": "vitrine.mjs",
+ "Bientôt : rien ne se vend et rien ne s’envoie encore depuis ce site.": "vitrine.mjs",
+ "Bientôt : ce formulaire n’envoie rien encore.": "vitrine.mjs",
+ "Prix indicatif, à venir.": "vitrine.mjs",
+ "Ouverture des ventes : bientôt.": "vitrine.mjs",
+ "Démonstration : les cadeaux ouvrent bientôt.": "vitrine.mjs",
+ "Compte de démonstration : « Mes fleurs » ouvre bientôt.": "vitrine.mjs",
+ "Ouverture bientôt : le site se visite, rien ne s’y vend encore. Les prix sont indicatifs.": "vitrine.mjs",
+ "La boutique ouvre bientôt : tout se visite, rien ne se vend encore.": "vitrine.mjs",
+ "Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.": "vitrine.mjs",
+ "Renoncer au contrat ici": "vitrine.mjs",
+ "Télécharger mes données": "vitrine.mjs",
+ "Supprimer mon compte": "vitrine.mjs"
 }

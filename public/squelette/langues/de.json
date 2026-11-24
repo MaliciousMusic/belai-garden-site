@@ -2310,5 +2310,19 @@
  "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "Ich verlange, dass mein Strauß sofort nach Bestätigung der Zahlung geliefert wird, und erkenne an, dass ich dadurch mein {n1}-tägiges Widerrufsrecht verliere.",
  "Cochez cette case pour continuer.": "Aktiviere dieses Kästchen, um fortzufahren.",
  "Commande avec obligation de paiement": "Zahlungspflichtig bestellen",
- "Commande avec obligation de paiement · {p{n1}}": "Zahlungspflichtig bestellen · {p1}"
+ "Commande avec obligation de paiement · {p{n1}}": "Zahlungspflichtig bestellen · {p1}",
+ "indicatif": "Richtwert",
+ "Mon compte": "Mein Konto",
+ "Bientôt : rien ne se vend et rien ne s’envoie encore depuis ce site.": "Bald: Auf dieser Website wird noch nichts verkauft und nichts gesendet.",
+ "Bientôt : ce formulaire n’envoie rien encore.": "Bald: Dieses Formular sendet noch nichts.",
+ "Prix indicatif, à venir.": "Richtpreis, demnächst.",
+ "Ouverture des ventes : bientôt.": "Der Verkauf beginnt bald.",
+ "Démonstration : les cadeaux ouvrent bientôt.": "Demonstration: Geschenke sind bald verfügbar.",
+ "Compte de démonstration : « Mes fleurs » ouvre bientôt.": "Demokonto: „Meine Blumen“ öffnet bald.",
+ "Ouverture bientôt : le site se visite, rien ne s’y vend encore. Les prix sont indicatifs.": "Bald geöffnet: Sehen Sie sich um, noch ist nichts zu kaufen. Die Preise sind Richtwerte.",
+ "La boutique ouvre bientôt : tout se visite, rien ne se vend encore.": "Der Laden öffnet bald: Alles ist zu sehen, noch ist nichts zu kaufen.",
+ "Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.": "Jemand aus dem Atelier, hier auf der Website: bald. Schreiben Sie uns bis dahin per E-Mail.",
+ "Renoncer au contrat ici": "Vertrag hier widerrufen",
+ "Télécharger mes données": "Meine Daten herunterladen",
+ "Supprimer mon compte": "Mein Konto löschen"
 }

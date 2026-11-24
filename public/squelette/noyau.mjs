@@ -491,11 +491,15 @@ export function marquesPaiement() {
   return el;
 }
 
+import { VITRINE } from './reglages.mjs';
+
 // ---------- the basket (owner, 2026-11-01): several bouquets, each with its quantity, before the checkout. It lives in
 // this browser (localStorage) until the checkout; the header shows how many bouquets wait in it.
 const PANIER = 'belai-panier';
 export const panier = {
   lire() {
+    // (a showcase keeps no basket)
+    if (VITRINE) return [];
     try {
       const items = JSON.parse(localStorage.getItem(PANIER));
       return Array.isArray(items) ? items.map((x) => ({ ...x, qte: Math.max(1, Math.floor(Number(x.qte)) || 1), centimes: Number(x.centimes) || 0 })) : [];
@@ -504,6 +508,7 @@ export const panier = {
     }
   },
   ecrire(items) {
+    if (VITRINE) return;
     try {
       localStorage.setItem(PANIER, JSON.stringify(items));
     } catch (_) {}
@@ -653,7 +658,7 @@ function panierListe() {
   const pay = $('panier-pied').querySelector('[data-bouchon="achat"]');
   pay.textContent = items.length ? `Commande avec obligation de paiement · ${price(panierTotal(items))}` : 'Commande avec obligation de paiement';
 }
-export const ouvrirPanier = () => panierFenetre().showModal();
+export const ouvrirPanier = () => (VITRINE ? null : panierFenetre().showModal());
 
 // ---------- one theme only (owner, 2026-11-01: « on n'a que le mode blanc avec pointe de couleur »): the dark one is
 // gone, and a choice an earlier visit kept in this browser is forgotten
@@ -711,6 +716,7 @@ export const actions = {};
 // every purchase asks for the account first (owner, 2026-11-02: required, validated by e-mail or phone; connexion.mjs); the
 // payment itself is still a stub, said once the visitor is signed in
 actions.achat = async (btn) => {
+  if (VITRINE) return;
   const { exigeCompte } = await import('./connexion.mjs');
   if (!(await exigeCompte()) || !$('bouchon')) return;
   $('bouchon-texte').textContent = stubs.achat(btn);
@@ -754,7 +760,7 @@ export function essayer(btn, { p = flagship, partage = false, tous = false, evit
     .then((m) =>
       m.ouvrir({
         T: fr.js,
-        I18N: { bureau: { installer: 'Belai-Bureau-0.1.0-x64-setup.exe', win: fr.desktop.winSmall, soon: fr.desktop.soon } },
+        I18N: { bureau: { installer: VITRINE ? null : 'Belai-Bureau-0.1.0-x64-setup.exe', win: fr.desktop.winSmall, soon: fr.desktop.soon } },
         jours: 30,
         index: () => fetch(`${SCENE}bouquets/${p.id}/sprites/sprites.json`).then((r) => r.json()),
         base: `${SCENE}bouquets/${p.id}/sprites/`,

@@ -2310,5 +2310,19 @@
  "Je demande que mon bouquet me soit livré tout de suite, dès la confirmation du paiement, et je reconnais que je perds ainsi mon droit de rétractation de {n{n1}} jours.": "결제가 확인되는 즉시 부케를 전달해 줄 것을 요청하며, 이로써 {n1}일의 철회권을 잃는다는 것을 인정합니다.",
  "Cochez cette case pour continuer.": "계속하려면 이 상자를 선택하세요.",
  "Commande avec obligation de paiement": "결제 의무가 있는 주문",
- "Commande avec obligation de paiement · {p{n1}}": "결제 의무가 있는 주문 · {p1}"
+ "Commande avec obligation de paiement · {p{n1}}": "결제 의무가 있는 주문 · {p1}",
+ "indicatif": "참고",
+ "Mon compte": "내 계정",
+ "Bientôt : rien ne se vend et rien ne s’envoie encore depuis ce site.": "곧 만나요: 이 사이트에서는 아직 아무것도 판매하거나 전송하지 않아요.",
+ "Bientôt : ce formulaire n’envoie rien encore.": "곧 만나요: 이 양식은 아직 아무것도 보내지 않아요.",
+ "Prix indicatif, à venir.": "참고 가격이며, 곧 공개됩니다.",
+ "Ouverture des ventes : bientôt.": "곧 판매를 시작해요.",
+ "Démonstration : les cadeaux ouvrent bientôt.": "시연 화면: 선물 기능은 곧 열려요.",
+ "Compte de démonstration : « Mes fleurs » ouvre bientôt.": "시연용 계정: ‘내 꽃’은 곧 열려요.",
+ "Ouverture bientôt : le site se visite, rien ne s’y vend encore. Les prix sont indicatifs.": "곧 문을 엽니다: 둘러보실 수 있지만 아직 판매하지 않아요. 가격은 참고용이에요.",
+ "La boutique ouvre bientôt : tout se visite, rien ne se vend encore.": "곧 가게 문을 열어요. 모두 둘러보실 수 있지만 아직 판매하지 않아요.",
+ "Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.": "사이트에서 아틀리에 담당자와의 대화는 곧 열려요. 그때까지 이메일로 문의해 주세요.",
+ "Renoncer au contrat ici": "여기에서 계약 철회하기",
+ "Télécharger mes données": "내 데이터 다운로드",
+ "Supprimer mon compte": "내 계정 삭제"
 }

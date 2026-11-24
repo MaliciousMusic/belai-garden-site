@@ -11,6 +11,7 @@
 // in the corner opens the talk.
 import { API, ici, ouvreEcrire } from './ecrire.mjs';
 import { jeton } from './antirobot.mjs';
+import { VITRINE } from './reglages.mjs';
 import { SAVOIR } from './abeille-savoir.mjs';
 import { conseille } from './abeille-conseil.mjs';
 import { choixLangue, langue, tapeDedans } from './traduction.mjs';
@@ -120,7 +121,7 @@ chat.setAttribute('aria-label', 'L’abeille de l’atelier');
 chat.hidden = true;
 chat.innerHTML = `<header class="abeille-tete"><span class="abeille-nom">L’abeille de l’atelier</span><button type="button" class="abeille-fermer" aria-label="Fermer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button></header>
   <ol class="abeille-fil" aria-live="polite"></ol>
-  <p class="abeille-mention">Bzzou est une IA. Une personne de l’atelier peut prendre le relais.</p>
+  <p class="abeille-mention">Bzzou est une IA. ${VITRINE ? 'La boutique ouvre bientôt : tout se visite, rien ne se vend encore.' : 'Une personne de l’atelier peut prendre le relais.'}</p>
   <form class="abeille-form"><label class="visuellement-cache" for="abeille-q">Votre question</label><input id="abeille-q" autocomplete="off" maxlength="500" placeholder="Posez votre question…"><button type="submit" aria-label="Envoyer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></form>`;
 document.body.append(chat);
 const liste = chat.querySelector('.abeille-fil');
@@ -256,6 +257,7 @@ for (const m of fil) montre(m);
 let relance = 0;
 let attente = 0;
 async function passe(question) {
+  if (VITRINE) return dit({ de: 'abeille', texte: 'Une personne de l’atelier sur le site : bientôt. En attendant, écrivez-nous par e-mail.', ecrire: question });
   dit({ de: 'abeille', texte: 'Un instant, je vous passe quelqu’un de l’atelier…' });
   try {
     const r = await fetch(`${API}/guichet`, {
@@ -301,6 +303,7 @@ async function ecoute() {
   } catch (_) {}
   relance = setTimeout(ecoute, chat.hidden ? 20000 : 4000);
 }
+if (VITRINE) guichet = null;
 if (guichet) ecoute();
 
 async function demande(texte) {
@@ -365,7 +368,7 @@ async function repond(id, question) {
 const LLM = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792/bzzou' : '/bzzou';
 let llmAbsent = false;
 async function converse(texte, g) {
-  if (llmAbsent) return null;
+  if (VITRINE || llmAbsent) return null;
   const pense = document.createElement('li');
   pense.className = 'abeille-msg de-abeille abeille-pense';
   pense.setAttribute('aria-label', 'Bzzou réfléchit');
@@ -463,7 +466,7 @@ function parle(texte, ms = 9000, { sous = false, haut = 0 } = {}) {
     h.className = 'abeille-bulle-titre';
     h.textContent = texte.titre;
     bulle.append(h);
-    for (const c of texte.corps) {
+    for (const c of [...texte.corps, ...(texte.sous ? [texte.sous] : [])]) {
       const q = document.createElement('p');
       q.textContent = c;
       bulle.append(q);
@@ -514,6 +517,7 @@ const ACCUEIL = {
     'Un atelier de fleurs numériques. Chaque bouquet est dessiné tige à tige d’après de vraies fleurs : sur votre écran, il éclôt, respire dans la brise, puis fane doucement en trente jours, comme un vrai.',
     'Offrez-le d’un simple lien, où que soit la personne, ou gardez-le sur votre bureau. Son prix est celui de ses tiges chez un fleuriste, vase offert, et la collection change chaque mois.',
   ],
+  ...(VITRINE ? { sous: 'La boutique ouvre bientôt : tout se visite, rien ne se vend encore.' } : {}),
   fin: 'Une question ? Touchez-moi : je suis Bzzou.',
 };
 // the welcome's words typed in. The phrase books write first, so the words typed are the reader's (hidden for that instant)

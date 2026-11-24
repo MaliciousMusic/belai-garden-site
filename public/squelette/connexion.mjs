@@ -6,6 +6,7 @@
 // The server is api/src/compte.js (POST /api/mail|sms/demande, then /verifie; GET /api/moi). In a preview without it, the
 // window says so and the purchase waits.
 import { API } from './ecrire.mjs';
+import { jeton } from './antirobot.mjs';
 import { langue } from './traduction.mjs';
 
 const $ = (id) => document.getElementById(id);
@@ -85,7 +86,7 @@ function construit() {
   const reponse = async (chemin, corps, bouton) => {
     bouton.disabled = true;
     try {
-      const r = await appel(chemin, corps);
+      const r = await appel(chemin, typeof corps === 'function' ? await corps() : corps);
       return { ok: r.ok, j: await r.json().catch(() => ({})) };
     } catch (_) {
       dit('Le serveur des comptes ne répond pas : dans cet aperçu, l’achat s’arrête ici.');
@@ -100,7 +101,7 @@ function construit() {
     ident = champ.value.trim();
     if (par === 'mail' ? !/^\S+@\S+\.\S{2,}$/.test(ident) : ident.replace(/\D/g, '').length < 8)
       return void (dit(ERREURS[par === 'mail' ? 'adresse_invalide' : 'numero_invalide']), champ.focus());
-    const res = await reponse(`/${par}/demande`, corpsDe(), $('cx-envoyer'));
+    const res = await reponse(`/${par}/demande`, async () => corpsDe({ antirobot: await jeton('code', $('cx-demande')) }), $('cx-envoyer'));
     if (!res) return;
     if (!res.ok) return void dit(res.j.erreur === 'trop_de_demandes' ? attente(res.j.attendre || 60) : ERREURS[res.j.erreur] || 'Le code n’a pas pu partir. Réessayez dans un instant.');
     dit('');

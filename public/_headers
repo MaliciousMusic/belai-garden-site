@@ -12,8 +12,10 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), geolocation=(), payment=(), usb=()
+  Permissions-Policy: camera=(), geolocation=(), payment=(), usb=(), microphone=(self), display-capture=(self)
   Strict-Transport-Security: max-age=31536000
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-qRKUe8SUFdIif91IhfJf+EZ9NOcG1RB67saB5idIToc=' 'sha256-zfCflHQZNcUcj8kXBVkID2K2csbcl7iGITeeQ7n86vg=' 'sha256-f3our/mA2kfpQPMnEdOHVLLXKa1oyJ6D3UdDXnkia5o=' 'sha256-qh7eNlC/NaxtvrB3yyWBHFSUZNNytVKxVdrhzC3reRk=' 'sha256-p3WCSgxuzaBIJnAFQjbuPOo8QqhcvJnDDzi0OGpfr4Y=' 'sha256-FLOO+/vtQJQmGh8kwTcdXxKB+Y34mtaTeizjwBuRe/A=' 'sha256-a6viyP9AWmSdBca5JVu448fKbVnsBBciDEQXAKoqen8=' 'sha256-3td5CGr8gbxmT3xqYFLUcPRKM5NyoImSi8aXo4/fsNM=' 'sha256-1p6J9vRGbLFab8Kxkpk4iaWuXSrQIZp4mPzkFOEsHG8=' 'sha256-ozNg2Reg6tTcPA3XgmoMwjligBYQmt4GftqkpVRbVqk=' 'sha256-OBe09EE9viTRnP60saBElWJjWJ/7Moh3YjEXPr0qiHM=' 'sha256-mLlJoB/YKyV146RsfJicKMNeCDpqrSSuusCjs3ZQ6ok=' 'unsafe-eval' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; font-src 'self'; connect-src 'self' blob: data:; worker-src 'self' blob:; frame-src 'self' https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
 
 /squelette/*.html
   Cache-Control: public, max-age=0, must-revalidate

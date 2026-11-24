@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; font-src 'self'; connect-src 'self' blob: data: http://127.0.0.1:8790 http://127.0.0.1:8792; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qRKUe8SUFdIif91IhfJf+EZ9NOcG1RB67saB5idIToc=' 'sha256-1p6J9vRGbLFab8Kxkpk4iaWuXSrQIZp4mPzkFOEsHG8=' 'unsafe-eval' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; font-src 'self'; connect-src 'self' blob: data: http://127.0.0.1:8790 http://127.0.0.1:8792; worker-src 'self' blob:; frame-src 'self' https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <!-- the shop in ten languages (traduction.mjs): the page waits, hidden, for its phrase book when it is not in French -->
   <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('belai-langue')||(navigator.language||'').split('-')[0].toLowerCase();if(l==='tl')l='fil';if(['en','es','it','de','ja','zh','fil','pt','ko'].indexOf(l)>=0)document.documentElement.classList.add('traduction')}catch(e){}</script>
   <script type="module" src="traduction.mjs"></script>
@@ -48,11 +48,12 @@
         <h1 id="e-titre" class="enveloppe-titre" data-t="e_titre">Quelqu’un vous offre des fleurs.</h1>
         <p class="enveloppe-texte" data-t="e_texte">Elles vont éclore sous vos yeux, avec un mot. Montez le son si vous le pouvez.</p>
         <!-- (never sent by the browser itself: a code typed before recu.js has loaded must not reload the page without its link) -->
-        <form class="code-cadeau" id="code-form" novalidate onsubmit="event.preventDefault()">
+        <form class="code-cadeau" id="code-form" novalidate>
           <label class="champ"><span data-t="e_code">Le code reçu à part</span><input id="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="40" required aria-describedby="code-etat e-aide"></label>
           <button type="submit" class="btn btn-plein btn-grand" id="ouvrir" data-t="ouvrir">Ouvrir mon bouquet</button>
           <p class="code-etat" id="code-etat" role="alert"></p>
         </form>
+        <script>document.getElementById('code-form').addEventListener('submit',function(e){e.preventDefault()})</script>
         <p class="enveloppe-petit" id="e-aide" data-t="e_aide">La personne qui vous l’offre vous a transmis ce lien et, à part, un code : le lien seul n’ouvre rien.</p>
         <p class="enveloppe-petit" data-t="e_petit">Rien à installer : ni mot de passe, ni numéro. Il vit sur l’appareil où vous l’ouvrez, et ses trente jours commencent à ce moment-là.</p>
         <p class="enveloppe-petit apercu-note" id="apercu-code" data-t="apercu_code">Aperçu : n’importe quel code de quatre signes ou plus ouvre ce bouquet.</p>

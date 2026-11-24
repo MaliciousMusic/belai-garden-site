@@ -3,6 +3,7 @@
 // or a phone number to be answered at. Without JavaScript the link stays a plain mailto. If the server cannot be reached,
 // the window says so and gives the address.
 import { langue } from './traduction.mjs';
+import { jeton } from './antirobot.mjs';
 
 // the server: the same domain once online (belai.garden/api), wrangler dev on the developer's machine
 const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
@@ -63,7 +64,7 @@ function construit() {
       const r = await fetch(`${API}/message`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ texte, contact, page: location.pathname + location.search, langue, site: form.elements.site.value }),
+        body: JSON.stringify({ antirobot: await jeton('message', form), texte, contact, page: location.pathname + location.search, langue, site: form.elements.site.value }),
       });
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.ok) {

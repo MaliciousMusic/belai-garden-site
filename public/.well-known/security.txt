@@ -1,0 +1,4 @@
+Contact: mailto:lonjaret.hadrien@proton.me
+Expires: 2027-10-31T00:00:00Z
+Preferred-Languages: fr, en
+Canonical: https://belaisgarden.com/.well-known/security.txt

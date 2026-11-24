@@ -12,7 +12,7 @@
 // A new VERSION (at every publication of the shop, and whenever a bouquet is drawn again) empties every older cache.
 // Never kept: what is not a GET of this origin, a range (the cycle's video streams by ranges), an answer other than 200.
 'use strict';
-const VERSION = 'squelette-2026-11-04';
+const VERSION = 'squelette-2026-11-25';
 const FIXED = `${VERSION}:fixe`;
 const BQ = `${VERSION}:bouquets`;
 const FRESH = `${VERSION}:frais`;

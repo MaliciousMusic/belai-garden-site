@@ -172,10 +172,10 @@ export default {
     body: `<section id="notice" aria-labelledby="t-notice">
     <h2 id="t-notice">Mentions légales</h2>
     <h3>Éditeur</h3>
-    <p>Hadrien Lonjaret, entrepreneur individuel, exerçant sous le nom commercial Agent 33<br>
+    <p>Hadrien Lonjaret, entrepreneur individuel (EI)<br>
       35 cours Sablon, 63000 Clermont-Ferrand, France<br>
-      Courriel : <a href="mailto:lonjaret.hadrien@proton.me">lonjaret.hadrien@proton.me</a> · Téléphone : +33 6 18 55 81 22<br>
-      SIREN 853 801 488 · RCS Clermont-Ferrand · N° de TVA intracommunautaire FR69853801488</p>
+      Courriel : <a href="mailto:belaisgarden@gmail.com">belaisgarden@gmail.com</a> · Téléphone : +33 7 43 77 48 97<br>
+      SIRET 853 801 488 00026</p>
     <h3>Directeur de la publication</h3>
     <p>Hadrien Lonjaret</p>
     <h3>Hébergeur</h3>
@@ -369,7 +369,7 @@ export default {
 
   <section id="contact" aria-labelledby="t-contact">
     <h2 id="t-contact">Contact</h2>
-    <p>Courriel : <a href="mailto:lonjaret.hadrien@proton.me">lonjaret.hadrien@proton.me</a> · Téléphone : +33 6 18 55 81 22 ·
+    <p>Courriel : <a href="mailto:belaisgarden@gmail.com">belaisgarden@gmail.com</a> · Téléphone : +33 7 43 77 48 97 ·
       Courrier : Hadrien Lonjaret, 35 cours Sablon, 63000 Clermont-Ferrand, France</p>
   </section>`,
     back: '← Retour aux bouquets',

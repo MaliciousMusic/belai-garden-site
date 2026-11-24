@@ -19,7 +19,7 @@ SMS_JOUR = "300"
 # The sender is an address of that domain: until the domain is chosen it stays empty and the messages are only kept.
 MESSAGES_JOUR = "200"
 EXPEDITEUR_MESSAGES = ""
-DESTINATAIRE_MESSAGES = "lonjaret.hadrien@proton.me"
+DESTINATAIRE_MESSAGES = "belaisgarden@gmail.com"
 # the account's code by e-mail (compte.js, courriel.js; owner 2026-11-02): "faux" writes it to the console (on localhost
 # only: refused online), "cloudflare" sends it with the [[send_email]] binding CODES below, from EXPEDITEUR_CODES (an
 # address of the shop's domain, empty until the domain is chosen); and the shop's ceiling of such mails a day
@@ -34,7 +34,7 @@ PAIEMENT = "faux"
 # what the shop sells: the site's own boutique.json (prices, the month's collection)
 CATALOGUE = "http://localhost:8851/scene/boutique.json"
 # the seller printed on the invoices (factures.js): as in the legal notice
-VENDEUR = '{"nom":"Hadrien Lonjaret EI, entrepreneur individuel (Agent 33)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 · RCS Clermont-Ferrand","courriel":"lonjaret.hadrien@proton.me"}'
+VENDEUR = '{"nom":"Hadrien Lonjaret, entrepreneur individuel (EI)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 (SIRET 853 801 488 00026)","courriel":"belaisgarden@gmail.com"}'
 
 [[d1_databases]]
 binding = "DB"
@@ -50,7 +50,7 @@ crons = ["17 3 * * *"]
 # the owner's mail for each message (message.js): to turn on once Email Routing is set up on the shop's domain
 # [[send_email]]
 # name = "COURRIER"
-# destination_address = "lonjaret.hadrien@proton.me"
+# destination_address = "belaisgarden@gmail.com"
 
 # the account's codes by e-mail (courriel.js): no destination_address, since they go to any visitor. Email Routing's own
 # binding only reaches its verified addresses: this needs Cloudflare's Email Sending on the domain (README, Le compte par
@@ -79,11 +79,11 @@ EXPEDITEUR_CODES = ""
 COURRIEL_JOUR = "300"
 MESSAGES_JOUR = "200"
 EXPEDITEUR_MESSAGES = ""
-DESTINATAIRE_MESSAGES = "lonjaret.hadrien@proton.me"
+DESTINATAIRE_MESSAGES = "belaisgarden@gmail.com"
 GUICHET_JOUR = "300"
 PAYS = "FR"
 PAIEMENT = "ferme"
-VENDEUR = '{"nom":"Hadrien Lonjaret EI, entrepreneur individuel (Agent 33)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 · RCS Clermont-Ferrand","courriel":"lonjaret.hadrien@proton.me"}'
+VENDEUR = '{"nom":"Hadrien Lonjaret, entrepreneur individuel (EI)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 (SIRET 853 801 488 00026)","courriel":"belaisgarden@gmail.com"}'
 
 [[env.production.d1_databases]]
 binding = "DB"
@@ -116,7 +116,7 @@ invocation_logs = false
 
 # [[env.production.send_email]]
 # name = "COURRIER"
-# destination_address = "lonjaret.hadrien@proton.me"
+# destination_address = "belaisgarden@gmail.com"
 
 # [[env.production.send_email]]
 # name = "CODES"

@@ -3,7 +3,7 @@
   "cours": { "usdParEur": 1.07, "date": "2026-10-27", "source": "BCE, cours de référence (provisoire, à relire chaque mois)" },
   "prix": { "regle": "somme des prix réels des tiges, vase offert, en euros", "provisoire": true },
   "vie": { "jours": 30 },
-  "contact": "lonjaret.hadrien@proton.me",
+  "contact": "belaisgarden@gmail.com",
   "collection": { "mois": "2026-10" },
   "scene": {
     "pied": [1200,700],

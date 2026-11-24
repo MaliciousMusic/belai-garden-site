@@ -72,7 +72,7 @@ bouton « Répondre » de la boîte lui répond directement. Si l'e-mail ne part
 Pour allumer l'e-mail, une fois le domaine de la boutique sur Cloudflare :
 
 1. Dans le tableau de bord, *Email* → *Email Routing* : activer le routage pour le domaine, et ajouter puis vérifier
-   l'adresse de destination (`lonjaret.hadrien@proton.me`).
+   l'adresse de destination (`belaisgarden@gmail.com`).
 2. Dans `wrangler.toml` : mettre une adresse du domaine dans `EXPEDITEUR_MESSAGES` (par exemple `messages@<domaine>`), et
    décommenter le bloc `[[send_email]]`.
 3. Publier le serveur (`npx wrangler deploy`).

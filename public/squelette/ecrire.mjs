@@ -15,7 +15,7 @@ export const ici = () => {
   const u = new URLSearchParams(['b', 'f'].filter((k) => q.has(k)).map((k) => [k, q.get(k).slice(0, 60)]));
   return location.pathname + (u.size ? `?${u}` : '');
 };
-const ADRESSE = 'lonjaret.hadrien@proton.me';
+const ADRESSE = 'belaisgarden@gmail.com';
 
 let boite = null;
 function construit() {

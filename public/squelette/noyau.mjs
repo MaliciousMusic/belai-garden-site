@@ -801,7 +801,7 @@ if ($('recu-boite')) {
       // the link is often pasted with the words around it: its first address is taken
       u = new URL((texte.match(/https?:\/\/\S+/) || [texte])[0], location.href);
     } catch (_) {}
-    if (!u || u.origin !== location.origin || !u.pathname.endsWith('/recu.html')) {
+    if (!u || u.origin !== location.origin || !/\/recu(\.html)?$/.test(u.pathname)) {
       $('rb-etat').textContent = 'Collez le lien en entier, tel qu’on vous l’a transmis : il mène à la page du cadeau.';
       return;
     }
@@ -813,7 +813,8 @@ if ($('recu-boite')) {
 // ---------- the header's nav and the phone's section bar: the link of this page is marked; a link to a section of this
 // page is marked while that section fills the middle of the screen
 {
-  const page = (u) => u.pathname.split('/').pop() || 'index.html';
+  // (Cloudflare Pages serves produit.html at /produit)
+  const page = (u) => (u.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
   const here = page(location);
   const watched = new Map(); // section -> its links
   for (const a of document.querySelectorAll('.nav a, .onglets a')) {

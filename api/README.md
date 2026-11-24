@@ -14,15 +14,16 @@ l'échange sous 24 heures, la cagnotte, les contestations). Les lots C4 et C5 y 
 | `POST /api/mail/verifie` `{ adresse, code, prenom, client? }` | Comme `/api/sms/verifie`. Une adresse et un numéro font deux comptes distincts. |
 | `GET /api/moi` | Le compte (prénom, cagnotte) et ses bouquets : leur fanaison, et jusqu'à quand chacun peut être échangé. |
 | `POST /api/moi` `{ prenom }` | Change le prénom. |
+| `GET /api/moi/export` | Les données du compte, en JSON à télécharger. |
 | `DELETE /api/moi` | Supprime le compte. Il est anonymisé 30 jours plus tard, et se reconnecter avant annule la suppression. |
 | `POST /api/deconnexion` | Ferme la session. |
 | `GET /api/collection?mois=AAAA-MM&produits=a,b` | Les exemplaires restants de chaque bouquet (public). |
-| `POST /api/achat` `{ produit, renonce, texte, langue, retour }` | Lot C3. Réserve un exemplaire 31 minutes, garde le renoncement daté et renvoie l'adresse de paiement : Stripe Checkout, ou la page simulée. |
+| `POST /api/achat` `{ produit, renonce, texte, langue, retour }` | Lot C3. Réserve un exemplaire 36 minutes (la page de paiement en dure 31), garde le renoncement daté et renvoie l'adresse de paiement : Stripe Checkout, ou la page simulée. |
 | `GET /api/commande/<id>` | La commande de l'acheteur : son état, et une fois payée son bouquet avec son numéro dans la série et sa facture. |
 | `POST /api/echange` `{ bouquet, produit }` | Lot C9. L'échange sous 24 heures : une fois, pour un bouquet jamais offert, contre un bouquet du jour disponible et pas plus cher. La différence va dans la cagnotte. Un avoir et une facture sont émis. |
 | `GET /api/factures` | Les factures et avoirs du compte. |
 | `GET /api/facture/<numéro>` | Une facture ou un avoir, en page à imprimer ou à enregistrer en PDF. |
-| `POST /api/stripe/webhook` | Les événements de Stripe, signature vérifiée (`checkout.session.completed`, `expired`, `charge.dispute.created`, `charge.dispute.closed`). Un même événement rejoué ne livre qu'une fois. |
+| `POST /api/stripe/webhook` | Les événements de Stripe, signature vérifiée (`checkout.session.completed`, `async_payment_succeeded`, `async_payment_failed`, `expired`, `charge.dispute.created`, `charge.dispute.closed`). Un même événement rejoué ne livre qu'une fois. |
 | `GET` et `POST /api/faux-stripe/<id>` | La page de paiement simulée (`PAIEMENT = "faux"`, jamais en ligne). |
 | `POST /api/message` `{ texte, contact, page?, langue? }` | « Nous écrire » : un message du site, avec une adresse e-mail ou un numéro pour y répondre. |
 
@@ -56,7 +57,7 @@ l'envoi d'e-mails de Cloudflare (Email Sending). Sans cela, il faut un autre ser
 - **Jours rendus après un défaut** (CGV, article 10). Le porteur repousse la fanaison d'un bouquet de N jours :
 
 ```bash
-npx wrangler d1 execute belai --remote --command "UPDATE bouquets SET fin = COALESCE(fin, achat + 2592000000) + N * 86400000 WHERE id = '<bouquet>'"
+npx wrangler d1 execute belai --env production --remote --command "UPDATE bouquets SET fin = COALESCE(fin, achat + 2592000000) + N * 86400000 WHERE id = '<bouquet>'"
 ```
 
 ## Les messages (« Nous écrire »)
@@ -77,8 +78,8 @@ Pour allumer l'e-mail, une fois le domaine de la boutique sur Cloudflare :
 Pour relire les messages dans la base, et marquer comme lu ce qui est traité :
 
 ```bash
-npx wrangler d1 execute belai --remote --command "SELECT datetime(cree / 1000, 'unixepoch') AS quand, genre, contact, langue, page, texte FROM messages WHERE lu IS NULL ORDER BY cree"
-npx wrangler d1 execute belai --remote --command "UPDATE messages SET lu = unixepoch() * 1000 WHERE id = '<id>'"
+npx wrangler d1 execute belai --env production --remote --command "SELECT datetime(cree / 1000, 'unixepoch') AS quand, genre, contact, langue, page, texte FROM messages WHERE lu IS NULL ORDER BY cree"
+npx wrangler d1 execute belai --env production --remote --command "UPDATE messages SET lu = unixepoch() * 1000 WHERE id = '<id>'"
 ```
 
 Limites : trois messages par heure et dix par jour pour une adresse IP, `MESSAGES_JOUR` par jour pour toute la boutique
@@ -94,12 +95,12 @@ Le visiteur relit les réponses toutes les quatre secondes ; le panneau, toutes 
 Le panneau s'ouvre avec un secret, jamais dans le dépôt :
 
 ```bash
-npx wrangler d1 migrations apply belai --remote
-npx wrangler secret put GUICHET_JETON
+npx wrangler d1 migrations apply belai --env production --remote
+npx wrangler secret put GUICHET_JETON --env production
 ```
 
-(32 caractères aléatoires au moins, par exemple `openssl rand -base64 32`), puis on le colle une fois dans le panneau, qui
-le garde dans ce navigateur. Le visiteur, lui, ne tient que le jeton de son propre fil, gardé ici en empreinte SHA-256.
+(32 caractères aléatoires au moins, par exemple `openssl rand -base64 32`), puis on le colle dans le panneau, qui
+le garde jusqu'à la fermeture de l'onglet. Le visiteur, lui, ne tient que le jeton de son propre fil, gardé ici en empreinte SHA-256.
 
 Limites : quatre fils par heure et douze par jour pour une adresse IP, quarante messages par heure dans un fil,
 `GUICHET_JOUR` fils par jour pour toute la boutique (300 par défaut). Sans réponse au bout de deux minutes, l'abeille
@@ -120,11 +121,17 @@ donne les heures de l'atelier et demande au visiteur une adresse ou un numéro.
 - **Les pays desservis** : un SMS ne part que vers les indicatifs de `INDICATIFS_SMS` (par défaut 33, 32, 41, 352, 49,
   34, 39, 44 et 1), et dans la zone +1 vers les États-Unis et le Canada seulement : les numéros des Caraïbes qui la
   partagent sont la cible favorite du SMS pumping.
-- **Les modes simulés** : `SMS = "faux"` et `PAIEMENT = "faux"` ne marchent que sur la machine du développeur
-  (`localhost`, `127.0.0.1`, `*.test`). En ligne, ces réglages, comme un réglage absent, renvoient une erreur de
-  configuration : un oubli dans `wrangler.toml` ne peut ni écrire les codes dans les journaux, ni donner des bouquets.
+- **Les modes simulés** : `SMS`, `COURRIEL_CODES` et `PAIEMENT` à `"faux"` ne marchent que sur la machine du développeur
+  (`localhost`, `127.0.0.1`, `*.test`). En ligne, un seul réglage simulé, absent, d'essai ou local ferme toutes les routes
+  (`src/reglages.js`), et `npm run deploie` refuse de publier (`verifie.mjs`). Une porte se ferme exprès avec `"ferme"`.
+- **L'anti-robot** : Turnstile, vérifié ici avant d'envoyer un code, de garder un message ou d'ouvrir un fil
+  (`src/antirobot.js`). Belai Bureau n'a pas de page pour lui : sa connexion devra passer par le site.
+- **Le débit** : Cloudflare compte les demandes par abonné avant que la base soit touchée (`DEBIT`, `DEBIT_STRICT`).
+- **La base tient elle-même** : une seule commande ouverte par compte et par bouquet, une cagnotte jamais négative, des
+  factures que rien ne change ni n'efface (`migrations/0007_commandes.sql`).
+- **Le journal** (`journal`) : qui a fait quoi et quand, sans nom, contact, code ni carte, gardé un an.
 - **Le CORS** n'est ouvert, avec cookie, qu'aux pages listées dans `ORIGINES`.
-- **Le cookie** est `HttpOnly; Secure; SameSite=Lax`. En ligne, le site et ce serveur doivent donc être sur le même
+- **Le cookie** est `__Host-…; HttpOnly; Secure; SameSite=Lax`. En ligne, le site et ce serveur doivent donc être sur le même
   domaine (par exemple `belai.garden` et `belai.garden/api` sur Cloudflare), sinon les navigateurs refusent le cookie.
 
 ## En local, sans aucun compte
@@ -164,28 +171,21 @@ node -e "const c=require('crypto');console.log('POIVRE='+c.randomBytes(32).toStr
 - **En local** : ouvrir `http://localhost:8851/squelette/`. Le code SMS s'écrit dans la
   console de Wrangler, et la page de paiement simulée propose Payer et Annuler.
 
-## Mise en ligne (une fois les comptes du porteur créés)
+## Commandes à vérifier
 
-1. Dans Cloudflare : `npx wrangler login`, puis `npx wrangler d1 create belai`. Recopier son `database_id` dans
-   `wrangler.toml`.
-2. Créer les tables : `npx wrangler d1 migrations apply belai --remote`.
-3. Mettre les secrets, jamais dans le dépôt : `npx wrangler secret put POIVRE`, puis `CLE_NUMEROS` (32 octets aléatoires
-   en base64url chacun). **Ne jamais changer `CLE_NUMEROS` ni `POIVRE` une fois des comptes créés** : les numéros
-   deviendraient illisibles et les comptes introuvables.
-4. Chez OVHcloud SMS : créer une application d'API sur eu.api.ovh.com/createToken avec le droit `POST /sms/*/jobs`, et
-   faire valider l'expéditeur « Belai ». Ensuite :
-   - `wrangler secret put` pour `OVH_APP_KEY`, `OVH_APP_SECRET`, `OVH_CONSUMER_KEY`, `OVH_SERVICE` (le nom du compte SMS)
-     et `OVH_EXPEDITEUR` ;
-   - passer `SMS = "ovh"` dans `wrangler.toml`.
-5. Chez Stripe :
-   - en mode test, mettre la clé `sk_test_...` avec `wrangler secret put STRIPE_SECRET` ;
-   - créer un point de terminaison de webhook vers `https://<domaine>/api/stripe/webhook`, avec les événements
-     `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.expired`,
-     `charge.dispute.created` et `charge.dispute.closed` ;
-   - mettre son secret `whsec_...` avec `wrangler secret put STRIPE_WEBHOOK_SECRET` ;
-   - passer `PAIEMENT = "stripe"`.
-6. Mettre dans `ORIGINES` l'adresse du site, et dans `CATALOGUE` celle de son `boutique.json`, puis `npx wrangler deploy`.
-   Mettre enfin l'adresse du serveur dans `api` de `boutique.json` : le bouton Acheter s'ouvre alors en ligne.
+Une commande passe à `a_verifier` quand un paiement ne correspond pas à ce qui était commandé (montant, devise, page), ou
+arrive pour une commande déjà annulée. Rien n'est livré et personne n'est remboursé tout seul. Le ménage du jour écrit leur nombre
+dans les journaux. Les lister :
+
+```bash
+npx wrangler d1 execute belai --env production --remote --command "SELECT id, compte, produit, centimes, cagnotte, paiement, datetime(paye / 1000, 'unixepoch') AS quand FROM commandes WHERE etat = 'a_verifier'"
+```
+
+Retrouver le paiement dans Stripe par sa référence (`paiement`), puis le rembourser depuis Stripe.
+
+## Mise en ligne
+
+Pas à pas, dans [docs/PUBLIER.md](../docs/PUBLIER.md).
 
 L'envoi par OVH est écrit d'après sa documentation (signature `$1$` en SHA-1), mais il n'a pas encore été essayé : il le
 sera avec le compte du porteur.

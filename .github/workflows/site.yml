@@ -23,6 +23,8 @@ jobs:
       - name: The account server
         working-directory: api
         run: node --test test/*.test.mjs
+      - name: Bzzou's relay
+        run: node --test bzzou/*.test.mjs
       - name: The published folder
         run: python3 -X utf8 outils/verifie.py --coloris
 

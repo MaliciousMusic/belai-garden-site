@@ -6,7 +6,7 @@ l'atelier : d'abord sur le PC du porteur, plus tard sur son serveur. Rien n'est 
 
 - `serveur.mjs` : le relais entre la page et le modèle. Il donne au modèle les règles de la boutique (`consignes.md`) et
   les seuls faits utiles à la question (les réponses de Bzzou, `abeille-savoir.mjs`). Il refuse une réponse qui enfreint
-  le vocabulaire de la boutique ou qui contient un lien, limite chaque adresse IP à 20 questions par 10 minutes et répond
+  le vocabulaire de la boutique, ou qui contient un lien, du code, une adresse, un numéro ou un montant absent des faits, limite chaque adresse IP à 20 questions par 10 minutes et 40 par heure, et répond
   à une question à la fois.
 - `consignes.md` : les règles du modèle, en français, à retoucher librement (relancer le relais ensuite).
 - `journal/` : les échanges sans nom ni adresse, un fichier par jour, jamais versionnés (porteur, 2 novembre : « tous les

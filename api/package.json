@@ -5,7 +5,9 @@
   "description": "Le serveur des comptes et des cadeaux de la boutique (decor/COMPTE.md)",
   "scripts": {
     "dev": "wrangler d1 migrations apply belai --local && wrangler dev --port 8790",
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "deploie": "npm test && node verifie.mjs && wrangler deploy --env production",
+    "sauvegarde": "node sauvegarde.mjs"
   },
   "devDependencies": {
     "wrangler": "4.153.0"

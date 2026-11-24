@@ -57,3 +57,66 @@ crons = ["17 3 * * *"]
 # e-mail), to turn on once it is set up
 # [[send_email]]
 # name = "CODES"
+
+# ---------- online: npm run deploie (which refuses to publish while a setting is missing or simulated: verifie.mjs), and the
+# server itself then refuses to answer (src/reglages.js). Nothing of the lines above is used there but name, main and the date.
+# Each door opens when its line changes from "ferme": SMS = "ovh", COURRIEL_CODES = "cloudflare", PAIEMENT = "stripe".
+[env.production]
+name = "belai-api"
+workers_dev = false
+preview_urls = false
+routes = [{ pattern = "belaisgarden.com/api/*", zone_name = "belaisgarden.com" }]
+
+[env.production.vars]
+ENVIRONNEMENT = "production"
+ORIGINES = "https://belaisgarden.com"
+CATALOGUE = "https://belaisgarden.com/scene/boutique.json"
+SMS = "ferme"
+INDICATIFS_SMS = "33,32,41,352,49,34,39,44,1"
+SMS_JOUR = "300"
+COURRIEL_CODES = "ferme"
+EXPEDITEUR_CODES = ""
+COURRIEL_JOUR = "300"
+MESSAGES_JOUR = "200"
+EXPEDITEUR_MESSAGES = ""
+DESTINATAIRE_MESSAGES = "lonjaret.hadrien@proton.me"
+GUICHET_JOUR = "300"
+PAYS = "FR"
+PAIEMENT = "ferme"
+VENDEUR = '{"nom":"Hadrien Lonjaret EI, entrepreneur individuel (Agent 33)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 · RCS Clermont-Ferrand","courriel":"lonjaret.hadrien@proton.me"}'
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "belai"
+# the one given by: npx wrangler d1 create belai --location weur
+database_id = "A_REMPLIR"
+migrations_dir = "migrations"
+
+# a visitor's pace (index.js): DEBIT for everything, DEBIT_STRICT for what costs (codes, orders, messages). Counted by each of
+# Cloudflare's centres on its own, so approximate: the exact counts are in the base (compte1)
+[[env.production.ratelimits]]
+name = "DEBIT"
+namespace_id = "1001"
+simple = { limit = 240, period = 60 }
+
+[[env.production.ratelimits]]
+name = "DEBIT_STRICT"
+namespace_id = "1002"
+simple = { limit = 20, period = 60 }
+
+[env.production.triggers]
+crons = ["17 3 * * *"]
+
+# the errors and the refusals, kept by Cloudflare a few days; no request's own address or query beside them
+[env.production.observability]
+enabled = true
+
+[env.production.observability.logs]
+invocation_logs = false
+
+# [[env.production.send_email]]
+# name = "COURRIER"
+# destination_address = "lonjaret.hadrien@proton.me"
+
+# [[env.production.send_email]]
+# name = "CODES"

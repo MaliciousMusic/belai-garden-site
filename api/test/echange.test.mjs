@@ -66,7 +66,7 @@ test('une facture numérotée pour chaque achat, lisible par son seul compte', a
   assert.match(h, /Facture F-000001/);
   assert.match(h, /Zoé/);
   assert.match(h, /\+33 • •• •• •• 11/);
-  assert.match(h, /TVA non applicable, art\. 293 B du CGI/);
+  assert.match(h, /TVA non applicable, article 293 B du CGI/);
   assert.match(h, /Vendeur test/);
   assert.ok(!h.includes('611111111'), 'le numéro ne doit pas apparaître en clair');
   const autre = await cookie(env, '0622222222');

@@ -90,3 +90,23 @@ test('mentions : l’identité validée, aucune ancienne coordonnée', async () 
   const legal = lit('squelette/legal.html');
   for (const x of ['Hadrien Lonjaret, entrepreneur individuel (EI)', 'Directeur de la publication : Hadrien Lonjaret', '853 801 488 RCS Clermont-Ferrand', 'SIRET 853 801 488 00026', 'TVA non applicable, article 293 B du CGI', '35 cours Sablon, 63000 Clermont-Ferrand, France', '+33 7 43 77 48 97', 'belaisgarden@gmail.com']) assert.ok(legal.includes(x), x);
 });
+
+test('la publication allégée garde chaque fichier sous son nom, et la vitrine fermée', { skip: process.platform === 'win32' }, async (t) => {
+  const { mkdtempSync, rmSync, existsSync, readdirSync } = await import('node:fs');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const racine = new URL('../../', import.meta.url).pathname;
+  if (!existsSync(join(racine, 'api/node_modules/.bin/esbuild'))) return t.skip('npm ci');
+  const base = mkdtempSync(join(tmpdir(), 'vitrine-'));
+  const d = join(base, 'dist');
+  try {
+    execFileSync(process.execPath, [join(racine, 'outils/vitrine.mjs'), '--sortie', d, '--site', 'https://maliciousmusic.github.io/belai-garden-site/']);
+    const avant = readdirSync(join(d, 'squelette')).join();
+    execFileSync('sh', [join(racine, 'outils/minifie.sh'), d]);
+    assert.equal(readdirSync(join(d, 'squelette')).join(), avant);
+    assert.match(readFileSync(join(d, 'squelette/reglages.mjs'), 'utf8').trim(), /^export const VITRINE=!0;$/);
+    assert.match(readFileSync(join(d, '404.html'), 'utf8'), /href="\/belai-garden-site\/squelette\/"/);
+  } finally {
+    rmSync(base, { recursive: true, force: true });
+  }
+});

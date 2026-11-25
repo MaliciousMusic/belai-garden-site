@@ -42,6 +42,10 @@ for (const f of tous.filter((x) => x.endsWith('.html'))) {
   const t = readFileSync(f, 'utf8');
   writeFileSync(f, t.replaceAll(ANCIEN, SITE).replace(/(Content-Security-Policy" content=")([^"]*)/, (s, a, c) => a + politique(c)));
 }
+// (the missing page answers at any depth: its links start from the site's own root)
+const RACINE = new URL(SITE).pathname;
+const perdue = join(DIST, '404.html');
+writeFileSync(perdue, readFileSync(perdue, 'utf8').replaceAll('href="/squelette/"', `href="${RACINE}squelette/"`));
 const entetes = join(DIST, '_headers');
 writeFileSync(entetes, readFileSync(entetes, 'utf8').replace(/^( {2}Content-Security-Policy: )(.*)$/m, (s, a, c) => a + politique(c)).replace('microphone=(self)', 'microphone=()'));
 const secu = join(DIST, '.well-known', 'security.txt');

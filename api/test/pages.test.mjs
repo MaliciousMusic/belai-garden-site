@@ -88,5 +88,5 @@ test('mentions : l’identité validée, aucune ancienne coordonnée', async () 
   const voir = (d) => readdirSync(new URL(d, racine), { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? (['bouquets', 'soliflores', 'telechargements', 'vendor', 'atlas'].includes(e.name) ? [] : voir(`${d}${e.name}/`)) : [`${d}${e.name}`]));
   for (const f of voir('').filter((x) => /\.(html|m?js|json|txt)$/.test(x) && statSync(new URL(x, racine)).size < 5e6)) assert.ok(!/proton\.me|18 55 81 22|618558122|FR69853801488/.test(lit(f)), f);
   const legal = lit('squelette/legal.html');
-  for (const x of ['Hadrien Lonjaret, entrepreneur individuel (EI)', 'Directeur de la publication : Hadrien Lonjaret', 'SIRET 853 801 488 00026', '35 cours Sablon, 63000 Clermont-Ferrand, France', '+33 7 43 77 48 97', 'belaisgarden@gmail.com']) assert.ok(legal.includes(x), x);
+  for (const x of ['Hadrien Lonjaret, entrepreneur individuel (EI)', 'Directeur de la publication : Hadrien Lonjaret', '853 801 488 RCS Clermont-Ferrand', 'SIRET 853 801 488 00026', 'TVA non applicable, article 293 B du CGI', '35 cours Sablon, 63000 Clermont-Ferrand, France', '+33 7 43 77 48 97', 'belaisgarden@gmail.com']) assert.ok(legal.includes(x), x);
 });

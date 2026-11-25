@@ -175,7 +175,7 @@ export default {
     <p>Hadrien Lonjaret, entrepreneur individuel (EI)<br>
       35 cours Sablon, 63000 Clermont-Ferrand, France<br>
       Courriel : <a href="mailto:belaisgarden@gmail.com">belaisgarden@gmail.com</a> · Téléphone : +33 7 43 77 48 97<br>
-      SIRET 853 801 488 00026</p>
+      853 801 488 RCS Clermont-Ferrand · SIRET 853 801 488 00026 · TVA non applicable, article 293 B du CGI</p>
     <h3>Directeur de la publication</h3>
     <p>Hadrien Lonjaret</p>
     <h3>Hébergeur</h3>

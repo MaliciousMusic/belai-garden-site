@@ -48,7 +48,7 @@ publier `public/` au lieu de `dist/`. Chaque commande se lance depuis la racine 
 ### 1. Les pages
 
 ```bash
-rm -rf /tmp/belai-public && cp -r public /tmp/belai-public && sh outils/minifie.sh /tmp/belai-public && npx --prefix api wrangler pages deploy /tmp/belai-public --project-name belais-garden --branch main
+npm ci --prefix api && rm -rf /tmp/belai-public && cp -r public /tmp/belai-public && sh outils/minifie.sh /tmp/belai-public && npx --prefix api wrangler pages deploy /tmp/belai-public --project-name belais-garden --branch main
 ```
 
 Les pages vont sur Cloudflare Pages, le serveur sur un Worker qui répond à `belaisgarden.com/api/*`, la base sur D1.
@@ -104,7 +104,8 @@ Pricing », les codes promotionnels et les taxes automatiques éteints. Puis `PA
 
 - SSL/TLS : Full (strict), Always Use HTTPS, TLS 1.2 au moins, TLS 1.3. Universal SSL.
 - `www` : une règle de redirection 301 vers `https://belaisgarden.com`.
-- DNS : activer DNSSEC. CAA et courrier : voir l'audit du porteur.
+- DNS : DNSSEC est posé, et le courrier fermé (MX nul, SPF `-all`, DKIM vide, DMARC `reject`). Avant d'envoyer ou de recevoir un seul e-mail depuis le
+  domaine, remplacer ces quatre-là par ceux d'Email Routing et d'Email Sending. CAA : à ajouter.
 - Sécurité : une règle de débit sur `/api/` (la limite gratuite suffit), en plus de celles du Worker. Turnstile. « Under Attack » en secours.
 - Éteindre ce qui réécrit les pages, que la politique de sécurité bloquerait : Rocket Loader, Email Address Obfuscation, JavaScript
   Detections (Bot Fight Mode), Web Analytics injecté.

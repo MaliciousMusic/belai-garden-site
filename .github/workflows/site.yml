@@ -49,6 +49,7 @@ jobs:
           node-version: '22'
       - name: Assemble the site
         run: |
+          npm ci --prefix api
           node outils/vitrine.mjs --site https://maliciousmusic.github.io/belai-garden-site/
           rm -f dist/_headers dist/robots.txt
           touch dist/.nojekyll

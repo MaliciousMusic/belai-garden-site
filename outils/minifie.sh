@@ -5,4 +5,5 @@
 set -e
 P="${1:-public}"
 FILES=$(ls "$P"/squelette/*.mjs "$P"/squelette/*.js "$P"/squelette/*.css "$P"/scene/*.mjs "$P"/scene/*.js "$P"/scene/*.css "$P"/insectes/runtime/*.mjs)
-npx --yes esbuild@0.24.0 $FILES --minify --charset=utf8 --legal-comments=none --allow-overwrite --outbase="$P" --outdir="$P" --log-level=warning
+# (the version the server's lock file pins, never one fetched on the spot: npm ci in api/ first)
+"$(dirname "$0")/../api/node_modules/.bin/esbuild" $FILES --minify --charset=utf8 --legal-comments=none --allow-overwrite --outbase="$P" --outdir="$P" --log-level=warning

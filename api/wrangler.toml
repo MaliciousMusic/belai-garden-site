@@ -34,7 +34,7 @@ PAIEMENT = "faux"
 # what the shop sells: the site's own boutique.json (prices, the month's collection)
 CATALOGUE = "http://localhost:8851/scene/boutique.json"
 # the seller printed on the invoices (factures.js): as in the legal notice
-VENDEUR = '{"nom":"Hadrien Lonjaret, entrepreneur individuel (EI)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 (SIRET 853 801 488 00026)","courriel":"belaisgarden@gmail.com"}'
+VENDEUR = '{"nom":"Hadrien Lonjaret, entrepreneur individuel (EI)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 RCS Clermont-Ferrand · SIRET 853 801 488 00026","courriel":"belaisgarden@gmail.com"}'
 
 [[d1_databases]]
 binding = "DB"
@@ -83,7 +83,7 @@ DESTINATAIRE_MESSAGES = "belaisgarden@gmail.com"
 GUICHET_JOUR = "300"
 PAYS = "FR"
 PAIEMENT = "ferme"
-VENDEUR = '{"nom":"Hadrien Lonjaret, entrepreneur individuel (EI)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 (SIRET 853 801 488 00026)","courriel":"belaisgarden@gmail.com"}'
+VENDEUR = '{"nom":"Hadrien Lonjaret, entrepreneur individuel (EI)","adresse":"35 cours Sablon, 63000 Clermont-Ferrand, France","siren":"853 801 488 RCS Clermont-Ferrand · SIRET 853 801 488 00026","courriel":"belaisgarden@gmail.com"}'
 
 [[env.production.d1_databases]]
 binding = "DB"

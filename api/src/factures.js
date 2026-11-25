@@ -97,7 +97,7 @@ button{font:inherit;padding:8px 16px;border-radius:999px;border:1px solid #2f6b4
 <h1>${esc(titre)}</h1>
 <p class="m">Émis le ${esc(jour(f.emise))}${avoir && f.annule ? ` · annule la facture ${esc(ref({ type: 'facture', numero: f.annule }))}` : ''}</p>
 <div class="p">
-<div><h2>Vendeur</h2>${esc(V.nom || '')}<br>${esc(V.adresse || '')}<br>${V.siren ? `SIREN ${esc(V.siren)}<br>` : ''}${esc(V.courriel || '')}</div>
+<div><h2>Vendeur</h2>${esc(V.nom || '')}<br>${esc(V.adresse || '')}<br>${V.siren ? `${esc(V.siren)}<br>` : ''}${esc(V.courriel || '')}</div>
 <div><h2>Client</h2>${esc(f.prenom || '')}<br>${esc(f.numero_masque || '')}</div>
 </div>
 <table>
@@ -105,7 +105,7 @@ button{font:inherit;padding:8px 16px;border-radius:999px;border:1px solid #2f6b4
 <tr><td>${esc(f.libelle)}${avoir ? '' : `<br><span class="x">Contenu numérique livré le ${esc(jour(f.emise))}</span>`}</td><td class="n">1</td><td class="n">${eur(f.total)}</td><td class="n">${eur(f.total)}</td></tr>
 <tr class="t"><td colspan="3">Total${avoir ? ' de l’avoir' : ''}</td><td class="n">${eur(f.total)}</td></tr>
 </table>
-<p class="x">TVA non applicable, art. 293 B du CGI.</p>
+<p class="x">TVA non applicable, article 293 B du CGI.</p>
 <table class="r">${reglement
     .filter(Boolean)
     .map(([k, v]) => `<tr><td>${esc(k)}</td><td class="n">${eur(v)}</td></tr>`)
